@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Muhammet Atmaca — Portfolio"
+description = "A visual portfolio website for software engineer Muhammet Atmaca, presenting selected work, capabilities, and a direct way to connect through an editorial, motion-led experience."
+version = "1.0.0"
+id = "artifacts/muhammet-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22649
+
+[services.development]
+run = "pnpm --filter @workspace/muhammet-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/muhammet-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/muhammet-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22649"
+BASE_PATH = "/"
