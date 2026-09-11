@@ -1,17 +1,30 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
+import { Route, Switch, Link, useLocation } from 'wouter';
 import {
   ArrowDown,
   ArrowUpRight,
   Check,
-  Code2,
+  ChevronDown,
+  Download,
+  FileText,
   Github,
-  Layers3,
+  GraduationCap,
   Linkedin,
   Mail,
   Menu,
   MoveUpRight,
+  Smartphone,
   X,
 } from 'lucide-react';
+import { KeycapsScene } from './components/KeycapsScene';
+import RidgeParallax from './components/originkit/ui/ridge-parallax-base';
+import { MobileAppsPage } from './pages/MobileAppsPage';
+import { WebProjectsPage } from './pages/WebProjectsPage';
+import { WEB_PROJECTS, CAREER_EXPERIENCES, EDUCATION_LIST, CV_METADATA } from './data/careerAndWeb';
+import { MOBILE_APPS } from './data/mobileApps';
+import { SERVICES_LIST, FAQ_LIST } from './data/servicesFaq';
+import { SEO } from './components/SEO';
+import { SitelinksDirectory } from './components/SitelinksDirectory';
 
 type RevealProps = {
   children: React.ReactNode;
@@ -29,6 +42,13 @@ function Reveal({ children, className = '', delay = 0 }: RevealProps) {
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [workFilter, setWorkFilter] = useState<'all' | 'web' | 'mobile'>('all');
+  const [cvNoticeOpen, setCvNoticeOpen] = useState(false);
+  const [openFaqId, setOpenFaqId] = useState<string | null>('faq-1');
+
+  const toggleFaq = (id: string) => {
+    setOpenFaqId((prev) => (prev === id ? null : id));
+  };
 
   useEffect(() => {
     const nodes = document.querySelectorAll<HTMLElement>('.reveal');
@@ -47,19 +67,69 @@ function Home() {
 
   const closeMenu = () => setMenuOpen(false);
 
+  const showcaseMobileApps = useMemo(() => {
+    const topApps = MOBILE_APPS.slice(0, 24);
+    return [...topApps, ...topApps];
+  }, []);
+
+  // Projects list based on filter
+  const displayedProjects = workFilter === 'mobile'
+    ? []
+    : workFilter === 'web'
+    ? WEB_PROJECTS
+    : WEB_PROJECTS.slice(0, 3);
+
+  const handleCvClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setCvNoticeOpen(true);
+  };
+
   return (
     <main className="portfolio-shell">
+      <SEO
+        title="Muhammet Atmaca — Mobil Uygulama & Web Geliştirme | Türkiye Geneli (81 İl) & Samsun"
+        description="İstanbul, Ankara, İzmir, Bursa, Antalya, Samsun ve tüm Türkiye geneline 7 yılı aşkın deneyimle 50'den fazla mobil uygulama ve ölçeklenebilir web sistemleri geliştiren Muhammet Atmaca'nın portfolyosu."
+        canonicalUrl="https://muhammetatmaca.com.tr/"
+        keywords={[
+          'Mobil Uygulama Yaptırmak İstiyorum',
+          'Web Sitesi Yaptırmak İstiyorum',
+          'React Native Geliştirici Türkiye',
+          'İstanbul Mobil Uygulama',
+          'Ankara Mobil Yazılımcı',
+          'İzmir React Native',
+          'Bursa Mobil Uygulama',
+          'Antalya Yazılım Geliştirme',
+          'Samsun Mobil Yazılım',
+          'Türkiye Geneli Mobil Geliştirme',
+          '50+ Mobil Uygulama',
+          'Freelance Mobil Yazılımcı',
+        ]}
+      />
+      {/* Navigation matching original editorial style */}
       <nav className="nav-card" aria-label="Main navigation">
         <a href="#top" className="wordmark" onClick={closeMenu} data-testid="link-home">
           <span className="wordmark-mark">M</span>
-          <span>Muhammet Atmaca</span>
+          <span>Muhammet Atmaca <span className="wordmark-role">/ Software Engineer</span></span>
         </a>
         <div className="nav-links">
-          <a href="#work" className="nav-link" data-testid="link-work">Work</a>
-          <a href="#approach" className="nav-link" data-testid="link-approach">Approach</a>
-          <a href="#about" className="nav-link" data-testid="link-about">About</a>
+          <a href="#work" className="nav-link nav-link-active" data-testid="link-work">Çalışmalar</a>
+          <a href="#services" className="nav-link" data-testid="link-services">Hizmetler & SSS</a>
+          <Link href="/web" className="nav-link" data-testid="link-nav-web">Web Sistemleri</Link>
+          <Link href="/apps" className="nav-link" data-testid="link-nav-apps">Mobil Uygulamalar</Link>
+          <a href="#career" className="nav-link" data-testid="link-career">Deneyim</a>
+          <a href="#approach" className="nav-link" data-testid="link-approach">Yaklaşım</a>
+          <a href="#about" className="nav-link" data-testid="link-about">Hakkımda</a>
+          <button
+            type="button"
+            onClick={handleCvClick}
+            className="nav-link"
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+            data-testid="link-cv-nav"
+          >
+            CV (PDF)
+          </button>
           <a href="#contact" className="nav-cta" data-testid="link-contact-nav">
-            Say hello <ArrowUpRight size={14} strokeWidth={1.8} />
+            İletişime geç <ArrowUpRight size={14} strokeWidth={1.8} />
           </a>
         </div>
         <button
@@ -75,177 +145,862 @@ function Home() {
       </nav>
       {menuOpen && (
         <div className="mobile-nav">
-          <a href="#work" className="nav-link" onClick={closeMenu} data-testid="link-mobile-work">Work</a>
-          <a href="#approach" className="nav-link" onClick={closeMenu} data-testid="link-mobile-approach">Approach</a>
-          <a href="#about" className="nav-link" onClick={closeMenu} data-testid="link-mobile-about">About</a>
-          <a href="#contact" className="nav-link" onClick={closeMenu} data-testid="link-mobile-contact">Contact <ArrowUpRight size={13} /></a>
+          <a href="#work" className="nav-link" onClick={closeMenu} data-testid="link-mobile-work">Çalışmalar</a>
+          <a href="#services" className="nav-link" onClick={closeMenu} data-testid="link-mobile-services">Hizmetler & SSS</a>
+          <Link href="/web" className="nav-link" onClick={closeMenu} data-testid="link-mobile-web">Web Sistemleri</Link>
+          <Link href="/apps" className="nav-link" onClick={closeMenu} data-testid="link-mobile-apps">Mobil Uygulamalar</Link>
+          <a href="#career" className="nav-link" onClick={closeMenu} data-testid="link-mobile-career">Deneyim</a>
+          <a href="#approach" className="nav-link" onClick={closeMenu} data-testid="link-mobile-approach">Yaklaşım</a>
+          <a href="#about" className="nav-link" onClick={closeMenu} data-testid="link-mobile-about">Hakkımda</a>
+          <button
+            type="button"
+            onClick={(e) => { closeMenu(); handleCvClick(e); }}
+            className="nav-link"
+            style={{ background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer', padding: '13px 2px', borderBottom: '1px solid var(--line)' }}
+            data-testid="link-mobile-cv"
+          >
+            Download CV (PDF) <FileText size={13} style={{ display: 'inline', marginLeft: '4px' }} />
+          </button>
+          <a href="#contact" className="nav-link" onClick={closeMenu} data-testid="link-mobile-contact">İletişim <ArrowUpRight size={13} /></a>
         </div>
       )}
 
-      <section id="top" className="hero">
-        <div className="container-wide hero-grid">
-          <div>
-            <Reveal><div className="eyebrow">Software engineer / Istanbul</div></Reveal>
-            <Reveal delay={1}>
-              <h1>Useful<br /><em>things,</em><br />carefully made.</h1>
-            </Reveal>
-            <Reveal delay={2}>
-              <p className="hero-lede">I’m Muhammet — I turn tangled product ideas into clear, dependable software that people enjoy using.</p>
-            </Reveal>
-            <Reveal delay={3}>
-              <div className="hero-actions">
-                <a href="#work" className="button-primary" data-testid="button-see-work">See selected work <ArrowDown size={15} /></a>
-                <a href="mailto:hello@muhammetatmaca.dev" className="button-quiet" data-testid="link-email-hero">hello@muhammetatmaca.dev <ArrowUpRight size={14} /></a>
+      {/* Hero section */}
+      <div className="hero-landing-wrap">
+        <section id="top" className="hero">
+          {/* Compact WebGL signature animation in background */}
+          <div className="home-ridge-banner" aria-label="Interactive web engineering animation">
+            <RidgeParallax
+              background="#f4f0e6"
+              baseColor="#182033"
+              accentColor="#2a5cdb"
+              density={140}
+              dotSize={320}
+              speed={55}
+              pointer={60}
+              range={{ layers: 10, height: 155, roughness: 80, fall: 220, seed: 42 }}
+              depth={{ parallax: 160, haze: 55, travelStart: 2200, travelEnd: 2200 }}
+              style={{ width: '100%', height: '100%', minHeight: 0, minWidth: 0 }}
+            />
+          </div>
+
+          <div className="container-wide hero-grid">
+            <div>
+              <Reveal><div className="eyebrow">Mobil & Yazılım Mühendisi / Türkiye Geneli (81 İl) & Samsun</div></Reveal>
+              <Reveal delay={1}>
+                <h1>Faydalı<br /><em>fikirler.</em><br /><span className="hero-phrase">Özenle hayata</span><br />geçirildi.</h1>
+              </Reveal>
+              <Reveal delay={2}>
+                <p className="hero-lede" style={{ color: '#000000', fontWeight: 600 }}>
+                  Ben Muhammet — karmaşık ürün fikirlerini insanların keyifle kullandığı, anlaşılır ve güvenilir yazılımlara dönüştürüyorum. Samsun merkezli; İstanbul, Ankara, İzmir başta olmak üzere tüm Türkiye'ye (81 il) ve yurt dışına 7 yılı aşkın süredir ölçeklenebilir mobil uygulamalar (50+) ve web platformları geliştiriyorum.
+                </p>
+              </Reveal>
+              <Reveal delay={3}>
+                <div className="hero-actions">
+                  <a href="#work" className="button-primary hero-action-primary" data-testid="button-see-work">
+                    Çalışmalarımı Gör <ArrowDown size={15} />
+                  </a>
+                  <div className="hero-actions-secondary">
+                    <Link href="/apps" className="button-secondary hero-directory-button" data-testid="button-see-apps">
+                      Mobil Uygulamalar (50+) <ArrowUpRight size={14} />
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={handleCvClick}
+                      className="button-secondary hero-cv-button flex items-center gap-1.5"
+                    >
+                      <FileText size={13} /> Özgeçmiş (CV)
+                    </button>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+            <Reveal className="hero-aside" delay={2}>
+              <div className="key-stage-3d" aria-label="3D Interactive mechanical keyboard">
+                <KeycapsScene />
               </div>
+              <div className="hero-caption">GitHub, LinkedIn, Medium ve e-posta<br />için tuşlara tıkla.</div>
             </Reveal>
           </div>
-          <Reveal className="hero-aside" delay={2}>
-            <div className="hero-note">
-              <strong>Make it<br />make sense.</strong>
-              <span>Small detail. Big difference.<br />That’s the job.</span>
-            </div>
-            <div className="key-stage" aria-label="A set of keyboard keys spelling build">
-              <div className="key">B</div>
-              <div className="key">U</div>
-              <div className="key">I</div>
-              <div className="key">L</div>
-            </div>
-            <div className="hero-caption">A workbench for good questions<br />and better interfaces.</div>
-          </Reveal>
-        </div>
-        <div className="container-wide scroll-cue">Scroll to explore</div>
-      </section>
+          <div className="container-wide scroll-cue">Scroll to explore</div>
+        </section>
 
-      <div className="marquee-band" aria-hidden="true">
-        <div className="marquee-track">
-          {Array.from({ length: 2 }).map((_, index) => (
-            <div className="marquee-item" key={index}>
-              <span>Product thinking</span><i /><span>Frontend craft</span><i /><span>Systems with soul</span><i /><span>Built for people</span><i />
-            </div>
-          ))}
+        {/* Marquee band */}
+        <div className="marquee-band" aria-hidden="true">
+          <div className="marquee-track">
+            {Array.from({ length: 2 }).map((_, index) => (
+              <div className="marquee-item" key={index}>
+                <span>ASP.NET Core · React Native · Flutter</span><i />
+                <span>Node.js · Spring · TypeScript</span><i />
+                <span>Microservices Architecture</span><i />
+                <span>Apache Kafka · RabbitMQ · Redis</span><i />
+                <span>Docker · Kubernetes · DevOps</span><i />
+                <span>AWS · Azure · Google Cloud</span><i />
+                <span>SQL · Cassandra · Entity Framework</span><i />
+                <span>AI / Machine Learning · LLMOps</span><i />
+                <span>Hive · Spark · Hadoop</span><i />
+                <span>Jenkins · Grafana · Automation</span><i />
+                <span>Ceph · Virtualization · VMware</span><i />
+                <span>Git · GitHub · Version Control</span><i />
+                <span>REST APIs · System Integration</span><i />
+                <span>Platform Engineering · DevOps</span><i />
+                <span>LoRa · Flight Control Systems</span><i />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <section id="work" className="section container-wide">
+      {/* Selected Work section with Web & Mobile integration */}
+      <section id="work" className="section container-wide work-section">
         <Reveal className="section-heading">
           <div>
-            <div className="eyebrow">Selected work</div>
-            <h2>A few things<br />I’ve shipped.</h2>
+            <div className="eyebrow">Seçili çalışmalar ve platformlar</div>
+            <h2>Hayata geçirdiğim<br />birkaç çalışma.</h2>
           </div>
-          <p>Real products, real constraints, and a lot of care in the space between the two.</p>
+          <p>Web sistemleri ve 50’den fazla yayındaki mobil uygulamadan oluşan gerçek üretim ürünleri.</p>
         </Reveal>
+
+        {/* Editorial Filter Tabs */}
+        <Reveal delay={1}>
+          <div className="work-filter-tabs">
+            <button
+              type="button"
+              onClick={() => setWorkFilter('all')}
+              className={`work-filter-btn ${workFilter === 'all' ? 'is-active' : ''}`}
+            >
+              Tüm çalışmalar (Web & Mobil)
+            </button>
+            <button
+              type="button"
+              onClick={() => setWorkFilter('web')}
+              className={`work-filter-btn ${workFilter === 'web' ? 'is-active' : ''}`}
+            >
+              Web platformları ve sistemler ({WEB_PROJECTS.length})
+            </button>
+            <button
+              type="button"
+              onClick={() => setWorkFilter('mobile')}
+              className={`work-filter-btn ${workFilter === 'mobile' ? 'is-active' : ''}`}
+            >
+              Mobil uygulamalar (50+)
+            </button>
+          </div>
+        </Reveal>
+
         <Reveal className="work-intro" delay={1}>
-          <p className="display-line">The best interfaces don’t ask for attention. They earn trust, one considered moment at a time.</p>
+          <p className="display-line">En iyi arayüzler dikkat istemez. Her düşünülmüş ayrıntıyla güven kazanır.</p>
           <div className="project-list">
-            <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" className="project-list-item" data-testid="link-project-reel">
-              <span className="list-no">01</span><span className="list-title">Open source experiments</span><span className="list-meta">React / TypeScript</span><MoveUpRight size={16} />
-            </a>
-            <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" className="project-list-item" data-testid="link-project-tools">
-              <span className="list-no">02</span><span className="list-title">Tools for better decisions</span><span className="list-meta">Product systems</span><MoveUpRight size={16} />
+            <Link href="/web" className="project-list-item" data-testid="link-project-web-catalog">
+              <span className="list-no">01</span><span className="list-title">Web sistemleri dizini</span><span className="list-meta">Next.js & Full-stack</span><MoveUpRight size={16} />
+            </Link>
+            <Link href="/apps" className="project-list-item" data-testid="link-project-mobile-catalog">
+              <span className="list-no">02</span><span className="list-title">Mobil uygulamalar dizini</span><span className="list-meta">50+ React Native uygulaması</span><MoveUpRight size={16} />
+            </Link>
+            <a href="#career" className="project-list-item" data-testid="link-project-career-quick">
+              <span className="list-no">03</span><span className="list-title">Kariyer geçmişi ve roller</span><span className="list-meta">7+ yıllık deneyim</span><MoveUpRight size={16} />
             </a>
           </div>
         </Reveal>
-        <div className="project-stack">
-          <Reveal>
-            <article className="project-card">
-              <div className="project-topline"><span className="project-tag">01 — Product platform</span><span className="project-year">2024</span></div>
-              <h3>Clarity<br />at scale.</h3>
-              <p>A modular workspace that gives growing teams one calm place to plan, decide, and move.</p>
-              <div className="project-graphic"><span /></div>
-              <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" className="project-link" data-testid="link-project-clarity">View project <ArrowUpRight size={14} /></a>
-            </article>
-          </Reveal>
-          <Reveal delay={1}>
-            <article className="project-card">
-              <div className="project-topline"><span className="project-tag">02 — Developer tool</span><span className="project-year">2023</span></div>
-              <h3>Less noise.<br />More signal.</h3>
-              <p>A fast, opinionated toolkit for turning messy product data into an honest next step.</p>
-              <div className="project-graphic"><span /></div>
-              <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" className="project-link" data-testid="link-project-signal">View project <ArrowUpRight size={14} /></a>
-            </article>
-          </Reveal>
-        </div>
-      </section>
 
-      <section id="approach" className="section approach">
-        <div className="container-wide">
-          <Reveal className="section-heading">
-            <div><div className="eyebrow">How I work</div><h2>Curious first.<br />Precise always.</h2></div>
-            <p>Good software starts before the first line of code. It starts with finding the right problem.</p>
+        {/* Mobile Directory Highlight Card (When mobile filter or all is active) */}
+        {(workFilter === 'all' || workFilter === 'mobile') && (
+          <Reveal className="mobile-specialization-reveal" delay={1}>
+            <div
+              className="mobile-specialization-card"
+              style={{
+                padding: '32px',
+                borderRadius: '17px',
+                border: '1px solid rgba(24, 32, 51, 0.16)',
+                background: '#d5e1fa',
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                gap: '24px',
+              }}
+            >
+              <div style={{ maxWidth: '520px' }}>
+                <div style={{ color: 'var(--cobalt)', font: '10px/1 var(--app-font-mono)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '8px' }}>
+                  Mobil uzmanlık
+                </div>
+                <h3 style={{ margin: 0, color: 'var(--ink)', font: '600 clamp(24px, 4vw, 36px)/1.05 var(--font-display)', letterSpacing: '-0.06em' }}>
+                  50+ üretim mobil uygulaması.
+                </h3>
+                <p style={{ margin: '8px 0 0', color: 'rgba(24, 32, 51, 0.72)', fontSize: '13px', lineHeight: 1.5 }}>
+                  React Native, Flutter, Swift ve Kotlin ile geliştirilen 50+ üretim mobil uygulaması. Finans, e-ticaret, sosyal, sağlık ve yapay zeka alanlarında kategori ve teknolojiye göre filtrelenebilir.
+                </p>
+              </div>
+              <Link href="/apps" className="button-primary" style={{ padding: '14px 22px' }}>
+                Mobil uygulama dizinini aç (50+) <ArrowUpRight size={14} />
+              </Link>
+            </div>
+
+            {/* Canlı akan mobil uygulama ikonları ve açıklamaları vitrini (Marquee) */}
+            <div className="mobile-icons-marquee" aria-label="Mobil uygulamalar ikon vitrini">
+              <div className="mobile-icons-track">
+                {showcaseMobileApps.map((app, idx) => (
+                  <Link
+                    key={`${app.id}-${idx}`}
+                    href="/apps"
+                    className="mobile-icon-card"
+                    title={`${app.name} — ${app.tagline}`}
+                  >
+                    {/* Top row: App Icon and Category badge */}
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', marginBottom: '10px' }}>
+                      {app.iconUrl ? (
+                        <img
+                          src={app.iconUrl}
+                          alt={`${app.name} — ${app.tagline} | Muhammet Atmaca Mobil Uygulama`}
+                          className="mobile-icon-img"
+                          loading="lazy"
+                          decoding="async"
+                          width={46}
+                          height={46}
+                          style={{
+                            width: '46px',
+                            height: '46px',
+                            borderRadius: '11px',
+                            objectFit: 'cover',
+                            boxShadow: '0 3px 8px rgba(24, 32, 51, 0.12)',
+                            border: '1px solid rgba(24, 32, 51, 0.08)',
+                            flexShrink: 0,
+                            transition: 'transform 0.3s ease',
+                          }}
+                        />
+                      ) : (
+                        <div
+                          className="mobile-icon-img"
+                          style={{
+                            width: '46px',
+                            height: '46px',
+                            borderRadius: '11px',
+                            background: 'var(--cobalt)',
+                            color: '#ffffff',
+                            display: 'grid',
+                            placeItems: 'center',
+                            fontSize: '18px',
+                            fontWeight: 700,
+                            boxShadow: '0 3px 8px rgba(24, 32, 51, 0.12)',
+                            flexShrink: 0,
+                            transition: 'transform 0.3s ease',
+                          }}
+                        >
+                          {app.iconLetter || 'M'}
+                        </div>
+                      )}
+                      <span
+                        style={{
+                          font: '500 9px/1 var(--app-font-mono)',
+                          padding: '3px 7px',
+                          borderRadius: '4px',
+                          background: 'rgba(24, 32, 51, 0.06)',
+                          color: 'rgba(24, 32, 51, 0.65)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.04em',
+                        }}
+                      >
+                        {app.category}
+                      </span>
+                    </div>
+
+                    {/* App Title */}
+                    <div
+                      style={{
+                        font: '600 13px/1.2 var(--font-display)',
+                        color: 'var(--ink)',
+                        marginBottom: '4px',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        width: '100%',
+                      }}
+                    >
+                      {app.name}
+                    </div>
+
+                    {/* App Short Description / Tagline */}
+                    <p
+                      style={{
+                        margin: 0,
+                        font: '400 11px/1.38 var(--font-body, system-ui, sans-serif)',
+                        color: 'rgba(24, 32, 51, 0.68)',
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                        width: '100%',
+                        flex: 1,
+                      }}
+                    >
+                      {app.tagline}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </Reveal>
-          <div className="approach-grid">
-            <Reveal>
-              <div className="approach-copy">I make room for <span>questions</span>, then close the loop with software that feels inevitable.</div>
-            </Reveal>
-            <Reveal className="principles" delay={1}>
-              <div className="principle"><span className="principle-no">01</span><div><strong>Start with the why</strong><p>Understand the people, pressure, and opportunity behind the brief.</p></div></div>
-              <div className="principle"><span className="principle-no">02</span><div><strong>Make the invisible visible</strong><p>Use prototypes and plain language to get to the useful truth quickly.</p></div></div>
-              <div className="principle"><span className="principle-no">03</span><div><strong>Leave things better</strong><p>Ship the work, document the decisions, and keep the system ready for tomorrow.</p></div></div>
-            </Reveal>
+        )}
+
+        {/* Project Cards (Web Projects) */}
+        {workFilter !== 'mobile' && (
+          <div className="project-stack">
+            {displayedProjects.map((project, idx) => (
+              <Reveal key={project.id} delay={idx}>
+                <article className="project-card" style={{ background: project.cardBg || '#e7e5dd' }}>
+                  <div className="project-topline">
+                    <span className="project-tag">{project.no} — {project.category}</span>
+                    <span className="project-year">{project.year}</span>
+                  </div>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="project-graphic"><span /></div>
+                  <a
+                    href={project.githubUrl || 'https://github.com/muhammetatmaca'}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link"
+                    data-testid={`link-project-${project.id}`}
+                  >
+                    View project <ArrowUpRight size={14} />
+                  </a>
+                </article>
+              </Reveal>
+            ))}
           </div>
-        </div>
+        )}
       </section>
 
-      <section id="capabilities" className="section container-wide">
+      {/* Services & Search Intent FAQ Section */}
+      <section id="services" className="section services-section container-wide">
         <Reveal className="section-heading">
-          <div><div className="eyebrow">Capabilities</div><h2>From first sketch<br />to final detail.</h2></div>
-          <span className="section-number">03 / 07</span>
+          <div>
+            <div className="eyebrow">Hizmetler & Sıkça Sorulan Sorular</div>
+            <h2>Fikrinizi Canlıya<br />Taşıyalım.</h2>
+          </div>
+          <span className="section-number">02 / 08</span>
         </Reveal>
-        <div className="capability-grid">
-          <Reveal><p className="capability-lede">I like the whole journey: getting close to the problem, building the first rough thing, and polishing the last 5% until it feels right.</p></Reveal>
-          <Reveal className="capability-list" delay={1}>
-            <div className="capability-row"><b>01</b><h3>Product engineering</h3><span>Think / build</span></div>
-            <div className="capability-row"><b>02</b><h3>Frontend systems</h3><span>React / TypeScript</span></div>
-            <div className="capability-row"><b>03</b><h3>Interface direction</h3><span>Shape / refine</span></div>
-            <div className="capability-row"><b>04</b><h3>Technical clarity</h3><span>Scale / simplify</span></div>
-          </Reveal>
-        </div>
-      </section>
 
-      <section id="about" className="section about-section container-wide">
-        <Reveal className="about-grid">
-          <div className="about-title">A human<br />behind the<br /><em>systems.</em></div>
-          <div className="about-copy">
-            <p>I’m a software engineer who cares equally about a well-shaped API, a thoughtful empty state, and the little moment when something finally clicks for a user.</p>
-            <p>When I’m away from the screen, I’m usually walking through a new neighbourhood, collecting books I’ll eventually read, or making an unnecessarily detailed breakfast.</p>
-            <span className="currently"><Check size={12} /> Available for thoughtful collaborations</span>
+        {/* Nationwide 81-city Service Coverage Banner */}
+        <Reveal>
+          <div
+            style={{
+              padding: '14px 20px',
+              borderRadius: '12px',
+              background: 'rgba(25, 75, 223, 0.05)',
+              border: '1px solid rgba(25, 75, 223, 0.16)',
+              marginBottom: '36px',
+              display: 'flex',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: '10px',
+              font: '500 13px/1.5 var(--font-sans)',
+              color: 'var(--ink)',
+            }}
+          >
+            <span
+              style={{
+                font: '700 10px/1 var(--app-font-mono)',
+                color: '#ffffff',
+                background: 'var(--cobalt)',
+                padding: '4px 8px',
+                borderRadius: '4px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+              }}
+            >
+              Hizmet Alanı
+            </span>
+            <span>
+              Samsun merkezli, <strong>Türkiye Geneli (81 İl)</strong> ve yurt dışına %100 uzaktan (remote) anahtar teslim yazılım geliştirme.
+            </span>
+            <span style={{ color: 'rgba(24, 32, 51, 0.55)', fontSize: '12px' }}>
+              (İstanbul · Ankara · İzmir · Bursa · Antalya · Kocaeli · Adana · Gaziantep · Konya ve tüm şehirler)
+            </span>
           </div>
         </Reveal>
-        <Reveal className="facts" delay={1}>
-          <div className="fact"><strong>7+</strong><span>years making software</span></div>
-          <div className="fact"><strong>28</strong><span>products shipped</span></div>
-          <div className="fact"><strong>∞</strong><span>things still to learn</span></div>
-        </Reveal>
-      </section>
 
-      <section id="contact" className="contact-section">
-        <div className="container-wide">
-          <Reveal className="contact-wrap">
-            <div><div className="eyebrow">Have a good problem?</div><h2 className="contact-title">Let’s make<br />it useful.</h2></div>
-            <div className="contact-side">
-              <p>Tell me what you’re building, what’s getting in the way, or what you’re curious about. I’ll get back to you personally.</p>
-              <a href="mailto:hello@muhammetatmaca.dev" className="contact-mail" data-testid="link-email-contact">Start a conversation <Mail size={14} /></a>
+        {/* Services Cards */}
+        <div className="services-grid">
+          {SERVICES_LIST.map((service, index) => (
+            <Reveal key={service.id} delay={index === 0 ? 0 : index === 1 ? 1 : 2}>
+              <article className="service-card" data-testid={`service-card-${service.id}`}>
+                <div className="service-card-top">
+                  <span className="service-badge">0{index + 1}</span>
+                  <h3 className="service-title">{service.title}</h3>
+                </div>
+                <p className="service-tagline">{service.tagline}</p>
+                <p className="service-desc">{service.description}</p>
+
+                <div className="service-deliverables">
+                  <div className="deliverables-title">Neler Teslim Ediyorum:</div>
+                  <ul className="deliverables-list">
+                    {service.deliverables.map((item, dIdx) => (
+                      <li key={dIdx} className="deliverable-item">
+                        <Check size={14} className="deliverable-check" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="service-tech-tags">
+                  {service.tech.map((t) => (
+                    <span key={t} className="service-tech-tag">{t}</span>
+                  ))}
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        {/* High-Intent FAQ Section */}
+        <div className="services-faq-block">
+          <Reveal className="faq-lead">
+            <div className="eyebrow">Sıkça Sorulan Sorular</div>
+            <h3 className="faq-main-title">Mobil Uygulama & Web Sitesi Yaptırma Rehberi</h3>
+            <p className="faq-main-sub">
+              Süreç, maliyet, iOS & Android mağaza onayları ve Samsun / uzaktan çalışma modeli hakkında merak edilenler:
+            </p>
+          </Reveal>
+
+          <div className="faq-accordion" role="region" aria-label="Sıkça Sorulan Sorular">
+            {FAQ_LIST.map((faq) => {
+              const isOpen = openFaqId === faq.id;
+              return (
+                <div
+                  key={faq.id}
+                  className={`faq-item ${isOpen ? 'is-open' : ''}`}
+                  data-testid={`faq-item-${faq.id}`}
+                >
+                  <button
+                    type="button"
+                    className="faq-question-btn"
+                    onClick={() => toggleFaq(faq.id)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-ans-${faq.id}`}
+                  >
+                    <span className="faq-question-text">{faq.question}</span>
+                    <span className="faq-icon-wrap" aria-hidden="true">
+                      <ChevronDown
+                        size={18}
+                        className={`faq-chevron ${isOpen ? 'is-rotated' : ''}`}
+                      />
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <div id={`faq-ans-${faq.id}`} className="faq-answer">
+                      <p>{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Direct CTA Banner */}
+          <Reveal delay={1}>
+            <div className="services-cta-banner">
+              <div className="services-cta-copy">
+                <h4>Mobil uygulama veya web sitesi yaptırmak mı istiyorsunuz?</h4>
+                <p>
+                  Projenizin mimarisini, takvimini ve bütçesini sürprizsiz planlayalım. Samsun veya uzaktan tüm Türkiye geneline hizmet veriyorum.
+                </p>
+              </div>
+              <a
+                href="#contact"
+                className="button-primary services-cta-btn"
+                data-testid="button-services-cta"
+              >
+                Ücretsiz Ön Değerlendirme & Teklif Al <ArrowUpRight size={15} />
+              </a>
             </div>
           </Reveal>
         </div>
       </section>
 
+      {/* Approach section */}
+      <section id="approach" className="section approach">
+        <div className="container-wide">
+          <Reveal className="section-heading">
+            <div><div className="eyebrow">Nasıl Çalışırım</div><h2>Önce anla.<br />Kusursuz inşa et.</h2></div>
+            <p>İyi yazılım, doğru soruyu sormakla başlar.</p>
+          </Reveal>
+          <div className="approach-grid">
+            <Reveal>
+              <div className="approach-copy">Karmaşayı eler, geriye sadece <span>akıcı ve çalışan</span> çözümler bırakırım.</div>
+            </Reveal>
+            <Reveal className="principles" delay={1}>
+              <div className="principle"><span className="principle-no">01</span><div><strong>Doğru problemi bul</strong><p>Koda başlamadan önce ihtiyacı netleştir.</p></div></div>
+              <div className="principle"><span className="principle-no">02</span><div><strong>Hızlı prototiple</strong><p>Fikirleri hızla çalışan bir deneyime dönüştür.</p></div></div>
+              <div className="principle"><span className="principle-no">03</span><div><strong>Sağlam bırak</strong><p>Ölçeklenebilir mimari ve temiz kod teslim et.</p></div></div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities section */}
+      <section id="capabilities" className="section capabilities-section container-wide">
+        <Reveal className="section-heading">
+          <div><div className="eyebrow">Yetkinlikler</div><h2>İlk taslaktan<br />son detaya.</h2></div>
+          <span className="section-number">03 / 08</span>
+        </Reveal>
+        <div className="capability-grid">
+          <Reveal><p className="capability-lede">Problemi kavramaktan hızlı prototipe, son %5'lik kusursuzluk hissine kadar tüm süreci uçtan uca sahiplenirim.</p></Reveal>
+          <Reveal className="capability-list" delay={1}>
+            <div className="capability-row"><b>01</b><h3>React Native & Flutter</h3><span>Çok platformlu mobil mimari</span></div>
+            <div className="capability-row"><b>02</b><h3>Native Swift & Kotlin</h3><span>iOS & Android yerel mühendislik</span></div>
+            <div className="capability-row"><b>03</b><h3>Web Sistemleri & Next.js</h3><span>Full-stack modern altyapı</span></div>
+            <div className="capability-row"><b>04</b><h3>Arayüz & Etkileşim</h3><span>60 FPS akıcı jest fiziği</span></div>
+            <div className="capability-row"><b>05</b><h3>Teknik Liderlik</h3><span>Ölçekleme ve canlıya alma</span></div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* New Career & Experience section */}
+      <section id="career" className="section career-section container-wide">
+        <Reveal className="section-heading">
+          <div>
+            <div className="eyebrow">Kariyer & Deneyim</div>
+            <h2>Değer kattığım<br />ekipler ve projeler.</h2>
+          </div>
+          <span className="section-number">04 / 08</span>
+        </Reveal>
+        <div className="career-grid">
+          <Reveal className="career-lead">
+            <p>
+              7 yılı aşkın süredir üretim ortamında çalışan yazılımlar geliştiriyorum. Web ve mobil platformlarda hızlı ürün geliştirmeyi, sağlam ve sürdürülebilir mimari temellerle dengeliyorum.
+            </p>
+
+            {/* CV Download Card */}
+            <div className="cv-box">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--cobalt)', marginBottom: '8px' }}>
+                <FileText size={16} />
+                <span style={{ font: '500 11px/1 var(--app-font-mono)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                  Özgeçmiş (CV)
+                </span>
+              </div>
+              <div className="cv-box-title">Muhammet Atmaca</div>
+              <div className="cv-box-meta">{CV_METADATA.fileSize} • {CV_METADATA.lastUpdated}</div>
+              <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
+                <a
+                  href="/muhammetatmacacv.pdf"
+                  download="Muhammet_Atmaca_CV.pdf"
+                  className="button-primary"
+                  style={{ flex: 1, justifyContent: 'center', textAlign: 'center', display: 'flex', alignItems: 'center', gap: '6px', padding: '12px 14px' }}
+                  data-testid="button-download-cv-card"
+                >
+                  <Download size={14} /> PDF İndir
+                </a>
+                <button
+                  type="button"
+                  onClick={handleCvClick}
+                  className="button-quiet"
+                  style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '12px 14px', cursor: 'pointer' }}
+                  title="Detaylar ve E-posta ile Talep Et"
+                >
+                  <Mail size={14} /> İste
+                </button>
+              </div>
+            </div>
+
+            {/* Education Card */}
+            <div className="cv-box" style={{ marginTop: '16px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--cobalt)', marginBottom: '14px' }}>
+                <GraduationCap size={16} />
+                <span style={{ font: '500 11px/1 var(--app-font-mono)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                  Eğitim
+                </span>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                {EDUCATION_LIST.map((edu, index) => (
+                  <div key={edu.id} style={{ borderTop: index > 0 ? '1px solid var(--line)' : 'none', paddingTop: index > 0 ? '12px' : '0' }}>
+                    <div style={{ font: '600 14px/1.2 var(--font-display)', color: 'var(--ink)' }}>
+                      {edu.institution}
+                    </div>
+                    <div style={{ font: '400 12px/1.4 var(--font-body)', color: 'rgba(24, 32, 51, 0.72)', marginTop: '3px' }}>
+                      {edu.degree} {edu.field ? `• ${edu.field}` : ''}
+                    </div>
+                    <div style={{ font: '500 10px/1 var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.45)', marginTop: '4px' }}>
+                      {edu.period}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Career timeline ledger */}
+          <Reveal className="career-list" delay={1}>
+            {CAREER_EXPERIENCES.map((exp) => (
+              <div key={exp.id} className="career-item">
+                <div className="career-period">{exp.period}</div>
+                <h3 className="career-role">{exp.role}</h3>
+                <div className="career-company">{exp.company} • {exp.location}</div>
+                <p className="career-desc">{exp.description}</p>
+                <div className="career-tags">
+                  {exp.techStack.map((tech) => (
+                    <span key={tech} className="career-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      {/* About section */}
+      <section id="about" className="section about-section container-wide">
+        <Reveal className="about-grid">
+          <div className="about-title">Sistemlerin<br />arkasındaki<br /><em>mühendis.</em></div>
+          <div className="about-copy">
+            <p>Yazılımı sadece kod yazmaktan ibaret görmüyorum; fikirleri sıfırdan çalışan, ölçeklenen ve insanların gerçekten kullandığı ürünlere dönüştürmeyi seviyorum.</p>
+            <p>Savunma sanayiindeki otonom kontrol yazılımlarından mağazalardaki 50'den fazla mobil uygulamaya kadar uzanan süreçte odağım hep aynı: Karmaşık problemleri sağlam, performanslı ve sade mimarilerle çözmek.</p>
+            <span className="currently"><Check size={12} /> Yeni projelere ve iş birliklerine açık</span>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* Contact section */}
+      <section id="contact" className="contact-section">
+        <div className="container-wide">
+          <Reveal className="contact-wrap">
+            <div><div className="eyebrow">Çözülecek bir problem mi var?</div><h2 className="contact-title">Birlikte hayata<br />geçirelim.</h2></div>
+            <div className="contact-side">
+              <p>Geliştirmek istediğiniz fikri, karşılaştığınız teknik engelleri veya merak ettiklerinizi paylaşın. En kısa sürede doğrudan yanıtlayacağım.</p>
+              <a href="mailto:muhammetatmaca79@gmail.com" className="contact-mail" data-testid="link-email-contact">İletişime geç <Mail size={14} /></a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Google Sitelinks & Quick Sub-Pages Directory */}
+      <SitelinksDirectory />
+
+      {/* Footer */}
       <footer className="footer">
         <div className="container-wide footer-inner">
           <span className="footer-note">© {new Date().getFullYear()} Muhammet Atmaca</span>
           <div className="footer-links">
-            <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" data-testid="link-github"><Github size={14} /> GitHub</a>
-            <a href="https://www.linkedin.com/in/muhammetatmaca/" target="_blank" rel="noreferrer" data-testid="link-linkedin"><Linkedin size={14} /> LinkedIn</a>
-            <a href="#top" data-testid="link-back-top">Back to top <ArrowDown size={14} className="rotate-180" /></a>
+            <Link href="/apps" className="footer-link">Mobil Uygulamalar (50+)</Link>
+            <Link href="/web" className="footer-link">Web Sistemleri</Link>
+            <button
+              type="button"
+              onClick={handleCvClick}
+              className="footer-link"
+            >
+              <FileText size={13} /> Özgeçmiş (PDF)
+            </button>
+            <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" className="footer-link" data-testid="link-github"><Github size={13} /> GitHub</a>
+            <a href="https://www.linkedin.com/in/muhammet-atmaca-857481252/" target="_blank" rel="noreferrer" className="footer-link" data-testid="link-linkedin"><Linkedin size={13} /> LinkedIn</a>
+            <a
+              href="#top"
+              className="footer-link"
+              data-testid="link-back-top"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
+              Yukarı çık <ArrowDown size={13} className="rotate-180" />
+            </a>
           </div>
         </div>
       </footer>
+
+      {/* CV Download / Modal Notice */}
+      {cvNoticeOpen && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 60,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '16px',
+            background: 'rgba(24, 32, 51, 0.55)',
+            backdropFilter: 'blur(8px)',
+          }}
+          onClick={() => setCvNoticeOpen(false)}
+        >
+          <div
+            style={{
+              position: 'relative',
+              width: '100%',
+              maxWidth: '460px',
+              maxHeight: 'calc(100svh - 32px)',
+              overflowY: 'auto',
+              borderRadius: '18px',
+              background: 'var(--paper)',
+              border: '1px solid rgba(24, 32, 51, 0.18)',
+              boxShadow: '0 25px 60px rgba(24, 32, 51, 0.22)',
+              padding: 'clamp(20px, 5vw, 32px)',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setCvNoticeOpen(false)}
+              style={{
+                position: 'absolute',
+                top: '18px',
+                right: '18px',
+                width: '30px',
+                height: '30px',
+                borderRadius: '8px',
+                border: '1px solid var(--line)',
+                background: 'transparent',
+                display: 'grid',
+                placeItems: 'center',
+                cursor: 'pointer',
+                color: 'var(--ink)',
+              }}
+              aria-label="Close"
+            >
+              <X size={15} />
+            </button>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+              <div
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '9px',
+                  background: 'var(--cobalt)',
+                  color: 'var(--paper)',
+                  display: 'grid',
+                  placeItems: 'center',
+                  font: '600 16px/1 var(--app-font-mono)',
+                  boxShadow: '2px 2px 0 var(--ink)',
+                }}
+              >
+                <FileText size={18} />
+              </div>
+              <div>
+                <div style={{ color: 'var(--cobalt)', font: '10px/1 var(--app-font-mono)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                  Özgeçmiş Belgesi
+                </div>
+                <h3 style={{ margin: 0, color: 'var(--ink)', font: '600 20px/1.1 var(--font-display)', letterSpacing: '-0.04em' }}>
+                  Muhammet Atmaca — CV
+                </h3>
+              </div>
+            </div>
+
+            <p style={{ color: 'rgba(24, 32, 51, 0.72)', fontSize: '13px', lineHeight: 1.55, marginBottom: '20px' }}>
+              Özgeçmiş; savunma sanayii, kurumsal altyapı deneyimlerini, 50+ mobil uygulamayı ve teknik uzmanlık profilini içerir (PDF formatı).
+            </p>
+
+            <div
+              style={{
+                padding: '12px 14px',
+                borderRadius: '8px',
+                background: '#e7e5dd',
+                border: '1px solid var(--line)',
+                font: '500 11px/1 var(--app-font-mono)',
+                color: 'rgba(24, 32, 51, 0.65)',
+                marginBottom: '24px',
+                display: 'flex',
+                justifyContent: 'space-between',
+              }}
+            >
+              <span>Format: PDF</span>
+              <span>Boyut: 252 KB</span>
+              <span>Güncel: 2025</span>
+            </div>
+
+            <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end', alignItems: 'center', flexWrap: 'wrap' }}>
+              <button
+                type="button"
+                onClick={() => setCvNoticeOpen(false)}
+                className="button-quiet"
+                style={{ cursor: 'pointer', padding: '10px 14px' }}
+              >
+                Vazgeç
+              </button>
+              <a
+                href="mailto:muhammetatmaca79@gmail.com?subject=Özgeçmiş Talebi - Muhammet Atmaca"
+                className="button-quiet"
+                style={{ padding: '10px 14px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                data-testid="link-request-cv-email"
+              >
+                <Mail size={14} /> E-posta ile İste
+              </a>
+              <a
+                href="/muhammetatmacacv.pdf"
+                download="Muhammet_Atmaca_CV.pdf"
+                className="button-primary"
+                style={{ padding: '12px 18px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                onClick={() => setCvNoticeOpen(false)}
+                data-testid="link-download-cv-file"
+              >
+                <Download size={14} /> PDF İndir
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
 
+function ScrollToTop() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    if (location === '/services' || location === '/hizmetler') {
+      const el = document.getElementById('services');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    if (location === '/career' || location === '/kariyer') {
+      const el = document.getElementById('career');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    if (location === '/contact' || location === '/iletisim') {
+      const el = document.getElementById('contact');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [location]);
+
+  return null;
+}
+
 function App() {
-  return <Home />;
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
+  return (
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path="/web" component={WebProjectsPage} />
+        <Route path="/apps" component={MobileAppsPage} />
+        <Route path="/services" component={Home} />
+        <Route path="/hizmetler" component={Home} />
+        <Route path="/career" component={Home} />
+        <Route path="/kariyer" component={Home} />
+        <Route path="/contact" component={Home} />
+        <Route path="/iletisim" component={Home} />
+        <Route path="/" component={Home} />
+        <Route component={Home} />
+      </Switch>
+    </>
+  );
 }
 
 export default App;

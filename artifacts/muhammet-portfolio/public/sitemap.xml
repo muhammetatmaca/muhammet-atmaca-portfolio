@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Ana Sayfa (Overview & Hero Portfolio) -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/og-image.png</image:loc>
+      <image:title>Muhammet Atmaca — Kıdemli Mobil ve Web Yazılım Mühendisi Portfolyosu</image:title>
+      <image:caption>50+ mobil uygulama, React Native, Flutter ve Next.js uzmanlığı</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 50+ Mobil Uygulama Dizini & Google Images Dizini -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/apps</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/apps/teleflow-prompter/icon.webp</image:loc>
+      <image:title>TeleFlow Prompter — Akıllı Kayan Yazı ve Video Çekim Uygulaması</image:title>
+      <image:caption>Muhammet Atmaca tarafından geliştirilen iOS &amp; Android mobil prompter uygulaması</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/apps/geode-cutter-3d/icon.webp</image:loc>
+      <image:title>Geode Cutter 3D — Fizik Tabanlı Kristal Kesme Simülasyonu</image:title>
+      <image:caption>Haptik geri bildirimli 3D mobil oyun deneyimi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/apps/virelon-wifi/icon.webp</image:loc>
+      <image:title>Virelon WiFi — Ağ Analizi ve Hız Testi Aracı</image:title>
+      <image:caption>Yerel ağ cihaz keşfi ve ping analiz uygulaması</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/apps/aura-weather-widget/icon.webp</image:loc>
+      <image:title>Aura Weather — Canlı Hava Durumu &amp; Widget</image:title>
+      <image:caption>iOS WidgetKit ve animasyonlu hava tahmin aracı</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/apps/toplualarm/icon.webp</image:loc>
+      <image:title>TopluAlarm — Akıllı Vardiya ve Çoklu Alarm Yöneticisi</image:title>
+      <image:caption>Tek dokunuşla çoklu alarm kurma mobil çözümü</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/apps/tick-shopping/icon.webp</image:loc>
+      <image:title>Tick Shopping — Ortak Paylaşımlı Alışveriş Listesi</image:title>
+      <image:caption>Gerçek zamanlı senkronize market listesi uygulaması</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/apps/tempoeat/icon.webp</image:loc>
+      <image:title>TempoEat — Aralıklı Oruç ve Beslenme Takipçisi</image:title>
+      <image:caption>Mobil sağlık ve yaşam tarzı takip uygulaması</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/apps/truelevel/icon.webp</image:loc>
+      <image:title>TrueLevel — Hassas Su Terazisi ve Açı Ölçer</image:title>
+      <image:caption>Jiroskop ve ivmeölçer tabanlı profesyonel ölçüm aracı</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Web Sistemleri ve Platformlar Dizini -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/web</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Hizmetler ve Sıkça Sorulan Sorular (Sitelink) -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/services</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Kariyer ve Deneyim (Sitelink) -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/career</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- İletişim ve Fiyat Teklifi (Sitelink) -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/contact</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
