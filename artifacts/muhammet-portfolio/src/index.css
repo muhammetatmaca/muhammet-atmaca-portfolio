@@ -121,8 +121,14 @@
 }
 
 .container-wide {
-  width: min(1180px, calc(100% - 48px));
+  width: min(1360px, calc(100% - 48px));
   margin-inline: auto;
+}
+
+@media (min-width: 1600px) {
+  .container-wide {
+    width: min(1440px, calc(100% - 64px));
+  }
 }
 
 .section-rule { border-top: 1px solid var(--line); }
@@ -132,7 +138,7 @@
   z-index: 30;
   top: 18px;
   left: 50%;
-  width: min(1180px, calc(100% - 32px));
+  width: min(1360px, calc(100% - 32px));
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -144,6 +150,12 @@
   background: rgba(250, 248, 242, .96);
   box-shadow: 0 12px 32px rgba(24, 32, 51, .12), inset 0 1px rgba(255,255,255,.9);
   backdrop-filter: blur(16px);
+}
+
+@media (min-width: 1600px) {
+  .nav-card {
+    width: min(1440px, calc(100% - 48px));
+  }
 }
 
 .wordmark {
