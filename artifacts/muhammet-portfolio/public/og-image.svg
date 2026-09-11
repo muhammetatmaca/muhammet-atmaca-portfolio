@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap');
+      .title { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; font-size: 64px; fill: #182033; letter-spacing: -0.04em; }
+      .role { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 600; font-size: 32px; fill: #194bdf; }
+      .desc { font-family: 'DM Mono', monospace; font-size: 21px; fill: #182033; opacity: 0.85; }
+      .badge-text { font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; fill: #ffffff; }
+      .stat-val { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; font-size: 40px; fill: #182033; }
+      .stat-lbl { font-family: 'DM Mono', monospace; font-size: 13px; fill: #182033; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="630" fill="#f4f0e6"/>
+
+  <!-- Brutalist Outer Shadow Frame -->
+  <rect x="36" y="36" width="1128" height="558" fill="none" stroke="#182033" stroke-width="4" rx="20"/>
+  <rect x="42" y="42" width="1116" height="546" fill="#ffffff" rx="16"/>
+
+  <!-- Top Cobalt Decorative Band -->
+  <path d="M 42 58 Q 42 42 58 42 L 1142 42 Q 1158 42 1158 58 L 1158 64 L 42 64 Z" fill="#194bdf"/>
+
+  <!-- Badges -->
+  <g transform="translate(80, 96)">
+    <rect x="0" y="0" width="230" height="34" rx="7" fill="#194bdf"/>
+    <text x="14" y="22" class="badge-text">MOBİL YAZILIM MÜHENDİSİ</text>
+
+    <rect x="246" y="0" width="180" height="34" rx="7" fill="#d4e86e" stroke="#182033" stroke-width="2"/>
+    <text x="260" y="22" class="badge-text" fill="#182033" style="fill: #182033;">SAMSUN / UZAKTAN</text>
+  </g>
+
+  <!-- Main Title & Role -->
+  <text x="80" y="200" class="title">Muhammet Atmaca</text>
+  <text x="80" y="248" class="role">Kıdemli Mobil &amp; Full-Stack Yazılım Mühendisi</text>
+
+  <!-- Summary Description -->
+  <text x="80" y="316" class="desc">React Native · Flutter · Swift · Kotlin · Next.js · ASP.NET Core</text>
+  <text x="80" y="350" class="desc">50'den Fazla Canlı Mobil Uygulama &amp; Kurumsal Web Platformları</text>
+
+  <!-- Stats Grid Cards -->
+  <g transform="translate(80, 410)">
+    <!-- Stat 1 -->
+    <rect x="0" y="0" width="310" height="110" rx="12" fill="#f4f0e6" stroke="#182033" stroke-width="2"/>
+    <text x="24" y="52" class="stat-val">50+</text>
+    <text x="24" y="84" class="stat-lbl">Canlı Mobil Uygulama</text>
+
+    <!-- Stat 2 -->
+    <rect x="340" y="0" width="310" height="110" rx="12" fill="#f4f0e6" stroke="#182033" stroke-width="2"/>
+    <text x="364" y="52" class="stat-val">7+ Yıl</text>
+    <text x="364" y="84" class="stat-lbl">Mühendislik Deneyimi</text>
+
+    <!-- Stat 3 -->
+    <rect x="680" y="0" width="360" height="110" rx="12" fill="#182033"/>
+    <text x="704" y="52" class="stat-val" fill="#ffffff" style="fill: #ffffff;">App &amp; Play Store</text>
+    <text x="704" y="84" class="stat-lbl" fill="#d4e86e" style="fill: #d4e86e;">%100 Onaylı Canlıya Alma</text>
+  </g>
+</svg>

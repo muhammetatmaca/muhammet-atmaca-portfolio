@@ -1,21 +1,365 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Muhammet Atmaca — Portfolio</title>
-    <meta name="description" content="Muhammet Atmaca — Portfolio — built on Replit. Update this description to reflect the app." />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Muhammet Atmaca — Portfolio" />
-    <meta property="og:description" content="Muhammet Atmaca — Portfolio — built on Replit. Update this description to reflect the app." />
-    <meta property="og:type" content="website" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Muhammet Atmaca — Mobil Uygulama &amp; Web Geliştirme | Türkiye Geneli (81 İl) &amp; Samsun</title>
+    <meta name="title" content="Muhammet Atmaca — Mobil Uygulama &amp; Web Geliştirme | Türkiye Geneli (81 İl) &amp; Samsun" />
+    <meta name="description" content="Mobil uygulama veya web sitesi yaptırmak isteyen şirket ve girişimciler için React Native, Flutter ve Next.js uzmanı Muhammet Atmaca. İstanbul, Ankara, İzmir, Bursa, Antalya, Samsun ve tüm Türkiye'ye %100 uzaktan anahtar teslim yazılım." />
+    <meta name="keywords" content="Muhammet Atmaca, mobil uygulama yaptırmak istiyorum, web sitesi yaptırmak istiyorum, react native geliştirici türkiye, istanbul mobil uygulama, ankara mobil yazılımcı, izmir react native, bursa mobil uygulama, antalya yazılım geliştirme, freelance mobil yazılımcı, ios uygulama geliştirme, android uygulama geliştirici, samsun mobil uygulama, türkiye geneli mobil yazılım, 81 il yazılım, 50+ mobil uygulama" />
+    <meta name="author" content="Muhammet Atmaca" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#f4f0e6" />
+    <link rel="canonical" href="https://muhammetatmaca.com.tr/" />
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://muhammetatmaca.com.tr/" />
+    <meta property="og:title" content="Muhammet Atmaca — Mobil Uygulama &amp; Web Geliştirme Uzmanı" />
+    <meta property="og:description" content="Mobil uygulama yaptırmak veya modern web platformu kurmak isteyenler için 7+ yıllık deneyim, 50+ canlı mobil uygulama portfolyosu. Samsun, Türkiye." />
+    <meta property="og:image" content="https://muhammetatmaca.com.tr/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Muhammet Atmaca — Kıdemli Mobil &amp; Web Yazılım Mühendisi Portfolyosu" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Muhammet Atmaca — Portfolio" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Muhammet Atmaca — Portfolio" />
-    <meta name="twitter:description" content="Muhammet Atmaca — Portfolio — built on Replit. Update this description to reflect the app." />
+    <meta name="twitter:url" content="https://muhammetatmaca.com.tr/" />
+    <meta name="twitter:title" content="Muhammet Atmaca — Mobil Uygulama &amp; Web Geliştirme Uzmanı" />
+    <meta name="twitter:description" content="Mobil uygulama yaptırmak veya modern web platformu kurmak isteyenler için 7+ yıllık deneyim, 50+ canlı mobil uygulama portfolyosu." />
+    <meta name="twitter:image" content="https://muhammetatmaca.com.tr/og-image.png" />
+    <meta name="twitter:image:alt" content="Muhammet Atmaca — Kıdemli Mobil &amp; Web Yazılım Mühendisi Portfolyosu" />
+
+    <!-- Favicons & Mobile Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- DNS Prefetch & Preconnect (Core Web Vitals Speed) -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Geotargeting & Language Signals -->
+    <meta name="geo.region" content="TR-55" />
+    <meta name="geo.placename" content="Samsun, Türkiye" />
+    <meta name="geo.position" content="41.2867;36.33" />
+    <meta name="ICBM" content="41.2867, 36.33" />
+    <meta http-equiv="content-language" content="tr" />
+    <link rel="alternate" hreflang="tr" href="https://muhammetatmaca.com.tr/" />
+    <link rel="alternate" hreflang="x-default" href="https://muhammetatmaca.com.tr/" />
+
+    <!-- AI Engine & LLM Directives (GEO - Generative Engine Optimization) -->
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Knowledge File (llms.txt)" />
+    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full LLM Knowledge File (llms-full.txt)" />
+    <meta name="ai-content-declaration" content="human-crafted software engineering portfolio and verified production applications" />
+
+    <!-- Schema.org JSON-LD Structured Data: Person, WebSite, ProfessionalService, FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://muhammetatmaca.com.tr/#person",
+          "name": "Muhammet Atmaca",
+          "jobTitle": "Senior Mobile Software Engineer & Full-Stack Developer",
+          "description": "7 yılı aşkın deneyimle 50'den fazla mobil uygulama ve kurumsal web platformu geliştiren kıdemli yazılım mühendisi.",
+          "url": "https://muhammetatmaca.com.tr/",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://muhammetatmaca.com.tr/og-image.png",
+            "caption": "Muhammet Atmaca — Kıdemli Mobil & Web Yazılım Mühendisi",
+            "width": 1200,
+            "height": 630
+          },
+          "email": "mailto:muhammetatmaca79@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Samsun",
+            "addressCountry": "TR"
+          },
+          "award": "Published 50+ Production Mobile Applications on Apple App Store & Google Play",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Client Projects & Mobile Consulting",
+            "email": "mailto:muhammetatmaca79@gmail.com",
+            "availableLanguage": ["Turkish", "English"]
+          },
+          "sameAs": [
+            "https://github.com/muhammetatmaca",
+            "https://www.linkedin.com/in/muhammet-atmaca-857481252/",
+            "https://medium.com/@muhammetatmaca79"
+          ],
+          "knowsAbout": [
+            { "@type": "Thing", "name": "React Native", "sameAs": "https://en.wikipedia.org/wiki/React_Native" },
+            { "@type": "Thing", "name": "Flutter", "sameAs": "https://en.wikipedia.org/wiki/Flutter_(software)" },
+            { "@type": "Thing", "name": "iOS Software Development", "sameAs": "https://en.wikipedia.org/wiki/IOS" },
+            { "@type": "Thing", "name": "Android App Development", "sameAs": "https://en.wikipedia.org/wiki/Android_software_development" },
+            { "@type": "Thing", "name": "Next.js", "sameAs": "https://en.wikipedia.org/wiki/Next.js" },
+            { "@type": "Thing", "name": "TypeScript", "sameAs": "https://en.wikipedia.org/wiki/TypeScript" },
+            { "@type": "Thing", "name": "ASP.NET Core", "sameAs": "https://en.wikipedia.org/wiki/ASP.NET_Core" },
+            { "@type": "Thing", "name": "Swift", "sameAs": "https://en.wikipedia.org/wiki/Swift_(programming_language)" },
+            { "@type": "Thing", "name": "Kotlin", "sameAs": "https://en.wikipedia.org/wiki/Kotlin_(programming_language)" },
+            { "@type": "Thing", "name": "Software Architecture", "sameAs": "https://en.wikipedia.org/wiki/Software_architecture" }
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://muhammetatmaca.com.tr/#service",
+          "name": "Muhammet Atmaca — Mobil Uygulama & Web Geliştirme",
+          "url": "https://muhammetatmaca.com.tr/",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Samsun",
+            "addressCountry": "TR"
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "Türkiye" },
+            { "@type": "AdministrativeArea", "name": "Türkiye Geneli (81 İl)" },
+            { "@type": "City", "name": "İstanbul" },
+            { "@type": "City", "name": "Ankara" },
+            { "@type": "City", "name": "İzmir" },
+            { "@type": "City", "name": "Bursa" },
+            { "@type": "City", "name": "Antalya" },
+            { "@type": "City", "name": "Samsun" },
+            { "@type": "City", "name": "Kocaeli" },
+            { "@type": "City", "name": "Adana" },
+            { "@type": "City", "name": "Konya" },
+            { "@type": "City", "name": "Gaziantep" },
+            { "@type": "City", "name": "Eskişehir" },
+            { "@type": "City", "name": "Kayseri" },
+            { "@type": "City", "name": "Trabzon" }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Yazılım Hizmetleri",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Mobil Uygulama Geliştirme (iOS & Android)",
+                  "description": "React Native ve Flutter ile sıfırdan anahtar teslim mobil uygulama geliştirme ve App Store / Play Store yükleme hizmeti."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Özel Web Sitesi ve Platform Geliştirme",
+                  "description": "Next.js, ASP.NET Core ve Node.js ile arama motoru uyumlu (SEO), hızlı ve modern kurumsal web platformları."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://muhammetatmaca.com.tr/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Mobil uygulama yaptırmak istiyorum, süreç nasıl işliyor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Süreç 4 aşamadan oluşur: İhtiyaç analizi ve mimari planlama, modern UI/UX tasarımı, React Native veya Flutter ile çift platforma (iOS & Android) eş zamanlı kodlama ve Apple App Store ile Google Play Store hesaplarınıza onaylı yükleme."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mobil uygulama hem iPhone (iOS) hem de Android cihazlarda çalışır mı?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Evet. React Native ve Flutter teknolojilerini kullanarak tek sağlam kod tabanından hem iOS (iPhone) hem Android cihazlarda yerel (native) 60 FPS hızda çalışan ürünler teslim ediyorum."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mobil uygulama ve web sitesi yaptırma fiyatları nasıl belirlenir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Projenin kapsamı, ekran sayısı, entegrasyonlar (ödeme, harita, yapay zeka vb.) ve teslim süresine göre net bir iş planı çıkarılarak sürpriz maliyeti olmayan şeffaf ve sabit bir teklif sunulur."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Web sitesi yaptırmak istiyorum, Google'da üst sıralarda çıkar mı?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Evet. Geliştirdiğim web projeleri Next.js, Schema.org yapısal verileri, OpenGraph ve 100/100 Core Web Vitals performans kriterlerine uygun kodlanır; Google arama sonuçlarında hızla yükselir."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://muhammetatmaca.com.tr/#website",
+          "url": "https://muhammetatmaca.com.tr/",
+          "name": "Muhammet Atmaca — Portfolio",
+          "description": "Mobil ve Web Yazılım Mühendisliği Portfolyosu",
+          "publisher": {
+            "@id": "https://muhammetatmaca.com.tr/#person"
+          },
+          "inLanguage": "tr-TR",
+          "hasPart": [
+            {
+              "@type": "WebPage",
+              "@id": "https://muhammetatmaca.com.tr/apps",
+              "name": "Mobil Uygulamalar (50+)",
+              "description": "React Native ve Flutter ile App Store ve Google Play'de yayınlanan 50'den fazla mobil uygulama kataloğu.",
+              "url": "https://muhammetatmaca.com.tr/apps"
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://muhammetatmaca.com.tr/web",
+              "name": "Web Sistemleri & Platformlar",
+              "description": "Next.js, ASP.NET Core ve Node.js mimarisiyle geliştirilen ölçeklenebilir kurumsal web platformları.",
+              "url": "https://muhammetatmaca.com.tr/web"
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://muhammetatmaca.com.tr/#services",
+              "name": "Hizmetler & Sıkça Sorulan Sorular",
+              "description": "Mobil uygulama ve web sitesi yaptırma süreci, fiyatlandırma, mağaza onayları ve teknik danışmanlık.",
+              "url": "https://muhammetatmaca.com.tr/#services"
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://muhammetatmaca.com.tr/#career",
+              "name": "Kariyer & Deneyim",
+              "description": "7+ yıllık savunma sanayii ve kurumsal yazılım mühendisliği geçmişi ve özgeçmiş (CV).",
+              "url": "https://muhammetatmaca.com.tr/#career"
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://muhammetatmaca.com.tr/#contact",
+              "name": "İletişim & Teklif Alma",
+              "description": "Yeni projeleriniz için ücretsiz ön değerlendirme ve doğrudan mühendis iletişimi.",
+              "url": "https://muhammetatmaca.com.tr/#contact"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://muhammetatmaca.com.tr/#sitelinks",
+          "name": "Öne Çıkan Sayfalar ve Bölümler (Sitelinks)",
+          "itemListElement": [
+            {
+              "@type": "SiteNavigationElement",
+              "position": 1,
+              "name": "Mobil Uygulamalar (50+)",
+              "description": "React Native & Flutter ile App Store ve Google Play'de yayınlanan 50'den fazla mobil uygulama.",
+              "url": "https://muhammetatmaca.com.tr/apps"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 2,
+              "name": "Web Sistemleri & Platformlar",
+              "description": "Next.js, ASP.NET Core ve Node.js ile geliştirilen kurumsal web sistemleri.",
+              "url": "https://muhammetatmaca.com.tr/web"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 3,
+              "name": "Hizmetler & SSS",
+              "description": "Mobil uygulama ve web sitesi yaptırma süreci, fiyatlandırma ve SSS rehberi.",
+              "url": "https://muhammetatmaca.com.tr/#services"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 4,
+              "name": "Kariyer & Deneyim",
+              "description": "7+ yıllık yazılım mühendisliği kariyeri ve PDF formatında özgeçmiş.",
+              "url": "https://muhammetatmaca.com.tr/#career"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 5,
+              "name": "İletişim & Teklif",
+              "description": "Ücretsiz proje analizi, bütçe teklifi ve doğrudan mühendis iletişimi.",
+              "url": "https://muhammetatmaca.com.tr/#contact"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://muhammetatmaca.com.tr/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Ana Sayfa",
+              "item": "https://muhammetatmaca.com.tr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Mobil Uygulamalar",
+              "item": "https://muhammetatmaca.com.tr/apps"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Web Sistemleri",
+              "item": "https://muhammetatmaca.com.tr/web"
+            }
+          ]
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://muhammetatmaca.com.tr/#profilepage",
+          "url": "https://muhammetatmaca.com.tr/",
+          "name": "Muhammet Atmaca — Profil & Portfolyo",
+          "isPartOf": {
+            "@id": "https://muhammetatmaca.com.tr/#website"
+          },
+          "about": {
+            "@id": "https://muhammetatmaca.com.tr/#person"
+          },
+          "mainEntity": {
+            "@id": "https://muhammetatmaca.com.tr/#person"
+          }
+        },
+        {
+          "@type": "MobileApplication",
+          "@id": "https://muhammetatmaca.com.tr/apps#teleflow-prompter",
+          "name": "TeleFlow Prompter",
+          "operatingSystem": "iOS, Android",
+          "applicationCategory": "MultimediaApplication",
+          "description": "Akıllı konuşma metni kaydırma ve kamera önü profesyonel video çekim mobil uygulaması.",
+          "author": {
+            "@id": "https://muhammetatmaca.com.tr/#person"
+          },
+          "image": "https://muhammetatmaca.com.tr/apps/teleflow-prompter/icon.webp",
+          "screenshot": "https://muhammetatmaca.com.tr/apps/teleflow-prompter/screenshot-1.webp",
+          "url": "https://muhammetatmaca.com.tr/apps"
+        },
+        {
+          "@type": "MobileApplication",
+          "@id": "https://muhammetatmaca.com.tr/apps#geode-cutter-3d",
+          "name": "Geode Cutter 3D",
+          "operatingSystem": "iOS, Android",
+          "applicationCategory": "GameApplication",
+          "description": "Fizik tabanlı 3D kristal ve taş kesme simülasyonu mobil oyunu.",
+          "author": {
+            "@id": "https://muhammetatmaca.com.tr/#person"
+          },
+          "image": "https://muhammetatmaca.com.tr/apps/geode-cutter-3d/icon.webp",
+          "screenshot": "https://muhammetatmaca.com.tr/apps/geode-cutter-3d/screenshot-1.webp",
+          "url": "https://muhammetatmaca.com.tr/apps"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

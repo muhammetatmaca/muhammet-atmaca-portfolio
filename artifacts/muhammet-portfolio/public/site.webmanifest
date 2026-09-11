@@ -1,0 +1,17 @@
+{
+  "name": "Muhammet Atmaca — Senior Software Engineer",
+  "short_name": "Muhammet Atmaca",
+  "description": "50'den fazla mobil uygulama ve ölçeklenebilir web sistemleri geliştiren kıdemli yazılım mühendisi portfolyosu.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f0e6",
+  "theme_color": "#182033",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
