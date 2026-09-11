@@ -23,6 +23,7 @@ export function KeycapsScene({
 }: KeycapsSceneProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,6 +34,19 @@ export function KeycapsScene({
     window.addEventListener('resize', checkIsDesktop);
     return () => window.removeEventListener('resize', checkIsDesktop);
   }, []);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.05 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [isDesktop]);
 
   useEffect(() => {
     if (!isDesktop) return;
@@ -74,7 +88,13 @@ export function KeycapsScene({
        * Spline horizontal FOV'u 2x artırır → klavye çok daha küçük/uzak görünür.
        * overflow:hidden kenarları keser, watermark crop için +90px yükseklik.
        */}
-      <div className="keycaps-canvas-wrapper">
+      <div
+        className="keycaps-canvas-wrapper"
+        style={{
+          visibility: isVisible ? 'visible' : 'hidden',
+          pointerEvents: isVisible ? 'auto' : 'none',
+        }}
+      >
         <Suspense fallback={null}>
           <Spline
             scene={sceneUrl}

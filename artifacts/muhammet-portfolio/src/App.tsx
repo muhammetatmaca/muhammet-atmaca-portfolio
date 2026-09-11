@@ -186,7 +186,7 @@ function Home() {
 
           <div className="container-wide hero-grid">
             <div>
-              <Reveal><div className="eyebrow">Mobil & Yazılım Mühendisi / Türkiye Geneli (81 İl) & Samsun</div></Reveal>
+              <Reveal><div className="eyebrow">Mobil & Yazılım Mühendisi / Samsun</div></Reveal>
               <Reveal delay={1}>
                 <h1>Faydalı<br /><em>fikirler.</em><br /><span className="hero-phrase">Özenle hayata</span><br />geçirildi.</h1>
               </Reveal>

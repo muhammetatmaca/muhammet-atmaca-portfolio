@@ -383,11 +383,18 @@
   position: absolute;
   left: 28px;
   bottom: -20px;
-  color: rgba(244,240,230,.88);
-  text-shadow: 0 1px 8px rgba(24,32,51,.45);
-  font: 10px/1.4 var(--app-font-mono);
+  color: #0f172a;
+  font: 11px/1.4 var(--app-font-mono);
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: .06em;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 .scroll-cue {
   position: absolute;

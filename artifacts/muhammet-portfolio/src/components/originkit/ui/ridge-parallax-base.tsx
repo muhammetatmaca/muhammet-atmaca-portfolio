@@ -4,7 +4,7 @@ import * as React from "react"
 import { useEffect, useRef } from "react"
 
 const MAX_LAYERS = 12
-const DPR_CAP = 1.5
+const DPR_CAP = 1.25
 
 const Z_MAX = 5
 
@@ -17,8 +17,8 @@ const FLOOR = -1.28
 const DOT_FULL = 10
 const DOT_PERSP = 0.35
 
-const PER_DENSITY = 260
-const MAX_POINTS = 260000
+const PER_DENSITY = 140
+const MAX_POINTS = 90000
 
 const DRIFT_RATE = 45
 
@@ -958,6 +958,7 @@ function __OriginkitBase_RidgeParallax(
         )
 
         let raf = 0
+        let isVisible = true
 
         let last =
             performance.now()
@@ -965,6 +966,11 @@ function __OriginkitBase_RidgeParallax(
         const frame = (
             now: number
         ) => {
+            if (!isVisible || (typeof document !== 'undefined' && document.hidden)) {
+                raf = 0
+                return
+            }
+
             raf =
                 requestAnimationFrame(
                     frame
@@ -1317,6 +1323,24 @@ function __OriginkitBase_RidgeParallax(
             )
         }
 
+        const io = new IntersectionObserver(([entry]) => {
+            const wasVisible = isVisible
+            isVisible = entry.isIntersecting
+            if (isVisible && !wasVisible && !raf) {
+                last = performance.now()
+                raf = requestAnimationFrame(frame)
+            }
+        }, { threshold: 0.01 })
+        io.observe(host)
+
+        const onVisibilityChange = () => {
+            if (!document.hidden && isVisible && !raf) {
+                last = performance.now()
+                raf = requestAnimationFrame(frame)
+            }
+        }
+        document.addEventListener("visibilitychange", onVisibilityChange)
+
         raf =
             requestAnimationFrame(
                 frame
@@ -1327,6 +1351,8 @@ function __OriginkitBase_RidgeParallax(
                 raf
             )
 
+            io.disconnect()
+            document.removeEventListener("visibilitychange", onVisibilityChange)
             ro.disconnect()
 
             host.removeEventListener(
