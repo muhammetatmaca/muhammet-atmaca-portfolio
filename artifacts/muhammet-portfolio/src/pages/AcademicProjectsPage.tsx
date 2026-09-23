@@ -274,18 +274,11 @@ export function AcademicProjectsPage() {
         {/* 3D Spline Canvas in Background */}
         <AcademicSplineBackdrop />
 
-        {/* Foreground Content Card on Left, leaving Center and Right completely clear for the 3D model */}
+        {/* Foreground Content on Left directly over background (no card container) */}
         <div className="container-wide" style={{ position: 'relative', zIndex: 3, pointerEvents: 'none' }}>
           <div
             style={{
-              maxWidth: '570px',
-              padding: '32px 36px',
-              borderRadius: '20px',
-              background: 'rgba(244, 240, 230, 0.88)',
-              backdropFilter: 'blur(16px)',
-              WebkitBackdropFilter: 'blur(16px)',
-              border: '1px solid rgba(24, 32, 51, 0.12)',
-              boxShadow: '0 16px 40px rgba(24, 32, 51, 0.08)',
+              maxWidth: '600px',
               pointerEvents: 'auto',
             }}
           >
