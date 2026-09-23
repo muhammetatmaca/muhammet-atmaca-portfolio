@@ -23,7 +23,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     no: '01',
     title: 'AI Destekli Otonom Yörünge Yönetimi ve Pasif Kaçınma Sistemi',
     institution: 'Samsun Üniversitesi • İMECE Uydusu Referanslı',
-    highlightBadge: 'Öne Çıkan Araştırma Projesi',
+    highlightBadge: 'Ulusal Havacılık Kongresi Bildirisi',
     tagline: 'LEO ortamında uzay enkazı takibi, Kalman filtresi, SGP4 yörünge mekaniği ve Physics-Informed Bi-LSTM ile yakıtsız çarpışma önleme',
     category: 'Uzay Sistemleri / Fizik Destekli Yapay Zeka',
     technologies: [
@@ -38,7 +38,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
       'Python',
     ],
     description:
-      'Alçak Dünya Yörüngesi’ndeki (LEO) artan uzay enkazı tehdidine karşı, Türkiye’nin yerli gözlem uydusu İMECE referans alınarak geliştirilen otonom yörünge yönetim ve çarpışma önleme sistemi. Geleneksel itki tabanlı ve manuel yöntemlerin aksine; doğal kuvvetleri (Güneş radyasyon basıncı SRP, J2 basıklığı, atmosferik balistik sürtünme B-DRAG) kullanarak yakıt harcamadan (%91.7 pasif başarı) yörünge kaydırma sağlar.',
+      'Ulusal Havacılık ve Uzay Kongresi’nde (UHUK) akademik bildiri olarak yayınlanan bu çalışma; Alçak Dünya Yörüngesi’ndeki (LEO) artan uzay enkazı tehdidine karşı, Türkiye’nin yerli gözlem uydusu İMECE referans alınarak geliştirilen otonom yörünge yönetim ve çarpışma önleme sistemidir. Geleneksel itki tabanlı ve manuel yöntemlerin aksine; doğal kuvvetleri (Güneş radyasyon basıncı SRP, J2 basıklığı, atmosferik balistik sürtünme B-DRAG) kullanarak yakıt harcamadan (%91.7 pasif başarı) yörünge kaydırma sağlar.',
     methodology:
       'SGP4 ve GMAT fizik motoruyla 7 günlük yörünge tahmini, Kalman filtresi ile sensör gürültüsü arındırma ve enerji korunumu kısıtlı (Physics-Informed) Bi-LSTM derin öğrenme sinir ağı ile kapalı döngü otonom karar mimarisi. 4 Davranış Modu: HOLD, G-SURF (Gravity Surfing), B-DRAG (Ballistic Drag) ve acil durum THRUST.',
     results: [
@@ -117,8 +117,8 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     id: 'defense-industry-turkish-llm-assistant',
     no: '04',
     title: 'Türkçe Dil Modeli (LLM) Fine-Tuning & Kurumsal Asistan Platformu',
-    institution: 'Savunma Sanayii / Crudfab AR-GE',
-    highlightBadge: 'Savunma Sanayii AR-GE Projesi',
+    institution: 'T.C. Savunma Sanayii Başkanlığı',
+    highlightBadge: 'Savunma Sanayii Başkanlığı AR-GE Projesi',
     tagline: 'Transformer mimarisi, PyTorch ile Türkçe veri setlerinde LLM ince ayarı (Fine-Tuning), NestJS, FastAPI ve çok aşamalı Docker orkestrasyonu',
     category: 'Büyük Dil Modelleri (LLM) / Full-Stack AI',
     technologies: [
@@ -133,7 +133,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
       'Multi-Stage Docker',
     ],
     description:
-      'Savunma sanayii odaklı AR-GE stajı kapsamında hayata geçirilen; modern Transformer mimarisi temelli, Türkçe konuşma ve teknik doküman anlama kabiliyetine sahip kurumsal akıllı asistan platformu. Veri güvenliğini sağlamak amacıyla tamamen yerel (on-premise) altyapıda çalışacak şekilde tasarlanmıştır.',
+      'T.C. Savunma Sanayii Başkanlığı bünyesinde gerçekleştirilen bu projede; modern Transformer mimarisi temelli, Türkçe konuşma ve teknik doküman anlama kabiliyetine sahip kurumsal akıllı asistan platformu geliştirilmiştir. Veri güvenliğini sağlamak amacıyla tamamen yerel (on-premise) altyapıda çalışacak şekilde tasarlanmıştır.',
     methodology:
       '"Attention Is All You Need" makalesinin teorik matematiksel temelleri (Multi-Head Self-Attention, Positional Encoding, Softmax QK/V); PyTorch ile Türkçe veri seti üzerinde AdamW optimizasyonuyla LLM Fine-Tuning; NestJS mikroservis mimarisi, PostgreSQL/Prisma veritabanı, RBAC rol tabanlı yetkilendirme ve çok aşamalı Dockerfile orkestrasyonu.',
     results: [
@@ -229,33 +229,61 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     cardBg: '#eef1f6',
   },
   {
-    id: 'social-network-seismic-deep-learning',
+    id: 'social-network-seismic-wave-propagation',
     no: '08',
-    title: 'Sismik Dalgaların Sosyal Ağ Yayılım Analizi & Derin Sinir Ağları ile Afet Risk Tahmini (TravelGuard AI)',
-    institution: 'Yapay Zeka ve Karmaşık Ağ Dinamikleri Araştırması',
-    tagline: 'Doğal afet ve sismik hareketlerin sosyal ağlardaki bilgi dalgası yayılımı analizi ve TensorFlow sinir ağları ile dinamik risk tahmini',
-    category: 'Yapay Zeka / Sosyal Ağ Analizi & Doğal Afet',
+    title: 'Sismik Dalgaların Sosyal Ağ Yayılım Analizi',
+    institution: 'Akademik Ağ Bilimi & Karmaşık Sistemler Araştırması',
+    highlightBadge: 'Sosyal Ağ & Sismik Yayılım Araştırması',
+    tagline: 'Deprem ve sismik hareketlerin sosyal iletişim ağlarındaki bilgi dalgası yayılımı, panik dinamikleri ve ağ topolojisinin modellenmesi',
+    category: 'Sosyal Ağ Analizi (SNA) / Bilgi Yayılımı',
+    technologies: [
+      'Sosyal Ağ Analizi (SNA)',
+      'Graf Teorisi',
+      'NetworkX',
+      'Sismik Dalga Veri Kümeleri',
+      'Python',
+      'Merkezilik Metrikleri (Betweenness/Closeness)',
+      'Topolojik Modelleme',
+      'Zaman Serisi Korelasyonu',
+    ],
+    description:
+      'Deprem ve büyük sismik sarsıntılar anında sosyal medya ve haberleşme ağlarında oluşan bilgi dalgalanmalarını, panik yayılma dinamiklerini ve veri anomalilerini inceleyen akademik ağ bilimi çalışması. Sismik dalgaların fiziksel yayılımı ile sosyal ağ düğümlerindeki bilgi akış hızı arasındaki ilişkiyi matematiksel modellerle ortaya koyar.',
+    methodology:
+      'Graf teorisi ve karmaşık ağ analizi metotları; sismik dalga kayıtları ile sosyal ağ etkileşim zaman damgalarının korelasyonu; derece, arasındalık ve yakınlık merkezilik metrikleri ile kritik bilgi düğümlerinin ve bilgi tıkanma noktalarının tespiti.',
+    results: [
+      'Sismik şok dalgalarının sosyal ağ düğümlerindeki yayılma hızının ve anomali tepe noktalarının matematiksel tespiti',
+      'Afet anlarında dezenformasyon ve panik yayılımını sınırlayabilecek kritik düğüm hiyerarşisinin modellenmesi',
+    ],
+    year: '2024',
+    cardBg: '#fbf0e8',
+  },
+  {
+    id: 'travelguard-ai-deep-learning-disaster-risk',
+    no: '09',
+    title: 'Derin Sinir Ağları ile Afet ve Kriz Risk Tahmini (TravelGuard AI)',
+    institution: 'Yapay Zeka ve Doğal Afet Modelleme Projesi',
+    highlightBadge: 'Derin Öğrenme / Çok Boyutlu Risk Tahmini',
+    tagline: 'Küresel afet, terör ve kriz veri tabanlarını derin sinir ağları ile analiz ederek anlık risk skorlaması ve alternatif güvenli rota oluşturan yapay zeka platformu',
+    category: 'Derin Öğrenme / Risk Modelleme',
     technologies: [
       'TensorFlow / Keras',
       'Derin Sinir Ağları (DNN)',
-      'Sosyal Ağ Analizi (SNA)',
-      'Sismik Dalga Veri Kümeleri',
       'Scikit-Learn',
       'Random Forest & Gradient Boosting',
+      'GTD & EM-DAT Veri Setleri',
       'Python',
       'Streamlit',
     ],
     description:
-      'Deprem ve sismik sarsıntı anlarında sosyal medya ve iletişim ağlarında oluşan bilgi dalgalanmalarını, panik yayılımını ve veri anomalilerini inceleyen; küresel afet ve kriz veritabanlarını derin sinir ağları ile işleyerek gerçek zamanlı risk skorlaması ve alternatif güvenli rota oluşturan yapay zeka sistemi.',
+      'Küresel terörizm, doğal afet ve sismik kriz veritabanlarını derin sinir ağları ile işleyerek seyahat rotalarındaki ve hedef lokasyonlardaki anlık risk faktörlerini 0-100 ölçeğinde tahmin eden ve kriz bölgelerini bypass eden otonom rota öneri motoru.',
     methodology:
-      'Graf teorisi ve sismik dalga yayılım modellemesi; GTD, EM-DAT ve sismik afet veri tabanlarından beslenen özellik mühendisliği (feature engineering); TensorFlow regresyon sinir ağı ile 0-100 arası risk skoru tahmini; kriz bölgelerini bypass eden dinamik kaçınma rotaları.',
+      'GTD, EM-DAT ve küresel afet veri tabanlarından beslenen özellik mühendisliği (feature engineering); TensorFlow regresyon sinir ağı ile dinamik risk skoru tahmini; riskli bölgeleri bypass eden güvenli koridor algoritması.',
     results: [
-      'Sismik şok dalgalarının sosyal ağ düğümlerindeki yayılma hızının ve anomali tepe noktalarının matematiksel tespiti',
       'TravelGuard AI ile kriz ve afet bölgelerindeki risk seviyesini yüksek doğrulukla sınıflandırma',
-      'Açık kaynak araştırma deposu ve interaktif simülasyon paneli',
+      'Açık kaynak araştırma deposu ve canlı simülasyon paneli',
     ],
     githubUrl: 'https://github.com/muhammetatmaca/Derin_Sinir_Aglari',
     year: '2024',
-    cardBg: '#fbf0e8',
+    cardBg: '#eef3fb',
   },
 ];

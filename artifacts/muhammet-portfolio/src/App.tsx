@@ -304,7 +304,7 @@ function Home() {
               <span className="list-no">02</span><span className="list-title">Mobil uygulamalar dizini</span><span className="list-meta">50+ React Native uygulaması</span><MoveUpRight size={16} />
             </Link>
             <Link href="/academic" className="project-list-item" data-testid="link-academic-quick">
-              <span className="list-no">03</span><span className="list-title">Akademik & AR-GE dizini</span><span className="list-meta">8 bilimsel araştırma ve 3D sahne</span><MoveUpRight size={16} />
+              <span className="list-no">03</span><span className="list-title">Akademik & AR-GE dizini</span><span className="list-meta">9 bilimsel araştırma ve 3D sahne</span><MoveUpRight size={16} />
             </Link>
             <a href="#career" className="project-list-item" data-testid="link-project-career-quick">
               <span className="list-no">04</span><span className="list-title">Kariyer & VirelonSoft</span><span className="list-meta">7+ yıllık deneyim</span><MoveUpRight size={16} />

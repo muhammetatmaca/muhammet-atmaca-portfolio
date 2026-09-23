@@ -1716,4 +1716,23 @@ spline-viewer::part(watermark) {
   }
 }
 
+/* Spline 3D Watermark and Branding Hide */
+#spline-watermark,
+[id*="spline-watermark"],
+[class*="spline-watermark"],
+a[href*="spline.design"],
+a[title*="Spline"],
+header a[href*="spline"],
+.spline-watermark {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
 
