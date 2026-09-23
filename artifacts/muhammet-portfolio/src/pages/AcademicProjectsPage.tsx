@@ -87,13 +87,14 @@ function AcademicSplineBackdrop() {
 
   return (
     <div
+      className="academic-spline-bg"
       style={{
         position: 'absolute',
         inset: 0,
         width: '100%',
         height: '100%',
         zIndex: 1,
-        pointerEvents: 'auto',
+        pointerEvents: 'none',
       }}
       aria-label="3D Interactive Engineering Model"
     >
@@ -107,6 +108,7 @@ function AcademicSplineBackdrop() {
             justifyContent: 'center',
             background: '#f4f0e6',
             zIndex: 2,
+            pointerEvents: 'none',
           }}
         >
           <div
@@ -151,6 +153,7 @@ function AcademicSplineBackdrop() {
               height: '100%',
               opacity: isLoaded ? 1 : 0,
               transition: 'opacity 0.4s ease',
+              pointerEvents: 'none',
             }}
           />
         </Suspense>
