@@ -122,7 +122,6 @@ export function KeycapsScene({
               };
 
               app.addEventListener('mouseUp', handleKeyNavigation);
-              app.addEventListener('mousePress', handleKeyNavigation);
               app.addEventListener('mouseDown', handleKeyNavigation);
             }}
             style={{

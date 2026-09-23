@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, Suspense, lazy } from 'react';
+import { useState, useMemo, useEffect, Suspense, lazy, Component, type ReactNode } from 'react';
 import { Link } from 'wouter';
 import {
   ArrowDown,
@@ -22,10 +22,92 @@ const Spline = lazy(() => import('@splinetool/react-spline'));
 
 const SPLINE_ACADEMIC_SCENE = 'https://prod.spline.design/mTLP5akvjPGimxjD/scene.splinecode';
 
+class SplineErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
+  state = { hasError: false };
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  componentDidCatch(error: unknown) {
+    console.warn('[Academic 3D Spline notice]:', error);
+  }
+  render() {
+    if (this.state.hasError) return null;
+    return this.props.children;
+  }
+}
+
+function AcademicSplineBackdrop() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkIsDesktop = () => {
+      setIsDesktop(typeof window !== 'undefined' && window.innerWidth > 768);
+    };
+    checkIsDesktop();
+    window.addEventListener('resize', checkIsDesktop);
+    return () => window.removeEventListener('resize', checkIsDesktop);
+  }, []);
+
+  if (!isDesktop) return null;
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 1,
+        pointerEvents: 'auto',
+      }}
+      aria-label="3D Interactive Engineering Model"
+    >
+      {!isLoaded && (
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: '#f4f0e6',
+            zIndex: 2,
+          }}
+        >
+          <div
+            style={{
+              font: '500 12px/1 var(--app-font-mono, monospace)',
+              color: 'rgba(24,32,51,0.5)',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+            }}
+          >
+            3D Model Yükleniyor...
+          </div>
+        </div>
+      )}
+      <SplineErrorBoundary>
+        <Suspense fallback={null}>
+          <Spline
+            scene={SPLINE_ACADEMIC_SCENE}
+            onLoad={() => setIsLoaded(true)}
+            style={{
+              width: '100%',
+              height: '100%',
+              opacity: isLoaded ? 1 : 0,
+              transition: 'opacity 0.4s ease',
+            }}
+          />
+        </Suspense>
+      </SplineErrorBoundary>
+    </div>
+  );
+}
+
 export function AcademicProjectsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDomain, setSelectedDomain] = useState<string>('All');
-  const [isSplineLoaded, setIsSplineLoaded] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -60,29 +142,10 @@ export function AcademicProjectsPage() {
 
   return (
     <div className="portfolio-page" style={{ minHeight: '100vh', background: 'var(--sand)' }}>
-      {/* Hide Spline watermark logo */}
-      <style>{`
-        #spline-watermark,
-        [id*="spline-watermark"],
-        [class*="spline-watermark"],
-        a[href*="spline.design"],
-        a[title*="Spline"],
-        .spline-watermark {
-          display: none !important;
-          opacity: 0 !important;
-          visibility: hidden !important;
-          pointer-events: none !important;
-          width: 0 !important;
-          height: 0 !important;
-          position: absolute !important;
-          left: -9999px !important;
-        }
-      `}</style>
-
       <SEO
         title="Akademik & AR-GE Projeleri — Muhammet Atmaca | Uzay Sistemleri, Edge AI & LLM"
         description="İMECE Uydusu uzay enkazı çarpışma önleme (UHUK bildirisi), LoRaWAN Edge AI bitirme tezi, Cumhurbaşkanlığı Kubernetes/Ceph ve Savunma Sanayii Başkanlığı araştırma projeleri."
-        canonical="https://muhammetatmaca.com.tr/academic"
+        canonicalUrl="https://muhammetatmaca.com.tr/academic"
         keywords={[
           'Akademik Projeler Muhammet Atmaca',
           'İMECE Uydusu Çarpışma Önleme',
@@ -136,55 +199,8 @@ export function AcademicProjectsPage() {
           background: '#f4f0e6',
         }}
       >
-        {/* 3D Spline Canvas in Background (100% Crisp & Vibrant) */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 1,
-            pointerEvents: 'auto',
-          }}
-          aria-label="3D Interactive Engineering Model"
-        >
-          {!isSplineLoaded && (
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: '#f4f0e6',
-                zIndex: 2,
-              }}
-            >
-              <div
-                style={{
-                  font: '500 12px/1 var(--app-font-mono, monospace)',
-                  color: 'rgba(24,32,51,0.5)',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                }}
-              >
-                3D Model Yükleniyor...
-              </div>
-            </div>
-          )}
-          <Suspense fallback={null}>
-            <Spline
-              scene={SPLINE_ACADEMIC_SCENE}
-              onLoad={() => setIsSplineLoaded(true)}
-              style={{
-                width: '100%',
-                height: '100%',
-                opacity: isSplineLoaded ? 1 : 0,
-                transition: 'opacity 0.4s ease',
-              }}
-            />
-          </Suspense>
-        </div>
+        {/* 3D Spline Canvas in Background */}
+        <AcademicSplineBackdrop />
 
         {/* Foreground Content Card on Left, leaving Center and Right completely clear for the 3D model */}
         <div className="container-wide" style={{ position: 'relative', zIndex: 3, pointerEvents: 'none' }}>
