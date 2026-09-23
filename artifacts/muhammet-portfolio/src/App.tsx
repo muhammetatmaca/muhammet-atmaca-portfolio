@@ -20,6 +20,7 @@ import { KeycapsScene } from './components/KeycapsScene';
 import RidgeParallax from './components/originkit/ui/ridge-parallax-base';
 import { MobileAppsPage } from './pages/MobileAppsPage';
 import { WebProjectsPage } from './pages/WebProjectsPage';
+import { AcademicProjectsPage } from './pages/AcademicProjectsPage';
 import { WEB_PROJECTS, CAREER_EXPERIENCES, EDUCATION_LIST, CV_METADATA } from './data/careerAndWeb';
 import { MOBILE_APPS } from './data/mobileApps';
 import { ACADEMIC_PROJECTS } from './data/academicProjects';
@@ -117,6 +118,7 @@ function Home() {
           <a href="#services" className="nav-link" data-testid="link-services">Hizmetler & SSS</a>
           <Link href="/web" className="nav-link" data-testid="link-nav-web">Web Sistemleri</Link>
           <Link href="/apps" className="nav-link" data-testid="link-nav-apps">Mobil Uygulamalar</Link>
+          <Link href="/academic" className="nav-link" data-testid="link-nav-academic">Akademik & AR-GE</Link>
           <a href="#career" className="nav-link" data-testid="link-career">Deneyim</a>
           <a href="#approach" className="nav-link" data-testid="link-approach">Yaklaşım</a>
           <a href="#about" className="nav-link" data-testid="link-about">Hakkımda</a>
@@ -150,6 +152,7 @@ function Home() {
           <a href="#services" className="nav-link" onClick={closeMenu} data-testid="link-mobile-services">Hizmetler & SSS</a>
           <Link href="/web" className="nav-link" onClick={closeMenu} data-testid="link-mobile-web">Web Sistemleri</Link>
           <Link href="/apps" className="nav-link" onClick={closeMenu} data-testid="link-mobile-apps">Mobil Uygulamalar</Link>
+          <Link href="/academic" className="nav-link" onClick={closeMenu} data-testid="link-mobile-academic">Akademik & AR-GE</Link>
           <a href="#career" className="nav-link" onClick={closeMenu} data-testid="link-mobile-career">Deneyim</a>
           <a href="#approach" className="nav-link" onClick={closeMenu} data-testid="link-mobile-approach">Yaklaşım</a>
           <a href="#about" className="nav-link" onClick={closeMenu} data-testid="link-mobile-about">Hakkımda</a>
@@ -495,14 +498,24 @@ function Home() {
         {(workFilter === 'all' || workFilter === 'academic') && (
           <div className="academic-projects-stack" style={{ marginTop: workFilter === 'academic' ? '0' : '48px' }}>
             <Reveal>
-              <div style={{ marginBottom: '24px' }}>
-                <span className="eyebrow">Akademik & Yapay Zeka AR-GE</span>
-                <h3 style={{ font: '600 24px/1.2 var(--font-display)', color: 'var(--ink)', marginTop: '6px' }}>
-                  YOLO, ResNet & Bilgisayarlı Görü Projeleri
-                </h3>
-                <p style={{ color: 'rgba(24, 32, 51, 0.7)', fontSize: '13px', marginTop: '4px' }}>
-                  Derin öğrenme mimarileri, nesne tespiti ve akademik araştırma çalışmaları.
-                </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', gap: '16px', marginBottom: '24px' }}>
+                <div>
+                  <span className="eyebrow">Akademik & Yapay Zeka AR-GE</span>
+                  <h3 style={{ font: '600 24px/1.2 var(--font-display)', color: 'var(--ink)', marginTop: '6px' }}>
+                    YOLO, ResNet & Bilgisayarlı Görü Projeleri
+                  </h3>
+                  <p style={{ color: 'rgba(24, 32, 51, 0.7)', fontSize: '13px', marginTop: '4px' }}>
+                    Uzay sistemleri, LEO yörünge mekaniği, Edge AI, derin öğrenme ve akademik araştırma çalışmaları.
+                  </p>
+                </div>
+                <Link
+                  href="/academic"
+                  className="button-primary"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 18px', fontSize: '13px' }}
+                  data-testid="button-open-academic-page"
+                >
+                  3D Modelli Akademik Sayfayı Aç (8 Proje) <ArrowUpRight size={14} />
+                </Link>
               </div>
             </Reveal>
 
@@ -514,7 +527,31 @@ function Home() {
                       <span className="project-tag">{academic.no} — {academic.category}</span>
                       <span className="project-year">{academic.year}</span>
                     </div>
+
+                    {academic.highlightBadge && (
+                      <div style={{ marginBottom: '10px' }}>
+                        <span
+                          style={{
+                            display: 'inline-block',
+                            fontSize: '11px',
+                            fontWeight: 700,
+                            padding: '3px 9px',
+                            borderRadius: '999px',
+                            background: 'rgba(31, 74, 219, 0.12)',
+                            color: 'var(--cobalt)',
+                          }}
+                        >
+                          {academic.highlightBadge}
+                        </span>
+                      </div>
+                    )}
+
                     <h3>{academic.title}</h3>
+                    {academic.institution && (
+                      <div style={{ fontSize: '12px', fontWeight: 600, color: 'rgba(24, 32, 51, 0.65)', marginBottom: '8px' }}>
+                        🏛️ {academic.institution}
+                      </div>
+                    )}
                     <p style={{ fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>{academic.tagline}</p>
                     <p>{academic.description}</p>
 
@@ -557,17 +594,39 @@ function Home() {
 
                     <div className="project-graphic"><span /></div>
 
-                    <div
-                      style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '6px',
-                        fontSize: '12px',
-                        fontWeight: 600,
-                        color: 'var(--cobalt)',
-                      }}
-                    >
-                      <span>🔬 Aktif AR-GE & Model Eğitimi</span>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', marginTop: '12px' }}>
+                      <div
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          fontSize: '12px',
+                          fontWeight: 600,
+                          color: 'var(--cobalt)',
+                        }}
+                      >
+                        <span>🔬 Aktif AR-GE & Model Eğitimi</span>
+                      </div>
+                      <div style={{ display: 'inline-flex', gap: '10px', alignItems: 'center' }}>
+                        {academic.githubUrl && (
+                          <a
+                            href={academic.githubUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="project-link"
+                            style={{ margin: 0 }}
+                          >
+                            GitHub <ArrowUpRight size={13} />
+                          </a>
+                        )}
+                        <Link
+                          href="/academic"
+                          className="project-link"
+                          style={{ margin: 0, color: 'var(--ink)' }}
+                        >
+                          Tüm Detaylar <MoveUpRight size={13} />
+                        </Link>
+                      </div>
                     </div>
                   </article>
                 </Reveal>
@@ -1104,6 +1163,8 @@ function App() {
     <>
       <ScrollToTop />
       <Switch>
+        <Route path="/academic" component={AcademicProjectsPage} />
+        <Route path="/akademik" component={AcademicProjectsPage} />
         <Route path="/web" component={WebProjectsPage} />
         <Route path="/apps" component={MobileAppsPage} />
         <Route path="/services" component={Home} />
