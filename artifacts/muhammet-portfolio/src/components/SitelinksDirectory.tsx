@@ -44,6 +44,22 @@ const SITELINKS: SitelinkItem[] = [
     isInternalRoute: false,
   },
   {
+    id: 'sitelink-academic',
+    badge: 'Akademik & AI',
+    title: 'Akademik & Yapay Zeka AR-GE',
+    description: 'YOLO, ResNet, bilgisayarlı görü ve derin öğrenme modelleri üzerine akademik araştırma projeleri.',
+    href: '/#work',
+    isInternalRoute: false,
+  },
+  {
+    id: 'sitelink-virelonsoft',
+    badge: 'Google İşletme',
+    title: 'VirelonSoft Yazılım Stüdyosu',
+    description: 'Google Haritalar ve İşletme Profili doğrulamalı kurumsal yazılım stüdyosu ve şirket sayfası.',
+    href: 'https://share.google/LeVvOPDHGCxM1biap',
+    isInternalRoute: false,
+  },
+  {
     id: 'sitelink-contact',
     badge: 'İletişim',
     title: 'İletişim & Proje Teklifi',
