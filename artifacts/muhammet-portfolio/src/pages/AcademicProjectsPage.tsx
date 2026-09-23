@@ -50,7 +50,7 @@ export function AcademicProjectsPage() {
         (selectedDomain === 'Space' && proj.category.includes('Uzay')) ||
         (selectedDomain === 'Edge' && proj.category.includes('Edge')) ||
         (selectedDomain === 'Cloud' && proj.category.includes('DevOps')) ||
-        (selectedDomain === 'AI' && (proj.category.includes('LLM') || proj.category.includes('Yapay Zeka'))) ||
+        (selectedDomain === 'AI' && (proj.category.includes('LLM') || proj.category.includes('Derin Öğrenme') || proj.category.includes('Yapay Zeka'))) ||
         (selectedDomain === 'Health' && proj.category.includes('Biyomedikal')) ||
         (selectedDomain === 'Network' && (proj.category.includes('Ağ') || proj.category.includes('İstatistik')));
 
@@ -60,20 +60,40 @@ export function AcademicProjectsPage() {
 
   return (
     <div className="portfolio-page" style={{ minHeight: '100vh', background: 'var(--sand)' }}>
+      {/* Hide Spline watermark logo */}
+      <style>{`
+        #spline-watermark,
+        [id*="spline-watermark"],
+        [class*="spline-watermark"],
+        a[href*="spline.design"],
+        a[title*="Spline"],
+        .spline-watermark {
+          display: none !important;
+          opacity: 0 !important;
+          visibility: hidden !important;
+          pointer-events: none !important;
+          width: 0 !important;
+          height: 0 !important;
+          position: absolute !important;
+          left: -9999px !important;
+        }
+      `}</style>
+
       <SEO
         title="Akademik & AR-GE Projeleri — Muhammet Atmaca | Uzay Sistemleri, Edge AI & LLM"
-        description="İMECE Uydusu uzay enkazı çarpışma önleme (Bi-LSTM), LoRaWAN Edge AI bitirme tezi, Cumhurbaşkanlığı Kubernetes/Ceph mimarisi ve TÜBİTAK 2209-A araştırma projeleri."
+        description="İMECE Uydusu uzay enkazı çarpışma önleme (UHUK bildirisi), LoRaWAN Edge AI bitirme tezi, Cumhurbaşkanlığı Kubernetes/Ceph ve Savunma Sanayii Başkanlığı araştırma projeleri."
         canonical="https://muhammetatmaca.com.tr/academic"
         keywords={[
           'Akademik Projeler Muhammet Atmaca',
           'İMECE Uydusu Çarpışma Önleme',
+          'Ulusal Havacılık Kongresi Bildirisi',
           'Physics-Informed Bi-LSTM',
           'SGP4 Kalman Filtresi',
           'LoRaWAN Edge AI Bitirme Tezi',
           'Cumhurbaşkanlığı Kubernetes Ceph',
+          'Savunma Sanayii Başkanlığı LLM',
           'TÜBİTAK 2209 Projesi',
           'Yapay Zeka AR-GE',
-          'YOLO ResNet Görüntü İşleme',
         ]}
       />
 
@@ -104,19 +124,19 @@ export function AcademicProjectsPage() {
         </div>
       </nav>
 
-      {/* Hero Header with Spline 3D as Immersive Full Background */}
+      {/* Hero Header with Spline 3D as Crisp, Vibrant, Interactive Full Background */}
       <header
         style={{
           position: 'relative',
-          minHeight: '560px',
+          minHeight: '580px',
           paddingTop: '130px',
-          paddingBottom: '70px',
+          paddingBottom: '60px',
           overflow: 'hidden',
           borderBottom: '1px solid var(--line)',
           background: '#f4f0e6',
         }}
       >
-        {/* 3D Spline Canvas in Background */}
+        {/* 3D Spline Canvas in Background (100% Crisp & Vibrant) */}
         <div
           style={{
             position: 'absolute',
@@ -159,72 +179,31 @@ export function AcademicProjectsPage() {
               style={{
                 width: '100%',
                 height: '100%',
-                opacity: isSplineLoaded ? 0.95 : 0,
-                transition: 'opacity 0.7s ease',
+                opacity: isSplineLoaded ? 1 : 0,
+                transition: 'opacity 0.4s ease',
               }}
             />
           </Suspense>
         </div>
 
-        {/* Soft Radial & Linear Gradient Overlays to preserve high text legibility */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            zIndex: 2,
-            pointerEvents: 'none',
-            background:
-              'radial-gradient(circle at 24% 45%, rgba(244, 240, 230, 0.94) 0%, rgba(244, 240, 230, 0.82) 42%, rgba(244, 240, 230, 0.35) 75%, transparent 100%)',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '120px',
-            zIndex: 2,
-            pointerEvents: 'none',
-            background: 'linear-gradient(to top, #f4f0e6 15%, transparent 100%)',
-          }}
-        />
-
-        {/* Foreground Content Layer */}
-        <div className="container-wide" style={{ position: 'relative', zIndex: 3 }}>
+        {/* Foreground Content Card on Left, leaving Center and Right completely clear for the 3D model */}
+        <div className="container-wide" style={{ position: 'relative', zIndex: 3, pointerEvents: 'none' }}>
           <div
             style={{
-              maxWidth: '680px',
-              padding: '24px 28px',
+              maxWidth: '570px',
+              padding: '32px 36px',
               borderRadius: '20px',
-              background: 'rgba(244, 240, 230, 0.65)',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(24, 32, 51, 0.08)',
-              boxShadow: '0 12px 36px rgba(24, 32, 51, 0.04)',
+              background: 'rgba(244, 240, 230, 0.88)',
+              backdropFilter: 'blur(16px)',
+              WebkitBackdropFilter: 'blur(16px)',
+              border: '1px solid rgba(24, 32, 51, 0.12)',
+              boxShadow: '0 16px 40px rgba(24, 32, 51, 0.08)',
+              pointerEvents: 'auto',
             }}
           >
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '5px 12px',
-                borderRadius: '6px',
-                background: 'rgba(31, 74, 219, 0.08)',
-                border: '1px solid rgba(31, 74, 219, 0.16)',
-                color: 'var(--cobalt)',
-                font: '600 11px/1 var(--app-font-mono, monospace)',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                marginBottom: '16px',
-              }}
-            >
-              Bilimsel Araştırma ve AR-GE Portfolyosu
-            </div>
-
             <h1
               style={{
-                font: '700 clamp(2.4rem, 4.6vw, 3.8rem)/1.08 var(--font-display)',
+                font: '700 clamp(2.3rem, 4.4vw, 3.6rem)/1.08 var(--font-display)',
                 color: 'var(--ink)',
                 margin: '0 0 16px',
                 letterSpacing: '-0.03em',
@@ -237,19 +216,19 @@ export function AcademicProjectsPage() {
 
             <p
               style={{
-                fontSize: '15.5px',
+                fontSize: '15px',
                 lineHeight: '1.62',
-                color: 'rgba(24, 32, 51, 0.82)',
+                color: 'rgba(24, 32, 51, 0.85)',
                 margin: '0 0 24px',
               }}
             >
-              Alçak Dünya Yörüngesi’nde İMECE uydusu çarpışma önleme mekaniğinden, LoRaWAN uç yapay zeka (Edge AI) bitirme tezine; Cumhurbaşkanlığı Kubernetes kümesinden TÜBİTAK 2209-A araştırmalarına uzanan 8 bilimsel ve mühendislik çalışması.
+              Alçak Dünya Yörüngesi’nde İMECE uydusu çarpışma önleme mekaniğinden (UHUK bildirisi), LoRaWAN uç yapay zeka (Edge AI) bitirme tezine; Cumhurbaşkanlığı Kubernetes kümesinden Savunma Sanayii Başkanlığı ve TÜBİTAK 2209-A araştırmalarına uzanan 9 bilimsel ve mühendislik çalışması.
             </p>
 
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
                 gap: '10px',
               }}
             >
@@ -257,11 +236,11 @@ export function AcademicProjectsPage() {
                 style={{
                   padding: '10px 14px',
                   borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.9)',
+                  background: 'rgba(255, 255, 255, 0.95)',
                   border: '1px solid rgba(24, 32, 51, 0.1)',
                 }}
               >
-                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>8 Proje</div>
+                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>9 Proje</div>
                 <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Tez & Araştırma</div>
               </div>
 
@@ -269,31 +248,31 @@ export function AcademicProjectsPage() {
                 style={{
                   padding: '10px 14px',
                   borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.9)',
+                  background: 'rgba(255, 255, 255, 0.95)',
                   border: '1px solid rgba(24, 32, 51, 0.1)',
                 }}
               >
-                <div style={{ font: '700 18px var(--font-display)', color: 'var(--cobalt)' }}>İMECE</div>
-                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Uydu Yörünge Modeli</div>
+                <div style={{ font: '700 18px var(--font-display)', color: 'var(--cobalt)' }}>UHUK Bildirisi</div>
+                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>İMECE Uydusu</div>
               </div>
 
               <div
                 style={{
                   padding: '10px 14px',
                   borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.9)',
+                  background: 'rgba(255, 255, 255, 0.95)',
                   border: '1px solid rgba(24, 32, 51, 0.1)',
                 }}
               >
-                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>T.C. Kamu</div>
-                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Cumhurbaşkanlığı & TÜBİTAK</div>
+                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>T.C. Kamu & SSB</div>
+                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Savunma & Bulut</div>
               </div>
 
               <div
                 style={{
                   padding: '10px 14px',
                   borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.9)',
+                  background: 'rgba(255, 255, 255, 0.95)',
                   border: '1px solid rgba(24, 32, 51, 0.1)',
                 }}
               >
@@ -301,25 +280,6 @@ export function AcademicProjectsPage() {
                 <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Bi-LSTM Doğruluğu</div>
               </div>
             </div>
-          </div>
-
-          {/* 3D Interaction Notice Badge */}
-          <div
-            style={{
-              position: 'absolute',
-              right: 0,
-              bottom: '-30px',
-              font: '500 11px var(--app-font-mono)',
-              color: 'rgba(24, 32, 51, 0.5)',
-              letterSpacing: '0.04em',
-              background: 'rgba(255,255,255,0.6)',
-              padding: '6px 12px',
-              borderRadius: '6px',
-              border: '1px solid rgba(24,32,51,0.08)',
-              backdropFilter: 'blur(4px)',
-            }}
-          >
-            Arka Plandaki 3D Modeli Döndürmek İçin Sürükleyin
           </div>
         </div>
       </header>
@@ -344,11 +304,11 @@ export function AcademicProjectsPage() {
           {/* Domain Filter Pills - Zero Emojis */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
             {[
-              { id: 'All', label: 'Tüm Projeler (8)' },
+              { id: 'All', label: 'Tüm Projeler (9)' },
               { id: 'Space', label: 'Uzay & Yörünge Mekaniği' },
               { id: 'Edge', label: 'Edge AI & Gömülü Sistemler' },
               { id: 'Cloud', label: 'Kubernetes & Ceph Bulut' },
-              { id: 'AI', label: 'Büyük Dil Modelleri (LLM)' },
+              { id: 'AI', label: 'Büyük Dil Modelleri & Derin Öğrenme' },
               { id: 'Health', label: 'TÜBİTAK 2209-A Araştırma' },
               { id: 'Network', label: 'Ağ & Siber Güvenlik' },
             ].map((tab) => (
@@ -462,7 +422,7 @@ export function AcademicProjectsPage() {
                       borderRadius: '4px',
                     }}
                   >
-                    PROJE {project.no} / 08
+                    PROJE {project.no} / 09
                   </span>
 
                   {project.highlightBadge && (

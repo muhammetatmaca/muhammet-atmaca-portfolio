@@ -47,7 +47,7 @@ const SITELINKS: SitelinkItem[] = [
     id: 'sitelink-academic',
     badge: 'Akademik & 3D',
     title: 'Akademik & AR-GE Projeleri',
-    description: 'İMECE uydusu Bi-LSTM yörünge mekaniği, LoRaWAN Edge AI tezi, Cumhurbaşkanlığı K8s ve 8 bilimsel proje.',
+    description: 'İMECE uydusu Bi-LSTM yörünge mekaniği (UHUK), LoRaWAN Edge AI tezi, SSB ve 9 bilimsel proje.',
     href: '/academic',
     isInternalRoute: true,
   },
