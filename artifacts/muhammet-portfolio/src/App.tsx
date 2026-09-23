@@ -23,7 +23,6 @@ import { WebProjectsPage } from './pages/WebProjectsPage';
 import { AcademicProjectsPage } from './pages/AcademicProjectsPage';
 import { WEB_PROJECTS, CAREER_EXPERIENCES, EDUCATION_LIST, CV_METADATA } from './data/careerAndWeb';
 import { MOBILE_APPS } from './data/mobileApps';
-import { ACADEMIC_PROJECTS } from './data/academicProjects';
 import { SERVICES_LIST, FAQ_LIST } from './data/servicesFaq';
 import { SEO } from './components/SEO';
 import { SitelinksDirectory } from './components/SitelinksDirectory';
@@ -44,7 +43,7 @@ function Reveal({ children, className = '', delay = 0 }: RevealProps) {
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [workFilter, setWorkFilter] = useState<'all' | 'web' | 'mobile' | 'academic'>('all');
+  const [workFilter, setWorkFilter] = useState<'all' | 'web' | 'mobile'>('all');
   const [cvNoticeOpen, setCvNoticeOpen] = useState(false);
   const [openFaqId, setOpenFaqId] = useState<string | null>('faq-1');
 
@@ -234,24 +233,24 @@ function Home() {
           <div className="marquee-track">
             {Array.from({ length: 2 }).map((_, index) => (
               <div className="marquee-item" key={index}>
-                <span>YOLO (v5/v8/v11) · ResNet · Computer Vision</span><i />
-                <span>PyTorch · Deep Learning · CNN Mimarileri</span><i />
+                <span>YOLO (v5 / v8 / v11) · Nesne Tespiti & Görüntü İşleme</span><i />
+                <span>ResNet (18 / 50 / 101) · Evrişimli Sinir Ağları (CNN)</span><i />
+                <span>PyTorch · Deep Learning · Computer Vision</span><i />
+                <span>AI Model Eğitimi & Optimizasyonu · CUDA</span><i />
                 <span>ASP.NET Core · React Native · Flutter</span><i />
-                <span>Görüntü İşleme · Nesne Tespiti · Model Eğitimi</span><i />
                 <span>Node.js · Spring · TypeScript</span><i />
                 <span>Microservices Architecture</span><i />
                 <span>Apache Kafka · RabbitMQ · Redis</span><i />
                 <span>Docker · Kubernetes · DevOps</span><i />
                 <span>AWS · Azure · Google Cloud</span><i />
                 <span>SQL · Cassandra · Entity Framework</span><i />
-                <span>AI / Machine Learning · LLMOps</span><i />
+                <span>LLM Fine-Tuning & Prompt Engineering</span><i />
                 <span>Hive · Spark · Hadoop</span><i />
                 <span>Jenkins · Grafana · Automation</span><i />
-                <span>Ceph · Virtualization · VMware</span><i />
+                <span>Ceph · Virtualization · Linux</span><i />
                 <span>Git · GitHub · Version Control</span><i />
                 <span>REST APIs · System Integration</span><i />
-                <span>Platform Engineering · DevOps</span><i />
-                <span>LoRa · Flight Control Systems</span><i />
+                <span>LoRaWAN · Edge AI · Gömülü Sistemler</span><i />
               </div>
             ))}
           </div>
@@ -292,19 +291,11 @@ function Home() {
             >
               Web platformları ({WEB_PROJECTS.length})
             </button>
-            <button
-              type="button"
-              onClick={() => setWorkFilter('academic')}
-              className={`work-filter-btn ${workFilter === 'academic' ? 'is-active' : ''}`}
-              data-testid="filter-academic-projects"
-            >
-              🔬 Akademik & AR-GE ({ACADEMIC_PROJECTS.length})
-            </button>
           </div>
         </Reveal>
 
         <Reveal className="work-intro" delay={1}>
-          <p className="display-line">En iyi arayüzler ve yapay zeka modelleri dikkat istemez. Her düşünülmüş ayrıntıyla güven kazanır.</p>
+          <p className="display-line">En iyi arayüzler ve mühendislik çözümleri dikkat istemez. Her düşünülmüş ayrıntıyla güven kazanır.</p>
           <div className="project-list">
             <Link href="/web" className="project-list-item" data-testid="link-project-web-catalog">
               <span className="list-no">01</span><span className="list-title">Web sistemleri dizini</span><span className="list-meta">Next.js & Full-stack</span><MoveUpRight size={16} />
@@ -312,15 +303,9 @@ function Home() {
             <Link href="/apps" className="project-list-item" data-testid="link-project-mobile-catalog">
               <span className="list-no">02</span><span className="list-title">Mobil uygulamalar dizini</span><span className="list-meta">50+ React Native uygulaması</span><MoveUpRight size={16} />
             </Link>
-            <button
-              type="button"
-              onClick={() => setWorkFilter('academic')}
-              className="project-list-item"
-              style={{ background: 'none', border: 'none', textAlign: 'left', width: '100%', cursor: 'pointer', font: 'inherit' }}
-              data-testid="link-academic-quick"
-            >
-              <span className="list-no">03</span><span className="list-title">Akademik & Yapay Zeka Projeleri</span><span className="list-meta">YOLO, ResNet & Computer Vision</span><MoveUpRight size={16} />
-            </button>
+            <Link href="/academic" className="project-list-item" data-testid="link-academic-quick">
+              <span className="list-no">03</span><span className="list-title">Akademik & AR-GE dizini</span><span className="list-meta">8 bilimsel araştırma ve 3D sahne</span><MoveUpRight size={16} />
+            </Link>
             <a href="#career" className="project-list-item" data-testid="link-project-career-quick">
               <span className="list-no">04</span><span className="list-title">Kariyer & VirelonSoft</span><span className="list-meta">7+ yıllık deneyim</span><MoveUpRight size={16} />
             </a>
@@ -491,147 +476,6 @@ function Home() {
                 </article>
               </Reveal>
             ))}
-          </div>
-        )}
-
-        {/* Academic & AI Projects (YOLO, ResNet, Computer Vision) */}
-        {(workFilter === 'all' || workFilter === 'academic') && (
-          <div className="academic-projects-stack" style={{ marginTop: workFilter === 'academic' ? '0' : '48px' }}>
-            <Reveal>
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', gap: '16px', marginBottom: '24px' }}>
-                <div>
-                  <span className="eyebrow">Akademik & Yapay Zeka AR-GE</span>
-                  <h3 style={{ font: '600 24px/1.2 var(--font-display)', color: 'var(--ink)', marginTop: '6px' }}>
-                    YOLO, ResNet & Bilgisayarlı Görü Projeleri
-                  </h3>
-                  <p style={{ color: 'rgba(24, 32, 51, 0.7)', fontSize: '13px', marginTop: '4px' }}>
-                    Uzay sistemleri, LEO yörünge mekaniği, Edge AI, derin öğrenme ve akademik araştırma çalışmaları.
-                  </p>
-                </div>
-                <Link
-                  href="/academic"
-                  className="button-primary"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 18px', fontSize: '13px' }}
-                  data-testid="button-open-academic-page"
-                >
-                  3D Modelli Akademik Sayfayı Aç (8 Proje) <ArrowUpRight size={14} />
-                </Link>
-              </div>
-            </Reveal>
-
-            <div className="project-stack">
-              {ACADEMIC_PROJECTS.map((academic, idx) => (
-                <Reveal key={academic.id} delay={idx}>
-                  <article className="project-card" style={{ background: academic.cardBg || '#e9eef7' }}>
-                    <div className="project-topline">
-                      <span className="project-tag">{academic.no} — {academic.category}</span>
-                      <span className="project-year">{academic.year}</span>
-                    </div>
-
-                    {academic.highlightBadge && (
-                      <div style={{ marginBottom: '10px' }}>
-                        <span
-                          style={{
-                            display: 'inline-block',
-                            fontSize: '11px',
-                            fontWeight: 700,
-                            padding: '3px 9px',
-                            borderRadius: '999px',
-                            background: 'rgba(31, 74, 219, 0.12)',
-                            color: 'var(--cobalt)',
-                          }}
-                        >
-                          {academic.highlightBadge}
-                        </span>
-                      </div>
-                    )}
-
-                    <h3>{academic.title}</h3>
-                    {academic.institution && (
-                      <div style={{ fontSize: '12px', fontWeight: 600, color: 'rgba(24, 32, 51, 0.65)', marginBottom: '8px' }}>
-                        🏛️ {academic.institution}
-                      </div>
-                    )}
-                    <p style={{ fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>{academic.tagline}</p>
-                    <p>{academic.description}</p>
-
-                    {academic.methodology && (
-                      <p style={{ fontSize: '13.5px', color: 'rgba(24,32,51,0.85)', marginTop: '12px' }}>
-                        <strong>Metodoloji:</strong> {academic.methodology}
-                      </p>
-                    )}
-
-                    {academic.results && (
-                      <div style={{ marginTop: '12px' }}>
-                        <span style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'rgba(24,32,51,0.7)' }}>
-                          Başarı ve Bulgular:
-                        </span>
-                        <ul style={{ margin: '6px 0 12px', paddingLeft: '18px', fontSize: '13px', color: 'rgba(24,32,51,0.85)' }}>
-                          {academic.results.map((res, rIdx) => (
-                            <li key={rIdx} style={{ marginBottom: '4px' }}>{res}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', margin: '16px 0' }}>
-                      {academic.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          style={{
-                            fontSize: '11px',
-                            fontWeight: 600,
-                            padding: '4px 10px',
-                            borderRadius: '6px',
-                            background: 'rgba(24, 32, 51, 0.08)',
-                            color: 'var(--ink)',
-                          }}
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="project-graphic"><span /></div>
-
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', marginTop: '12px' }}>
-                      <div
-                        style={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                          fontSize: '12px',
-                          fontWeight: 600,
-                          color: 'var(--cobalt)',
-                        }}
-                      >
-                        <span>🔬 Aktif AR-GE & Model Eğitimi</span>
-                      </div>
-                      <div style={{ display: 'inline-flex', gap: '10px', alignItems: 'center' }}>
-                        {academic.githubUrl && (
-                          <a
-                            href={academic.githubUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="project-link"
-                            style={{ margin: 0 }}
-                          >
-                            GitHub <ArrowUpRight size={13} />
-                          </a>
-                        )}
-                        <Link
-                          href="/academic"
-                          className="project-link"
-                          style={{ margin: 0, color: 'var(--ink)' }}
-                        >
-                          Tüm Detaylar <MoveUpRight size={13} />
-                        </Link>
-                      </div>
-                    </div>
-                  </article>
-                </Reveal>
-              ))}
-            </div>
           </div>
         )}
       </section>
@@ -957,7 +801,7 @@ function Home() {
               data-testid="link-virelonsoft-business"
               title="VirelonSoft Google İşletme Profili ve Harita"
             >
-              📍 VirelonSoft (Google İşletme)
+              VirelonSoft (Google İşletme)
             </a>
             <button
               type="button"
