@@ -49,6 +49,40 @@ function AcademicSplineBackdrop() {
     return () => window.removeEventListener('resize', checkIsDesktop);
   }, []);
 
+  // Aggressively eliminate any Spline watermark or branding DOM elements
+  useEffect(() => {
+    const removeWatermarkDOM = () => {
+      const selectors = [
+        '#spline-watermark',
+        '[id*="spline-watermark"]',
+        '[class*="spline-watermark"]',
+        'a[href*="spline.design"]',
+        'a[title*="Spline"]',
+        '#logo',
+        'a#logo',
+        '.logo',
+        'header a[href*="spline"]',
+      ];
+      selectors.forEach((sel) => {
+        document.querySelectorAll(sel).forEach((el) => {
+          if (el instanceof HTMLElement) {
+            el.remove();
+          }
+        });
+      });
+      document.querySelectorAll('spline-viewer').forEach((viewer) => {
+        if (viewer.shadowRoot) {
+          const shadowLogo = viewer.shadowRoot.querySelector('#logo, a[href*="spline"], .logo');
+          if (shadowLogo) shadowLogo.remove();
+        }
+      });
+    };
+
+    removeWatermarkDOM();
+    const interval = setInterval(removeWatermarkDOM, 250);
+    return () => clearInterval(interval);
+  }, []);
+
   if (!isDesktop) return null;
 
   return (
@@ -91,7 +125,27 @@ function AcademicSplineBackdrop() {
         <Suspense fallback={null}>
           <Spline
             scene={SPLINE_ACADEMIC_SCENE}
-            onLoad={() => setIsLoaded(true)}
+            onLoad={(app: any) => {
+              setIsLoaded(true);
+              try {
+                // Disable Spline WebGL postprocessing watermark texture pass
+                const renderer = app?._renderer;
+                if (renderer?.pipeline?.setWatermark) {
+                  renderer.pipeline.setWatermark(null);
+                }
+                if (renderer?.pipeline?.logoOverlayPass) {
+                  renderer.pipeline.logoOverlayPass.enabled = false;
+                }
+                if (renderer?.pipeline) {
+                  renderer.pipeline.watermarkTexture = null;
+                  renderer.pipeline._chainWatermark = null;
+                  renderer.pipeline._effectChainDirty = true;
+                }
+                app?.requestRender?.();
+              } catch {
+                // Silently continue
+              }
+            }}
             style={{
               width: '100%',
               height: '100%',
@@ -101,6 +155,21 @@ function AcademicSplineBackdrop() {
           />
         </Suspense>
       </SplineErrorBoundary>
+
+      {/* Protective corner shield: seamlessly conceals any residual watermark at the bottom-right */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          right: 0,
+          width: '220px',
+          height: '65px',
+          background: 'linear-gradient(to top left, #f4f0e6 65%, rgba(244, 240, 230, 0))',
+          pointerEvents: 'none',
+          zIndex: 4,
+        }}
+        aria-hidden="true"
+      />
     </div>
   );
 }
@@ -235,67 +304,11 @@ export function AcademicProjectsPage() {
                 fontSize: '15px',
                 lineHeight: '1.62',
                 color: 'rgba(24, 32, 51, 0.85)',
-                margin: '0 0 24px',
+                margin: 0,
               }}
             >
               Alçak Dünya Yörüngesi’nde İMECE uydusu çarpışma önleme mekaniğinden (UHUK bildirisi), LoRaWAN uç yapay zeka (Edge AI) bitirme tezine; Cumhurbaşkanlığı Kubernetes kümesinden Savunma Sanayii Başkanlığı ve TÜBİTAK 2209-A araştırmalarına uzanan 9 bilimsel ve mühendislik çalışması.
             </p>
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
-                gap: '10px',
-              }}
-            >
-              <div
-                style={{
-                  padding: '10px 14px',
-                  borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.95)',
-                  border: '1px solid rgba(24, 32, 51, 0.1)',
-                }}
-              >
-                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>9 Proje</div>
-                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Tez & Araştırma</div>
-              </div>
-
-              <div
-                style={{
-                  padding: '10px 14px',
-                  borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.95)',
-                  border: '1px solid rgba(24, 32, 51, 0.1)',
-                }}
-              >
-                <div style={{ font: '700 18px var(--font-display)', color: 'var(--cobalt)' }}>UHUK Bildirisi</div>
-                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>İMECE Uydusu</div>
-              </div>
-
-              <div
-                style={{
-                  padding: '10px 14px',
-                  borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.95)',
-                  border: '1px solid rgba(24, 32, 51, 0.1)',
-                }}
-              >
-                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>T.C. Kamu & SSB</div>
-                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Savunma & Bulut</div>
-              </div>
-
-              <div
-                style={{
-                  padding: '10px 14px',
-                  borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.95)',
-                  border: '1px solid rgba(24, 32, 51, 0.1)',
-                }}
-              >
-                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>%97</div>
-                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Bi-LSTM Doğruluğu</div>
-              </div>
-            </div>
           </div>
         </div>
       </header>

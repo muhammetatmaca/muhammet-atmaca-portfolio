@@ -1723,7 +1723,11 @@ spline-viewer::part(watermark) {
 a[href*="spline.design"],
 a[title*="Spline"],
 header a[href*="spline"],
-.spline-watermark {
+.spline-watermark,
+#logo,
+a#logo,
+spline-viewer::part(watermark),
+[aria-label*="Spline"] {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
