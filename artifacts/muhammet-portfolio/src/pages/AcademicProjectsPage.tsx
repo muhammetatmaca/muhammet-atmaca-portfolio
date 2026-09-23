@@ -12,7 +12,6 @@ import {
   MoveUpRight,
   Search,
   SlidersHorizontal,
-  Sparkles,
   X,
 } from 'lucide-react';
 import { ACADEMIC_PROJECTS, type AcademicProject } from '../data/academicProjects';
@@ -78,17 +77,17 @@ export function AcademicProjectsPage() {
         ]}
       />
 
-      {/* Floating Navigation Card */}
+      {/* Floating Navigation Card matching site editorial standard */}
       <nav className="nav-card" aria-label="Page navigation">
         <Link href="/" className="wordmark" data-testid="link-home-from-academic">
           <span className="wordmark-mark">M</span>
-          <span>Muhammet Atmaca <span className="wordmark-role">/ Academic & R&D</span></span>
+          <span>Muhammet Atmaca <span className="wordmark-role">/ Akademik & AR-GE</span></span>
         </Link>
         <div className="nav-links">
           <Link href="/" className="nav-link flex items-center gap-1">
             <ArrowLeft size={14} /> Ana Sayfa
           </Link>
-          <Link href="/apps" className="nav-link">Mobil Uygulamalar (50+)</Link>
+          <Link href="/apps" className="nav-link">Mobil Uygulamalar</Link>
           <Link href="/web" className="nav-link">Web Sistemleri</Link>
           <a
             href="https://share.google/LeVvOPDHGCxM1biap"
@@ -97,7 +96,7 @@ export function AcademicProjectsPage() {
             className="nav-link"
             title="VirelonSoft Google İşletme Profili"
           >
-            📍 VirelonSoft
+            VirelonSoft
           </a>
           <Link href="/#contact" className="nav-cta">
             İletişim <ArrowUpRight size={14} />
@@ -105,170 +104,228 @@ export function AcademicProjectsPage() {
         </div>
       </nav>
 
-      {/* Hero Header with Interactive 3D Spline Scene */}
+      {/* Hero Header with Spline 3D as Immersive Full Background */}
       <header
         style={{
-          paddingTop: '120px',
-          paddingBottom: '50px',
-          borderBottom: '1px solid var(--line)',
-          background: 'linear-gradient(180deg, rgba(230,238,250,0.6) 0%, rgba(244,240,230,0) 100%)',
           position: 'relative',
+          minHeight: '560px',
+          paddingTop: '130px',
+          paddingBottom: '70px',
           overflow: 'hidden',
+          borderBottom: '1px solid var(--line)',
+          background: '#f4f0e6',
         }}
       >
-        <div className="container-wide">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'minmax(0, 1.2fr) minmax(0, 1fr)',
-              gap: '40px',
-              alignItems: 'center',
-            }}
-            className="academic-hero-grid"
-          >
-            <div>
-              <div
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '6px 14px',
-                  borderRadius: '9999px',
-                  background: 'rgba(31, 74, 219, 0.1)',
-                  border: '1px solid rgba(31, 74, 219, 0.2)',
-                  color: 'var(--cobalt)',
-                  font: '600 12px/1 var(--app-font-mono, monospace)',
-                  letterSpacing: '0.06em',
-                  textTransform: 'uppercase',
-                  marginBottom: '16px',
-                }}
-              >
-                <GraduationCap size={15} /> Bilimsel Araştırma & AR-GE Portfolyosu
-              </div>
-
-              <h1
-                style={{
-                  font: '700 clamp(2.4rem, 5vw, 3.8rem)/1.08 var(--font-display)',
-                  color: 'var(--ink)',
-                  margin: '0 0 16px',
-                  letterSpacing: '-0.03em',
-                }}
-              >
-                Akademik Tezler,<br />
-                <span style={{ color: 'var(--cobalt)' }}>Uzay Yörünge Sistemleri</span><br />
-                ve Derin Öğrenme.
-              </h1>
-
-              <p
-                style={{
-                  fontSize: '16px',
-                  lineHeight: '1.6',
-                  color: 'rgba(24, 32, 51, 0.8)',
-                  maxWidth: '580px',
-                  margin: '0 0 24px',
-                }}
-              >
-                Alçak Dünya Yörüngesi’nde İMECE uydusu çarpışma önleme mekaniğinden, LoRaWAN uç yapay zeka (Edge AI) bitirme tezine; Cumhurbaşkanlığı Kubernetes kümesinden TÜBİTAK 2209-A araştırmalarına kadar hayata geçirdiğim 8 bilimsel ve mühendislik projesi.
-              </p>
-
-              <div
-                style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '12px',
-                  alignItems: 'center',
-                }}
-              >
-                <div
-                  style={{
-                    padding: '8px 16px',
-                    borderRadius: '12px',
-                    background: '#fff',
-                    border: '1px solid rgba(24,32,51,0.12)',
-                    fontSize: '13px',
-                    fontWeight: 600,
-                    color: 'var(--ink)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                  }}
-                >
-                  <Sparkles size={14} style={{ color: 'var(--coral)' }} /> 8 Bilimsel & AR-GE Projesi
-                </div>
-                <div
-                  style={{
-                    padding: '8px 16px',
-                    borderRadius: '12px',
-                    background: '#fff',
-                    border: '1px solid rgba(24,32,51,0.12)',
-                    fontSize: '13px',
-                    fontWeight: 600,
-                    color: 'var(--ink)',
-                  }}
-                >
-                  🛰️ İMECE Uydusu Referanslı
-                </div>
-                <div
-                  style={{
-                    padding: '8px 16px',
-                    borderRadius: '12px',
-                    background: '#fff',
-                    border: '1px solid rgba(24,32,51,0.12)',
-                    fontSize: '13px',
-                    fontWeight: 600,
-                    color: 'var(--ink)',
-                  }}
-                >
-                  🏛️ T.C. Cumhurbaşkanlığı & TÜBİTAK
-                </div>
-              </div>
-            </div>
-
-            {/* 3D Spline Interactive Scene */}
+        {/* 3D Spline Canvas in Background */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: 1,
+            pointerEvents: 'auto',
+          }}
+          aria-label="3D Interactive Engineering Model"
+        >
+          {!isSplineLoaded && (
             <div
               style={{
-                height: '420px',
-                position: 'relative',
-                borderRadius: '24px',
-                overflow: 'hidden',
-                background: 'rgba(255,255,255,0.4)',
-                border: '1px solid rgba(24,32,51,0.12)',
-                boxShadow: '0 20px 40px rgba(24,32,51,0.06)',
+                position: 'absolute',
+                inset: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: '#f4f0e6',
+                zIndex: 2,
               }}
-              className="academic-spline-card"
             >
-              {!isSplineLoaded && (
-                <div
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '12px',
-                  }}
-                >
-                  <div className="w-8 h-8 rounded-full border-2 border-primary border-t-transparent animate-spin" />
-                  <span style={{ font: '12px var(--app-font-mono, monospace)', color: 'rgba(24,32,51,0.6)' }}>
-                    3D Araştırma Sahnesi Yükleniyor...
-                  </span>
-                </div>
-              )}
-              <Suspense fallback={null}>
-                <Spline
-                  scene={SPLINE_ACADEMIC_SCENE}
-                  onLoad={() => setIsSplineLoaded(true)}
-                  style={{ width: '100%', height: '100%', opacity: isSplineLoaded ? 1 : 0, transition: 'opacity 0.6s ease' }}
-                />
-              </Suspense>
+              <div
+                style={{
+                  font: '500 12px/1 var(--app-font-mono, monospace)',
+                  color: 'rgba(24,32,51,0.5)',
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                }}
+              >
+                3D Model Yükleniyor...
+              </div>
             </div>
+          )}
+          <Suspense fallback={null}>
+            <Spline
+              scene={SPLINE_ACADEMIC_SCENE}
+              onLoad={() => setIsSplineLoaded(true)}
+              style={{
+                width: '100%',
+                height: '100%',
+                opacity: isSplineLoaded ? 0.95 : 0,
+                transition: 'opacity 0.7s ease',
+              }}
+            />
+          </Suspense>
+        </div>
+
+        {/* Soft Radial & Linear Gradient Overlays to preserve high text legibility */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            zIndex: 2,
+            pointerEvents: 'none',
+            background:
+              'radial-gradient(circle at 24% 45%, rgba(244, 240, 230, 0.94) 0%, rgba(244, 240, 230, 0.82) 42%, rgba(244, 240, 230, 0.35) 75%, transparent 100%)',
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: '120px',
+            zIndex: 2,
+            pointerEvents: 'none',
+            background: 'linear-gradient(to top, #f4f0e6 15%, transparent 100%)',
+          }}
+        />
+
+        {/* Foreground Content Layer */}
+        <div className="container-wide" style={{ position: 'relative', zIndex: 3 }}>
+          <div
+            style={{
+              maxWidth: '680px',
+              padding: '24px 28px',
+              borderRadius: '20px',
+              background: 'rgba(244, 240, 230, 0.65)',
+              backdropFilter: 'blur(8px)',
+              border: '1px solid rgba(24, 32, 51, 0.08)',
+              boxShadow: '0 12px 36px rgba(24, 32, 51, 0.04)',
+            }}
+          >
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '5px 12px',
+                borderRadius: '6px',
+                background: 'rgba(31, 74, 219, 0.08)',
+                border: '1px solid rgba(31, 74, 219, 0.16)',
+                color: 'var(--cobalt)',
+                font: '600 11px/1 var(--app-font-mono, monospace)',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                marginBottom: '16px',
+              }}
+            >
+              Bilimsel Araştırma ve AR-GE Portfolyosu
+            </div>
+
+            <h1
+              style={{
+                font: '700 clamp(2.4rem, 4.6vw, 3.8rem)/1.08 var(--font-display)',
+                color: 'var(--ink)',
+                margin: '0 0 16px',
+                letterSpacing: '-0.03em',
+              }}
+            >
+              Akademik Tezler,<br />
+              <span style={{ color: 'var(--cobalt)' }}>Uzay Yörünge Sistemleri</span><br />
+              ve Derin Öğrenme.
+            </h1>
+
+            <p
+              style={{
+                fontSize: '15.5px',
+                lineHeight: '1.62',
+                color: 'rgba(24, 32, 51, 0.82)',
+                margin: '0 0 24px',
+              }}
+            >
+              Alçak Dünya Yörüngesi’nde İMECE uydusu çarpışma önleme mekaniğinden, LoRaWAN uç yapay zeka (Edge AI) bitirme tezine; Cumhurbaşkanlığı Kubernetes kümesinden TÜBİTAK 2209-A araştırmalarına uzanan 8 bilimsel ve mühendislik çalışması.
+            </p>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+                gap: '10px',
+              }}
+            >
+              <div
+                style={{
+                  padding: '10px 14px',
+                  borderRadius: '10px',
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  border: '1px solid rgba(24, 32, 51, 0.1)',
+                }}
+              >
+                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>8 Proje</div>
+                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Tez & Araştırma</div>
+              </div>
+
+              <div
+                style={{
+                  padding: '10px 14px',
+                  borderRadius: '10px',
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  border: '1px solid rgba(24, 32, 51, 0.1)',
+                }}
+              >
+                <div style={{ font: '700 18px var(--font-display)', color: 'var(--cobalt)' }}>İMECE</div>
+                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Uydu Yörünge Modeli</div>
+              </div>
+
+              <div
+                style={{
+                  padding: '10px 14px',
+                  borderRadius: '10px',
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  border: '1px solid rgba(24, 32, 51, 0.1)',
+                }}
+              >
+                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>T.C. Kamu</div>
+                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Cumhurbaşkanlığı & TÜBİTAK</div>
+              </div>
+
+              <div
+                style={{
+                  padding: '10px 14px',
+                  borderRadius: '10px',
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  border: '1px solid rgba(24, 32, 51, 0.1)',
+                }}
+              >
+                <div style={{ font: '700 18px var(--font-display)', color: 'var(--ink)' }}>%97</div>
+                <div style={{ font: '500 11px var(--app-font-mono)', color: 'rgba(24, 32, 51, 0.65)' }}>Bi-LSTM Doğruluğu</div>
+              </div>
+            </div>
+          </div>
+
+          {/* 3D Interaction Notice Badge */}
+          <div
+            style={{
+              position: 'absolute',
+              right: 0,
+              bottom: '-30px',
+              font: '500 11px var(--app-font-mono)',
+              color: 'rgba(24, 32, 51, 0.5)',
+              letterSpacing: '0.04em',
+              background: 'rgba(255,255,255,0.6)',
+              padding: '6px 12px',
+              borderRadius: '6px',
+              border: '1px solid rgba(24,32,51,0.08)',
+              backdropFilter: 'blur(4px)',
+            }}
+          >
+            Arka Plandaki 3D Modeli Döndürmek İçin Sürükleyin
           </div>
         </div>
       </header>
 
       {/* Filter and Search Bar */}
-      <section className="container-wide" style={{ marginTop: '40px', marginBottom: '36px' }}>
+      <section className="container-wide" style={{ marginTop: '36px', marginBottom: '32px' }}>
         <div
           style={{
             display: 'flex',
@@ -276,40 +333,40 @@ export function AcademicProjectsPage() {
             gap: '16px',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '20px 24px',
-            background: 'rgba(255, 255, 255, 0.85)',
-            backdropFilter: 'blur(12px)',
-            borderRadius: '20px',
+            padding: '16px 20px',
+            background: 'rgba(255, 255, 255, 0.9)',
+            backdropFilter: 'blur(10px)',
+            borderRadius: '14px',
             border: '1px solid rgba(24, 32, 51, 0.12)',
-            boxShadow: '0 8px 24px rgba(24, 32, 51, 0.04)',
+            boxShadow: '0 6px 20px rgba(24, 32, 51, 0.03)',
           }}
         >
-          {/* Domain Filter Pills */}
+          {/* Domain Filter Pills - Zero Emojis */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
             {[
               { id: 'All', label: 'Tüm Projeler (8)' },
-              { id: 'Space', label: '🛰️ Uzay & Yörünge (İMECE)' },
-              { id: 'Edge', label: '⚡ Edge AI & LoRaWAN' },
-              { id: 'Cloud', label: '🏛️ Kubernetes & Ceph' },
-              { id: 'AI', label: '🧠 LLM & Deep Learning' },
-              { id: 'Health', label: '🔬 TÜBİTAK 2209-A' },
-              { id: 'Network', label: '🌐 Siber Ağ & Veri Bilimi' },
+              { id: 'Space', label: 'Uzay & Yörünge Mekaniği' },
+              { id: 'Edge', label: 'Edge AI & Gömülü Sistemler' },
+              { id: 'Cloud', label: 'Kubernetes & Ceph Bulut' },
+              { id: 'AI', label: 'Büyük Dil Modelleri (LLM)' },
+              { id: 'Health', label: 'TÜBİTAK 2209-A Araştırma' },
+              { id: 'Network', label: 'Ağ & Siber Güvenlik' },
             ].map((tab) => (
               <button
                 key={tab.id}
                 type="button"
                 onClick={() => setSelectedDomain(tab.id)}
                 style={{
-                  padding: '8px 16px',
-                  borderRadius: '9999px',
-                  fontSize: '13px',
+                  padding: '7px 14px',
+                  borderRadius: '8px',
+                  fontSize: '12.5px',
                   fontWeight: 600,
                   cursor: 'pointer',
                   border: '1px solid',
                   borderColor: selectedDomain === tab.id ? 'var(--cobalt)' : 'rgba(24, 32, 51, 0.14)',
                   background: selectedDomain === tab.id ? 'var(--cobalt)' : '#fff',
                   color: selectedDomain === tab.id ? '#fff' : 'var(--ink)',
-                  transition: 'all 0.2s ease',
+                  transition: 'all 0.15s ease',
                 }}
               >
                 {tab.label}
@@ -320,7 +377,7 @@ export function AcademicProjectsPage() {
           {/* Search Box */}
           <div style={{ position: 'relative', minWidth: '240px' }}>
             <Search
-              size={16}
+              size={15}
               style={{
                 position: 'absolute',
                 left: '12px',
@@ -331,16 +388,16 @@ export function AcademicProjectsPage() {
             />
             <input
               type="text"
-              placeholder="Model, konu veya teknoloji ara..."
+              placeholder="Algoritma, kurum veya teknoloji ara..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               style={{
                 width: '100%',
-                padding: '9px 12px 9px 36px',
-                borderRadius: '12px',
+                padding: '8px 12px 8px 34px',
+                borderRadius: '8px',
                 border: '1px solid rgba(24, 32, 51, 0.16)',
                 background: '#fff',
-                fontSize: '13.5px',
+                fontSize: '13px',
                 color: 'var(--ink)',
                 outline: 'none',
               }}
@@ -360,7 +417,7 @@ export function AcademicProjectsPage() {
                   color: 'rgba(24,32,51,0.5)',
                 }}
               >
-                <X size={14} />
+                <X size={13} />
               </button>
             )}
           </div>
@@ -368,19 +425,18 @@ export function AcademicProjectsPage() {
       </section>
 
       {/* Projects Grid */}
-      <main className="container-wide" style={{ marginBottom: '110px' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+      <main className="container-wide" style={{ marginBottom: '100px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
           {filteredProjects.map((project) => (
             <article
               key={project.id}
               style={{
-                borderRadius: '24px',
-                background: project.cardBg || '#fff',
-                border: '1px solid rgba(24, 32, 51, 0.14)',
-                padding: '36px',
-                boxShadow: '0 12px 32px rgba(24, 32, 51, 0.05)',
+                borderRadius: '16px',
+                background: '#ffffff',
+                border: '1px solid rgba(24, 32, 51, 0.12)',
+                padding: '32px',
+                boxShadow: '0 8px 24px rgba(24, 32, 51, 0.04)',
                 position: 'relative',
-                overflow: 'hidden',
               }}
             >
               {/* Topline Header */}
@@ -391,7 +447,9 @@ export function AcademicProjectsPage() {
                   gap: '12px',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  marginBottom: '16px',
+                  marginBottom: '14px',
+                  paddingBottom: '12px',
+                  borderBottom: '1px solid rgba(24, 32, 51, 0.08)',
                 }}
               >
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center' }}>
@@ -399,33 +457,37 @@ export function AcademicProjectsPage() {
                     style={{
                       font: '700 12px/1 var(--app-font-mono, monospace)',
                       color: 'var(--cobalt)',
-                      background: 'rgba(31, 74, 219, 0.1)',
-                      padding: '4px 10px',
-                      borderRadius: '6px',
+                      background: 'rgba(31, 74, 219, 0.08)',
+                      padding: '4px 8px',
+                      borderRadius: '4px',
                     }}
                   >
-                    PROJE #{project.no}
+                    PROJE {project.no} / 08
                   </span>
+
                   {project.highlightBadge && (
                     <span
                       style={{
-                        fontSize: '12px',
+                        fontSize: '11px',
                         fontWeight: 700,
-                        color: '#b4341e',
-                        background: 'rgba(217, 79, 51, 0.12)',
-                        padding: '4px 12px',
-                        borderRadius: '9999px',
-                        border: '1px solid rgba(217, 79, 51, 0.25)',
+                        color: 'var(--cobalt)',
+                        background: 'rgba(31, 74, 219, 0.06)',
+                        padding: '4px 10px',
+                        borderRadius: '4px',
+                        border: '1px solid rgba(31, 74, 219, 0.18)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.04em',
                       }}
                     >
                       {project.highlightBadge}
                     </span>
                   )}
+
                   <span
                     style={{
-                      fontSize: '12.5px',
+                      fontSize: '12px',
                       fontWeight: 600,
-                      color: 'rgba(24, 32, 51, 0.65)',
+                      color: 'rgba(24, 32, 51, 0.6)',
                       textTransform: 'uppercase',
                       letterSpacing: '0.04em',
                     }}
@@ -438,7 +500,7 @@ export function AcademicProjectsPage() {
                   {project.institution && (
                     <span
                       style={{
-                        fontSize: '13px',
+                        fontSize: '12.5px',
                         fontWeight: 600,
                         color: 'rgba(24, 32, 51, 0.75)',
                       }}
@@ -460,7 +522,7 @@ export function AcademicProjectsPage() {
               {/* Title & Tagline */}
               <h2
                 style={{
-                  font: '700 clamp(1.6rem, 3vw, 2.2rem)/1.15 var(--font-display)',
+                  font: '700 clamp(1.5rem, 2.5vw, 2rem)/1.15 var(--font-display)',
                   color: 'var(--ink)',
                   margin: '0 0 10px',
                   letterSpacing: '-0.02em',
@@ -471,20 +533,20 @@ export function AcademicProjectsPage() {
 
               <p
                 style={{
-                  fontSize: '15px',
+                  fontSize: '14.5px',
                   fontWeight: 600,
                   color: 'var(--cobalt)',
-                  margin: '0 0 18px',
+                  margin: '0 0 16px',
                   lineHeight: '1.5',
                 }}
               >
                 {project.tagline}
               </p>
 
-              {/* Detailed Description */}
+              {/* Description */}
               <p
                 style={{
-                  fontSize: '14.5px',
+                  fontSize: '14px',
                   lineHeight: '1.68',
                   color: 'rgba(24, 32, 51, 0.85)',
                   margin: '0 0 20px',
@@ -493,104 +555,99 @@ export function AcademicProjectsPage() {
                 {project.description}
               </p>
 
-              {/* Methodology / Architecture */}
+              {/* Methodology Box */}
               {project.methodology && (
                 <div
                   style={{
-                    padding: '16px 20px',
-                    borderRadius: '14px',
-                    background: 'rgba(255, 255, 255, 0.75)',
-                    border: '1px solid rgba(24, 32, 51, 0.08)',
-                    marginBottom: '18px',
+                    padding: '16px 18px',
+                    borderRadius: '8px',
+                    background: 'rgba(31, 74, 219, 0.04)',
+                    borderLeft: '3px solid var(--cobalt)',
+                    marginBottom: '20px',
                   }}
                 >
                   <div
                     style={{
-                      fontSize: '11.5px',
+                      fontSize: '11px',
                       fontWeight: 700,
-                      letterSpacing: '0.05em',
+                      color: 'var(--cobalt)',
                       textTransform: 'uppercase',
-                      color: 'rgba(24, 32, 51, 0.65)',
+                      letterSpacing: '0.06em',
                       marginBottom: '6px',
+                      fontFamily: 'var(--app-font-mono)',
                     }}
                   >
-                    Metodoloji & Matematiksel / Sistem Altyapısı:
+                    Mühendislik Metodolojisi & Mimari
                   </div>
-                  <p style={{ margin: 0, fontSize: '13.5px', lineHeight: '1.6', color: 'var(--ink)' }}>
+                  <p style={{ margin: 0, fontSize: '13.5px', lineHeight: '1.6', color: 'rgba(24, 32, 51, 0.9)' }}>
                     {project.methodology}
                   </p>
                 </div>
               )}
 
-              {/* Measurable Results & Achievements */}
+              {/* Key Results Grid */}
               {project.results && project.results.length > 0 && (
                 <div style={{ marginBottom: '20px' }}>
                   <div
                     style={{
-                      fontSize: '11.5px',
+                      fontSize: '11px',
                       fontWeight: 700,
-                      letterSpacing: '0.05em',
-                      textTransform: 'uppercase',
                       color: 'rgba(24, 32, 51, 0.65)',
-                      marginBottom: '8px',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.06em',
+                      marginBottom: '10px',
+                      fontFamily: 'var(--app-font-mono)',
                     }}
                   >
-                    Ölçülebilir Başarı Sonuçları ve Çıktılar:
+                    Deneysel Bulgular ve Başarı Metrikleri
                   </div>
-                  <ul
+                  <div
                     style={{
-                      margin: 0,
-                      paddingLeft: '20px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '6px',
-                      fontSize: '13.5px',
-                      lineHeight: '1.5',
-                      color: 'rgba(24, 32, 51, 0.88)',
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                      gap: '8px',
                     }}
                   >
-                    {project.results.map((res, rIdx) => (
-                      <li key={rIdx}>{res}</li>
+                    {project.results.map((result, rIdx) => (
+                      <div
+                        key={rIdx}
+                        style={{
+                          padding: '10px 14px',
+                          borderRadius: '6px',
+                          background: 'rgba(24, 32, 51, 0.03)',
+                          border: '1px solid rgba(24, 32, 51, 0.08)',
+                          fontSize: '13px',
+                          lineHeight: '1.5',
+                          color: 'var(--ink)',
+                        }}
+                      >
+                        {result}
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               )}
 
-              {/* Dataset info */}
-              {project.dataset && (
-                <div
-                  style={{
-                    fontSize: '12.5px',
-                    color: 'rgba(24, 32, 51, 0.65)',
-                    marginBottom: '18px',
-                    fontStyle: 'italic',
-                  }}
-                >
-                  <strong>Veri Seti:</strong> {project.dataset}
-                </div>
-              )}
-
-              {/* Technology Tags & Action Links */}
+              {/* Technologies and Links */}
               <div
                 style={{
                   display: 'flex',
                   flexWrap: 'wrap',
-                  gap: '16px',
                   alignItems: 'center',
                   justifyContent: 'space-between',
+                  gap: '14px',
                   paddingTop: '16px',
-                  borderTop: '1px solid rgba(24, 32, 51, 0.1)',
+                  borderTop: '1px solid rgba(24, 32, 51, 0.08)',
                 }}
               >
-                {/* Tech Pills */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', maxWidth: '680px' }}>
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
                       style={{
-                        padding: '4px 10px',
-                        borderRadius: '6px',
-                        background: 'rgba(24, 32, 51, 0.08)',
+                        padding: '4px 9px',
+                        borderRadius: '4px',
+                        background: 'rgba(24, 32, 51, 0.06)',
                         fontSize: '11.5px',
                         fontWeight: 600,
                         color: 'var(--ink)',
@@ -601,17 +658,16 @@ export function AcademicProjectsPage() {
                   ))}
                 </div>
 
-                {/* External Links */}
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="button-primary"
-                      style={{ padding: '8px 16px', fontSize: '12.5px' }}
+                      style={{ padding: '8px 14px', fontSize: '12px' }}
                     >
-                      <Github size={14} /> Kodları İncele <ArrowUpRight size={13} />
+                      <Github size={13} /> Kaynak Kodları <ArrowUpRight size={12} />
                     </a>
                   )}
                   {project.paperUrl && (
@@ -620,9 +676,9 @@ export function AcademicProjectsPage() {
                       target="_blank"
                       rel="noreferrer"
                       className="button-secondary"
-                      style={{ padding: '8px 16px', fontSize: '12.5px' }}
+                      style={{ padding: '8px 14px', fontSize: '12px' }}
                     >
-                      <FileText size={14} /> Makale / Bildiri <ArrowUpRight size={13} />
+                      <FileText size={13} /> Rapor / Makale <ArrowUpRight size={12} />
                     </a>
                   )}
                 </div>
@@ -635,13 +691,13 @@ export function AcademicProjectsPage() {
       {/* Sitelinks Directory */}
       <SitelinksDirectory />
 
-      {/* Footer */}
+      {/* Footer without any emojis */}
       <footer className="footer">
         <div className="container-wide footer-inner">
           <span className="footer-note">© {new Date().getFullYear()} Muhammet Atmaca — Akademik & AR-GE Portfolyosu</span>
           <div className="footer-links">
             <Link href="/" className="footer-link">Ana Sayfa</Link>
-            <Link href="/apps" className="footer-link">Mobil Uygulamalar (50+)</Link>
+            <Link href="/apps" className="footer-link">Mobil Uygulamalar</Link>
             <Link href="/web" className="footer-link">Web Sistemleri</Link>
             <a
               href="https://share.google/LeVvOPDHGCxM1biap"
@@ -650,7 +706,7 @@ export function AcademicProjectsPage() {
               className="footer-link"
               title="VirelonSoft Google İşletme Profili"
             >
-              📍 VirelonSoft
+              VirelonSoft
             </a>
             <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" className="footer-link">
               <Github size={13} /> GitHub

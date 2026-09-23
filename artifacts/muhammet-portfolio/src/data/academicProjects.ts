@@ -23,7 +23,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     no: '01',
     title: 'AI Destekli Otonom Yörünge Yönetimi ve Pasif Kaçınma Sistemi',
     institution: 'Samsun Üniversitesi • İMECE Uydusu Referanslı',
-    highlightBadge: 'En Önemli Araştırma Projesi 🛰️',
+    highlightBadge: 'Öne Çıkan Araştırma Projesi',
     tagline: 'LEO ortamında uzay enkazı takibi, Kalman filtresi, SGP4 yörünge mekaniği ve Physics-Informed Bi-LSTM ile yakıtsız çarpışma önleme',
     category: 'Uzay Sistemleri / Fizik Destekli Yapay Zeka',
     technologies: [
@@ -56,7 +56,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     no: '02',
     title: 'LoRaWAN Sistemlerinde Edge AI, Kalman ve LSTM ile Otonom Sinyal İyileştirme',
     institution: 'Samsun Üniversitesi • Bitirme Tezi & Projesi',
-    highlightBadge: 'Lisans Bitirme Tezi ⚡',
+    highlightBadge: 'Lisans Bitirme Tezi',
     tagline: 'ESP32 ve Semtech LoRa donanımlarında uç birim (Edge) yapay zeka, C/C++ Kalman filtreleme ve LSTM ile Self-Healing Mesh ağı',
     category: 'Edge AI / IoT & Gömülü Sistemler',
     technologies: [
@@ -88,7 +88,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     no: '03',
     title: 'Kubernetes Kümesi & Ceph Dağıtık Depolama Mimarisi',
     institution: 'T.C. Cumhurbaşkanlığı Dijital Dönüşüm Ofisi',
-    highlightBadge: 'Kamu / Kurumsal Bulut Mimarisi 🏛️',
+    highlightBadge: 'Kamu / Kurumsal Bulut Mimarisi',
     tagline: 'Master ve worker düğümlerden oluşan Vanilla Kubernetes ortamında Ceph dağıtık depolama ve yüksek erişilebilirlikli mikroservis orkestrasyonu',
     category: 'DevOps / Dağıtık Sistemler & Bulut Mimarisi',
     technologies: [
@@ -118,7 +118,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     no: '04',
     title: 'Türkçe Dil Modeli (LLM) Fine-Tuning & Kurumsal Asistan Platformu',
     institution: 'Savunma Sanayii / Crudfab AR-GE',
-    highlightBadge: 'Savunma Sanayii AR-GE Projesi 🛡️',
+    highlightBadge: 'Savunma Sanayii AR-GE Projesi',
     tagline: 'Transformer mimarisi, PyTorch ile Türkçe veri setlerinde LLM ince ayarı (Fine-Tuning), NestJS, FastAPI ve çok aşamalı Docker orkestrasyonu',
     category: 'Büyük Dil Modelleri (LLM) / Full-Stack AI',
     technologies: [
@@ -149,7 +149,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     no: '05',
     title: 'TÜBİTAK 2209-A: Askeri ve Çevrimdışı Ortamlar İçin İlaç-İlaç ve İlaç-Gıda Etkileşim Tespit Sistemi',
     institution: 'TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri',
-    highlightBadge: 'TÜBİTAK 2209-A Destekli Proje 🔬',
+    highlightBadge: 'TÜBİTAK 2209-A Destekli Proje',
     tagline: 'Askeri sahra hastaneleri, operasyon alanları ve afet bölgelerinde internetsiz (offline-first) çalışan klinik karar destek ve kontrendikasyon motoru',
     category: 'Biyomedikal Bilişim / Offline-First Karar Destek',
     technologies: [
