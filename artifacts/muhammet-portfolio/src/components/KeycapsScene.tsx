@@ -100,6 +100,17 @@ export function KeycapsScene({
             scene={sceneUrl}
             onLoad={(app) => {
               setIsLoaded(true);
+              try {
+                const renderer = (app as any)?._renderer;
+                if (renderer?.pipeline?.setWatermark) renderer.pipeline.setWatermark(null);
+                if (renderer?.pipeline?.logoOverlayPass) renderer.pipeline.logoOverlayPass.enabled = false;
+                if (renderer?.pipeline) {
+                  renderer.pipeline.watermarkTexture = null;
+                  renderer.pipeline._chainWatermark = null;
+                  renderer.pipeline._effectChainDirty = true;
+                }
+                app.requestRender();
+              } catch {}
               const handleKeyNavigation = (event: SplineEvent) => {
                 const targetId = event.target?.id;
                 const targetName = event.target?.name;
