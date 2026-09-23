@@ -303,6 +303,20 @@ export const EDUCATION_LIST: Education[] = [
 
 export const CAREER_EXPERIENCES: Experience[] = [
   {
+    id: 'exp-virelonsoft',
+    period: '2024 — Günümüz',
+    role: 'Kurucu & Kıdemli Yazılım Mühendisi',
+    company: 'VirelonSoft (Mobil & Web Yazılım Şirketi)',
+    location: 'Bayburt / Samsun, Türkiye • Uzaktan',
+    description: 'iOS, Android ve kurumsal web platformları geliştiren; yapay zeka, derin öğrenme ve modern mobil teknolojilere odaklı bağımsız yazılım stüdyosu.',
+    highlights: [
+      '50+ yayında mobil uygulamanın ve kurumsal platformların uçtan uca mimari tasarımı ve yayını',
+      'YOLO ve ResNet tabanlı derin öğrenme ve mobil görüntü işleme AR-GE çalışmaları',
+      'Google İşletme / Harita profili entegrasyonu ve kurumsal müşteri çözümleri',
+    ],
+    techStack: ['React Native', 'Flutter', 'ASP.NET Core', 'Node.js', 'YOLO', 'ResNet', 'PyTorch'],
+  },
+  {
     id: 'exp-crudfab-intern-30',
     period: 'Ara 2025 — Oca 2026',
     role: 'Yazılım Mühendisliği Stajyeri',
