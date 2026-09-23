@@ -1739,4 +1739,12 @@ spline-viewer::part(watermark),
   left: -9999px !important;
 }
 
+/* Allow page scrolling through Spline background */
+.academic-spline-bg,
+.academic-spline-bg *,
+.academic-spline-bg canvas {
+  pointer-events: none !important;
+}
+
+
 
