@@ -45,11 +45,11 @@ const SITELINKS: SitelinkItem[] = [
   },
   {
     id: 'sitelink-academic',
-    badge: 'Akademik & AI',
-    title: 'Akademik & Yapay Zeka AR-GE',
-    description: 'YOLO, ResNet, bilgisayarlı görü ve derin öğrenme modelleri üzerine akademik araştırma projeleri.',
-    href: '/#work',
-    isInternalRoute: false,
+    badge: 'Akademik & 3D',
+    title: 'Akademik & AR-GE Projeleri',
+    description: 'İMECE uydusu Bi-LSTM yörünge mekaniği, LoRaWAN Edge AI tezi, Cumhurbaşkanlığı K8s ve 8 bilimsel proje.',
+    href: '/academic',
+    isInternalRoute: true,
   },
   {
     id: 'sitelink-virelonsoft',

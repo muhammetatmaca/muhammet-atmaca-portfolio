@@ -71,6 +71,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Akademik & AR-GE Bilimsel Projeler Dizini (3D Spline) -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/academic</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Hizmetler ve Sıkça Sorulan Sorular (Sitelink) -->
   <url>
     <loc>https://muhammetatmaca.com.tr/services</loc>
