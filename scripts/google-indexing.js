@@ -107,6 +107,19 @@ async function notifyGoogleUrl(accessToken, url) {
   };
 }
 
+const HISTORY_PATH = path.resolve(__dirname, 'indexed-history.json');
+
+// Load already indexed URLs
+let indexedHistory = [];
+if (fs.existsSync(HISTORY_PATH)) {
+  try {
+    indexedHistory = JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8'));
+  } catch {}
+}
+
+const pendingUrls = urls.filter((u) => !indexedHistory.includes(u));
+console.log(`[Google Indexing] Daha önce iletilen: ${indexedHistory.length}, Kalan: ${pendingUrls.length}`);
+
 // 6. Main Orchestrator
 async function main() {
   await pingGoogleSitemap();
@@ -127,6 +140,11 @@ async function main() {
     return;
   }
 
+  if (pendingUrls.length === 0) {
+    console.log(`\n🎉 Harika! Sitemap'teki tüm ${urls.length} URL zaten daha önce Google Indexing API ile iletildi.`);
+    return;
+  }
+
   try {
     const serviceAccount = JSON.parse(fs.readFileSync(CREDENTIALS_PATH, 'utf8'));
     console.log(`\n[Auth] Service Account doğrulandı: ${serviceAccount.client_email}`);
@@ -134,19 +152,20 @@ async function main() {
     const accessToken = await getAccessToken(serviceAccount);
     console.log(`[Auth] Access Token başarıyla alındı!`);
 
-    console.log(`\n[Indexing] URL'ler Google Indexing API'ye gönderiliyor (Günde maksimum 200 istek önerilir)...`);
+    console.log(`\n[Indexing] Kalan URL'ler Google Indexing API'ye gönderiliyor (Günde maksimum 200 kota)...`);
 
-    // Submit URLs (up to daily quota)
-    const limit = Math.min(urls.length, 200);
+    const limit = Math.min(pendingUrls.length, 200);
     let successCount = 0;
 
     for (let i = 0; i < limit; i++) {
-      const url = urls[i];
+      const url = pendingUrls[i];
       process.stdout.write(`[${i + 1}/${limit}] Gönderiliyor: ${url} ... `);
       const result = await notifyGoogleUrl(accessToken, url);
       if (result.ok) {
         console.log(`✅ OK (${result.status})`);
         successCount++;
+        indexedHistory.push(url);
+        fs.writeFileSync(HISTORY_PATH, JSON.stringify(indexedHistory, null, 2), 'utf8');
       } else {
         const errorMsg = result.data?.error?.message || 'Bilinmeyen hata';
         console.log(`❌ Hata (${result.status}):`, errorMsg);
@@ -163,7 +182,8 @@ async function main() {
           break;
         }
         if (result.status === 429) {
-          console.log(`⚠️  Günlük Google Indexing API kotasına ulaşıldı.`);
+          console.log(`\n⚠️  Bugünkü Google Indexing API kotasına (200 URL/gün) ulaşıldı.`);
+          console.log(`Kalan ${pendingUrls.length - successCount} URL için yarın kotanız sıfırlandığında script kaldığı yerden otomatik olarak devam edecektir.`);
           break;
         }
       }
@@ -171,7 +191,8 @@ async function main() {
       await new Promise((resolve) => setTimeout(resolve, 200));
     }
 
-    console.log(`\n🎉 Toplam ${successCount} adet URL Google Indexing API ile doğrudan Googlebot'a iletildi!`);
+    console.log(`\n🎉 Bu oturumda ${successCount} adet URL Google Indexing API ile doğrudan Googlebot'a iletildi!`);
+    console.log(`Toplam tamamlanan: ${indexedHistory.length}/${urls.length}`);
   } catch (err) {
     console.error(`\n[Google Indexing Hatası]:`, err.message);
   }
