@@ -17,6 +17,7 @@
       <category id="7">Savunma Sanayii, IoT ve Simülasyon</category>
       <category id="8">İşletme Otomasyonu ve Muhasebe Entegrasyonu</category>
       <category id="9">Bulut Altyapı, DevOps ve IT Danışmanlığı</category>
+      <category id="10">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</category>
     </categories>
     <offers>
       <offer id="1" available="true">
@@ -368,6 +369,106 @@
         <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
         <description>Google, Yandex ve Bing ilk sıra hedefli Programmatic SEO motoru, Schema JSON-LD yapılandırması ve Indexing API otomasyonu.</description>
         <param name="Kategori">Bulut Altyapı, DevOps ve IT Danışmanlığı</param>
+      </offer>
+      <offer id="36" available="true">
+        <name>Laptop ve Masaüstü Detaylı Fan Temizliği ve Termal Macun</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri</url>
+        <price>2000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Aşırı ısınma, fan sesi ve donma sorunlarını gideren komple iç toz temizliği, fan yağlaması ve Arctic MX-4 yüksek iletkenlikli termal macun yenilemesi.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
+      </offer>
+      <offer id="37" available="true">
+        <name>Akıllı Telefondan Silinen Verileri Kurtarma (Fotoğraf, WhatsApp)</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar</url>
+        <price>6500</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>iPhone ve Android telefonlardan yanlışlıkla silinen fotoğraflar, videolar, ses kayıtları, rehber ve WhatsApp sohbet geçmişinin profesyonel laboratuvar kurtarımı.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
+      </offer>
+      <offer id="38" available="true">
+        <name>Açılmayan, Kırık veya Hasarlı Telefondan Çip Veri Kurtarma</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar</url>
+        <price>12500</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Sıvı temaslı, anakartı yanan, ekranı kırık veya hiç açılmayan akıllı telefonlardan eMMC/UFS bellek çipi seviyesinde doğrudan veri çıkarma hizmeti.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
+      </offer>
+      <offer id="39" available="true">
+        <name>Harici Disk, Flash Bellek (USB) ve SD Kart Veri Kurtarma</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri</url>
+        <price>8500</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Biçimlendirilen, RAW formata dönen, bilgisayarın tanımadığı bozuk harici harddisk ve USB belleklerden sıfır kayıpla dosya kurtarma.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
+      </offer>
+      <offer id="40" available="true">
+        <name>Bilgisayar Format, Orijinal Windows Kurulumu ve Hızlandırma</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri</url>
+        <price>1800</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Yavaşlayan veya çöken bilgisayarları fabrika hızına döndüren temiz Windows 10/11 kurulumu, orijinal sürücü (driver) optimizasyonu ve temel program paketi.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
+      </offer>
+      <offer id="41" available="true">
+        <name>SSD ve RAM Donanım Yükseltme ile 10 Kat Hızlandırma</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar</url>
+        <price>3500</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Eski sabit diski (HDD) çıkarıp yüksek hızlı NVMe SSD takılması, RAM artırımı ve eski Windows ile tüm verilerin sıfır kayıpla yeni diske klonlanması.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
+      </offer>
+      <offer id="42" available="true">
+        <name>Virüs, Truva Atı, Reklam Virüsü ve Casus Yazılım Temizliği</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri</url>
+        <price>2200</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Tarayıcıyı kilitleyen reklamlar, arka planda çalışan Bitcoin madencilik virüsleri ve sistemi kilitleyen zararlı yazılımların garantili temizliği.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
+      </offer>
+      <offer id="43" available="true">
+        <name>Laptop Kasa Onarımı, Kırık Menteşe Tamiri ve Ekran Değişimi</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri</url>
+        <price>4500</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Kapağı zor açılan, kırılan menteşe yuvalarının özel mukavemetli dolgu malzemesiyle garantili onarımı ve çatlak laptop ekranlarının değişimi.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
+      </offer>
+      <offer id="44" available="true">
+        <name>Kablosuz Wi-Fi Yazıcı, Tarayıcı ve Ağ Cihazı Kurulumu</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar</url>
+        <price>2500</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Lazer ve mürekkepli yazıcıların ofisteki tüm bilgisayar ve cep telefonlarına kablosuz tanıtılması, ortak ağ tarama ayarlarının yapılması.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
+      </offer>
+      <offer id="45" available="true">
+        <name>Telefon Yazılım Kurtarma, ROM Yükleme ve Sistem Onarımı</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-bilgisayar</url>
+        <price>3000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Açılış logosunda kalan, çöken, bootloop olan veya şifresi unutulan akıllı telefonların orijinal üretici yazılımıyla kurtarılması ve sıfırlanması.</description>
+        <param name="Kategori">Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma</param>
       </offer>
     </offers>
   </shop>
