@@ -25,7 +25,6 @@ console.log(`[IndexNow] Found ${urls.length} URLs in sitemap.xml`);
 const payload = {
   host: HOST,
   key: KEY,
-  keyLocation: KEY_LOCATION,
   urlList: urls,
 };
 
