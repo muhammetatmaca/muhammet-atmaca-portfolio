@@ -20,7 +20,7 @@ import {
   Zap,
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { SEO_LANDING_PAGES, SeoLandingPageData } from '@/data/seoLandingPages';
+import { SEO_LANDING_PAGES, SeoLandingPageData, TECH_SPECIALIZED_PAGES } from '@/data/seoLandingPages';
 import { MOBILE_APPS, MobileApp } from '@/data/mobileApps';
 
 interface SeoLandingPageProps {
@@ -91,9 +91,28 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
     };
   }, [canonicalUrl, pageData]);
 
-  // List of other SEO landing pages for internal linking
-  const otherPages = useMemo(() => {
-    return Object.values(SEO_LANDING_PAGES).filter((p) => p.slug !== pageData.slug);
+  // Categorized internal links for superior SEO silo architecture
+  const bayburtPages = useMemo(() => {
+    return Object.values(SEO_LANDING_PAGES).filter(
+      (p) => (p.slug.startsWith('bayburt-') || p.cityOrRegion === 'Bayburt') && p.slug !== pageData.slug
+    );
+  }, [pageData.slug]);
+
+  const techPages = useMemo(() => {
+    return Object.values(TECH_SPECIALIZED_PAGES).filter((p) => p.slug !== pageData.slug);
+  }, [pageData.slug]);
+
+  const majorPages = useMemo(() => {
+    const majors = ['istanbul', 'ankara', 'izmir', 'bursa', 'samsun', 'antalya', 'trabzon', 'erzurum', 'gaziantep', 'kocaeli'];
+    return Object.values(SEO_LANDING_PAGES).filter(
+      (p) => majors.some((m) => p.slug === `${m}-yazilim` || p.slug === `${m}-mobil-uygulama`) && p.slug !== pageData.slug
+    );
+  }, [pageData.slug]);
+
+  const allCityPages = useMemo(() => {
+    return Object.values(SEO_LANDING_PAGES).filter(
+      (p) => p.slug.endsWith('-yazilim') && !p.slug.startsWith('bayburt-') && p.slug !== pageData.slug
+    );
   }, [pageData.slug]);
 
   return (
@@ -430,22 +449,85 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
       {/* Internal Linking SEO Silo Directory */}
       <footer className="py-12 bg-stone-950 border-t border-stone-800 text-stone-400 text-xs">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="mb-6">
-            <h3 className="text-stone-300 font-bold text-xs uppercase tracking-wider mb-3">
-              Türkiye Geneli Şehirler & Hizmet Bölgeleri (Hızlı Erişim):
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {otherPages.map((page) => (
-                <Link
-                  key={page.slug}
-                  href={`/${page.slug}`}
-                  className="bg-stone-900 hover:bg-amber-600 hover:text-white border border-stone-800 px-2.5 py-1 rounded text-stone-400 transition-colors"
-                >
-                  {page.title.split('—')[0].trim()}
-                </Link>
-              ))}
+          {/* 1. Bayburt Ultra Local Silo */}
+          {bayburtPages.length > 0 && (
+            <div className="mb-6 p-4 rounded-xl bg-amber-950/20 border border-amber-500/20">
+              <h3 className="text-amber-400 font-bold text-xs uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                <MapPin size={13} /> Bayburt & Doğu Karadeniz Özel Hizmet Sayfaları:
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {bayburtPages.map((page) => (
+                  <Link
+                    key={page.slug}
+                    href={`/${page.slug}`}
+                    className="bg-amber-950/50 hover:bg-amber-500 hover:text-stone-950 border border-amber-500/30 px-2.5 py-1 rounded-lg text-amber-200 transition-colors text-[11px]"
+                  >
+                    {page.title.split('—')[0].replace('Bayburt', '').trim() || page.slug}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
+          {/* 2. Teknoloji & Savunma Sanayii */}
+          {techPages.length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-stone-300 font-bold text-xs uppercase tracking-wider mb-2.5">
+                Teknoloji, Savunma Sanayii & İleri Mühendislik:
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {techPages.map((page) => (
+                  <Link
+                    key={page.slug}
+                    href={`/${page.slug}`}
+                    className="bg-stone-900 hover:bg-amber-600 hover:text-white border border-stone-800 px-2.5 py-1 rounded text-stone-400 transition-colors text-[11px]"
+                  >
+                    {page.title.split('—')[0].trim()}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 3. Öne Çıkan Büyükşehirler */}
+          {majorPages.length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-stone-300 font-bold text-xs uppercase tracking-wider mb-2.5">
+                Öne Çıkan Büyükşehirler & Bölge Merkezleri:
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {majorPages.map((page) => (
+                  <Link
+                    key={page.slug}
+                    href={`/${page.slug}`}
+                    className="bg-stone-900 hover:bg-amber-600 hover:text-white border border-stone-800 px-2.5 py-1 rounded text-stone-400 transition-colors text-[11px]"
+                  >
+                    {page.title.split('—')[0].trim()}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 4. Türkiye Geneli 81 İl Yazılım Rehberi */}
+          {allCityPages.length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-stone-400 font-bold text-xs uppercase tracking-wider mb-2.5">
+                Türkiye Geneli 81 İl Yazılım Ağı (A'dan Z'ye):
+              </h3>
+              <div className="flex flex-wrap gap-1.5 max-h-48 overflow-y-auto pr-1">
+                {allCityPages.map((page) => (
+                  <Link
+                    key={page.slug}
+                    href={`/${page.slug}`}
+                    className="bg-stone-900/60 hover:bg-amber-600 hover:text-white border border-stone-800/80 px-2 py-0.5 rounded text-stone-400 transition-colors text-[10px]"
+                  >
+                    {page.cityOrRegion} Yazılım
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="pt-6 border-t border-stone-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-stone-500">
             <p>© 2026 Muhammet Atmaca. Tüm hakları saklıdır. Mobil Uygulama & Web Yazılım Mühendisliği.</p>
