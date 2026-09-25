@@ -26,6 +26,8 @@ import { MOBILE_APPS } from './data/mobileApps';
 import { SERVICES_LIST, FAQ_LIST } from './data/servicesFaq';
 import { SEO } from './components/SEO';
 import { SitelinksDirectory } from './components/SitelinksDirectory';
+import { SeoLandingPage } from './pages/SeoLandingPage';
+import { SEO_LANDING_PAGES } from './data/seoLandingPages';
 
 type RevealProps = {
   children: React.ReactNode;
@@ -1050,6 +1052,14 @@ function ScrollToTop() {
   return null;
 }
 
+function SeoPageWrapper({ params }: { params: { slug: string } }) {
+  const pageData = SEO_LANDING_PAGES[params.slug];
+  if (!pageData) {
+    return <Home />;
+  }
+  return <SeoLandingPage pageData={pageData} />;
+}
+
 function App() {
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
@@ -1071,6 +1081,7 @@ function App() {
         <Route path="/kariyer" component={Home} />
         <Route path="/contact" component={Home} />
         <Route path="/iletisim" component={Home} />
+        <Route path="/:slug" component={SeoPageWrapper} />
         <Route path="/" component={Home} />
         <Route component={Home} />
       </Switch>

@@ -112,4 +112,85 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- ============================================== -->
+  <!-- Programmatic SEO Landing Pages (Hedefli Şehir & Hizmet Sayfaları) -->
+  <!-- ============================================== -->
+  <!-- Bayburt Grubu -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-yazilim</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-bilgisayar</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-mobil-uygulama</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-web-tasarim</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Şehirler & Bölgesel Merkezler -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/samsun-mobil-uygulama</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/istanbul-mobil-uygulama</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/ankara-mobil-yazilim</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/izmir-mobil-yazilim</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bursa-mobil-uygulama</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Ticari Arama Niyeti & Hizmetler -->
+  <url>
+    <loc>https://muhammetatmaca.com.tr/mobil-uygulama-yaptirmak-istiyorum</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/react-native-gelistirici</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/mobil-uygulama-fiyatlari</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
