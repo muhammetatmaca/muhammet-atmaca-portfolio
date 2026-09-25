@@ -305,7 +305,7 @@ export const CAREER_EXPERIENCES: Experience[] = [
   {
     id: 'exp-virelonsoft',
     period: '2024 — Günümüz',
-    role: 'Kurucu & Kıdemli Yazılım Mühendisi',
+    role: 'Kurucu & Yazılım Mühendisi',
     company: 'VirelonSoft (Mobil & Web Yazılım Şirketi)',
     location: 'Bayburt / Samsun, Türkiye • Uzaktan',
     description: 'iOS, Android ve kurumsal web platformları geliştiren; yapay zeka, derin öğrenme ve modern mobil teknolojilere odaklı bağımsız yazılım stüdyosu.',

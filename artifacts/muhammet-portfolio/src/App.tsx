@@ -114,7 +114,7 @@ function Home() {
         keywords: [
           'Muhammet Atmaca CV',
           'Muhammet Atmaca Özgeçmiş',
-          'Kıdemli Mobil Yazılım Mühendisi',
+          'Mobil Yazılım Mühendisi',
           'Savunma Sanayii Yazılım Deneyimi',
           'Kubernetes Ceph Mühendisi',
         ],
@@ -123,7 +123,7 @@ function Home() {
     if (location === '/contact' || location === '/iletisim') {
       return {
         title: 'İletişim & Ücretsiz Proje Teklifi | Muhammet Atmaca',
-        description: 'Mobil uygulama ve web projeleriniz için ücretsiz ön analiz, bütçe teklifi ve doğrudan kıdemli yazılım mühendisi iletişimi.',
+        description: 'Mobil uygulama ve web projeleriniz için ücretsiz ön analiz, bütçe teklifi ve doğrudan yazılım mühendisi iletişimi.',
         canonicalUrl: 'https://muhammetatmaca.com.tr/contact',
         keywords: [
           'Muhammet Atmaca İletişim',
@@ -246,7 +246,7 @@ function Home() {
 
           <div className="container-wide hero-grid">
             <div>
-              <Reveal><div className="eyebrow">Kıdemli Mobil &amp; Yazılım Mühendisi / Bayburt &amp; Samsun</div></Reveal>
+              <Reveal><div className="eyebrow">Mobil &amp; Yazılım Mühendisi / Bayburt &amp; Samsun</div></Reveal>
               <Reveal delay={1}>
                 <h1>Faydalı<br /><em>fikirler.</em><br /><span className="hero-phrase">Özenle hayata</span><br />geçirildi.</h1>
               </Reveal>

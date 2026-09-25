@@ -57,7 +57,7 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
           provider: {
             '@type': 'Person',
             name: 'Muhammet Atmaca',
-            jobTitle: 'Senior Mobile Software Engineer',
+            jobTitle: 'Mobile Software Engineer',
             url: 'https://muhammetatmaca.com.tr/',
           },
           areaServed: pageData.cityOrRegion ? { '@type': 'City', name: pageData.cityOrRegion } : { '@type': 'Country', name: 'Türkiye' },
@@ -134,7 +134,7 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
             </div>
             <div>
               <span className="font-semibold text-sm tracking-tight block text-stone-900">Muhammet Atmaca</span>
-              <span className="text-[11px] text-stone-500 block -mt-0.5">Kıdemli Yazılım Mühendisi</span>
+              <span className="text-[11px] text-stone-500 block -mt-0.5">Yazılım Mühendisi</span>
             </div>
           </Link>
 
@@ -221,7 +221,7 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
         <div className="max-w-4xl mx-auto px-4">
           <div className="p-6 md:p-8 rounded-2xl bg-[#fdfcf9] border border-stone-200 shadow-xs">
             <h2 className="text-xl md:text-2xl font-bold text-stone-900 mb-4">
-              Neden Doğrudan Kıdemli Yazılım Mühendisi ile Çalışmalısınız?
+              Neden Doğrudan Yazılım Mühendisi ile Çalışmalısınız?
             </h2>
             <p className="text-stone-700 leading-relaxed text-sm md:text-base mb-6">
               {pageData.introParagraph}
