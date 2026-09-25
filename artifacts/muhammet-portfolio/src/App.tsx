@@ -12,12 +12,8 @@ import {
   Linkedin,
   Mail,
   Menu,
-  MessageSquare,
   MoveUpRight,
-  Phone,
-  ShieldCheck,
   Smartphone,
-  Star,
   X,
 } from 'lucide-react';
 import { KeycapsScene } from './components/KeycapsScene';
@@ -250,20 +246,7 @@ function Home() {
 
           <div className="container-wide hero-grid">
             <div>
-              <Reveal>
-                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-3">
-                  <Link href="/apps" className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-stone-900 border border-amber-600/30 hover:bg-amber-500/30 transition-colors no-underline">
-                    <Star size={13} className="text-amber-600 fill-amber-500" /> 50+ Canlı Mobil Uygulama
-                  </Link>
-                  <Link href="/academic" className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-950 border border-emerald-600/30 hover:bg-emerald-500/25 transition-colors no-underline">
-                    <ShieldCheck size={13} className="text-emerald-700" /> Savunma Sanayii &amp; UHUK Uydusu
-                  </Link>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900/10 text-stone-800">
-                    📍 Bayburt &amp; Samsun / 81 İl
-                  </span>
-                </div>
-                <div className="eyebrow">Kıdemli Mobil &amp; Yazılım Mühendisi / Bayburt &amp; Samsun</div>
-              </Reveal>
+              <Reveal><div className="eyebrow">Kıdemli Mobil &amp; Yazılım Mühendisi / Bayburt &amp; Samsun</div></Reveal>
               <Reveal delay={1}>
                 <h1>Faydalı<br /><em>fikirler.</em><br /><span className="hero-phrase">Özenle hayata</span><br />geçirildi.</h1>
               </Reveal>
@@ -273,16 +256,7 @@ function Home() {
                 </p>
               </Reveal>
               <Reveal delay={3}>
-                <div className="hero-actions flex flex-wrap items-center gap-3">
-                  <a
-                    href="https://wa.me/905448375685?text=Merhaba%20Muhammet%20Bey,%20web%20sitenizden%20yaz%C4%B1l%C4%B1m%20hizmeti%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold px-5 py-3 rounded-xl shadow-md transition-all transform hover:-translate-y-0.5 text-sm"
-                    data-testid="button-whatsapp-hero"
-                  >
-                    <MessageSquare size={16} /> WhatsApp ile Teklif Al
-                  </a>
+                <div className="hero-actions">
                   <a href="#work" className="button-primary hero-action-primary" data-testid="button-see-work">
                     Çalışmalarımı Gör <ArrowDown size={15} />
                   </a>
