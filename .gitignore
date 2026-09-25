@@ -48,5 +48,9 @@ Thumbs.db
 .cache/
 .local/
 .pnpm-store/
+
+# Google Cloud Service Account
+service_account.json
+*credentials*.json
 *.log
 artifacts/dump.html
