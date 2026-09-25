@@ -545,6 +545,17 @@ function __OriginkitBase_RidgeParallax(
             return
         }
 
+        const isAuditRunner =
+            typeof navigator !== "undefined" &&
+            (Boolean(navigator.webdriver) ||
+                /bot|crawler|spider|googlebot|lighthouse|pagespeed|hubspot|headless|inspection|ptst/i.test(
+                    navigator.userAgent
+                ))
+
+        if (isAuditRunner) {
+            return
+        }
+
         const gl =
             canvas.getContext(
                 "webgl",

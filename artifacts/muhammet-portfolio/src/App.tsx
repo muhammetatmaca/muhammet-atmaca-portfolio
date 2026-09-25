@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, lazy, Suspense } from 'react';
 import { Route, Switch, Link, useLocation } from 'wouter';
 import {
   ArrowDown,
@@ -12,22 +12,27 @@ import {
   Linkedin,
   Mail,
   Menu,
+  MessageSquare,
   MoveUpRight,
+  Phone,
+  ShieldCheck,
   Smartphone,
+  Star,
   X,
 } from 'lucide-react';
 import { KeycapsScene } from './components/KeycapsScene';
 import RidgeParallax from './components/originkit/ui/ridge-parallax-base';
-import { MobileAppsPage } from './pages/MobileAppsPage';
-import { WebProjectsPage } from './pages/WebProjectsPage';
-import { AcademicProjectsPage } from './pages/AcademicProjectsPage';
 import { WEB_PROJECTS, CAREER_EXPERIENCES, EDUCATION_LIST, CV_METADATA } from './data/careerAndWeb';
 import { MOBILE_APPS } from './data/mobileApps';
 import { SERVICES_LIST, FAQ_LIST } from './data/servicesFaq';
 import { SEO } from './components/SEO';
 import { SitelinksDirectory } from './components/SitelinksDirectory';
-import { SeoLandingPage } from './pages/SeoLandingPage';
 import { SEO_LANDING_PAGES } from './data/seoLandingPages';
+
+const MobileAppsPage = lazy(() => import('./pages/MobileAppsPage').then((m) => ({ default: m.MobileAppsPage })));
+const WebProjectsPage = lazy(() => import('./pages/WebProjectsPage').then((m) => ({ default: m.WebProjectsPage })));
+const AcademicProjectsPage = lazy(() => import('./pages/AcademicProjectsPage').then((m) => ({ default: m.AcademicProjectsPage })));
+const SeoLandingPage = lazy(() => import('./pages/SeoLandingPage').then((m) => ({ default: m.SeoLandingPage })));
 
 type RevealProps = {
   children: React.ReactNode;
@@ -245,7 +250,20 @@ function Home() {
 
           <div className="container-wide hero-grid">
             <div>
-              <Reveal><div className="eyebrow">Kıdemli Mobil &amp; Yazılım Mühendisi / Bayburt &amp; Samsun</div></Reveal>
+              <Reveal>
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-3">
+                  <Link href="/apps" className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-stone-900 border border-amber-600/30 hover:bg-amber-500/30 transition-colors no-underline">
+                    <Star size={13} className="text-amber-600 fill-amber-500" /> 50+ Canlı Mobil Uygulama
+                  </Link>
+                  <Link href="/academic" className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-950 border border-emerald-600/30 hover:bg-emerald-500/25 transition-colors no-underline">
+                    <ShieldCheck size={13} className="text-emerald-700" /> Savunma Sanayii &amp; UHUK Uydusu
+                  </Link>
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900/10 text-stone-800">
+                    📍 Bayburt &amp; Samsun / 81 İl
+                  </span>
+                </div>
+                <div className="eyebrow">Kıdemli Mobil &amp; Yazılım Mühendisi / Bayburt &amp; Samsun</div>
+              </Reveal>
               <Reveal delay={1}>
                 <h1>Faydalı<br /><em>fikirler.</em><br /><span className="hero-phrase">Özenle hayata</span><br />geçirildi.</h1>
               </Reveal>
@@ -255,7 +273,16 @@ function Home() {
                 </p>
               </Reveal>
               <Reveal delay={3}>
-                <div className="hero-actions">
+                <div className="hero-actions flex flex-wrap items-center gap-3">
+                  <a
+                    href="https://wa.me/905448375685?text=Merhaba%20Muhammet%20Bey,%20web%20sitenizden%20yaz%C4%B1l%C4%B1m%20hizmeti%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold px-5 py-3 rounded-xl shadow-md transition-all transform hover:-translate-y-0.5 text-sm"
+                    data-testid="button-whatsapp-hero"
+                  >
+                    <MessageSquare size={16} /> WhatsApp ile Teklif Al
+                  </a>
                   <a href="#work" className="button-primary hero-action-primary" data-testid="button-see-work">
                     Çalışmalarımı Gör <ArrowDown size={15} />
                   </a>
@@ -1070,21 +1097,30 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <Switch>
-        <Route path="/academic" component={AcademicProjectsPage} />
-        <Route path="/akademik" component={AcademicProjectsPage} />
-        <Route path="/web" component={WebProjectsPage} />
-        <Route path="/apps" component={MobileAppsPage} />
-        <Route path="/services" component={Home} />
-        <Route path="/hizmetler" component={Home} />
-        <Route path="/career" component={Home} />
-        <Route path="/kariyer" component={Home} />
-        <Route path="/contact" component={Home} />
-        <Route path="/iletisim" component={Home} />
-        <Route path="/:slug" component={SeoPageWrapper} />
-        <Route path="/" component={Home} />
-        <Route component={Home} />
-      </Switch>
+      <Suspense
+        fallback={
+          <div className="min-h-screen bg-[#f4f0e6] flex flex-col items-center justify-center gap-3">
+            <div className="w-8 h-8 rounded-full border-2 border-stone-800 border-t-transparent animate-spin" />
+            <span className="text-xs font-mono text-stone-600">Yükleniyor...</span>
+          </div>
+        }
+      >
+        <Switch>
+          <Route path="/academic" component={AcademicProjectsPage} />
+          <Route path="/akademik" component={AcademicProjectsPage} />
+          <Route path="/web" component={WebProjectsPage} />
+          <Route path="/apps" component={MobileAppsPage} />
+          <Route path="/services" component={Home} />
+          <Route path="/hizmetler" component={Home} />
+          <Route path="/career" component={Home} />
+          <Route path="/kariyer" component={Home} />
+          <Route path="/contact" component={Home} />
+          <Route path="/iletisim" component={Home} />
+          <Route path="/:slug" component={SeoPageWrapper} />
+          <Route path="/" component={Home} />
+          <Route component={Home} />
+        </Switch>
+      </Suspense>
     </>
   );
 }
