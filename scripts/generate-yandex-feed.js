@@ -84,6 +84,19 @@ const services = [
   }
 ];
 
+function escapeXml(unsafe) {
+  if (typeof unsafe !== 'string') return unsafe;
+  return unsafe.replace(/[<>&'"]/g, (c) => {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+    }
+  });
+}
+
 // 1. Build YML (Yandex Market Language)
 let yml = `<?xml version="1.0" encoding="UTF-8"?>
 <yml_catalog date="2026-09-26 00:15">
@@ -96,24 +109,24 @@ let yml = `<?xml version="1.0" encoding="UTF-8"?>
     </currencies>
     <categories>
       <category id="1">Mobil Uygulama Geliştirme</category>
-      <category id="2">Web Tasarım &amp; Kurumsal Yazılım</category>
+      <category id="2">Web Tasarım ve Kurumsal Yazılım</category>
       <category id="3">E-Ticaret Çözümleri</category>
       <category id="4">İşletme Otomasyonu</category>
-      <category id="5">Yapay Zeka &amp; AR-GE</category>
+      <category id="5">Yapay Zeka ve AR-GE</category>
     </categories>
     <offers>
 `;
 
 for (const s of services) {
   yml += `      <offer id="${s.id}" available="true">
-        <name>${s.name}</name>
-        <url>${s.url}</url>
+        <name>${escapeXml(s.name)}</name>
+        <url>${escapeXml(s.url)}</url>
         <price>${s.price}</price>
         <currencyId>TRY</currencyId>
         <categoryId>${s.categoryId}</categoryId>
-        <picture>${s.picture}</picture>
-        <description>${s.description}</description>
-        <param name="Kategori">${s.category}</param>
+        <picture>${escapeXml(s.picture)}</picture>
+        <description>${escapeXml(s.description)}</description>
+        <param name="Kategori">${escapeXml(s.category)}</param>
       </offer>
 `;
 }
