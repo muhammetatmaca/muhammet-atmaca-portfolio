@@ -97,8 +97,15 @@ export const FAQ_LIST: FaqItem[] = [
   {
     id: 'faq-6',
     category: 'process',
-    question: 'Samsun’da mısınız? İstanbul, Ankara, İzmir veya Türkiye’nin diğer illerinden çalışabiliyor muyuz?',
+    question: 'Bayburt ve Samsun’da mısınız? İstanbul, Ankara, İzmir veya diğer illerden çalışabiliyor muyuz?',
     answer:
-      'Evet. Merkezim Samsun olmakla birlikte; başta İstanbul, Ankara, İzmir, Bursa, Antalya, Kocaeli, Adana, Gaziantep ve Konya olmak üzere Türkiye’nin 81 ilindeki ve yurt dışındaki müşterilerimle %100 uzaktan (remote) kusursuz iş birlikleri yürütüyorum. Düzenli video toplantılar, haftalık canlı test sürümleri (TestFlight / APK) ve şeffaf ilerleme raporları ile fiziksel mesafe fark etmeksizin projenin her anında doğrudan yanınızdayım.',
+      'Evet. Samsun ve Bayburt merkezli olarak çalışıyorum; başta İstanbul, Ankara, İzmir, Bursa, Antalya olmak üzere Türkiye’nin 81 ilindeki ve yurt dışındaki müşterilerimle %100 uzaktan (remote) kusursuz iş birlikleri yürütüyorum. Düzenli video toplantılar, haftalık canlı test sürümleri (TestFlight / APK) ve şeffaf ilerleme raporları ile fiziksel mesafe fark etmeksizin projenin her anında doğrudan yanınızdayım.',
+  },
+  {
+    id: 'faq-7',
+    category: 'process',
+    question: 'Bayburt’ta yazılım, bilgisayar ve web tasarım hizmeti veriyor musunuz?',
+    answer:
+      'Evet. Bayburt Fen Lisesi mezunu olarak memleketim Bayburt’taki yerel işletmeler, kobiler, esnaflar ve kamu kurumları için özel bilgisayar yazılımları, kurumsal web sitesi tasarımı, e-ticaret sistemleri, teknik veritabanı çözümleri ve iOS & Android mobil uygulama geliştirme hizmetlerini doğrudan yerinde veya online olarak sunuyorum.',
   },
 ];
