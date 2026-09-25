@@ -80,31 +80,85 @@ function Home() {
     ? WEB_PROJECTS
     : WEB_PROJECTS.slice(0, 3);
 
+  const [location] = useLocation();
+
   const handleCvClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setCvNoticeOpen(true);
   };
 
+  const seoMeta = useMemo(() => {
+    if (location === '/services' || location === '/hizmetler') {
+      return {
+        title: 'Yazılım Hizmetleri & Fiyatlandırma SSS | Muhammet Atmaca',
+        description: 'Mobil uygulama ve web sitesi geliştirme süreçleri, şeffaf fiyatlandırma, App Store & Google Play onay garantisi ve sıkça sorulan sorular.',
+        canonicalUrl: 'https://muhammetatmaca.com.tr/services',
+        keywords: [
+          'Mobil Uygulama Fiyatları',
+          'Web Sitesi Yaptırma Fiyatları',
+          'Yazılım Hizmetleri',
+          'App Store Yükleme Hizmeti',
+          'Google Play Onay Danışmanlığı',
+          'React Native Geliştirici',
+        ],
+      };
+    }
+    if (location === '/career' || location === '/kariyer') {
+      return {
+        title: 'Kariyer, Deneyim & Özgeçmiş (CV) | Muhammet Atmaca',
+        description: '7+ yıllık savunma sanayii ve kurumsal yazılım mühendisliği kariyeri, teknoloji yetkinlikleri ve indirilebilir PDF CV.',
+        canonicalUrl: 'https://muhammetatmaca.com.tr/career',
+        keywords: [
+          'Muhammet Atmaca CV',
+          'Muhammet Atmaca Özgeçmiş',
+          'Kıdemli Mobil Yazılım Mühendisi',
+          'Savunma Sanayii Yazılım Deneyimi',
+          'Kubernetes Ceph Mühendisi',
+        ],
+      };
+    }
+    if (location === '/contact' || location === '/iletisim') {
+      return {
+        title: 'İletişim & Ücretsiz Proje Teklifi | Muhammet Atmaca',
+        description: 'Mobil uygulama ve web projeleriniz için ücretsiz ön analiz, bütçe teklifi ve doğrudan kıdemli yazılım mühendisi iletişimi.',
+        canonicalUrl: 'https://muhammetatmaca.com.tr/contact',
+        keywords: [
+          'Muhammet Atmaca İletişim',
+          'Yazılım Teklifi Al',
+          'Mobil Uygulama Yaptırmak İstiyorum',
+          'Web Sitesi Teklifi',
+          'Freelance Yazılımcı İletişim',
+        ],
+      };
+    }
+    return {
+      title: 'Muhammet Atmaca — Mobil Uygulama & Web Geliştirme | Türkiye Geneli (81 İl) & Samsun',
+      description: 'İstanbul, Ankara, İzmir, Bursa, Antalya, Samsun ve tüm Türkiye geneline 7 yılı aşkın deneyimle 50\'den fazla mobil uygulama ve ölçeklenebilir web sistemleri geliştiren Muhammet Atmaca\'nın portfolyosu.',
+      canonicalUrl: 'https://muhammetatmaca.com.tr/',
+      keywords: [
+        'Mobil Uygulama Yaptırmak İstiyorum',
+        'Web Sitesi Yaptırmak İstiyorum',
+        'React Native Geliştirici Türkiye',
+        'İstanbul Mobil Uygulama',
+        'Ankara Mobil Yazılımcı',
+        'İzmir React Native',
+        'Bursa Mobil Uygulama',
+        'Antalya Yazılım Geliştirme',
+        'Samsun Mobil Yazılım',
+        'Türkiye Geneli Mobil Geliştirme',
+        '50+ Mobil Uygulama',
+        'Freelance Mobil Yazılımcı',
+      ],
+    };
+  }, [location]);
+
   return (
     <main className="portfolio-shell">
       <SEO
-        title="Muhammet Atmaca — Mobil Uygulama & Web Geliştirme | Türkiye Geneli (81 İl) & Samsun"
-        description="İstanbul, Ankara, İzmir, Bursa, Antalya, Samsun ve tüm Türkiye geneline 7 yılı aşkın deneyimle 50'den fazla mobil uygulama ve ölçeklenebilir web sistemleri geliştiren Muhammet Atmaca'nın portfolyosu."
-        canonicalUrl="https://muhammetatmaca.com.tr/"
-        keywords={[
-          'Mobil Uygulama Yaptırmak İstiyorum',
-          'Web Sitesi Yaptırmak İstiyorum',
-          'React Native Geliştirici Türkiye',
-          'İstanbul Mobil Uygulama',
-          'Ankara Mobil Yazılımcı',
-          'İzmir React Native',
-          'Bursa Mobil Uygulama',
-          'Antalya Yazılım Geliştirme',
-          'Samsun Mobil Yazılım',
-          'Türkiye Geneli Mobil Geliştirme',
-          '50+ Mobil Uygulama',
-          'Freelance Mobil Yazılımcı',
-        ]}
+        title={seoMeta.title}
+        description={seoMeta.description}
+        canonicalUrl={seoMeta.canonicalUrl}
+        keywords={seoMeta.keywords}
       />
       {/* Navigation matching original editorial style */}
       <nav className="nav-card" aria-label="Main navigation">

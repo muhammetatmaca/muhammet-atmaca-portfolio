@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <!-- Ana Sayfa (Overview & Hero Portfolio) -->
+  <!-- Ana Sayfa (Overview &amp; Hero Portfolio) -->
   <url>
     <loc>https://muhammetatmaca.com.tr/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,12 +15,12 @@
     </image:image>
   </url>
 
-  <!-- 50+ Mobil Uygulama Dizini & Google Images Dizini -->
+  <!-- 50+ Mobil Uygulama Dizini &amp; Google Images Dizini -->
   <url>
     <loc>https://muhammetatmaca.com.tr/apps</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
     <image:image>
       <image:loc>https://muhammetatmaca.com.tr/apps/teleflow-prompter/icon.webp</image:loc>
       <image:title>TeleFlow Prompter — Akıllı Kayan Yazı ve Video Çekim Uygulaması</image:title>
@@ -66,23 +66,33 @@
   <!-- Web Sistemleri ve Platformlar Dizini -->
   <url>
     <loc>https://muhammetatmaca.com.tr/web</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/og-image.png</image:loc>
+      <image:title>Web Sistemleri &amp; Kurumsal Platformlar — Muhammet Atmaca</image:title>
+      <image:caption>Next.js, ASP.NET Core ve Node.js ile kurumsal web platformları</image:caption>
+    </image:image>
   </url>
 
-  <!-- Akademik & AR-GE Bilimsel Projeler Dizini (3D Spline) -->
+  <!-- Akademik &amp; AR-GE Bilimsel Projeler Dizini (3D Spline) -->
   <url>
     <loc>https://muhammetatmaca.com.tr/academic</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://muhammetatmaca.com.tr/og-image.png</image:loc>
+      <image:title>Akademik &amp; AR-GE Projeleri — Muhammet Atmaca</image:title>
+      <image:caption>İMECE Uydusu pasif çarpışma önleme bildirisi (UHUK), LoRaWAN Edge AI tezi ve savunma sanayii projeleri</image:caption>
+    </image:image>
   </url>
 
   <!-- Hizmetler ve Sıkça Sorulan Sorular (Sitelink) -->
   <url>
     <loc>https://muhammetatmaca.com.tr/services</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -90,7 +100,7 @@
   <!-- Kariyer ve Deneyim (Sitelink) -->
   <url>
     <loc>https://muhammetatmaca.com.tr/career</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -98,7 +108,7 @@
   <!-- İletişim ve Fiyat Teklifi (Sitelink) -->
   <url>
     <loc>https://muhammetatmaca.com.tr/contact</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
