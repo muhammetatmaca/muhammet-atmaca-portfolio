@@ -1,0 +1,24 @@
+name: Submit IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Wait for deployment to propagate
+        run: sleep 15
+
+      - name: Submit URLs to IndexNow
+        run: node scripts/submit-indexnow.js
