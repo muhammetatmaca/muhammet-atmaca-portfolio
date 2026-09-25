@@ -20,7 +20,7 @@ const DEFAULT_KEYWORDS = [
   'Bayburt Web Tasarım',
   'Bayburt Bilgisayar Mühendisi',
   'Bayburt Yazılım Şirketi',
-  'Senior Mobile Developer',
+  'Mobile Developer',
   'Mobil Yazılım Mühendisi',
   'React Native Geliştirici',
   'Flutter Uzmanı',

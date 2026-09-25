@@ -32,7 +32,7 @@
 
   <!-- Main Title & Role -->
   <text x="80" y="200" class="title">Muhammet Atmaca</text>
-  <text x="80" y="248" class="role">Kıdemli Mobil &amp; Full-Stack Yazılım Mühendisi</text>
+  <text x="80" y="248" class="role">Mobil &amp; Full-Stack Yazılım Mühendisi</text>
 
   <!-- Summary Description -->
   <text x="80" y="316" class="desc">React Native · Flutter · Swift · Kotlin · Next.js · ASP.NET Core</text>
