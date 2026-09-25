@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-09-26 00:15">
+  <shop>
+    <name>Muhammet Atmaca — Mobil Uygulama &amp; Web Yazılım</name>
+    <company>Muhammet Atmaca / VirelonSoft</company>
+    <url>https://muhammetatmaca.com.tr/</url>
+    <currencies>
+      <currency id="TRY" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Mobil Uygulama Geliştirme</category>
+      <category id="2">Web Tasarım &amp; Kurumsal Yazılım</category>
+      <category id="3">E-Ticaret Çözümleri</category>
+      <category id="4">İşletme Otomasyonu</category>
+      <category id="5">Yapay Zeka &amp; AR-GE</category>
+    </categories>
+    <offers>
+      <offer id="1" available="true">
+        <name>iOS ve Android Mobil Uygulama Geliştirme</name>
+        <url>https://muhammetatmaca.com.tr/mobil-uygulama-gelistirme</url>
+        <price>25000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>React Native ve Flutter ile App Store ve Google Play uyumlu, 50+ canlı uygulama tecrübesiyle anahtar teslim mobil yazılım geliştirme.</description>
+        <param name="Kategori">Mobil Uygulama Geliştirme</param>
+      </offer>
+      <offer id="2" available="true">
+        <name>Kurumsal Web Tasarım ve Web Sitesi Geliştirme</name>
+        <url>https://muhammetatmaca.com.tr/web</url>
+        <price>15000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Modern, ultra hızlı, mobil uyumlu ve SEO odaklı kurumsal web platformu ve yönetim paneli tasarımı.</description>
+        <param name="Kategori">Web Tasarım & Kurumsal Yazılım</param>
+      </offer>
+      <offer id="3" available="true">
+        <name>E-Ticaret Sitesi ve Online Satış Altyapısı</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-e-ticaret</url>
+        <price>20000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>3</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Güvenli ödeme altyapısı (İyzico/PayTR), sepet yönetimi, stok takibi ve mobil uyumlu modern e-ticaret platformu.</description>
+        <param name="Kategori">E-Ticaret Çözümleri</param>
+      </offer>
+      <offer id="4" available="true">
+        <name>Özel İşletme Otomasyonu ve Muhasebe Entegrasyonu</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-otomasyon</url>
+        <price>18000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>4</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Restoran adisyon, emlak portalları, stok-fatura otomasyonu ve işletmelere özel masaüstü/web yönetim yazılımları.</description>
+        <param name="Kategori">İşletme Otomasyonu</param>
+      </offer>
+      <offer id="5" available="true">
+        <name>Yapay Zeka ve Görüntü İşleme (Computer Vision)</name>
+        <url>https://muhammetatmaca.com.tr/academic</url>
+        <price>35000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>5</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>YOLOv8 ve ResNet tabanlı derin öğrenme, nesne tespiti, sınıflandırma ve kamera tabanlı endüstriyel yapay zeka sistemleri.</description>
+        <param name="Kategori">Yapay Zeka & AR-GE</param>
+      </offer>
+      <offer id="6" available="true">
+        <name>Savunma Sanayii ve Simülasyon Yazılımları</name>
+        <url>https://muhammetatmaca.com.tr/academic</url>
+        <price>50000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>6</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Uydu yörünge algoritmaları, pasif çarpışma önleme sistemleri ve görev kritik mühendislik simülasyonları.</description>
+        <param name="Kategori">Savunma Sanayii & Özel Yazılım</param>
+      </offer>
+      <offer id="7" available="true">
+        <name>Mobil Uygulama Güncelleme, Bakım ve Mağaza Onayı</name>
+        <url>https://muhammetatmaca.com.tr/apps</url>
+        <price>10000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Mevcut iOS ve Android uygulamalarınızın SDK güncellemeleri, hata onarımları ve App Store/Google Play mağaza onay süreçleri.</description>
+        <param name="Kategori">Mobil Uygulama Bakım</param>
+      </offer>
+      <offer id="8" available="true">
+        <name>Teknik SEO ve Arama Motoru Optimizasyonu Danışmanlığı</name>
+        <url>https://muhammetatmaca.com.tr/bayburt-seo-ajansi</url>
+        <price>12000</price>
+        <currencyId>TRY</currencyId>
+        <categoryId>5</categoryId>
+        <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
+        <description>Google, Yandex ve Bing arama sonuçlarında ilk sayfaya çıkmak için teknik SEO, Schema yapılandırması ve indeksleme hızlandırma.</description>
+        <param name="Kategori">SEO & Dijital Büyüme</param>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
