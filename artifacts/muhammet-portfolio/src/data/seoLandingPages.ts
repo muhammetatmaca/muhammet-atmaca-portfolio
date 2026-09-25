@@ -29,22 +29,14 @@ export interface SeoLandingPageData {
 }
 
 export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
-  // ==========================================
-  // 1. BAYBURT ÖZEL YEREL SERİSİ
-  // ==========================================
+  // =========================================================================
+  // 1. BAYBURT ULTRA DOMINASYON SERİSİ (15 HEDEF SAYFA)
+  // =========================================================================
   'bayburt-yazilim': {
     slug: 'bayburt-yazilim',
     title: 'Bayburt Yazılım & Bilgisayar Mühendisliği — Muhammet Atmaca (VirelonSoft)',
     metaDescription: 'Bayburt merkezli yazılım ve bilgisayar mühendisliği çözümleri. Bayburt Fen Lisesi mezunu Muhammet Atmaca ile mobil uygulama, web platformu ve otomasyon sistemleri.',
-    keywords: [
-      'Bayburt yazılım',
-      'Bayburt yazılımcı',
-      'Bayburt yazılım şirketi',
-      'Bayburt bilgisayar mühendisi',
-      'Bayburt yazılım ofisi',
-      'Bayburt VirelonSoft',
-      'Muhammet Atmaca Bayburt',
-    ],
+    keywords: ['Bayburt yazılım', 'Bayburt yazılımcı', 'Bayburt yazılım şirketi', 'Bayburt bilgisayar mühendisi', 'Bayburt yazılım ofisi', 'Bayburt VirelonSoft', 'Muhammet Atmaca Bayburt'],
     eyebrow: 'Bayburt Yerel Yazılım Mühendisliği',
     heroHeading: 'Bayburt İçin Profesyonel',
     heroHighlight: 'Yazılım & Mühendislik',
@@ -55,22 +47,10 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     targetAudience: 'Bayburt ve çevre illerde faaliyet gösteren, işini dijitale taşımak veya özel yazılımla hızlandırmak isteyen işletmeler.',
     introParagraph: 'Bayburt’ta yerel işletmelerin ve kamu kuruluşlarının ihtiyaç duyduğu özel bilgisayar yazılımları, mobil uygulamalar ve web platformlarını, 7+ yıllık sektör tecrübemiz ve mağazalarda 50’den fazla canlı uygulamamız ile anahtar teslim geliştiriyoruz.',
     whyChooseUs: [
-      {
-        title: 'Doğrudan Bayburt İçi İletişim',
-        description: 'Bayburt merkezde yüz yüze toplantı imkanı, yerinde analiz ve sıfır aracı ile doğrudan mühendis iletişimi.',
-      },
-      {
-        title: '50+ Canlı Mobil Uygulama Güvencesi',
-        description: 'Teorik vaatler değil; Apple App Store ve Google Play’de aktif yüz binlerce kullanıcıya ulaşan gerçek ürünler.',
-      },
-      {
-        title: 'Kurumsal Faturalandırma ve Destek',
-        description: 'Sözleşmeli, faturalı, teslim sonrası kesintisiz teknik destek ve sürüm güncelleme garantisi.',
-      },
-      {
-        title: 'Uluslararası Yazılım Standartları',
-        description: 'React Native, Flutter, Next.js ve bulut mimarileri ile geleceğe hazır, yüksek güvenlikli kod tabanı.',
-      },
+      { title: 'Doğrudan Bayburt İçi İletişim', description: 'Bayburt merkezde yüz yüze toplantı imkanı, yerinde analiz ve sıfır aracı ile doğrudan mühendis iletişimi.' },
+      { title: '50+ Canlı Mobil Uygulama Güvencesi', description: 'Teorik vaatler değil; Apple App Store ve Google Play’de aktif yüz binlerce kullanıcıya ulaşan gerçek ürünler.' },
+      { title: 'Kurumsal Faturalandırma ve Destek', description: 'Sözleşmeli, faturalı, teslim sonrası kesintisiz teknik destek ve sürüm güncelleme garantisi.' },
+      { title: 'Uluslararası Yazılım Standartları', description: 'React Native, Flutter, Next.js ve bulut mimarileri ile geleceğe hazır, yüksek güvenlikli kod tabanı.' },
     ],
     featuredAppIds: ['teleflow-prompter', 'virelon-wifi', 'toplualarm', 'tick-shopping'],
     processSteps: [
@@ -80,18 +60,40 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
       { step: '04', title: 'Canlıya Alma & Yerinde Eğitim', desc: 'Yazılımınız kurulur, test edilir ve personeliniz için yerinde kullanım eğitimi verilir.' },
     ],
     faqs: [
-      {
-        question: 'Bayburt’ta yüz yüze görüşebilir miyiz?',
-        answer: 'Evet. Bayburt merkezde veya ofisinizde doğrudan bir araya gelerek projenizi detaylıca planlayabiliriz.',
-      },
-      {
-        question: 'Yazılım tesliminden sonra destek veriyor musunuz?',
-        answer: 'Kesinlikle. Tüm projelerimiz teslim sonrası garanti ve teknik destek kapsamındadır; bakım ve güncellemeler düzenli olarak sağlanır.',
-      },
-      {
-        question: 'Fiyatlandırma nasıl yapılıyor?',
-        answer: 'İhtiyaç duyulan özellikler ve teslim süresi belirlendikten sonra sürpriz ek masraf içermeyen, şeffaf ve sabit bir sözleşme teklifi sunuyoruz.',
-      },
+      { question: 'Bayburt’ta yüz yüze görüşebilir miyiz?', answer: 'Evet. Bayburt merkezde veya ofisinizde doğrudan bir araya gelerek projenizi detaylıca planlayabiliriz.' },
+      { question: 'Yazılım tesliminden sonra destek veriyor musunuz?', answer: 'Kesinlikle. Tüm projelerimiz teslim sonrası garanti ve teknik destek kapsamındadır; bakım ve güncellemeler düzenli olarak sağlanır.' },
+    ],
+  },
+
+  'bayburt-yazilim-sirketi': {
+    slug: 'bayburt-yazilim-sirketi',
+    title: 'Bayburt Yazılım Şirketi & Ofisi — VirelonSoft (Muhammet Atmaca)',
+    metaDescription: 'Bayburt yazılım şirketi ve teknoloji ofisi arayanlar için kurumsal çözümler. Özel web, mobil uygulama, otomasyon ve veritabanı yazılımları.',
+    keywords: ['Bayburt yazılım şirketi', 'Bayburt yazılım firmaları', 'Bayburt yazılım ofisi', 'Bayburt yazılım ajansı', 'Bayburt VirelonSoft', 'Bayburt bilişim firması'],
+    eyebrow: 'Kurumsal Yazılım Şirketi & Ofisi',
+    heroHeading: 'Bayburt’un Güvenilir',
+    heroHighlight: 'Yazılım Şirketi',
+    heroSubheading: 'Kurumsal sözleşme, faturalı teslimat ve 50’den fazla canlı mobil uygulama referansıyla Bayburt’un öncü yazılım teknoloji ortağı.',
+    cityOrRegion: 'Bayburt',
+    category: 'local',
+    badge: 'Kurumsal Sözleşme & Fatura',
+    targetAudience: 'Bayburt’ta kurumsal bir yazılım şirketiyle çalışarak işini garantiye almak isteyen müteahhitler, fabrikalar, toptancılar ve esnaflar.',
+    introParagraph: 'VirelonSoft çatısı altında; Bayburt merkezli işletmelere kurumsal yazılım şirketi ciddiyetiyle hizmet veriyoruz. İşi yarım bırakma riski olmadan, sözleşmeli ve faturalı mühendislik hizmeti sunuyoruz.',
+    whyChooseUs: [
+      { title: 'Kurumsal Sözleşme Güvencesi', description: 'Tüm teslimat tarihleri, fonksiyonel gereksinimler ve fiyatlar resmi sözleşmeyle garanti altına alınır.' },
+      { title: 'Bayburt Fen Lisesi Mühendislik Kültürü', description: 'Analitik düşünce, yüksek disiplin ve savunma sanayii standartlarında kod kalitesi.' },
+      { title: '7/24 Teknik Destek & Bakım', description: 'Olası sistem aksamalarında Bayburt içinde anında müdahale ve kesintisiz çalışma güvencesi.' },
+      { title: 'Geniş Sektörel Yelpaze', description: 'İnşaat, tarım, gıda, tekstil, perakende ve sağlık sektörlerine özel çözümler.' },
+    ],
+    featuredAppIds: ['virelon-wifi', 'teleflow-prompter', 'toplualarm', 'tick-shopping'],
+    processSteps: [
+      { step: '01', title: 'Ofis Toplantısı', desc: 'Bayburt’ta yüz yüze ihtiyaç belirleme.' },
+      { step: '02', title: 'Sözleşme & Yol Haritası', desc: 'Net iş teslim planı ve sabit bütçe.' },
+      { step: '03', title: 'Aşamalı Geliştirme', desc: 'Haftalık demolarla onaylı ilerleme.' },
+      { step: '04', title: 'Canlı Teslim & Garanti', desc: 'Kaynak kodlar ve tam kullanım hakkı teslimi.' },
+    ],
+    faqs: [
+      { question: 'Faturalı çalışıyor musunuz?', answer: 'Evet, kurumsal tüm projelerimiz faturalı ve resmi sözleşmeli olarak gerçekleştirilir.' },
     ],
   },
 
@@ -99,14 +101,7 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     slug: 'bayburt-bilgisayar',
     title: 'Bayburt Bilgisayar & Özel Otomasyon Sistemleri — Muhammet Atmaca',
     metaDescription: 'Bayburt bilgisayar yazılımları, stok takip, özel otomasyon, veritabanı yönetimi ve kurumsal bilişim danışmanlığı. 7+ yıl mühendislik deneyimi.',
-    keywords: [
-      'Bayburt bilgisayar',
-      'Bayburt bilgisayar yazılımı',
-      'Bayburt otomasyon sistemleri',
-      'Bayburt bilişim',
-      'Bayburt bilgisayar mühendisi',
-      'Bayburt veritabanı yazılımı',
-    ],
+    keywords: ['Bayburt bilgisayar', 'Bayburt bilgisayar yazılımı', 'Bayburt otomasyon sistemleri', 'Bayburt bilişim', 'Bayburt bilgisayar mühendisi', 'Bayburt veritabanı yazılımı'],
     eyebrow: 'Bilişim & Bilgisayar Sistemleri',
     heroHeading: 'Bayburt Bilgisayar &',
     heroHighlight: 'Özel Otomasyon Yazılımları',
@@ -124,14 +119,44 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     ],
     featuredAppIds: ['virelon-wifi', 'toplualarm', 'tick-shopping', 'geode-cutter-3d'],
     processSteps: [
-      { step: '01', title: 'İş Süreci Analizi', desc: 'İş yerinizdeki mevcut işleyişi inceler, hangi alanların otomatikleştirileceğini belirleriz.' },
-      { step: '02', title: 'Yazılım Mimarisi', desc: 'Hızlı, güvenli veritabanı ve masaüstü/web arayüz mimarisi kurgulanır.' },
-      { step: '03', title: 'Geliştirme & Test', desc: 'Verileriniz aktarılır, gerçek operasyon testleri yapılır.' },
-      { step: '04', title: 'Kurulum & Eğitim', desc: 'Bilgisayarlarınıza kurulum yapılır, ekibinize kullanım eğitimi verilir.' },
+      { step: '01', title: 'İş Süreci Analizi', desc: 'İş yerinizdeki mevcut işleyiş incelenir.' },
+      { step: '02', title: 'Yazılım Mimarisi', desc: 'Hızlı veritabanı ve sade ekran tasarımı.' },
+      { step: '03', title: 'Geliştirme & Test', desc: 'Mevcut verileriniz aktarılır.' },
+      { step: '04', title: 'Kurulum & Eğitim', desc: 'Bilgisayarlarınıza kurulur, personele eğitim verilir.' },
     ],
     faqs: [
       { question: 'Eski verilerimi yeni programa aktarabilir misiniz?', answer: 'Evet, Excel veya eski veritabanlarınızdaki kayıtları yeni sisteme hatasız aktarıyoruz.' },
-      { question: 'İnternet kesildiğinde çalışır mı?', answer: 'İsteğinize göre hem çevrimdışı (offline-first) hem de bulut senkronizasyonlu hibrit mimariler kuruyoruz.' },
+    ],
+  },
+
+  'bayburt-bilgisayar-muhendisi': {
+    slug: 'bayburt-bilgisayar-muhendisi',
+    title: 'Bayburt Bilgisayar Mühendisi & Yazılım Danışmanı — Muhammet Atmaca',
+    metaDescription: 'Bayburt’ta bilgisayar mühendisliği ve teknik danışmanlık hizmeti. Bayburt Fen Lisesi mezunu kıdemli mühendis Muhammet Atmaca ile projelerinizi hayata geçirin.',
+    keywords: ['Bayburt bilgisayar mühendisi', 'Bayburt yazılım mühendisi', 'Bayburt bilişim uzmanı', 'Bayburt teknik danışman', 'Muhammet Atmaca bilgisayar mühendisi'],
+    eyebrow: 'Kıdemli Bilgisayar Mühendisi',
+    heroHeading: 'Bayburt’ta Doğrudan',
+    heroHighlight: 'Mühendislik Güvencesi',
+    heroSubheading: 'Aracı ajanslar veya stajyerler değil; savunma sanayii, kamu bulut ve 50+ mobil uygulama tecrübesine sahip kıdemli bilgisayar mühendisiyle çalışın.',
+    cityOrRegion: 'Bayburt',
+    category: 'local',
+    badge: 'Kıdemli Yazılım Mühendisi',
+    targetAudience: 'Yazılım projesini şansa bırakmak istemeyen, doğrudan uzman bir bilgisayar mühendisiyle çalışmak isteyen vizyoner iş insanları.',
+    introParagraph: 'Bayburt Fen Lisesi kökenli analitik altyapım ve 7 yılı aşkın profesyonel mühendislik kariyerimle; Bayburt’taki işletmelerin teknolojik altyapısını güçlendiriyor, verimliliklerini artıran modern yazılımlar geliştiriyorum.',
+    whyChooseUs: [
+      { title: 'Birebir Mühendis İletişimi', description: 'Teknik detayları doğrudan kodlayan kişiye anlatır, anında doğru çözümü alırsınız.' },
+      { title: 'UHUK & Savunma Sanayii Tecrübesi', description: 'Ulusal Havacılık Kongresi bildirisi ve kamu bulut altyapısı kalitesinde mühendislik.' },
+      { title: 'Tasarım + Kodlama + Mağaza Yayını', description: 'Tüm aşamaları tek elden, koordinasyon sorunu yaşamadan profesyonelce tamamlayın.' },
+    ],
+    featuredAppIds: ['teleflow-prompter', 'virelon-wifi', 'geode-cutter-3d', 'truelevel'],
+    processSteps: [
+      { step: '01', title: 'Teknik Değerlendirme', desc: 'Fikrinizin mühendislik fizibilitesi çıkarılır.' },
+      { step: '02', title: 'Mimari Planlama', desc: 'Doğru teknolojiler seçilerek sağlam zemin kurulur.' },
+      { step: '03', title: 'Uygulama & Geliştirme', desc: 'Performanslı ve güvenli kodlama.' },
+      { step: '04', title: 'Tam Teslimat', desc: 'Sistem devreye alınır ve çalışır teslim edilir.' },
+    ],
+    faqs: [
+      { question: 'Hangi teknolojileri kullanıyorsunuz?', answer: 'React Native, Flutter, Next.js, TypeScript, Node.js, ASP.NET Core, PostgreSQL, SQLite ve bulut teknolojilerini kullanıyorum.' },
     ],
   },
 
@@ -139,14 +164,7 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     slug: 'bayburt-mobil-uygulama',
     title: 'Bayburt Mobil Uygulama Geliştirme (iOS & Android) — Anahtar Teslim',
     metaDescription: 'Bayburt’ta mobil uygulama yaptırmak isteyenler için React Native ve Flutter ile App Store & Google Play onay garantili anahtar teslim geliştirme.',
-    keywords: [
-      'Bayburt mobil uygulama',
-      'Bayburt mobil yazılımcı',
-      'Bayburt ios uygulama',
-      'Bayburt android yazılım',
-      'Bayburt uygulama yaptırma',
-      'Bayburt mobil yazılım ajansı',
-    ],
+    keywords: ['Bayburt mobil uygulama', 'Bayburt mobil yazılımcı', 'Bayburt ios uygulama', 'Bayburt android yazılım', 'Bayburt uygulama yaptırma', 'Bayburt mobil yazılım ajansı'],
     eyebrow: 'iOS & Android Çözümleri',
     heroHeading: 'Bayburt’ta Kendi',
     heroHighlight: 'Mobil Uygulamanızı Kurun',
@@ -171,7 +189,6 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     ],
     faqs: [
       { question: 'Uygulama hem iPhone hem Samsung telefonlarda çalışır mı?', answer: 'Evet, tek geliştirme ile tüm iOS ve Android cihazlarda kusursuz çalışır.' },
-      { question: 'Yıllık mağaza ücreti var mı?', answer: 'Apple Developer hesabı yıllık 99$, Google Play hesabı ise tek seferlik 25$ resmi mağaza harcına sahiptir. Kurulumları birlikte yapıyoruz.' },
     ],
   },
 
@@ -179,14 +196,7 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     slug: 'bayburt-web-tasarim',
     title: 'Bayburt Web Tasarım & Kurumsal Web Siteleri — SEO Uyumlu Next.js',
     metaDescription: 'Bayburt kurumsal web tasarım, e-ticaret ve Google SEO uyumlu web siteleri. Ultra hızlı, mobil uyumlu, Google’da üst sıralara çıkan modern siteler.',
-    keywords: [
-      'Bayburt web tasarım',
-      'Bayburt web sitesi yaptırma',
-      'Bayburt kurumsal web sitesi',
-      'Bayburt e-ticaret sitesi',
-      'Bayburt seo uzmanı',
-      'Bayburt internet sitesi',
-    ],
+    keywords: ['Bayburt web tasarım', 'Bayburt web sitesi yaptırma', 'Bayburt kurumsal web sitesi', 'Bayburt e-ticaret sitesi', 'Bayburt seo uzmanı', 'Bayburt internet sitesi'],
     eyebrow: 'SEO & Web Platformları',
     heroHeading: 'Google’da Zirveye Çıkan',
     heroHighlight: 'Bayburt Web Siteleri',
@@ -211,25 +221,283 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     ],
     faqs: [
       { question: 'Sitem Google’da ne zaman çıkar?', answer: 'Doğru Schema.org ve sitemap kurulumu ile Search Console üzerinden öncelikli indeksleme isteyerek 24-72 saat içinde Google aramalarına dahil ediyoruz.' },
-      { question: 'Alan adı ve hosting işlemlerini siz mi yapıyorsunuz?', answer: 'Evet; .com.tr alan adı tescili, SSL güvenlik sertifikası ve bulut sunucu kurulumlarını anahtar teslim yürütüyorum.' },
     ],
   },
 
-  // ==========================================
+  'bayburt-web-sitesi-yaptirma': {
+    slug: 'bayburt-web-sitesi-yaptirma',
+    title: 'Bayburt Web Sitesi Yaptırma & Fiyatları — Şeffaf & Sabit Bütçe',
+    metaDescription: 'Bayburt’ta web sitesi yaptırmak kaça mal olur? 2026 güncel fiyatlar, mobil uyumlu kurumsal tasarımlar ve Google ilk sayfa garantili çözümler.',
+    keywords: ['Bayburt web sitesi yaptırma', 'Bayburt web sitesi fiyatları', 'Bayburt internet sitesi kurma', 'Bayburt ucuz web sitesi', 'Bayburt kaliteli web tasarım'],
+    eyebrow: 'Şeffaf Web Tasarım Fiyatları',
+    heroHeading: 'Bayburt’ta Web Sitesi',
+    heroHighlight: 'Yaptırmak İsteyenlere Özel',
+    heroSubheading: 'Sürpriz yıllık yenileme faturaları olmadan, net fiyat ve teslim garantisiyle modern kurumsal internet sitenizi yayına alın.',
+    cityOrRegion: 'Bayburt',
+    category: 'local',
+    badge: 'Şeffaf & Sabit Fiyat',
+    targetAudience: 'Yeni dükkan açan, şirket kuran ya da eski web sitesini yenilemek isteyen Bayburt esnafları ve işletme sahipleri.',
+    introParagraph: 'Bayburt’ta web sitesi yaptırırken paranızın karşılığını tam olarak almak istiyorsanız, modası geçmiş hantal şablonlar yerine Google’ın en sevdiği modern yazılım teknolojileriyle çalışmalısınız.',
+    whyChooseUs: [
+      { title: 'Domain + Hosting Dahil', description: '.com.tr alan adı, SSL güvenlik sertifikası ve yüksek hızlı bulut sunucu kurulumu fiyata dahildir.' },
+      { title: 'Google Haritalar & Rehber Kaydı', description: 'İşletmenizin Google Haritalar’da doğru çıkması için gerekli teknik doğrulama adımları.' },
+      { title: 'WhatsApp Doğrudan Sipariş Butonu', description: 'Sitenize giren ziyaretçiler tek tıkla WhatsApp hattınıza mesaj atsın, satışa dönüşsün.' },
+    ],
+    featuredAppIds: ['teleflow-prompter', 'virelon-wifi', 'tick-shopping', 'aura-weather-widget'],
+    processSteps: [
+      { step: '01', title: 'İçeriklerin Toplanması', desc: 'Logo, resim ve hizmet bilgileriniz alınır.' },
+      { step: '02', title: 'Tasarım Hazırlığı', desc: 'Mobil uyumlu ekranlar hazırlanır ve onayınıza sunulur.' },
+      { step: '03', title: 'Yayınlama', desc: 'Web siteniz internette açılır ve Google’a bildirilir.' },
+    ],
+    faqs: [
+      { question: 'Sitemi kendim güncelleyebilir miyim?', answer: 'Evet, yönetim panelinden dilediğiniz zaman resim ve yazı ekleyebilirsiniz.' },
+    ],
+  },
+
+  'bayburt-yazilimci': {
+    slug: 'bayburt-yazilimci',
+    title: 'Bayburt Yazılımcı & Mobil/Web Geliştirici — Muhammet Atmaca',
+    metaDescription: 'Bayburt’ta güvenilir, tecrübeli yazılımcı arayanlar için doğrudan kıdemli mühendis desteği. 7+ yıl deneyim, 50+ mobil uygulama referansı.',
+    keywords: ['Bayburt yazılımcı', 'Bayburt yazılımcı arayanlar', 'Bayburt freelance yazılımcı', 'Bayburt kod yazarı', 'Bayburt yazılım uzmanı'],
+    eyebrow: 'Doğrudan Yazılımcı İletişimi',
+    heroHeading: 'Bayburt’ta Güvenilir Bir',
+    heroHighlight: 'Yazılımcı mı Arıyorsunuz?',
+    heroSubheading: 'İşi yarıda bırakmayan, telefonunuza her an çıkan, söz verdiği tarihte teslim eden kıdemli yazılımcı Muhammet Atmaca.',
+    cityOrRegion: 'Bayburt',
+    category: 'local',
+    badge: 'Doğrudan Mühendis Güvencesi',
+    targetAudience: 'Daha önce yazılımcılarla sorun yaşamış veya projesini ehil ellere teslim etmek isteyen tüm işletmeler.',
+    introParagraph: 'Yazılım dünyasında en büyük sorun güven ve sürdürülebilirliktir. Bayburt Fen Lisesi mezunu olarak memleketimde yürüttüğüm her projede dürüstlük, şeffaflık ve üstün kaliteyi ilke edindim.',
+    whyChooseUs: [
+      { title: 'Ulaşılabilirlik', description: 'Günün her saatinde telefonla veya WhatsApp ile doğrudan teknik destek.' },
+      { title: 'Zamanında Teslimat', description: 'Gecikme olmadan, söz verilen takvimde çalışan ürün teslimi.' },
+      { title: 'Temiz & Belgelenmiş Kod', description: 'Gelecekte rahatça genişletilebilecek uluslararası standartta kod altyapısı.' },
+    ],
+    featuredAppIds: ['teleflow-prompter', 'geode-cutter-3d', 'virelon-wifi', 'tempoeat'],
+    processSteps: [
+      { step: '01', title: 'Tanışma & Dinleme', desc: 'Projenizi yüz yüze ya da telefonla dinleriz.' },
+      { step: '02', title: 'Doğru Yönlendirme', desc: 'Bütçenizi en verimli kullanacak teknolojiyi öneririm.' },
+      { step: '03', title: 'Düzenli Bilgilendirme', desc: 'Geliştirme sürecinde haftalık durum raporları.' },
+    ],
+    faqs: [
+      { question: 'Küçük projeler için de bakıyor musunuz?', answer: 'Evet, tek sayfalık bir web sitesinden yüzlerce ekranlı mobil uygulamaya kadar her ölçekte destek sağlıyorum.' },
+    ],
+  },
+
+  'bayburt-e-ticaret-yazilimi': {
+    slug: 'bayburt-e-ticaret-yazilimi',
+    title: 'Bayburt E-Ticaret Sitesi & Online Satış Yazılımları — Yerel Üreticiler İçin',
+    metaDescription: 'Bayburt’tan tüm Türkiye’ye ve dünyaya online satış yapın. Komisyonsuz e-ticaret siteleri, kredi kartı entegrasyonu ve kargo otomasyonu.',
+    keywords: ['Bayburt e-ticaret', 'Bayburt online satış', 'Bayburt sanal mağaza', 'Bayburt e-ticaret sitesi kurma', 'Bayburt organik ürün satış sitesi'],
+    eyebrow: 'E-Ticaret & Dijital Satış',
+    heroHeading: 'Bayburt’un Ürünlerini',
+    heroHighlight: 'Tüm Türkiye’ye Satın',
+    heroSubheading: 'Bayburt balı, pestili, tarım ürünleri ve yerel üreticileri için pazaryeri komisyonlarına mahkum olmadan kendi e-ticaret siteniz üzerinden satış yapın.',
+    cityOrRegion: 'Bayburt',
+    category: 'local',
+    badge: 'Komisyonsuz Kendi Mağazanız',
+    targetAudience: 'Bayburt’ta yerel lezzetler, el sanatları, tekstil veya imalat ürünlerini internetten Türkiye’ye satmak isteyen üreticiler.',
+    introParagraph: 'Trendyol, Hepsiburada gibi platformlar %20-30’lara varan fahiş komisyonlar keser. Kendi e-ticaret sitenizle tüm kâr size kalır. Kredi kartı, kargo barkodu ve stok yönetimini tek tuşla halledin.',
+    whyChooseUs: [
+      { title: '%0 Komisyon ile Kendi Siteniz', description: 'Pazaryerlerine komisyon ödemeden net kazanç elde edin.' },
+      { title: 'İyzico / PayTR Kredi Kartı Entegrasyonu', description: 'Tüm banka kartlarından 12 aya varan taksitle güvenli ödeme alma.' },
+      { title: 'Otomatik Kargo Entegrasyonu', description: 'Sipariş geldiğinde tek tıkla kargo fişi çıkarma kolaylığı.' },
+    ],
+    featuredAppIds: ['tick-shopping', 'teleflow-prompter', 'virelon-wifi', 'toplualarm'],
+    processSteps: [
+      { step: '01', title: 'Ürün & Kategori Düzeni', desc: 'Ürünleriniz ve fiyatlarınız sisteme girilir.' },
+      { step: '02', title: 'Ödeme & Kargo Bağlantısı', desc: 'Banka ve kargo anlaşmalarınız entegre edilir.' },
+      { step: '03', title: 'Test Siparişleri & Lansman', desc: 'Gerçek kart testleri yapılır ve satışa başlanır.' },
+    ],
+    faqs: [
+      { question: 'Sanal POS başvurusu nasıl yapılıyor?', answer: 'İyzico veya PayTR gibi güvenli ödeme sağlayıcılarına başvuruyu sizin adınıza birlikte tamamlıyoruz.' },
+    ],
+  },
+
+  'bayburt-otomasyon-yazilimlari': {
+    slug: 'bayburt-otomasyon-yazilimlari',
+    title: 'Bayburt Özel Stok, Fatura & İşletme Otomasyonu — Muhammet Atmaca',
+    metaDescription: 'Bayburt esnafı ve fabrikaları için özel masaüstü ve bulut otomasyon yazılımları. Barkodlu satış, stok sayımı, cari takip ve anlık raporlama.',
+    keywords: ['Bayburt otomasyon yazılımları', 'Bayburt stok takip programı', 'Bayburt barkodlu satış', 'Bayburt cari takip yazılımı', 'Bayburt özel muhasebe programı'],
+    eyebrow: 'Özel İşletme Otomasyonu',
+    heroHeading: 'Bayburt İşletmelerine Özel',
+    heroHighlight: 'Sıfır Hata Otomasyon',
+    heroSubheading: 'Defter karmaşasını ve stok kaçaklarını bitirin. Barkodlu hızlı satış, cari hesaplar ve anlık kâr/zarar raporları tek ekranda.',
+    cityOrRegion: 'Bayburt',
+    category: 'local',
+    badge: 'Hızlı & Hatasız Operasyon',
+    targetAudience: 'Depo, toptan, perakende satış yapan ve işini bilgisayardan anlık takip etmek isteyen Bayburt firmaları.',
+    introParagraph: 'Karmaşık muhasebe programlarında kaybolmayın. Sadece sizin işinize yarayan butonların olduğu, personelin kolayca kullanabildiği sade ve güçlü otomasyon yazılımları tasarlıyoruz.',
+    whyChooseUs: [
+      { title: 'Dokunmatik Ekran Uyumlu Hızlı Satış', description: 'Market, şarküteri veya mağazanızda saniyeler içinde fiş ve barkod basımı.' },
+      { title: 'Cepten Anlık Ciro Takibi', description: 'İş yerinde olmasanız bile telefonunuzdan bugünkü satışları ve stokları canlı görün.' },
+      { title: 'Müşteri Borç / Alacak Hatırlatması', description: 'Vadesi gelen müşterilere otomatik SMS ve bildirim ile tahsilat kolaylığı.' },
+    ],
+    featuredAppIds: ['virelon-wifi', 'toplualarm', 'tick-shopping', 'truelevel'],
+    processSteps: [
+      { step: '01', title: 'İşyeri İncelemesi', desc: 'Dükkanınızdaki iş akışını yerinde inceleriz.' },
+      { step: '02', title: 'Özel Ekran Tasarımı', desc: 'Kullanımı çocuk oyuncağı olan arayüz.' },
+      { step: '03', title: 'Yerinde Kurulum', desc: 'Bilgisayar ve barkod okuyucunuza kurulum.' },
+    ],
+    faqs: [
+      { question: 'Bilgisayarım bozulursa verilerim silinir mi?', answer: 'Hayır, veritabanı her gece otomatik olarak güvenli bulut sunucuya yedeklenir.' },
+    ],
+  },
+
+  'bayburt-seo-uzmani': {
+    slug: 'bayburt-seo-uzmani',
+    title: 'Bayburt SEO Uzmanı & Google Sıralama Yükseltme — Muhammet Atmaca',
+    metaDescription: 'Bayburt’ta Google aramalarında 1. sıraya çıkmak isteyenler için profesyonel teknik SEO, yerel harita optimizasyonu ve Schema.org mimarisi.',
+    keywords: ['Bayburt seo uzmanı', 'Bayburt google ilk sıra', 'Bayburt seo danışmanı', 'Bayburt arama motoru optimizasyonu', 'Bayburt google harita kaydı'],
+    eyebrow: 'Google 1. Sıra & Yerel SEO',
+    heroHeading: 'Google’da Bayburt Aramalarında',
+    heroHighlight: 'En Tepede Siz Çıkın',
+    heroSubheading: 'Rakiplerinizi geride bırakın. Biri Bayburt’ta sizin sektörünüzü arattığında ilk sırada web siteniz ve Google Harita profiliniz çıksın.',
+    cityOrRegion: 'Bayburt',
+    category: 'local',
+    badge: 'Teknik SEO & Yerel Harita',
+    targetAudience: 'Web sitesi olan ama Google’da çıkmayan ya da daha çok müşteri çekmek isteyen Bayburt işletmeleri.',
+    introParagraph: 'SEO sadece kelime tekrarı değildir; teknik altyapı, Schema.org mikro verileri, site açılış hızı ve yerel otoritedir. Google algoritmalarını derinlemesine bilen bir mühendis olarak sitenizi hak ettiği zirveye taşıyorum.',
+    whyChooseUs: [
+      { title: 'Teknik SEO Denetimi (Audit)', description: 'Sitenizdeki kodlama hatalarını ve Google’ın okuyamadığı alanları düzeltme.' },
+      { title: 'Google Haritalar 3-Pack Hedefi', description: 'Harita aramalarında ilk 3’e girerek doğrudan telefon araması çekme.' },
+      { title: 'Kalıcı ve Güvenli (White-Hat)', description: 'Google cezası riski olmayan, tamamen kılavuzlara uygun organik yükselme.' },
+    ],
+    featuredAppIds: ['teleflow-prompter', 'virelon-wifi', 'toplualarm', 'aura-weather-widget'],
+    processSteps: [
+      { step: '01', title: 'Mevcut Durum Analizi', desc: 'Sitenizin ve rakiplerinizin sıralama analizi.' },
+      { step: '02', title: 'Teknik Altyapı Düzeltmesi', desc: 'Hız, mobil uyum ve şema kodları entegrasyonu.' },
+      { step: '03', title: 'Düzenli Raporlama', desc: 'Google Search Console sıralama artış raporları.' },
+    ],
+    faqs: [
+      { question: 'SEO çalışması ne kadar sürer?', answer: 'Genellikle ilk teknik düzeltmelerin ardından 2 ila 4 hafta içinde gözle görülür sıralama yükselişleri başlar.' },
+    ],
+  },
+
+  'bayburt-bilisim-hizmetleri': {
+    slug: 'bayburt-bilisim-hizmetleri',
+    title: 'Bayburt Bilişim, Ağ Altyapısı & Bilgisayar Çözümleri — Muhammet Atmaca',
+    metaDescription: 'Bayburt bilişim hizmetleri, yerel ağ güvenliği, kurumsal e-posta, sunucu kurulumu ve teknik yazılım desteği. Cisco ve K8s tecrübeli mühendislik.',
+    keywords: ['Bayburt bilişim', 'Bayburt bilişim hizmetleri', 'Bayburt bilgisayar servisi', 'Bayburt ağ kurulumu', 'Bayburt sunucu kurulumu', 'Bayburt kurumsal bilişim'],
+    eyebrow: 'Kurumsal Bilişim & Ağ Güvenliği',
+    heroHeading: 'Bayburt Kurumlarına Özel',
+    heroHighlight: 'Bilişim & Altyapı Çözümleri',
+    heroSubheading: 'Cisco ağ simülasyonu ve kamu bulut tecrübesiyle; şirketinizin bilgisayar ağını, veritabanını ve veri güvenliğini profesyonelce yönetin.',
+    cityOrRegion: 'Bayburt',
+    category: 'local',
+    badge: 'Cisco & Bulut Standartları',
+    targetAudience: 'Bayburt’taki kamu binaları, okullar, fabrikalar, şantiyeler ve çok personelli şirketler.',
+    introParagraph: 'Bilişim altyapınız çöktüğünde işletmeniz durur. Güvenli ağ anahtarları (switch), yedekli internet hatları, kurumsal e-posta ve şifreli sunucu mimarileriyle Bayburt’ta bilişim sorunlarınızı kökten çözüyoruz.',
+    whyChooseUs: [
+      { title: 'Taktik Ağ & Cisco Tecrübesi', description: 'Polis ve kamu haberleşme standartlarında güvenli ağ topolojileri.' },
+      { title: 'Veri Güvenliği ve Fidye Yazılım Koruması', description: 'Şirket dosyalarınızın çalınmasına veya şifrelenmesine karşı zırhlı yedekleme.' },
+      { title: 'Hızlı Yerinde Müdahale', description: 'Bayburt içi arızalarda saatler içinde yerinde çözüm.' },
+    ],
+    featuredAppIds: ['virelon-wifi', 'toplualarm', 'tick-shopping', 'truelevel'],
+    processSteps: [
+      { step: '01', title: 'Altyapı Keşfi', desc: 'Mevcut kablo, modem ve cihazların kontrolü.' },
+      { step: '02', title: 'Güvenlik İyileştirmesi', desc: 'Açıkların kapatılması ve güvenlik duvarı kurulumu.' },
+      { step: '03', title: 'Düzenli Bakım', desc: 'Periyodik sistem kontrolleri ve yedekleme takibi.' },
+    ],
+    faqs: [
+      { question: 'Aylık kurumsal bakım anlaşması yapıyor musunuz?', answer: 'Evet, işletmenizin bilişim sistemlerini sürekli güvende tutan aylık bakım sözleşmeleri sunuyoruz.' },
+    ],
+  },
+
+  'demirozu-yazilim-web-tasarim': {
+    slug: 'demirozu-yazilim-web-tasarim',
+    title: 'Demirözü Yazılım & Web Tasarım — Bayburt Demirözü Mobil Çözümler',
+    metaDescription: 'Bayburt Demirözü ilçesinde web tasarım, mobil uygulama ve yazılım hizmetleri. Demirözü esnafı ve işletmeleri için modern dijital çözümler.',
+    keywords: ['Demirözü yazılım', 'Demirözü web tasarım', 'Demirözü bilgisayar', 'Demirözü mobil uygulama', 'Bayburt Demirözü yazılımcı'],
+    eyebrow: 'Demirözü Yerel Yazılım Çözümleri',
+    heroHeading: 'Demirözü İşletmeleri İçin',
+    heroHighlight: 'Modern Web & Yazılım',
+    heroSubheading: 'Demirözü ilçemizdeki tarım, hayvancılık, turizm ve perakende işletmeleri için Google uyumlu web siteleri ve özel mobil uygulamalar.',
+    cityOrRegion: 'Bayburt / Demirözü',
+    category: 'local',
+    badge: 'Demirözü & Bayburt',
+    targetAudience: 'Demirözü’nde faaliyet gösteren kooperatifler, işletmeler, tesisler ve üreticiler.',
+    introParagraph: 'Demirözü Barajı tesislerinden yerel üreticilere kadar Demirözü’ndeki tüm girişimlerin dijital dünyada parlaması için anahtar teslim yazılım ve web tasarım hizmeti veriyoruz.',
+    whyChooseUs: [
+      { title: 'Yerinde Demirözü Ziyareti', description: 'İlçemize doğrudan gelerek projenizi yüz yüze konuşma kolaylığı.' },
+      { title: 'Mobil Uyumlu Modern Web Siteleri', description: 'Google’da Demirözü aramalarında ilk sırada çıkma güvencesi.' },
+    ],
+    featuredAppIds: ['teleflow-prompter', 'tick-shopping', 'virelon-wifi', 'toplualarm'],
+    processSteps: [
+      { step: '01', title: 'İlçe Ziyareti / Görüşme', desc: 'Taleplerinizi dinleriz.' },
+      { step: '02', title: 'Hızlı Kurulum', desc: '1-2 hafta içinde web siteniz ve yazılımınız hazır.' },
+    ],
+    faqs: [
+      { question: 'Demirözü’ne geliyor musunuz?', answer: 'Evet, Bayburt merkezden Demirözü’ne yerinde analiz ve destek için geliyorum.' },
+    ],
+  },
+
+  'aydintepe-yazilim-web-tasarim': {
+    slug: 'aydintepe-yazilim-web-tasarim',
+    title: 'Aydıntepe Yazılım & Web Tasarım — Bayburt Aydıntepe Dijital Sistemler',
+    metaDescription: 'Bayburt Aydıntepe web tasarım, bilgisayar yazılımları ve mobil uygulama geliştirme. Aydıntepe Yeraltı Şehri turizm ve yerel işletme çözümleri.',
+    keywords: ['Aydıntepe yazılım', 'Aydıntepe web tasarım', 'Aydıntepe bilgisayar', 'Bayburt Aydıntepe yazılımcı', 'Aydıntepe internet sitesi'],
+    eyebrow: 'Aydıntepe Yerel Çözümleri',
+    heroHeading: 'Aydıntepe İçin Özel',
+    heroHighlight: 'Web & Bilgisayar Yazılımları',
+    heroSubheading: 'Aydıntepe’deki işletmeler, turizm tesisleri ve yerel üreticiler için kurumsal web tasarım ve özel otomasyon sistemleri.',
+    cityOrRegion: 'Bayburt / Aydıntepe',
+    category: 'local',
+    badge: 'Aydıntepe & Bayburt',
+    targetAudience: 'Aydıntepe ilçemizdeki işletmeler, esnaflar ve yerel üreticiler.',
+    introParagraph: 'Aydıntepe’nin zengin tarihine ve yerel ticaretine yakışır modern dijital platformlar kuruyoruz. Web sitenizle hem Türkiye’ye hem de yurt dışına ulaşın.',
+    whyChooseUs: [
+      { title: 'Bölgeye Hakimiyet', description: 'Aydıntepe’nin yerel dinamiklerini bilerek en doğru tasarımı üretme.' },
+      { title: 'Google Harita & Arama Uyumu', description: 'Aydıntepe aramalarında işletmenizin doğrudan bulunması.' },
+    ],
+    featuredAppIds: ['teleflow-prompter', 'aura-weather-widget', 'virelon-wifi', 'toplualarm'],
+    processSteps: [
+      { step: '01', title: 'İhtiyaç Belirleme', desc: 'Hizmetlerinizin listelenmesi.' },
+      { step: '02', title: 'Canlıya Alma', desc: 'Alan adı ve web sitenizin açılışı.' },
+    ],
+    faqs: [
+      { question: 'Aydıntepe için ne kadar sürede hazır olur?', answer: 'Standart kurumsal web projelerimiz 7 ila 10 gün içinde eksiksiz teslim edilir.' },
+    ],
+  },
+
+  'bayburt-qr-menu-adisyon': {
+    slug: 'bayburt-qr-menu-adisyon',
+    title: 'Bayburt QR Menü & Restoran Adisyon Yazılımı — Kafe ve Lokantalar İçin',
+    metaDescription: 'Bayburt kafe, restoran ve lokantaları için temassız QR kodlu dijital menü ve garson sipariş adisyon yazılımları. Fiyatları anında güncelleyin.',
+    keywords: ['Bayburt qr menü', 'Bayburt restoran adisyon programı', 'Bayburt kafe sipariş sistemi', 'Bayburt dijital menü', 'Bayburt lokanta yazılımı'],
+    eyebrow: 'Kafe & Restoran Teknolojileri',
+    heroHeading: 'Bayburt Restoranları İçin',
+    heroHighlight: 'Akıllı QR Menü & Adisyon',
+    heroSubheading: 'Baskı maliyetlerini sıfırlayın. Masadaki QR kodu okutan müşteriniz resimli menüyü görsün, garson tek dokunuşla siparişi mutfağa göndersin.',
+    cityOrRegion: 'Bayburt',
+    category: 'local',
+    badge: 'Kafe & Restoranlara Özel',
+    targetAudience: 'Bayburt merkezdeki dönerciler, kafeler, lokantalar, pastaneler ve otel restoranları.',
+    introParagraph: 'Enflasyon ve fiyat değişimlerinde sürekli menü bastırmaktan yoruldunuz mu? Bayburt’taki işletmeniz için anında fiyat değiştirebileceğiniz, cep telefonundan çalışan modern QR menü ve adisyon sistemi kuruyoruz.',
+    whyChooseUs: [
+      { title: 'Baskı Masrafı Sıfır', description: 'Fiyatları ve ürünleri telefonunuzdan saniyeler içinde güncelleyin.' },
+      { title: 'Masa Bazlı Sipariş Takibi', description: 'Hangi masa ne sipariş verdi, hesap ne kadar anlık ekranda.' },
+      { title: 'İnternet Hızında ve Sade', description: 'Müşterinin uygulama indirmesine gerek yok; kamera açıldığında menü anında açılır.' },
+    ],
+    featuredAppIds: ['tick-shopping', 'tempoeat', 'toplualarm', 'virelon-wifi'],
+    processSteps: [
+      { step: '01', title: 'Menü Aktarımı', desc: 'Yemek ve içecekleriniz fotoğraflarıyla yüklenir.' },
+      { step: '02', title: 'QR Kod Baskıları', desc: 'Masalarınıza özel pleksi veya şık QR etiketleri verilir.' },
+      { step: '03', title: 'Kullanım Başlangıcı', desc: 'Ekibinizle hemen sipariş almaya başlarsınız.' },
+    ],
+    faqs: [
+      { question: 'Aylık kira ücreti var mı?', answer: 'İsteğe bağlı olarak tek seferlik ödemeyle ömür boyu kullanabileceğiniz paketlerimiz mevcuttur.' },
+    ],
+  },
+
+  // =========================================================================
   // 2. SAMSUN & BÖLGESEL MERKEZLER
-  // ==========================================
+  // =========================================================================
   'samsun-mobil-uygulama': {
     slug: 'samsun-mobil-uygulama',
     title: 'Samsun Mobil Uygulama Geliştirme — React Native & Flutter Uzmanı',
     metaDescription: 'Samsun’da mobil uygulama yaptırmak isteyen şirket ve girişimcilere özel React Native ve Flutter çözümleri. 50+ canlı uygulama tecrübesi.',
-    keywords: [
-      'Samsun mobil uygulama',
-      'Samsun yazılımcı',
-      'Samsun mobil yazılım şirketi',
-      'Samsun react native',
-      'Samsun yazılım mühendisi',
-      'Samsun mobil ajans',
-    ],
+    keywords: ['Samsun mobil uygulama', 'Samsun yazılımcı', 'Samsun mobil yazılım şirketi', 'Samsun react native', 'Samsun yazılım mühendisi', 'Samsun mobil ajans'],
     eyebrow: 'Samsun Mobil Yazılım',
     heroHeading: 'Samsun’da Profesyonel',
     heroHighlight: 'Mobil Uygulama Çözümleri',
@@ -254,24 +522,17 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     ],
     faqs: [
       { question: 'Samsun’da ofisinizde görüşebilir miyiz?', answer: 'Evet, Samsun’da projenizi detaylıca konuşmak için dilediğiniz zaman bir araya gelebiliriz.' },
-      { question: 'Mevcut uygulamamızı yenileyebilir misiniz?', answer: 'Evet, performans sorunları yaşayan veya tasarımı eskiyen uygulamaları modern mimariyle baştan inşa ediyoruz.' },
     ],
   },
 
-  // ==========================================
+  // =========================================================================
   // 3. BÜYÜKŞEHİRLER (İSTANBUL, ANKARA, İZMİR, BURSA)
-  // ==========================================
+  // =========================================================================
   'istanbul-mobil-uygulama': {
     slug: 'istanbul-mobil-uygulama',
     title: 'İstanbul Mobil Uygulama Geliştirici & React Native Uzmanı — Muhammet Atmaca',
     metaDescription: 'İstanbul merkezli girişim ve şirketler için uzaktan kesintisiz mobil uygulama geliştirme. 50+ canlı uygulama, React Native ve Flutter uzmanlığı.',
-    keywords: [
-      'İstanbul mobil uygulama',
-      'İstanbul react native geliştirici',
-      'İstanbul flutter yazılımcı',
-      'İstanbul mobil yazılım ajansı',
-      'İstanbul freelance mobil yazılımcı',
-    ],
+    keywords: ['İstanbul mobil uygulama', 'İstanbul react native geliştirici', 'İstanbul flutter yazılımcı', 'İstanbul mobil yazılım ajansı', 'İstanbul freelance mobil yazılımcı'],
     eyebrow: 'İstanbul & Global Uzaktan Çalışma',
     heroHeading: 'İstanbul Girişimleri İçin',
     heroHighlight: 'Ölçeklenebilir Mobil Çözümler',
@@ -295,7 +556,7 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
       { step: '04', title: 'Mağaza Lansmanı', desc: 'Apple ve Google mağazalarında canlıya çıkış ve analitik kurulumu.' },
     ],
     faqs: [
-      { question: 'İstanbul’da fiziksel toplantı gerekiyor mu?', answer: 'Gerekmiyor; online toplantılar ve haftalık canlı test sürümleriyle fiziksel mesafeyi sıfıra indiriyoruz. İhtiyaç halinde İstanbul ziyaretlerimizde yüz yüze de görüşebiliyoruz.' },
+      { question: 'İstanbul’da fiziksel toplantı gerekiyor mu?', answer: 'Gerekmiyor; online toplantılar ve haftalık canlı test sürümleriyle fiziksel mesafeyi sıfıra indiriyoruz.' },
     ],
   },
 
@@ -303,13 +564,7 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     slug: 'ankara-mobil-yazilim',
     title: 'Ankara Mobil Yazılım & Savunma Mimarisi — Muhammet Atmaca',
     metaDescription: 'Ankara merkezli savunma, kamu ve kurumsal sistemlere uygun yüksek güvenlikli mobil uygulama ve bulut çözümleri. T.C. Kamu & SSB tecrübesi.',
-    keywords: [
-      'Ankara mobil yazılım',
-      'Ankara mobil uygulama geliştirme',
-      'Ankara react native',
-      'Ankara savunma sanayii yazılım',
-      'Ankara yazılım danışmanlığı',
-    ],
+    keywords: ['Ankara mobil yazılım', 'Ankara mobil uygulama geliştirme', 'Ankara react native', 'Ankara savunma sanayii yazılım', 'Ankara yazılım danışmanlığı'],
     eyebrow: 'Ankara & Kamu / Savunma Standartları',
     heroHeading: 'Ankara İçin Güvenli &',
     heroHighlight: 'Yüksek Performanslı Yazılım',
@@ -323,7 +578,6 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
       { title: 'Kamu & Savunma Tecrübesi', description: 'K8s, kriptolu ağlar ve UHUK uzay bildirisi gibi kritik sistem tecrübesi.' },
       { title: 'Offline-First & Güvenli Depolama', description: 'İnternet olmayan ortamlarda dahi çalışan SQLite ve yerel şifreleme katmanları.' },
       { title: 'Sözleşmeli & NDA Korumalı', description: 'Fikri mülkiyet haklarınız ve ticari sırlarınız gizlilik sözleşmesiyle korunur.' },
-      { title: '50+ Canlı Mobil Uygulama Referansı', description: 'Geniş portfolyo ve her ölçekte kanıtlanmış mobil ürün başarısı.' },
     ],
     featuredAppIds: ['virelon-wifi', 'teleflow-prompter', 'truelevel', 'toplualarm'],
     processSteps: [
@@ -341,13 +595,7 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     slug: 'izmir-mobil-yazilim',
     title: 'İzmir Mobil Uygulama & React Native Geliştirici — Muhammet Atmaca',
     metaDescription: 'İzmir’deki şirket ve girişimler için kullanıcı odaklı, modern iOS & Android mobil uygulama geliştirme. 50+ canlı uygulama referansı.',
-    keywords: [
-      'İzmir mobil yazılım',
-      'İzmir mobil uygulama geliştirici',
-      'İzmir react native',
-      'İzmir yazılım şirketi',
-      'İzmir mobil ajans',
-    ],
+    keywords: ['İzmir mobil yazılım', 'İzmir mobil uygulama geliştirici', 'İzmir react native', 'İzmir yazılım şirketi', 'İzmir mobil ajans'],
     eyebrow: 'İzmir & Ege Bölgesi',
     heroHeading: 'İzmir İşletmelerine Özel',
     heroHighlight: 'Akıcı Mobil Deneyimler',
@@ -360,8 +608,6 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     whyChooseUs: [
       { title: 'Hızlı ve Akıcı Arayüzler', description: 'Kullanıcının takılmadan gezindiği, terk etme oranını düşüren optimize ekranlar.' },
       { title: 'Çift Platformda Eşit Performans', description: 'Tek kod tabanından hem iPhone hem Android için maksimum performans.' },
-      { title: 'Şeffaf Süreç ve Fiyatlandırma', description: 'Her aşamada canlı demolar, net teslim tarihleri ve sabit bütçe garantisi.' },
-      { title: '50+ Mağaza Uygulaması', description: 'Sıfırdan zirveye çıkarılmış 50’den fazla gerçek mobil uygulama tecrübesi.' },
     ],
     featuredAppIds: ['teleflow-prompter', 'aura-weather-widget', 'tempoeat', 'geode-cutter-3d'],
     processSteps: [
@@ -379,13 +625,7 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     slug: 'bursa-mobil-uygulama',
     title: 'Bursa Mobil Uygulama & Sanayi / E-Ticaret Yazılımları — Muhammet Atmaca',
     metaDescription: 'Bursa’daki sanayi, otomotiv, tekstil ve e-ticaret firmaları için özel mobil uygulamalar ve kurumsal yönetim yazılımları.',
-    keywords: [
-      'Bursa mobil uygulama',
-      'Bursa yazılım şirketi',
-      'Bursa mobil yazılımcı',
-      'Bursa e-ticaret mobil uygulama',
-      'Bursa kurumsal yazılım',
-    ],
+    keywords: ['Bursa mobil uygulama', 'Bursa yazılım şirketi', 'Bursa mobil yazılımcı', 'Bursa e-ticaret mobil uygulama', 'Bursa kurumsal yazılım'],
     eyebrow: 'Bursa Sanayi & E-Ticaret',
     heroHeading: 'Bursa Şirketleri İçin',
     heroHighlight: 'Güçlü Mobil Sistemler',
@@ -398,8 +638,6 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     whyChooseUs: [
       { title: 'Saha ve Depo Operasyonlarına Uygun', description: 'Barkod okuma, çevrimdışı çalışma ve hızlı veri girişi optimizasyonu.' },
       { title: 'ERP ve Muhasebe Entegrasyonu', description: 'Mikro, Logo, Nebim veya özel veritabanlarınızla senkronize çalışabilme.' },
-      { title: '7/24 Kesintisiz Çalışma', description: 'Yüksek trafik ve yoğun veri girişine dayanıklı bulut ve mobil mimari.' },
-      { title: '50+ Uygulama Referansı', description: 'Farklı sektörlerde test edilmiş ve başarısı kanıtlanmış hazır mimari bileşenler.' },
     ],
     featuredAppIds: ['virelon-wifi', 'tick-shopping', 'toplualarm', 'teleflow-prompter'],
     processSteps: [
@@ -413,21 +651,14 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     ],
   },
 
-  // ==========================================
+  // =========================================================================
   // 4. TİCARİ ARAMA NİYETİ ODAKLI SAYFALAR (HIGH INTENT)
-  // ==========================================
+  // =========================================================================
   'mobil-uygulama-yaptirmak-istiyorum': {
     slug: 'mobil-uygulama-yaptirmak-istiyorum',
     title: 'Mobil Uygulama Yaptırmak İstiyorum — 2026 Süreç, Fiyat & Adımlar',
     metaDescription: 'Mobil uygulama yaptırmak isteyenler için eksiksiz rehber. React Native ve Flutter ile çift platform, App Store & Google Play onay garantisi ve şeffaf fiyatlandırma.',
-    keywords: [
-      'mobil uygulama yaptırmak istiyorum',
-      'uygulama yaptırma fiyatları',
-      'mobil uygulama geliştirme süreci',
-      'uygulama yaptırmak kaça mal olur',
-      'freelance mobil yazılımcı',
-      'anahtar teslim mobil uygulama',
-    ],
+    keywords: ['mobil uygulama yaptırmak istiyorum', 'uygulama yaptırma fiyatları', 'mobil uygulama geliştirme süreci', 'uygulama yaptırmak kaça mal olur', 'freelance mobil yazılımcı', 'anahtar teslim mobil uygulama'],
     eyebrow: 'Eksiksiz Rehber & Doğrudan Mühendis',
     heroHeading: 'Mobil Uygulama Yaptırmak',
     heroHighlight: 'İsteyenler İçin Rehber',
@@ -452,7 +683,6 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     faqs: [
       { question: 'Bir mobil uygulama yaptırmak ne kadar sürer?', answer: 'Projenin kapsamına göre basit ve orta ölçekli projeler 3 ila 6 hafta arasında, kapsamlı e-ticaret veya pazar yeri projeleri ise 8 ila 12 hafta arasında canlıya alınır.' },
       { question: 'Uygulamanın kaynak kodları bana mı ait olacak?', answer: 'Evet; proje tamamlandığında tüm kaynak kodlar, GitHub deposu ve mağaza hesapları eksiksiz olarak size devredilir.' },
-      { question: 'Yayınlandıktan sonra güncelleme yapabilir miyim?', answer: 'Evet; yönetim paneli üzerinden içeriklerinizi güncelleyebilir, yeni özellikler için ise sürekli bakım desteğimizden faydalanabilirsiniz.' },
     ],
   },
 
@@ -460,13 +690,7 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     slug: 'react-native-gelistirici',
     title: 'Kıdemli React Native Geliştirici Türkiye — Muhammet Atmaca (50+ Uygulama)',
     metaDescription: 'Türkiye geneli kıdemli React Native geliştirici. iOS ve Android için 60 FPS yerel performanslı, Redux/Zustand, TypeScript ve Expo tecrübeli uzman mühendis.',
-    keywords: [
-      'react native geliştirici',
-      'react native yazılımcı türkiye',
-      'react native developer',
-      'kıdemli mobil yazılımcı',
-      'react native danışmanlık',
-    ],
+    keywords: ['react native geliştirici', 'react native yazılımcı türkiye', 'react native developer', 'kıdemli mobil yazılımcı', 'react native danışmanlık'],
     eyebrow: 'React Native & Cross-Platform Uzmanlığı',
     heroHeading: 'Kıdemli React Native',
     heroHighlight: 'Geliştirici & Mimari',
@@ -478,8 +702,6 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     whyChooseUs: [
       { title: '60 FPS Yerel Hız ve Akıcılık', description: 'Ağır animasyonlarda ve listelerde takılmayan, GPU hızlandırmalı modern bileşenler.' },
       { title: 'Temiz Mimari & TypeScript', description: 'Katı tipli, test edilebilir ve gelecekte başka yazılımcıların da kolayca geliştirebileceği modüler mimari.' },
-      { title: 'Offline-First ve Yerel SQLite', description: 'İnternet kopsa dahi verileri kaybetmeyen, anlık senkronizasyon yeteneği.' },
-      { title: '50+ Başarılı Lansman', description: 'App Store ve Google Play’de aktif yüz binlerce indirmeye sahip canlı referanslar.' },
     ],
     featuredAppIds: ['teleflow-prompter', 'virelon-wifi', 'toplualarm', 'tick-shopping'],
     processSteps: [
@@ -497,13 +719,7 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     slug: 'mobil-uygulama-fiyatlari',
     title: 'Mobil Uygulama Fiyatları ve Maliyet Hesaplama — 2026 Şeffaf Rehber',
     metaDescription: 'Mobil uygulama yaptırma fiyatları nasıl hesaplanır? 2026 ortalama maliyetler, sürpriz masraflardan kaçınma yolları ve ücretsiz ön fiyat teklifi.',
-    keywords: [
-      'mobil uygulama fiyatları',
-      'uygulama yaptırma maliyeti',
-      'mobil yazılım ücretleri',
-      'uygulama kaça mal olur',
-      'mobil uygulama fiyat hesaplama',
-    ],
+    keywords: ['mobil uygulama fiyatları', 'uygulama yaptırma maliyeti', 'mobil yazılım ücretleri', 'uygulama kaça mal olur', 'mobil uygulama fiyat hesaplama'],
     eyebrow: 'Şeffaf Maliyet & Fiyat Rehberi',
     heroHeading: 'Mobil Uygulama Fiyatları',
     heroHighlight: 'Nasıl Belirlenir?',
@@ -515,8 +731,6 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     whyChooseUs: [
       { title: 'Sabit Fiyat Güvencesi', description: 'İşin başında belirlenen bütçe ne ise teslimatta o geçerlidir; sonradan sürpriz ek faturalar çıkmaz.' },
       { title: 'Çift Platform Maliyet Avantajı', description: 'React Native sayesinde iOS ve Android için iki ayrı ekibe para ödemez, %40 bütçe tasarrufu sağlarsınız.' },
-      { title: 'Ücretsiz Ön Analiz ve Danışmanlık', description: 'Fikrinizi dinleyip hangi özelliklerin ilk versiyon (MVP) için zorunlu olduğunu birlikte belirleriz.' },
-      { title: 'Taksitli / Aşama Bazlı Ödeme', description: 'Tasarım onayı, test sürümü ve canlıya çıkış şeklinde aşamalı ve güvenli ödeme takvimi.' },
     ],
     featuredAppIds: ['teleflow-prompter', 'geode-cutter-3d', 'tempoeat', 'truelevel'],
     processSteps: [
@@ -527,7 +741,6 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
     ],
     faqs: [
       { question: 'Ortalama bir mobil uygulama kaça mal olur?', answer: 'Giriş seviyesi kurumsal ve randevu uygulamaları genellikle uygun bütçelerle başlarken; canlı takip, ödeme ve yapay zeka içeren gelişmiş projeler daha kapsamlı bütçelendirilir. Ücretsiz ön analiz için hemen iletişime geçebilirsiniz.' },
-      { question: 'Ödemeler nasıl yapılıyor?', answer: 'Genellikle %30 başlangıç, %40 test sürümü onayı ve %30 mağazada canlıya çıkış şeklinde 3 vadeli güvenli modelle çalışıyoruz.' },
     ],
   },
 };
