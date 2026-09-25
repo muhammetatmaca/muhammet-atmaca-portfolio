@@ -116,7 +116,7 @@
   <!-- ============================================== -->
   <!-- Programmatic SEO Landing Pages (Hedefli Şehir & Hizmet Sayfaları) -->
   <!-- ============================================== -->
-  <!-- Bayburt Grubu -->
+  <!-- Bayburt Ultra Dominasyon Paketi (15 Hedef Sayfa) -->
   <url>
     <loc>https://muhammetatmaca.com.tr/bayburt-yazilim</loc>
     <lastmod>2026-09-25</lastmod>
@@ -124,7 +124,19 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-yazilim-sirketi</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://muhammetatmaca.com.tr/bayburt-bilgisayar</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-bilgisayar-muhendisi</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -137,6 +149,60 @@
   </url>
   <url>
     <loc>https://muhammetatmaca.com.tr/bayburt-web-tasarim</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-web-sitesi-yaptirma</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-yazilimci</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-e-ticaret-yazilimi</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-otomasyon-yazilimlari</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-seo-uzmani</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-bilisim-hizmetleri</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/demirozu-yazilim-web-tasarim</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/aydintepe-yazilim-web-tasarim</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/bayburt-qr-menu-adisyon</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
