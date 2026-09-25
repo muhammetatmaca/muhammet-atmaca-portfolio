@@ -148,7 +148,20 @@ async function main() {
         console.log(`✅ OK (${result.status})`);
         successCount++;
       } else {
-        console.log(`❌ Hata (${result.status}):`, result.data?.error?.message || 'Bilinmeyen hata');
+        const errorMsg = result.data?.error?.message || 'Bilinmeyen hata';
+        console.log(`❌ Hata (${result.status}):`, errorMsg);
+        if (result.status === 403 && errorMsg.includes('ownership')) {
+          console.log(`\n🛑 DURDURULDU: URL Mülkiyeti Doğrulanamadı (403 Permission Denied)`);
+          console.log(`Google, bu Hizmet Hesabının sitenin sahibi olduğunu henüz bilmiyor.`);
+          console.log(`\nÇÖZÜM:`);
+          console.log(`1. Google Search Console'a girin: https://search.google.com/search-console`);
+          console.log(`2. Sol alttan 'Ayarlar' -> 'Kullanıcılar ve İzinler' -> 'Kullanıcı Ekle' deyin.`);
+          console.log(`3. E-posta: ${serviceAccount.client_email}`);
+          console.log(`4. İzin: 'Sahip' (veya 'Tam') seçip ekleyin.`);
+          console.log(`(Eğer Search Console'da 'Sahip' seçeneği çıkmıyorsa: https://www.google.com/webmasters/verification/home adresine gidip mülkünüze 'Sahip Ekle' diyerek bu e-postayı yapıştırın).`);
+          console.log(`5. Ekledikten sonra bu scripti tekrar çalıştırın!`);
+          break;
+        }
         if (result.status === 429) {
           console.log(`⚠️  Günlük Google Indexing API kotasına ulaşıldı.`);
           break;
