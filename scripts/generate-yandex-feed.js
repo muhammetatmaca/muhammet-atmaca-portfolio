@@ -23,7 +23,8 @@ const categories = [
   { id: '6', name: 'Yapay Zeka, Görüntü İşleme ve AR-GE' },
   { id: '7', name: 'Savunma Sanayii, IoT ve Simülasyon' },
   { id: '8', name: 'İşletme Otomasyonu ve Muhasebe Entegrasyonu' },
-  { id: '9', name: 'Bulut Altyapı, DevOps ve IT Danışmanlığı' }
+  { id: '9', name: 'Bulut Altyapı, DevOps ve IT Danışmanlığı' },
+  { id: '10', name: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma' }
 ];
 
 const services = [
@@ -392,6 +393,108 @@ const services = [
     price: '50000',
     description: 'Google, Yandex ve Bing ilk sıra hedefli Programmatic SEO motoru, Schema JSON-LD yapılandırması ve Indexing API otomasyonu.',
     url: 'https://muhammetatmaca.com.tr/bayburt-seo-ajansi',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+
+  // --- 10. BİLGİSAYAR TEMİZLEME, FORMAT & TELEFON VERİ KURTARMA ---
+  {
+    id: '36',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'Laptop ve Masaüstü Detaylı Fan Temizliği ve Termal Macun',
+    price: '2000',
+    description: 'Aşırı ısınma, fan sesi ve donma sorunlarını gideren komple iç toz temizliği, fan yağlaması ve Arctic MX-4 yüksek iletkenlikli termal macun yenilemesi.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+  {
+    id: '37',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'Akıllı Telefondan Silinen Verileri Kurtarma (Fotoğraf, WhatsApp)',
+    price: '6500',
+    description: 'iPhone ve Android telefonlardan yanlışlıkla silinen fotoğraflar, videolar, ses kayıtları, rehber ve WhatsApp sohbet geçmişinin profesyonel laboratuvar kurtarımı.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+  {
+    id: '38',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'Açılmayan, Kırık veya Hasarlı Telefondan Çip Veri Kurtarma',
+    price: '12500',
+    description: 'Sıvı temaslı, anakartı yanan, ekranı kırık veya hiç açılmayan akıllı telefonlardan eMMC/UFS bellek çipi seviyesinde doğrudan veri çıkarma hizmeti.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+  {
+    id: '39',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'Harici Disk, Flash Bellek (USB) ve SD Kart Veri Kurtarma',
+    price: '8500',
+    description: 'Biçimlendirilen, RAW formata dönen, bilgisayarın tanımadığı bozuk harici harddisk ve USB belleklerden sıfır kayıpla dosya kurtarma.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+  {
+    id: '40',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'Bilgisayar Format, Orijinal Windows Kurulumu ve Hızlandırma',
+    price: '1800',
+    description: 'Yavaşlayan veya çöken bilgisayarları fabrika hızına döndüren temiz Windows 10/11 kurulumu, orijinal sürücü (driver) optimizasyonu ve temel program paketi.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+  {
+    id: '41',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'SSD ve RAM Donanım Yükseltme ile 10 Kat Hızlandırma',
+    price: '3500',
+    description: 'Eski sabit diski (HDD) çıkarıp yüksek hızlı NVMe SSD takılması, RAM artırımı ve eski Windows ile tüm verilerin sıfır kayıpla yeni diske klonlanması.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+  {
+    id: '42',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'Virüs, Truva Atı, Reklam Virüsü ve Casus Yazılım Temizliği',
+    price: '2200',
+    description: 'Tarayıcıyı kilitleyen reklamlar, arka planda çalışan Bitcoin madencilik virüsleri ve sistemi kilitleyen zararlı yazılımların garantili temizliği.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+  {
+    id: '43',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'Laptop Kasa Onarımı, Kırık Menteşe Tamiri ve Ekran Değişimi',
+    price: '4500',
+    description: 'Kapağı zor açılan, kırılan menteşe yuvalarının özel mukavemetli dolgu malzemesiyle garantili onarımı ve çatlak laptop ekranlarının değişimi.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar-tamiri',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+  {
+    id: '44',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'Kablosuz Wi-Fi Yazıcı, Tarayıcı ve Ağ Cihazı Kurulumu',
+    price: '2500',
+    description: 'Lazer ve mürekkepli yazıcıların ofisteki tüm bilgisayar ve cep telefonlarına kablosuz tanıtılması, ortak ağ tarama ayarlarının yapılması.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar',
+    picture: 'https://muhammetatmaca.com.tr/og-image.png'
+  },
+  {
+    id: '45',
+    categoryId: '10',
+    category: 'Bilgisayar Temizleme, Format ve Telefon Veri Kurtarma',
+    name: 'Telefon Yazılım Kurtarma, ROM Yükleme ve Sistem Onarımı',
+    price: '3000',
+    description: 'Açılış logosunda kalan, çöken, bootloop olan veya şifresi unutulan akıllı telefonların orijinal üretici yazılımıyla kurtarılması ve sıfırlanması.',
+    url: 'https://muhammetatmaca.com.tr/bayburt-bilgisayar',
     picture: 'https://muhammetatmaca.com.tr/og-image.png'
   }
 ];
