@@ -1,0 +1,57 @@
+{
+  "name": "react-native-teleflow-prompter",
+  "version": "1.0.0",
+  "description": "High-performance 60fps teleprompter scroll engine, WPM calculation, and mirror optics for React Native, Expo, and Web.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "teleprompter",
+    "prompter",
+    "teleflow",
+    "autoscroll",
+    "speech-timer",
+    "wpm-calculator",
+    "mirror-optics",
+    "video-recording",
+    "muhammet-atmaca",
+    "virelonsoft"
+  ],
+  "author": {
+    "name": "Muhammet Atmaca",
+    "email": "muhammetatmaca79@gmail.com",
+    "url": "https://muhammetatmaca.com.tr"
+  },
+  "homepage": "https://muhammetatmaca.com.tr/apps/teleflow-prompter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhammetatmaca/muhammet-atmaca-portfolio.git",
+    "directory": "packages/react-native-teleflow-prompter"
+  },
+  "bugs": {
+    "url": "https://muhammetatmaca.com.tr/#contact"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0 || ^19.0.0",
+    "typescript": "~5.9.3"
+  }
+}
