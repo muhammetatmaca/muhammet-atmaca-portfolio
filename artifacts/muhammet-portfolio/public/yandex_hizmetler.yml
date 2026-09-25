@@ -9,10 +9,10 @@
     </currencies>
     <categories>
       <category id="1">Mobil Uygulama Geliştirme</category>
-      <category id="2">Web Tasarım &amp; Kurumsal Yazılım</category>
+      <category id="2">Web Tasarım ve Kurumsal Yazılım</category>
       <category id="3">E-Ticaret Çözümleri</category>
       <category id="4">İşletme Otomasyonu</category>
-      <category id="5">Yapay Zeka &amp; AR-GE</category>
+      <category id="5">Yapay Zeka ve AR-GE</category>
     </categories>
     <offers>
       <offer id="1" available="true">
@@ -33,7 +33,7 @@
         <categoryId>2</categoryId>
         <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
         <description>Modern, ultra hızlı, mobil uyumlu ve SEO odaklı kurumsal web platformu ve yönetim paneli tasarımı.</description>
-        <param name="Kategori">Web Tasarım & Kurumsal Yazılım</param>
+        <param name="Kategori">Web Tasarım &amp; Kurumsal Yazılım</param>
       </offer>
       <offer id="3" available="true">
         <name>E-Ticaret Sitesi ve Online Satış Altyapısı</name>
@@ -63,7 +63,7 @@
         <categoryId>5</categoryId>
         <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
         <description>YOLOv8 ve ResNet tabanlı derin öğrenme, nesne tespiti, sınıflandırma ve kamera tabanlı endüstriyel yapay zeka sistemleri.</description>
-        <param name="Kategori">Yapay Zeka & AR-GE</param>
+        <param name="Kategori">Yapay Zeka &amp; AR-GE</param>
       </offer>
       <offer id="6" available="true">
         <name>Savunma Sanayii ve Simülasyon Yazılımları</name>
@@ -73,7 +73,7 @@
         <categoryId>6</categoryId>
         <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
         <description>Uydu yörünge algoritmaları, pasif çarpışma önleme sistemleri ve görev kritik mühendislik simülasyonları.</description>
-        <param name="Kategori">Savunma Sanayii & Özel Yazılım</param>
+        <param name="Kategori">Savunma Sanayii &amp; Özel Yazılım</param>
       </offer>
       <offer id="7" available="true">
         <name>Mobil Uygulama Güncelleme, Bakım ve Mağaza Onayı</name>
@@ -93,7 +93,7 @@
         <categoryId>5</categoryId>
         <picture>https://muhammetatmaca.com.tr/og-image.png</picture>
         <description>Google, Yandex ve Bing arama sonuçlarında ilk sayfaya çıkmak için teknik SEO, Schema yapılandırması ve indeksleme hızlandırma.</description>
-        <param name="Kategori">SEO & Dijital Büyüme</param>
+        <param name="Kategori">SEO &amp; Dijital Büyüme</param>
       </offer>
     </offers>
   </shop>
