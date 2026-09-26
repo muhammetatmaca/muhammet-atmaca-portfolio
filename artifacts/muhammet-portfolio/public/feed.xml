@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom" 
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Muhammet Atmaca — Mobil Uygulamalar, Yazılım Mühendisliği &amp; AR-GE Akışı</title>
+    <link>https://muhammetatmaca.com.tr/</link>
+    <description>Muhammet Atmaca ve VirelonSoft resmi teknoloji ve yayın akışı. 50'den fazla canlı mobil uygulama, React Native ve Flutter mimarisi, kurumsal web platformları ve uydu sistemleri AR-GE çalışmaları.</description>
+    <language>tr</language>
+    <copyright>© 2026 Muhammet Atmaca. Tüm Hakları Saklıdır.</copyright>
+    <managingEditor>muhammetatmaca79@gmail.com (Muhammet Atmaca)</managingEditor>
+    <webMaster>muhammetatmaca79@gmail.com (Muhammet Atmaca)</webMaster>
+    <lastBuildDate>Sat, 26 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://muhammetatmaca.com.tr/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <!-- Item 1: Open Source NPM Package Release -->
+    <item>
+      <title>react-native-teleflow-prompter: 60 FPS Teleprompter Scroll Motoru Açık Kaynak Yayınlandı</title>
+      <link>https://muhammetatmaca.com.tr/apps/teleflow-prompter</link>
+      <guid isPermaLink="false">muhammetatmaca-npm-react-native-teleflow-prompter</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Muhammet Atmaca</dc:creator>
+      <category>Açık Kaynak</category>
+      <category>React Native</category>
+      <description><![CDATA[
+        TeleFlow Prompter mobil uygulamasının çekirdek 60 FPS kaydırma algoritması, konuşma hızı (WPM) hesaplayıcısı ve ayna optiği transformasyon motoru react-native-teleflow-prompter adıyla NPM üzerinde açık kaynak olarak yayınlandı.
+      ]]></description>
+    </item>
+
+    <!-- Item 2: TeleFlow Prompter Mobile App -->
+    <item>
+      <title>TeleFlow Prompter: İçerik Üreticileri İçin Profesyonel Kayan Yazı ve Video Aracı</title>
+      <link>https://muhammetatmaca.com.tr/apps/teleflow-prompter</link>
+      <guid isPermaLink="false">muhammetatmaca-app-teleflow-prompter</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Muhammet Atmaca</dc:creator>
+      <category>Mobil Uygulama</category>
+      <category>iOS</category>
+      <category>Android</category>
+      <description><![CDATA[
+        Kamera karşısında konuşan YouTube içerik üreticileri, eğitmenler ve haberciler için tasarlanmış; akıllı kaydırma, ayarlanabilir WPM ve ayna yansıtma desteği sunan mobil prompter uygulaması.
+      ]]></description>
+    </item>
+
+    <!-- Item 3: Virelon WiFi Analyzer -->
+    <item>
+      <title>Virelon WiFi &amp; Ağ Analizi: Yerel Ağ Hız Testi ve Cihaz Güvenlik Tarayıcısı</title>
+      <link>https://muhammetatmaca.com.tr/apps/virelon-wifi</link>
+      <guid isPermaLink="false">muhammetatmaca-app-virelon-wifi</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Muhammet Atmaca</dc:creator>
+      <category>Ağ &amp; Güvenlik</category>
+      <description><![CDATA[
+        Kablosuz ağ sinyal gücü ölçümü, latency/ping analizi, IP ve port taraması ile ağ performansını optimize eden tam donanımlı mobil bilişim aracı.
+      ]]></description>
+    </item>
+
+    <!-- Item 4: Geode Cutter 3D -->
+    <item>
+      <title>Geode Cutter 3D: Gerçekçi Fizik Simülasyonu ve Haptik Geri Bildirimli Mobil Deneyim</title>
+      <link>https://muhammetatmaca.com.tr/apps/geode-cutter-3d</link>
+      <guid isPermaLink="false">muhammetatmaca-app-geode-cutter-3d</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Muhammet Atmaca</dc:creator>
+      <category>Mobil Oyun &amp; Simülasyon</category>
+      <description><![CDATA[
+        Gerçek dünya kristal kırma fiziği ve dokunsal titreşim (haptic feedback) mekaniği içeren 3D mobil simülasyon oyunu.
+      ]]></description>
+    </item>
+
+    <!-- Item 5: İMECE Satellite Research -->
+    <item>
+      <title>İMECE Uydusu Pasif Çarpışma Önleme: Derin Öğrenme (Bi-LSTM) ve SGP4 ile Yörünge Kestirimi</title>
+      <link>https://muhammetatmaca.com.tr/academic</link>
+      <guid isPermaLink="false">muhammetatmaca-academic-imece-satellite</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Muhammet Atmaca</dc:creator>
+      <category>Akademik &amp; AR-GE</category>
+      <category>Yapay Zeka</category>
+      <description><![CDATA[
+        Ulusal Havacılık ve Uzay Konferansı'nda (UHUK) sunulan, alçak dünya yörüngesindeki (LEO) İMECE uydusunun uzay enkazlarıyla olası çarpışmalarını Bi-LSTM derin öğrenme mimarisi ve SGP4 analitik yayılım modeli ile saatler öncesinden tespit eden bilimsel araştırma.
+      ]]></description>
+    </item>
+
+    <!-- Item 6: Bayburt Software Engineering Hub -->
+    <item>
+      <title>Bayburt Yazılım &amp; Bilgisayar Mühendisliği: VirelonSoft ile Yerinde Dijital Dönüşüm</title>
+      <link>https://muhammetatmaca.com.tr/bayburt-yazilim</link>
+      <guid isPermaLink="false">muhammetatmaca-local-bayburt-yazilim</guid>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Muhammet Atmaca</dc:creator>
+      <category>Yerel Mühendislik</category>
+      <description><![CDATA[
+        Bayburt merkezli işletmeler, kurumlar ve girişimciler için dünya standartlarında mobil uygulama, kurumsal ERP/CRM sistemleri ve e-ticaret altyapısı geliştirme hizmetleri.
+      ]]></description>
+    </item>
+  </channel>
+</rss>
