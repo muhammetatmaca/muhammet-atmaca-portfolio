@@ -28,28 +28,12 @@ const SITELINKS: SitelinkItem[] = [
     isInternalRoute: true,
   },
   {
-    id: 'sitelink-services',
-    badge: 'Rehber & Teklif',
-    title: 'Hizmetler & Sıkça Sorulan Sorular',
-    description: 'Mobil uygulama ve web sitesi yaptırma süreci, fiyatlandırma, mağaza onayları ve teknik danışmanlık.',
-    href: '/#services',
-    isInternalRoute: false,
-  },
-  {
     id: 'sitelink-career',
     badge: 'Deneyim & CV',
     title: 'Kariyer & Deneyim',
     description: '7 yılı aşkın savunma sanayii ve kurumsal yazılım mühendisliği kariyeri, projeler ve PDF özgeçmiş.',
     href: '/#career',
     isInternalRoute: false,
-  },
-  {
-    id: 'sitelink-academic',
-    badge: 'Akademik & 3D',
-    title: 'Akademik & AR-GE Projeleri',
-    description: 'İMECE uydusu Bi-LSTM yörünge mekaniği (UHUK), LoRaWAN Edge AI tezi, SSB ve 9 bilimsel proje.',
-    href: '/academic',
-    isInternalRoute: true,
   },
   {
     id: 'sitelink-virelonsoft',

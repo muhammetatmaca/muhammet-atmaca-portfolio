@@ -1585,7 +1585,7 @@ spline-viewer::part(watermark) {
    Google Sitelinks Directory Section
    ========================================================================== */
 .sitelinks-section {
-  padding: 48px 0 36px;
+  padding: 40px 0 16px;
   border-top: 1px solid var(--line);
   scroll-margin-top: 54px;
 }
@@ -1706,7 +1706,7 @@ spline-viewer::part(watermark) {
 
 @media (max-width: 800px) {
   .sitelinks-section {
-    padding: 36px 0 24px;
+    padding: 28px 0 12px;
   }
   .sitelinks-grid {
     grid-template-columns: 1fr;
