@@ -11,6 +11,8 @@
     <managingEditor>muhammetatmaca79@gmail.com (Muhammet Atmaca)</managingEditor>
     <webMaster>muhammetatmaca79@gmail.com (Muhammet Atmaca)</webMaster>
     <lastBuildDate>Sat, 26 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
+    <atom:link href="https://pubsubhubbub.superfeedr.com/" rel="hub"/>
     <atom:link href="https://muhammetatmaca.com.tr/feed.xml" rel="self" type="application/rss+xml"/>
 
     <!-- Item 1: Open Source NPM Package Release -->

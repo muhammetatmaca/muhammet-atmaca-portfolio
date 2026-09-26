@@ -1,0 +1,24 @@
+/* TEAM */
+  Software Architect & Lead Engineer: Muhammet Atmaca
+  Contact: muhammetatmaca79@gmail.com
+  Website: https://muhammetatmaca.com.tr
+  GitHub: https://github.com/muhammetatmaca
+  LinkedIn: https://www.linkedin.com/in/muhammet-atmaca-857481252/
+  Wikidata: https://www.wikidata.org/wiki/Q141561691
+  NPM: https://www.npmjs.com/~muhammetatmaca
+  Company: VirelonSoft (https://www.linkedin.com/company/virelonsoft/)
+  Location: Bayburt & Samsun, Türkiye
+
+/* THANKS */
+  Bayburt Fen Lisesi
+  Samsun Üniversitesi
+  Open Source & Web Community (React, TypeScript, Three.js, Vite, TailwindCSS, Expo)
+
+/* SITE */
+  Standards: HTML5, CSS3, SVG, JSON-LD (Schema.org), RFC 9116, KML 2.2, OpenSearch 1.1, WebSub (W3C), RSS 2.0
+  Components: React 19, TypeScript, Vite, TailwindCSS v4, Three.js, Lucide Icons, Canvas Keycaps
+  Architecture: Clean Architecture, Offline-First Mobile, Zero-Trust Security, Programmatic SEO Silo
+  Last Update: 2026-09-26
+  Language: Turkish & English
+  Doctype: HTML5
+  IDE: Visual Studio Code & Google Antigravity
