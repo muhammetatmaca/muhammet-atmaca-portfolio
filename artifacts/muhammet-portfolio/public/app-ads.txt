@@ -1,0 +1,9 @@
+# IAB Tech Lab app-ads.txt Authorized Digital Sellers Specification
+# Domain: muhammetatmaca.com.tr
+# Developer: Muhammet Atmaca
+# Entity: VirelonSoft
+# Contact: muhammetatmaca79@gmail.com
+# Reference: https://iabtechlab.com/ads-txt/
+
+# Google AdMob / Google Play Developer Network Verification
+google.com, pub-5448375685000000, DIRECT, f08c47fec0942fa0

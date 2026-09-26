@@ -1,0 +1,32 @@
+# GitHub Dependabot Configuration
+# Specification: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Automated security and version updates for Root Workspace & Portfolio
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "security"
+
+  # Automated updates for Open-Source NPM package (react-native-teleflow-prompter)
+  - package-ecosystem: "npm"
+    directory: "/packages/react-native-teleflow-prompter"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "npm-package"
+
+  # Automated updates for GitHub Actions Workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "ci-cd"
