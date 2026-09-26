@@ -1,3 +1,23 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="blueBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e5bf2"/>
+      <stop offset="100%" stop-color="#143db8"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#182033" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <!-- Kobalt Mavi Squircle (128x128 with Apple/Linear 28px corner radius) -->
+  <rect x="6" y="6" width="116" height="116" rx="28" fill="url(#blueBg)" filter="url(#shadow)"/>
+  <rect x="6" y="6" width="116" height="116" rx="28" fill="none" stroke="rgba(255,255,255,0.24)" stroke-width="2"/>
+
+  <!-- Bold Geometric 'M' Monogram (Uniform 14px stroke thickness, perfectly symmetric) -->
+  <path d="M 28 34 H 44 L 64 64 L 84 34 H 100 V 94 H 86 V 54 L 64 84 L 42 54 V 94 H 28 Z" fill="#ffffff"/>
+
+  <!-- Active Signature Coral Dot (Brand Pulse Indicator) -->
+  <circle cx="101" cy="25" r="10" fill="#143db8"/>
+  <circle cx="101" cy="25" r="8" fill="#ff765e"/>
+  <circle cx="99" cy="23" r="2.5" fill="#ffffff" opacity="0.6"/>
 </svg>
