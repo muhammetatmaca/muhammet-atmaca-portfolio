@@ -651,7 +651,7 @@ function Home() {
           </Reveal>
 
           {/* Direct CTA Banner */}
-          <Reveal delay={1}>
+          <Reveal delay={1} style={{ marginTop: '56px' }}>
             <div className="services-cta-banner">
               <div className="services-cta-copy">
                 <h4>Mobil uygulama veya web sitesi yaptırmak mı istiyorsunuz?</h4>
