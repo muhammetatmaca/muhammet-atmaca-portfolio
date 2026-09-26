@@ -1,0 +1,29 @@
+{
+  "links": [
+    {
+      "rel": "lrdd",
+      "type": "application/jrd+json",
+      "template": "https://muhammetatmaca.com.tr/.well-known/webfinger?resource={uri}"
+    },
+    {
+      "rel": "search",
+      "type": "application/opensearchdescription+xml",
+      "href": "https://muhammetatmaca.com.tr/opensearch.xml"
+    },
+    {
+      "rel": "feed",
+      "type": "application/rss+xml",
+      "href": "https://muhammetatmaca.com.tr/feed.xml"
+    },
+    {
+      "rel": "security-policy",
+      "type": "text/plain",
+      "href": "https://muhammetatmaca.com.tr/.well-known/security.txt"
+    },
+    {
+      "rel": "author",
+      "type": "text/plain",
+      "href": "https://muhammetatmaca.com.tr/humans.txt"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# W3C Tracking Protection / Do Not Track Policy
+# Specification: https://www.w3.org/TR/tracking-dnt/
+
+policy: https://muhammetatmaca.com.tr/
+tracking: none
+same-party: muhammetatmaca.com.tr
+compliance: https://www.w3.org/TR/tracking-dnt/
