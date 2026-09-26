@@ -35,11 +35,12 @@ type RevealProps = {
   children: React.ReactNode;
   className?: string;
   delay?: number;
+  style?: React.CSSProperties;
 };
 
-function Reveal({ children, className = '', delay = 0 }: RevealProps) {
+function Reveal({ children, className = '', delay = 0, style }: RevealProps) {
   return (
-    <div className={`reveal ${delay ? `reveal-delay-${delay}` : ''} ${className}`}>
+    <div className={`reveal ${delay ? `reveal-delay-${delay}` : ''} ${className}`} style={style}>
       {children}
     </div>
   );
