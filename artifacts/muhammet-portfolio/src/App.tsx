@@ -248,7 +248,15 @@ function Home() {
                 <h1>Faydalı<br /><em>fikirler.</em><br /><span className="hero-phrase">Özenle hayata</span><br />geçirildi.</h1>
               </Reveal>
               <Reveal delay={2}>
-                <p className="hero-lede" style={{ color: '#000000', fontWeight: 600 }}>
+                <p
+                  className="hero-lede"
+                  style={{
+                    color: '#000000',
+                    fontWeight: 600,
+                    fontFamily: 'var(--font-display)',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
                   Ben Muhammet — karmaşık ürün fikirlerini insanların keyifle kullandığı, anlaşılır ve güvenilir yazılımlara dönüştürüyorum. VirelonSoft çatısı altında; Samsun ve Bayburt merkezli olarak İstanbul, Ankara, İzmir başta olmak üzere tüm Türkiye'ye (81 il) ve yurt dışına 7 yılı aşkın süredir ölçeklenebilir mobil uygulamalar (50+), yapay zeka & bilgisayarlı görü sistemleri ve web platformları geliştiriyorum.
                 </p>
               </Reveal>
