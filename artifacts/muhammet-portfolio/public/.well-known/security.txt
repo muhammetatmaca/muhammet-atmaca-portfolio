@@ -3,6 +3,8 @@
 
 Contact: mailto:muhammetatmaca79@gmail.com
 Contact: https://muhammetatmaca.com.tr/#contact
+Encryption: https://muhammetatmaca.com.tr/pgp-key.txt
+Encryption: https://muhammetatmaca.com.tr/muhammet-atmaca.asc
 Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: tr, en
 Canonical: https://muhammetatmaca.com.tr/.well-known/security.txt
