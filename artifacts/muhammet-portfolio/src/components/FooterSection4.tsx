@@ -103,7 +103,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
   ];
 
   return (
-    <footer className={`py-14 px-4 sm:px-6 lg:px-8 border-t border-[var(--line)] bg-[var(--paper)] ${className}`} id="footer-section">
+    <footer className={`py-14 px-4 sm:px-6 lg:px-8 border-t-2 border-[var(--coral)] bg-[var(--paper)] ${className}`} id="footer-section">
       <motion.div
         className="container-wide mx-auto max-w-7xl"
         initial="hidden"
@@ -112,14 +112,14 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
         variants={containerVariants}
       >
         <div className="flex flex-col lg:flex-row gap-5 items-stretch">
-          {/* Cobalt Identity Card (Left Card) */}
+          {/* Coral Orange Identity Card (Left Card) */}
           <motion.div
-            className="relative w-full lg:w-1/3 min-h-[380px] lg:min-h-[560px] overflow-hidden rounded-2xl bg-[var(--cobalt)] text-white flex flex-col justify-between p-8 md:p-10 shadow-lg"
+            className="relative w-full lg:w-1/3 min-h-[380px] lg:min-h-[560px] overflow-hidden rounded-2xl bg-[var(--coral)] text-white flex flex-col justify-between p-8 md:p-10 shadow-lg"
             variants={itemVariants}
           >
             {/* SVG Noise / Grain Overlay */}
             <svg
-              className="absolute inset-0 w-full h-full opacity-30 pointer-events-none mix-blend-overlay z-0"
+              className="absolute inset-0 w-full h-full opacity-25 pointer-events-none mix-blend-overlay z-0"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
@@ -243,7 +243,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-8">
               {navColumns.map((col, idx) => (
                 <div key={idx} className="flex flex-col space-y-4">
-                  <h4 className="text-sm font-bold text-[var(--ink)] font-display uppercase tracking-wider text-xs font-mono text-[var(--cobalt)]">
+                  <h4 className="text-sm font-bold text-[var(--ink)] font-display uppercase tracking-wider text-xs font-mono text-[var(--coral)]">
                     {col.title}
                   </h4>
                   <ul className="flex flex-col space-y-2.5 text-xs md:text-[13px] text-[#182033]/75 font-normal">
@@ -252,7 +252,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
                         {link.isRoute ? (
                           <Link
                             href={link.href}
-                            className="hover:text-[var(--cobalt)] transition-colors inline-flex items-center gap-1"
+                            className="hover:text-[var(--coral)] transition-colors inline-flex items-center gap-1"
                           >
                             <span>{link.label}</span>
                           </Link>
@@ -260,7 +260,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
                           <a
                             href={link.href}
                             download="Muhammet_Atmaca_CV.pdf"
-                            className="hover:text-[var(--cobalt)] transition-colors inline-flex items-center gap-1"
+                            className="hover:text-[var(--coral)] transition-colors inline-flex items-center gap-1"
                           >
                             <span>{link.label}</span>
                             <Download size={11} className="opacity-70" />
@@ -270,7 +270,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
                             href={link.href}
                             target={link.href.startsWith('http') ? '_blank' : undefined}
                             rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-                            className="hover:text-[var(--cobalt)] transition-colors inline-flex items-center gap-1"
+                            className="hover:text-[var(--coral)] transition-colors inline-flex items-center gap-1"
                           >
                             <span className="truncate max-w-[170px]">{link.label}</span>
                             {link.href.startsWith('http') && <ArrowUpRight size={11} className="opacity-60 shrink-0" />}
@@ -287,7 +287,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
             <div className="pt-10 mt-10 border-t border-[var(--line)] flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-2 max-w-md">
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--cobalt)] font-semibold">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--coral)] font-semibold">
                     Hızlı Değerlendirme & Bütçe
                   </span>
                 </div>
@@ -305,11 +305,11 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
                     value={emailInput}
                     onChange={(e) => setEmailInput(e.target.value)}
                     placeholder="E-posta veya telefon numaranız..."
-                    className="flex-1 rounded-lg px-3.5 py-2.5 text-xs md:text-sm bg-[#faf8f2] text-[var(--ink)] border border-[var(--line)] focus:outline-none focus:border-[var(--cobalt)] transition-colors"
+                    className="flex-1 rounded-lg px-3.5 py-2.5 text-xs md:text-sm bg-[#faf8f2] text-[var(--ink)] border border-[var(--line)] focus:outline-none focus:border-[var(--coral)] transition-colors"
                   />
                   <button
                     type="submit"
-                    className="rounded-lg bg-[var(--cobalt)] text-white px-5 py-2.5 text-xs md:text-sm font-medium hover:bg-[var(--cobalt)]/90 transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer shrink-0"
+                    className="rounded-lg bg-[var(--coral)] text-white px-5 py-2.5 text-xs md:text-sm font-medium hover:bg-[#ff6444] transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer shrink-0"
                   >
                     <span>{submitted ? 'Açılıyor...' : 'Teklif Al'}</span>
                     <Send size={13} />
@@ -325,7 +325,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
                     e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="inline-flex items-center gap-2 text-xs font-mono text-[var(--ink)]/60 hover:text-[var(--cobalt)] transition-colors py-2 px-3 rounded-lg border border-[var(--line)] hover:border-[var(--cobalt)]/30"
+                  className="inline-flex items-center gap-2 text-xs font-mono text-[var(--ink)]/60 hover:text-[var(--coral)] transition-colors py-2 px-3 rounded-lg border border-[var(--line)] hover:border-[var(--coral)]/40"
                   title="Sayfanın Başına Dön"
                 >
                   <span>Yukarı çık</span>
