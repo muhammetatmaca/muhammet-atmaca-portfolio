@@ -17,6 +17,7 @@ import {
 import { ACADEMIC_PROJECTS, type AcademicProject } from '../data/academicProjects';
 import { SEO } from '../components/SEO';
 import { SitelinksDirectory } from '../components/SitelinksDirectory';
+import { FooterSection4 } from '../components/FooterSection4';
 
 const Spline = lazy(() => import('@splinetool/react-spline'));
 
@@ -676,42 +677,8 @@ export function AcademicProjectsPage() {
       {/* Sitelinks Directory */}
       <SitelinksDirectory />
 
-      {/* Footer without any emojis */}
-      <footer className="footer">
-        <div className="container-wide footer-inner">
-          <span className="footer-note">© {new Date().getFullYear()} Muhammet Atmaca — Akademik & AR-GE Portfolyosu</span>
-          <div className="footer-links">
-            <Link href="/" className="footer-link">Ana Sayfa</Link>
-            <Link href="/apps" className="footer-link">Mobil Uygulamalar</Link>
-            <Link href="/web" className="footer-link">Web Sistemleri</Link>
-            <a
-              href="https://share.google/LeVvOPDHGCxM1biap"
-              target="_blank"
-              rel="noreferrer"
-              className="footer-link"
-              title="VirelonSoft Google İşletme Profili"
-            >
-              VirelonSoft
-            </a>
-            <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" className="footer-link">
-              <Github size={13} /> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/muhammet-atmaca-857481252/" target="_blank" rel="noreferrer" className="footer-link">
-              <Linkedin size={13} /> LinkedIn
-            </a>
-            <a
-              href="#"
-              className="footer-link"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            >
-              Yukarı çık <ArrowDown size={13} className="rotate-180" />
-            </a>
-          </div>
-        </div>
-      </footer>
+      {/* Editorial Footer Section 4 (2-card split layout) */}
+      <FooterSection4 />
     </div>
   );
 }

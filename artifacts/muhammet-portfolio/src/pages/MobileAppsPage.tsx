@@ -24,6 +24,7 @@ import FlowerType from '../components/originkit/ui/botanical-text-custom-style';
 import { SEO } from '../components/SEO';
 import { SitelinksDirectory } from '../components/SitelinksDirectory';
 import { GlassCodeBlock } from '../components/GlassCodeBlock';
+import { FooterSection4 } from '../components/FooterSection4';
 
 const APP_CATEGORY_LABELS: Record<string, string> = {
   All: 'Tümü',
@@ -819,29 +820,8 @@ export function MobileAppsPage() {
       {/* Sitelinks Navigation Directory */}
       <SitelinksDirectory />
 
-      {/* Footer matching site design */}
-      <footer className="footer">
-        <div className="container-wide footer-inner">
-          <span className="footer-note">© {new Date().getFullYear()} Muhammet Atmaca • Mobil Uygulamalar</span>
-          <div className="footer-links">
-            <Link href="/" className="footer-link">Portfolyo Ana Sayfa</Link>
-            <Link href="/web" className="footer-link">Web Sistemleri</Link>
-            <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" className="footer-link" data-testid="link-github"><Github size={13} /> GitHub</a>
-            <a href="https://www.linkedin.com/in/muhammet-atmaca-857481252/" target="_blank" rel="noreferrer" className="footer-link" data-testid="link-linkedin"><Linkedin size={13} /> LinkedIn</a>
-            <a
-              href="#top"
-              className="footer-link"
-              data-testid="link-back-top"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            >
-              Yukarı çık <ArrowDown size={13} className="rotate-180" />
-            </a>
-          </div>
-        </div>
-      </footer>
+      {/* Editorial Footer Section 4 (2-card split layout) */}
+      <FooterSection4 />
     </main>
   );
 }

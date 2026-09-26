@@ -6,6 +6,7 @@ import { SEO } from '../components/SEO';
 import { SitelinksDirectory } from '../components/SitelinksDirectory';
 import { LogoLoop, type LogoItem } from '../components/LogoLoop';
 import { GlassCodeBlock } from '../components/GlassCodeBlock';
+import { FooterSection4 } from '../components/FooterSection4';
 import {
   SiNextdotjs,
   SiReact,
@@ -1056,29 +1057,8 @@ export function WebProjectsPage() {
       {/* Sitelinks Navigation Directory */}
       <SitelinksDirectory />
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container-wide footer-inner">
-          <span className="footer-note">© {new Date().getFullYear()} Muhammet Atmaca • Web Sistemleri</span>
-          <div className="footer-links">
-            <Link href="/" className="footer-link">Portfolyo Ana Sayfa</Link>
-            <Link href="/apps" className="footer-link">Mobil Uygulamalar (50+)</Link>
-            <a href="https://github.com/muhammetatmaca" target="_blank" rel="noreferrer" className="footer-link" data-testid="link-github"><Github size={13} /> GitHub</a>
-            <a href="https://www.linkedin.com/in/muhammet-atmaca-857481252/" target="_blank" rel="noreferrer" className="footer-link" data-testid="link-linkedin"><Linkedin size={13} /> LinkedIn</a>
-            <a
-              href="#top"
-              className="footer-link"
-              data-testid="link-back-top"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            >
-              Yukarı çık <ArrowDown size={13} className="rotate-180" />
-            </a>
-          </div>
-        </div>
-      </footer>
+      {/* Editorial Footer Section 4 (2-card split layout) */}
+      <FooterSection4 />
     </main>
   );
 }
