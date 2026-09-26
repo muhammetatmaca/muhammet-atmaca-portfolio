@@ -1,0 +1,15 @@
+# RFC 9116 Security Disclosure Policy
+# https://muhammetatmaca.com.tr/.well-known/security.txt
+
+Contact: mailto:muhammetatmaca79@gmail.com
+Contact: https://muhammetatmaca.com.tr/#contact
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: tr, en
+Canonical: https://muhammetatmaca.com.tr/.well-known/security.txt
+Policy: https://muhammetatmaca.com.tr/
+Hiring: https://muhammetatmaca.com.tr/
+Acknowledgments: https://muhammetatmaca.com.tr/#career
+
+# Organization: VirelonSoft (Muhammet Atmaca)
+# Focus: Mobile Application Security, Cloud Infrastructure, Defense Systems & Zero-Trust Architecture
+# Reporting: Please encrypt sensitive vulnerability disclosures and report directly to muhammetatmaca79@gmail.com.

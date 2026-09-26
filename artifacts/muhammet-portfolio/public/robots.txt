@@ -26,9 +26,11 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Sitemaps
+# Sitemaps & Feeds
 Sitemap: https://muhammetatmaca.com.tr/sitemap.xml
 Sitemap: https://muhammetatmaca.com.tr/geositemap.xml
+# RSS Feed: https://muhammetatmaca.com.tr/feed.xml
+# Security: https://muhammetatmaca.com.tr/.well-known/security.txt
 
 # LLM Direct Knowledge Context
 # https://muhammetatmaca.com.tr/llms.txt
