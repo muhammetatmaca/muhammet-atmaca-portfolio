@@ -125,19 +125,26 @@ const tokenizeLine = (line: string): Token[] => {
   return tokens;
 };
 
+/* --- PORTFOLIO EDITORIAL THEME PALETTE ---
+ * Cobalt Blue: var(--cobalt, #194bdf)
+ * Coral Orange: var(--coral, #ff765e)
+ * Ink Dark: var(--ink, #182033)
+ * Paper: var(--paper, #f4f0e6)
+ * Line: var(--line, rgba(24, 32, 51, 0.16))
+ */
 const TOKEN_STYLES: Record<TokenKind, React.CSSProperties> = {
-  comment: { color: '#94a3b8', fontStyle: 'italic' },
-  keyword: { color: '#c084fc', fontWeight: 600 },
-  boolean: { color: '#f87171', fontWeight: 600 },
-  type: { color: '#38bdf8', fontWeight: 500 },
-  function: { color: '#60a5fa' },
-  property: { color: '#fde047' },
-  string: { color: '#4ade80' },
-  number: { color: '#fb923c' },
-  jsxTag: { color: '#f43f5e', fontWeight: 600 },
-  operator: { color: '#cbd5e1' },
-  punctuation: { color: '#94a3b8' },
-  code: { color: '#ffffff' },
+  comment: { color: 'rgba(24, 32, 51, 0.5)', fontStyle: 'italic' },
+  keyword: { color: 'var(--cobalt)', fontWeight: 600 },
+  boolean: { color: 'var(--coral)', fontWeight: 600 },
+  type: { color: '#0284c7', fontWeight: 600 },
+  function: { color: '#4f46e5', fontWeight: 500 },
+  property: { color: '#b45309' },
+  string: { color: '#d94d34' }, // Rich readable coral-orange on light background
+  number: { color: '#ea580c', fontWeight: 600 },
+  jsxTag: { color: 'var(--cobalt)', fontWeight: 600 },
+  operator: { color: 'rgba(24, 32, 51, 0.65)' },
+  punctuation: { color: 'rgba(24, 32, 51, 0.55)' },
+  code: { color: 'var(--ink)' },
 };
 
 export interface CodeTab {
@@ -253,7 +260,7 @@ export const GlassCodeBlock = ({
   width = '100%',
   maxHeight,
   fontSize = 13.5,
-  glassColor = '#080c16',
+  glassColor = '#ffffff',
   showTrafficLights = true,
   className = '',
   style,
@@ -295,9 +302,9 @@ export const GlassCodeBlock = ({
         .glass-code-aura {
           position: absolute;
           inset: -12px;
-          background: radial-gradient(ellipse at 30% 20%, rgba(56, 189, 248, 0.22), transparent 55%),
-                      radial-gradient(ellipse at 75% 80%, rgba(192, 132, 252, 0.18), transparent 50%);
-          filter: blur(28px);
+          background: radial-gradient(ellipse at 25% 20%, rgba(25, 75, 223, 0.09), transparent 60%),
+                      radial-gradient(ellipse at 80% 80%, rgba(255, 118, 94, 0.08), transparent 60%);
+          filter: blur(24px);
           border-radius: 24px;
           pointer-events: none;
           z-index: 0;
@@ -306,17 +313,17 @@ export const GlassCodeBlock = ({
         @media (max-width: 640px) {
           .glass-code-aura {
             inset: 0;
-            filter: blur(14px);
+            filter: blur(12px);
           }
         }
 
         .glass-code-frame {
           position: relative;
           z-index: 1;
-          background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%);
+          background: #ffffff;
+          border: 1px solid var(--line);
           border-radius: 16px;
-          padding: 1px;
-          box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+          box-shadow: 0 16px 44px -12px rgba(24, 32, 51, 0.09), 0 2px 8px -2px rgba(24, 32, 51, 0.04);
           box-sizing: border-box;
           overflow: hidden;
         }
@@ -326,7 +333,6 @@ export const GlassCodeBlock = ({
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .glass-code-header {
@@ -335,8 +341,8 @@ export const GlassCodeBlock = ({
           justifyContent: space-between;
           gap: 10px;
           padding: 10px 16px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-          background: rgba(255, 255, 255, 0.03);
+          border-bottom: 1px solid var(--line);
+          background: var(--paper);
           min-height: 46px;
           box-sizing: border-box;
         }
@@ -384,9 +390,9 @@ export const GlassCodeBlock = ({
         .glass-tab-btn {
           background: transparent;
           border: 1px solid transparent;
-          border-radius: 6px;
+          border-radius: 7px;
           padding: 5px 11px;
-          color: rgba(255, 255, 255, 0.6);
+          color: rgba(24, 32, 51, 0.65);
           font-size: 12px;
           font-family: ${FONT_MONO};
           font-weight: 500;
@@ -401,32 +407,32 @@ export const GlassCodeBlock = ({
         }
 
         .glass-tab-btn:hover {
-          color: #ffffff;
-          background: rgba(255, 255, 255, 0.07);
+          color: var(--ink);
+          background: rgba(24, 32, 51, 0.05);
         }
 
         .glass-tab-btn.active {
-          background: rgba(255, 255, 255, 0.12);
-          border-color: rgba(255, 255, 255, 0.2);
-          color: #ffffff;
+          background: #ffffff;
+          border-color: var(--line);
+          color: var(--cobalt);
           font-weight: 600;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px rgba(24, 32, 51, 0.06);
         }
 
         .glass-tab-badge {
           font-size: 10px;
           padding: 1.5px 6px;
           border-radius: 4px;
-          background: rgba(255, 255, 255, 0.06);
-          color: rgba(255, 255, 255, 0.5);
-          font-weight: normal;
+          background: rgba(24, 32, 51, 0.06);
+          color: rgba(24, 32, 51, 0.6);
+          font-weight: 500;
           transition: all 0.18s ease;
         }
 
         .glass-tab-btn.active .glass-tab-badge {
-          background: rgba(56, 189, 248, 0.22);
-          color: #38bdf8;
-          border: 1px solid rgba(56, 189, 248, 0.35);
+          background: rgba(25, 75, 223, 0.08);
+          color: var(--cobalt);
+          border: 1px solid rgba(25, 75, 223, 0.2);
         }
 
         @media (max-width: 640px) {
@@ -443,12 +449,12 @@ export const GlassCodeBlock = ({
           display: inline-flex;
           align-items: center;
           gap: 5px;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: #ffffff;
+          border: 1px solid var(--line);
           border-radius: 6px;
           padding: 5px 10px;
           font-size: 11px;
-          color: rgba(255, 255, 255, 0.75);
+          color: rgba(24, 32, 51, 0.75);
           cursor: pointer;
           font-family: ${FONT_MONO};
           flex-shrink: 0;
@@ -457,15 +463,15 @@ export const GlassCodeBlock = ({
         }
 
         .glass-copy-btn:hover {
-          background: rgba(255, 255, 255, 0.1);
-          color: #ffffff;
-          border-color: rgba(255, 255, 255, 0.22);
+          background: rgba(25, 75, 223, 0.05);
+          color: var(--cobalt);
+          border-color: var(--cobalt);
         }
 
         .glass-copy-btn.copied {
-          background: rgba(74, 222, 128, 0.15);
-          border-color: rgba(74, 222, 128, 0.35);
-          color: #4ade80;
+          background: rgba(255, 118, 94, 0.1);
+          border-color: var(--coral);
+          color: var(--coral);
         }
 
         @media (max-width: 440px) {
@@ -489,6 +495,7 @@ export const GlassCodeBlock = ({
           font-family: ${FONT_MONO};
           line-height: 1.62;
           box-sizing: border-box;
+          background: #ffffff;
         }
 
         .glass-code-body::-webkit-scrollbar {
@@ -520,7 +527,7 @@ export const GlassCodeBlock = ({
         }
 
         .glass-line-number {
-          color: rgba(255, 255, 255, 0.28);
+          color: rgba(24, 32, 51, 0.32);
           user-select: none;
           font-size: 11px;
           width: 24px;
@@ -532,7 +539,7 @@ export const GlassCodeBlock = ({
           .glass-line-number {
             width: 18px;
             font-size: 10px;
-            color: rgba(255, 255, 255, 0.22);
+            color: rgba(24, 32, 51, 0.28);
           }
         }
 
@@ -548,22 +555,23 @@ export const GlassCodeBlock = ({
           .glass-mobile-scroll-cue {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justifyContent: flex-end;
             gap: 5px;
             padding: 5px 14px 8px;
             font-size: 10px;
-            color: rgba(255, 255, 255, 0.35);
+            color: rgba(24, 32, 51, 0.5);
             font-family: ${FONT_MONO};
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-top: 1px solid var(--line);
+            background: var(--paper);
             user-select: none;
           }
         }
       `}</style>
 
-      {/* Background glowing aura */}
+      {/* Background glowing aura with theme cobalt & coral */}
       <div className="glass-code-aura" aria-hidden="true" />
 
-      {/* Main glass frame */}
+      {/* Main theme frame */}
       <div className="glass-code-frame">
         <div
           className="glass-code-inner"
@@ -582,7 +590,7 @@ export const GlassCodeBlock = ({
                       height: 11,
                       borderRadius: '50%',
                       background: '#ff5f57',
-                      boxShadow: '0 0 6px rgba(255, 95, 87, 0.4)',
+                      boxShadow: '0 0 4px rgba(255, 95, 87, 0.35)',
                     }}
                   />
                   <div
@@ -591,7 +599,7 @@ export const GlassCodeBlock = ({
                       height: 11,
                       borderRadius: '50%',
                       background: '#febc2e',
-                      boxShadow: '0 0 6px rgba(254, 188, 46, 0.4)',
+                      boxShadow: '0 0 4px rgba(254, 188, 46, 0.35)',
                     }}
                   />
                   <div
@@ -600,7 +608,7 @@ export const GlassCodeBlock = ({
                       height: 11,
                       borderRadius: '50%',
                       background: '#28c840',
-                      boxShadow: '0 0 6px rgba(40, 200, 64, 0.4)',
+                      boxShadow: '0 0 4px rgba(40, 200, 64, 0.35)',
                     }}
                   />
                 </div>
@@ -638,7 +646,7 @@ export const GlassCodeBlock = ({
             >
               {copied ? (
                 <>
-                  <Check size={12} color="#4ade80" />
+                  <Check size={12} color="var(--coral)" />
                   <span className="glass-copy-label">Kopyalandı</span>
                 </>
               ) : (
