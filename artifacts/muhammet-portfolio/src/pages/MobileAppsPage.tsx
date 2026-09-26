@@ -147,8 +147,9 @@ export function MobileAppsPage() {
             </p>
           </div>
 
-          {/* Originkit Botanical Text component */}
+          {/* Originkit Botanical Text component - Hidden on mobile screens */}
           <div
+            className="mobile-hero-flower-anim hidden md:block"
             style={{
               width: '100%',
               maxWidth: '540px',

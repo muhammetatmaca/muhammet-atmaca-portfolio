@@ -1759,3 +1759,11 @@ spline-viewer::part(watermark),
   width: 0 !important;
   height: 0 !important;
 }
+
+/* Hide heavy botanical animation on mobile screens */
+@media (max-width: 768px) {
+  .mobile-hero-flower-anim {
+    display: none !important;
+  }
+}
+
