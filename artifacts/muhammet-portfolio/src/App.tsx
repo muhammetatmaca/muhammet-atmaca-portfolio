@@ -4,7 +4,6 @@ import {
   ArrowDown,
   ArrowUpRight,
   Check,
-  ChevronDown,
   Download,
   FileText,
   Github,
@@ -20,10 +19,11 @@ import { KeycapsScene } from './components/KeycapsScene';
 import RidgeParallax from './components/originkit/ui/ridge-parallax-base';
 import { WEB_PROJECTS, CAREER_EXPERIENCES, EDUCATION_LIST, CV_METADATA } from './data/careerAndWeb';
 import { MOBILE_APPS } from './data/mobileApps';
-import { SERVICES_LIST, FAQ_LIST } from './data/servicesFaq';
+import { SERVICES_LIST } from './data/servicesFaq';
 import { SEO } from './components/SEO';
 import { SitelinksDirectory } from './components/SitelinksDirectory';
 import { GlassCodeBlock } from './components/GlassCodeBlock';
+import { FaqAccordion } from './components/FaqAccordion';
 import { SEO_LANDING_PAGES } from './data/seoLandingPages';
 
 const MobileAppsPage = lazy(() => import('./pages/MobileAppsPage').then((m) => ({ default: m.MobileAppsPage })));
@@ -49,11 +49,6 @@ function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [workFilter, setWorkFilter] = useState<'all' | 'web' | 'mobile'>('all');
   const [cvNoticeOpen, setCvNoticeOpen] = useState(false);
-  const [openFaqId, setOpenFaqId] = useState<string | null>('faq-1');
-
-  const toggleFaq = (id: string) => {
-    setOpenFaqId((prev) => (prev === id ? null : id));
-  };
 
   useEffect(() => {
     const nodes = document.querySelectorAll<HTMLElement>('.reveal');
@@ -650,39 +645,9 @@ function Home() {
             </p>
           </Reveal>
 
-          <div className="faq-accordion" role="region" aria-label="Sıkça Sorulan Sorular">
-            {FAQ_LIST.map((faq) => {
-              const isOpen = openFaqId === faq.id;
-              return (
-                <div
-                  key={faq.id}
-                  className={`faq-item ${isOpen ? 'is-open' : ''}`}
-                  data-testid={`faq-item-${faq.id}`}
-                >
-                  <button
-                    type="button"
-                    className="faq-question-btn"
-                    onClick={() => toggleFaq(faq.id)}
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-ans-${faq.id}`}
-                  >
-                    <span className="faq-question-text">{faq.question}</span>
-                    <span className="faq-icon-wrap" aria-hidden="true">
-                      <ChevronDown
-                        size={18}
-                        className={`faq-chevron ${isOpen ? 'is-rotated' : ''}`}
-                      />
-                    </span>
-                  </button>
-                  {isOpen && (
-                    <div id={`faq-ans-${faq.id}`} className="faq-answer">
-                      <p>{faq.answer}</p>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+          <Reveal delay={1}>
+            <FaqAccordion defaultOpenId="01" />
+          </Reveal>
 
           {/* Direct CTA Banner */}
           <Reveal delay={1}>
