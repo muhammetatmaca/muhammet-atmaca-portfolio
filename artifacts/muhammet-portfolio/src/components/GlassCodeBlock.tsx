@@ -184,7 +184,7 @@ export function deployApplication(config: ProjectLaunchConfig) {
 
     // 3. Apple App Store ve Google Play resmi onay süreci
     publishToStores(nativeBuild).then(() => {
-      setStatus('Yayında: Milyonlarca kullanıcıya hazır 🚀');
+      setStatus('Yayında: Milyonlarca kullanıcıya hazır');
     });
   }, []);
 

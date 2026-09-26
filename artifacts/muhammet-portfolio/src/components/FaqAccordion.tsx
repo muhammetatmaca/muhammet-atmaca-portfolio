@@ -6,621 +6,544 @@ import {
   AccordionTrigger,
 } from './ui/accordion';
 import { Button } from './ui/button';
-import { ArrowUpRight, ChevronDown } from 'lucide-react';
+import {
+  ArrowUpRight,
+  ChevronDown,
+  CheckCircle2,
+  ShieldCheck,
+  Smartphone,
+  Layers,
+  Code2,
+  FileSearch,
+  Palette,
+  GitBranch,
+  Lock,
+  Zap,
+  Globe,
+  Terminal,
+  Star,
+  Check,
+  Video,
+} from 'lucide-react';
 
 /* ==========================================================================
-   HIGH-FIDELITY BESPOKE VECTOR UI ILLUSTRATIONS FOR FAQ ACCORDION
+   HIGH-FIDELITY BESPOKE UI VISUALS FOR FAQ ACCORDION
+   Rooted in our portfolio palette:
+   - Derin Mürekkep: #182033 / #121828
+   - Bizim Beyaz: #ffffff
+   - Bizim Mavi / Kobalt: #60a5fa / #38bdf8 / #194bdf
+   - Bizim Turuncu: #ff765e / #ea580c
+   - Bizim Lime: #d4e86e
    ========================================================================== */
 
 // 1. Mobil Uygulama Süreci (4 Aşamalı Modern Pipeline)
-function SvgMobileProcess() {
+function VisualMobileProcess() {
+  const steps = [
+    {
+      num: '01',
+      title: 'Analiz & PRD',
+      desc: 'Mimari Taslak',
+      tag: '#Wireframe',
+      icon: <FileSearch size={15} className="text-[#38bdf8]" />,
+      border: 'border-sky-500/30',
+      badgeBg: 'bg-sky-500/10 text-sky-400',
+    },
+    {
+      num: '02',
+      title: 'UI/UX 60 FPS',
+      desc: 'Figma Prototip',
+      tag: '#KullanıcıDostu',
+      icon: <Palette size={15} className="text-[#c084fc]" />,
+      border: 'border-purple-500/30',
+      badgeBg: 'bg-purple-500/10 text-purple-300',
+    },
+    {
+      num: '03',
+      title: 'React Native',
+      desc: 'Yerel Derleme',
+      tag: '#iOS & #Android',
+      icon: <Code2 size={15} className="text-[#818cf8]" />,
+      border: 'border-indigo-500/30',
+      badgeBg: 'bg-indigo-500/10 text-indigo-300',
+    },
+    {
+      num: '04',
+      title: 'Canlı Yayında',
+      desc: 'Store Release',
+      tag: '● %100 Onaylı',
+      icon: <CheckCircle2 size={15} className="text-[#4ade80]" />,
+      border: 'border-emerald-500/40',
+      badgeBg: 'bg-emerald-500/15 text-emerald-400 font-bold',
+    },
+  ];
+
   return (
-    <svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full max-h-[260px]" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="mpBg" x1="0" y1="0" x2="420" y2="280" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#0a0f1d" />
-          <stop offset="1" stopColor="#060911" />
-        </linearGradient>
-        <linearGradient id="mpTrack" x1="40" y1="120" x2="380" y2="120" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#38bdf8" />
-          <stop offset="0.35" stopColor="#818cf8" />
-          <stop offset="0.7" stopColor="#a855f7" />
-          <stop offset="1" stopColor="#22c55e" />
-        </linearGradient>
-        <filter id="mpGlow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="4" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-        <pattern id="mpGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-          <circle cx="2" cy="2" r="1" fill="rgba(255, 255, 255, 0.05)" />
-        </pattern>
-      </defs>
+    <div className="w-full max-w-[420px] rounded-2xl bg-[#111726] border border-white/10 p-4 shadow-2xl flex flex-col justify-between gap-3 text-white">
+      {/* Top Chrome Header */}
+      <div className="flex items-center justify-between border-b border-white/10 pb-2.5">
+        <div className="flex items-center gap-1.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
+          <span className="ml-2 font-mono text-[10px] text-white/45">pipeline://mobile-workflow.v3</span>
+        </div>
+        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 font-mono text-[9px] text-emerald-400 font-semibold">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Production Ready</span>
+        </div>
+      </div>
 
-      {/* Background Frame */}
-      <rect width="420" height="280" rx="16" fill="url(#mpBg)" />
-      <rect width="420" height="280" rx="16" fill="url(#mpGrid)" />
-      <rect x="0.5" y="0.5" width="419" height="279" rx="15.5" stroke="rgba(255, 255, 255, 0.08)" />
-
-      {/* Top Header Chrome */}
-      <g transform="translate(18, 16)">
-        <circle cx="8" cy="8" r="4" fill="#ff5f57" />
-        <circle cx="22" cy="8" r="4" fill="#febc2e" />
-        <circle cx="36" cy="8" r="4" fill="#28c840" />
-        <text x="54" y="12" fill="rgba(255, 255, 255, 0.4)" fontSize="10" fontFamily="monospace" fontWeight="500">pipeline://mobile-workflow.v3</text>
-        <rect x="250" y="-1" width="134" height="20" rx="10" fill="rgba(34, 197, 94, 0.12)" stroke="rgba(34, 197, 94, 0.3)" />
-        <circle cx="262" cy="9" r="3.5" fill="#22c55e" filter="url(#mpGlow)" />
-        <text x="272" y="12" fill="#4ade80" fontSize="9" fontWeight="700" fontFamily="monospace">● Production Ready</text>
-      </g>
-
-      {/* Connecting Laser Bus */}
-      <line x1="45" y1="120" x2="375" y2="120" stroke="url(#mpTrack)" strokeWidth="3" strokeLinecap="round" opacity="0.85" filter="url(#mpGlow)" />
-      <line x1="45" y1="120" x2="375" y2="120" stroke="rgba(255,255,255,0.7)" strokeWidth="1" strokeDasharray="6 6" />
-
-      {/* Phase 1: Analiz */}
-      <g transform="translate(24, 75)">
-        <rect width="84" height="92" rx="12" fill="#0f172a" stroke="rgba(56, 189, 248, 0.35)" strokeWidth="1.2" />
-        <rect x="8" y="8" width="28" height="18" rx="6" fill="rgba(56, 189, 248, 0.15)" />
-        <text x="14" y="21" fill="#38bdf8" fontSize="10" fontWeight="800" fontFamily="monospace">01</text>
-        <circle cx="68" cy="17" r="4" fill="#38bdf8" />
-        <text x="10" y="44" fill="#ffffff" fontSize="11" fontWeight="700">Analiz &amp; PRD</text>
-        <text x="10" y="58" fill="rgba(255, 255, 255, 0.55)" fontSize="8.5">Mimari Taslak</text>
-        <rect x="10" y="68" width="64" height="15" rx="4" fill="rgba(56, 189, 248, 0.1)" />
-        <text x="16" y="79" fill="#93c5fd" fontSize="7.5" fontFamily="monospace">#Fonksiyonel</text>
-      </g>
-
-      {/* Phase 2: UI/UX */}
-      <g transform="translate(120, 75)">
-        <rect width="84" height="92" rx="12" fill="#0f172a" stroke="rgba(168, 85, 247, 0.35)" strokeWidth="1.2" />
-        <rect x="8" y="8" width="28" height="18" rx="6" fill="rgba(168, 85, 247, 0.15)" />
-        <text x="14" y="21" fill="#c084fc" fontSize="10" fontWeight="800" fontFamily="monospace">02</text>
-        <circle cx="68" cy="17" r="4" fill="#c084fc" />
-        <text x="10" y="44" fill="#ffffff" fontSize="11" fontWeight="700">UI / UX 60fps</text>
-        <text x="10" y="58" fill="rgba(255, 255, 255, 0.55)" fontSize="8.5">Figma Prototip</text>
-        <rect x="10" y="68" width="64" height="15" rx="4" fill="rgba(168, 85, 247, 0.1)" />
-        <text x="16" y="79" fill="#e9d5ff" fontSize="7.5" fontFamily="monospace">#KullanıcıDostu</text>
-      </g>
-
-      {/* Phase 3: Kodlama */}
-      <g transform="translate(216, 75)">
-        <rect width="84" height="92" rx="12" fill="#0f172a" stroke="rgba(99, 102, 241, 0.35)" strokeWidth="1.2" />
-        <rect x="8" y="8" width="28" height="18" rx="6" fill="rgba(99, 102, 241, 0.15)" />
-        <text x="14" y="21" fill="#818cf8" fontSize="10" fontWeight="800" fontFamily="monospace">03</text>
-        <circle cx="68" cy="17" r="4" fill="#818cf8" />
-        <text x="10" y="44" fill="#ffffff" fontSize="11" fontWeight="700">React Native</text>
-        <text x="10" y="58" fill="rgba(255, 255, 255, 0.55)" fontSize="8.5">Yerel Derleme</text>
-        <rect x="10" y="68" width="64" height="15" rx="4" fill="rgba(99, 102, 241, 0.1)" />
-        <text x="16" y="79" fill="#c7d2fe" fontSize="7.5" fontFamily="monospace">#iOS&amp;Android</text>
-      </g>
-
-      {/* Phase 4: Mağazaya Çıkış */}
-      <g transform="translate(312, 75)">
-        <rect width="84" height="92" rx="12" fill="#0f172a" stroke="rgba(34, 197, 94, 0.45)" strokeWidth="1.4" />
-        <rect x="8" y="8" width="28" height="18" rx="6" fill="rgba(34, 197, 94, 0.15)" />
-        <text x="14" y="21" fill="#4ade80" fontSize="10" fontWeight="800" fontFamily="monospace">04</text>
-        <circle cx="68" cy="17" r="4" fill="#22c55e" filter="url(#mpGlow)" />
-        <text x="10" y="44" fill="#4ade80" fontSize="11" fontWeight="700">Canlı Yayında</text>
-        <text x="10" y="58" fill="rgba(255, 255, 255, 0.55)" fontSize="8.5">App Store &amp; Play</text>
-        <rect x="10" y="68" width="64" height="15" rx="4" fill="rgba(34, 197, 94, 0.15)" />
-        <text x="16" y="79" fill="#86efac" fontSize="7.5" fontWeight="700" fontFamily="monospace">#%100Onaylı</text>
-      </g>
+      {/* 4 Steps Grid */}
+      <div className="grid grid-cols-2 gap-2.5 my-1">
+        {steps.map((st) => (
+          <div
+            key={st.num}
+            className={`p-2.5 rounded-xl bg-[#0c1220] border ${st.border} flex flex-col justify-between shadow-sm`}
+          >
+            <div className="flex items-center justify-between mb-1.5">
+              <span className="font-mono text-[10px] font-bold text-white/50">{st.num}</span>
+              <div className="p-1 rounded-md bg-white/5">{st.icon}</div>
+            </div>
+            <div>
+              <div className="text-xs font-bold text-white leading-tight">{st.title}</div>
+              <div className="text-[10px] text-white/60 leading-tight mt-0.5">{st.desc}</div>
+            </div>
+            <div className="mt-2">
+              <span className={`inline-block px-1.5 py-0.5 rounded text-[8.5px] font-mono ${st.badgeBg}`}>
+                {st.tag}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
 
       {/* Bottom Summary Bar */}
-      <g transform="translate(24, 195)">
-        <rect width="372" height="62" rx="12" fill="#0b1324" stroke="rgba(255, 255, 255, 0.08)" />
-        <circle cx="28" cy="31" r="14" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" strokeWidth="1.2" />
-        <path d="M23 31L27 35L34 27" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <text x="52" y="27" fill="#ffffff" fontSize="11.5" fontWeight="700">Sözleşmeli Teslimat &amp; Düzenli Canlı Test Sürümleri</text>
-        <text x="52" y="43" fill="rgba(255, 255, 255, 0.6)" fontSize="9">Her aşamada doğrudan telefona TestFlight &amp; APK kurulumu · Haftalık şeffaf rapor</text>
-        <rect x="296" y="18" width="66" height="26" rx="6" fill="rgba(34, 197, 94, 0.18)" stroke="rgba(34, 197, 94, 0.35)" />
-        <text x="306" y="35" fill="#4ade80" fontSize="9.5" fontWeight="700" fontFamily="monospace">60 FPS OK</text>
-      </g>
-    </svg>
+      <div className="p-2.5 rounded-xl bg-[#0c1220] border border-white/10 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-lg bg-sky-500/15 border border-sky-500/30 flex items-center justify-center shrink-0">
+            <ShieldCheck size={14} className="text-sky-400" />
+          </div>
+          <div>
+            <div className="text-[11px] font-bold text-white leading-tight">Sözleşmeli Teslimat & Canlı Testler</div>
+            <div className="text-[9px] text-white/55 leading-tight">TestFlight & APK doğrudan telefonunuza teslim</div>
+          </div>
+        </div>
+        <span className="px-2 py-1 rounded bg-emerald-500/15 border border-emerald-500/30 text-[9px] font-mono text-emerald-400 font-bold shrink-0">
+          60 FPS OK
+        </span>
+      </div>
+    </div>
   );
 }
 
-// 2. Çift Platform (iOS & Android Tek Kod Tabanı)
-function SvgCrossPlatform() {
+// 2. Çift Platform (iOS & Android Senkron Yerel UI)
+function VisualCrossPlatform() {
   return (
-    <svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full max-h-[260px]" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="cpBg" x1="0" y1="0" x2="420" y2="280" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#090d16" />
-          <stop offset="1" stopColor="#05070d" />
-        </linearGradient>
-        <linearGradient id="cpBlue" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#38bdf8" />
-          <stop offset="1" stopColor="#2563eb" />
-        </linearGradient>
-        <linearGradient id="cpGreen" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#4ade80" />
-          <stop offset="1" stopColor="#16a34a" />
-        </linearGradient>
-        <linearGradient id="cpChartGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop stopColor="rgba(56, 189, 248, 0.35)" />
-          <stop offset="1" stopColor="rgba(56, 189, 248, 0.0)" />
-        </linearGradient>
-      </defs>
+    <div className="w-full max-w-[420px] rounded-2xl bg-[#111726] border border-white/10 p-4 shadow-2xl flex flex-col justify-between gap-3 text-white">
+      {/* Top Core Engine Nucleus */}
+      <div className="flex items-center justify-between p-2 rounded-xl bg-[#0c1220] border border-sky-500/30">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-lg bg-sky-500/15 flex items-center justify-center">
+            <Layers size={14} className="text-sky-400" />
+          </div>
+          <div>
+            <div className="text-xs font-bold text-white">React Native TurboEngine</div>
+            <div className="text-[9px] font-mono text-sky-300">Tek Kod Tabanı · %100 Senkronize</div>
+          </div>
+        </div>
+        <span className="px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[9px] font-bold">
+          2x Hızlı Teslim
+        </span>
+      </div>
 
-      <rect width="420" height="280" rx="16" fill="url(#cpBg)" />
-      <rect x="0.5" y="0.5" width="419" height="279" rx="15.5" stroke="rgba(255, 255, 255, 0.08)" />
+      {/* Dual Phones Side by Side */}
+      <div className="grid grid-cols-2 gap-3 my-1">
+        {/* iPhone 16 Pro */}
+        <div className="rounded-xl bg-[#0c1220] border border-slate-700/80 p-2.5 flex flex-col justify-between shadow-inner">
+          <div className="flex justify-center mb-1.5">
+            <div className="w-10 h-2 rounded-full bg-black border border-white/10" />
+          </div>
+          <div className="p-2 rounded-lg bg-white/5 border border-white/5 space-y-1.5">
+            <div className="flex items-center justify-between">
+              <span className="text-[8px] text-white/60">Bakiye</span>
+              <span className="text-[8px] font-bold text-emerald-400">+14.2%</span>
+            </div>
+            <div className="text-xs font-mono font-bold text-white">$18,450.00</div>
+            <div className="h-1.5 w-full bg-sky-500/20 rounded-full overflow-hidden">
+              <div className="h-full w-4/5 bg-sky-400 rounded-full" />
+            </div>
+            <div className="flex gap-1 pt-0.5">
+              <span className="flex-1 py-0.5 text-center text-[7.5px] rounded bg-sky-500/20 text-sky-300 font-semibold">Gönder</span>
+              <span className="flex-1 py-0.5 text-center text-[7.5px] rounded bg-white/10 text-white/80">Al</span>
+            </div>
+          </div>
+          <div className="mt-2 text-center py-1 rounded bg-blue-950/60 border border-blue-500/30 text-[8.5px] font-mono text-blue-300 font-bold">
+            Apple iOS · 60 FPS
+          </div>
+        </div>
 
-      {/* Central React Native TurboEngine Nucleus */}
-      <g transform="translate(125, 16)">
-        <rect width="170" height="42" rx="10" fill="#0f172a" stroke="rgba(56, 189, 248, 0.4)" strokeWidth="1.4" />
-        {/* Orbital Atom Motif */}
-        <circle cx="24" cy="21" r="5" fill="#38bdf8" />
-        <ellipse cx="24" cy="21" rx="12" ry="5" stroke="#38bdf8" strokeWidth="1" transform="rotate(30 24 21)" opacity="0.75" />
-        <ellipse cx="24" cy="21" rx="12" ry="5" stroke="#38bdf8" strokeWidth="1" transform="rotate(-30 24 21)" opacity="0.75" />
-        <text x="44" y="19" fill="#ffffff" fontSize="10.5" fontWeight="700">React Native Engine</text>
-        <text x="44" y="32" fill="#93c5fd" fontSize="8.5" fontFamily="monospace">Tek Kod Tabanı · %100 Senkron</text>
-      </g>
+        {/* Android Flagship */}
+        <div className="rounded-xl bg-[#0c1220] border border-slate-700/80 p-2.5 flex flex-col justify-between shadow-inner">
+          <div className="flex justify-center mb-1.5">
+            <div className="w-2 h-2 rounded-full bg-black border border-white/10" />
+          </div>
+          <div className="p-2 rounded-lg bg-white/5 border border-white/5 space-y-1.5">
+            <div className="flex items-center justify-between">
+              <span className="text-[8px] text-white/60">Bakiye</span>
+              <span className="text-[8px] font-bold text-emerald-400">+14.2%</span>
+            </div>
+            <div className="text-xs font-mono font-bold text-white">$18,450.00</div>
+            <div className="h-1.5 w-full bg-emerald-500/20 rounded-full overflow-hidden">
+              <div className="h-full w-4/5 bg-emerald-400 rounded-full" />
+            </div>
+            <div className="flex gap-1 pt-0.5">
+              <span className="flex-1 py-0.5 text-center text-[7.5px] rounded bg-emerald-500/20 text-emerald-300 font-semibold">Gönder</span>
+              <span className="flex-1 py-0.5 text-center text-[7.5px] rounded bg-white/10 text-white/80">Al</span>
+            </div>
+          </div>
+          <div className="mt-2 text-center py-1 rounded bg-emerald-950/60 border border-emerald-500/30 text-[8.5px] font-mono text-emerald-300 font-bold">
+            Android · Kotlin 60fps
+          </div>
+        </div>
+      </div>
 
-      {/* Sweeping Connecting Conduits */}
-      <path d="M155 58 C 155 85, 95 85, 95 105" stroke="#38bdf8" strokeWidth="2" strokeDasharray="3 3" />
-      <path d="M265 58 C 265 85, 325 85, 325 105" stroke="#4ade80" strokeWidth="2" strokeDasharray="3 3" />
-
-      {/* Left Device: iPhone 16 Pro */}
-      <g transform="translate(30, 95)">
-        <rect width="130" height="145" rx="18" fill="#0c111d" stroke="#334155" strokeWidth="2" />
-        {/* Titanium Outer Rim Highlight */}
-        <rect x="1" y="1" width="128" height="143" rx="17" stroke="rgba(255, 255, 255, 0.12)" />
-        {/* Dynamic Island */}
-        <rect x="45" y="8" width="40" height="8" rx="4" fill="#000000" />
-        <circle cx="78" cy="12" r="2" fill="#1e293b" />
-        
-        {/* App UI Header */}
-        <g transform="translate(10, 24)">
-          <rect width="110" height="24" rx="6" fill="#1e293b" />
-          <circle cx="14" cy="12" r="6" fill="url(#cpBlue)" />
-          <text x="26" y="15" fill="#ffffff" fontSize="8" fontWeight="700">Bakiye: $18,450</text>
-          <text x="82" y="15" fill="#4ade80" fontSize="7" fontWeight="bold">+14.2%</text>
-        </g>
-        
-        {/* Sparkline Chart */}
-        <path d="M12 75 L30 65 L50 72 L70 56 L90 62 L118 48 L118 85 L12 85 Z" fill="url(#cpChartGrad)" />
-        <path d="M12 75 L30 65 L50 72 L70 56 L90 62 L118 48" stroke="#38bdf8" strokeWidth="2" fill="none" />
-        
-        {/* Action Buttons */}
-        <rect x="12" y="94" width="48" height="16" rx="4" fill="rgba(56, 189, 248, 0.2)" />
-        <text x="20" y="105" fill="#93c5fd" fontSize="7.5" fontWeight="600">Gönder</text>
-        <rect x="70" y="94" width="48" height="16" rx="4" fill="rgba(255, 255, 255, 0.08)" />
-        <text x="82" y="105" fill="#ffffff" fontSize="7.5">Al</text>
-        
-        {/* Bottom OS Label */}
-        <rect x="10" y="118" width="110" height="18" rx="5" fill="#172554" />
-        <text x="18" y="130" fill="#60a5fa" fontSize="8" fontWeight="700" fontFamily="monospace">Apple iOS 18 · 60 FPS</text>
-      </g>
-
-      {/* Right Device: Android Flagship */}
-      <g transform="translate(260, 95)">
-        <rect width="130" height="145" rx="18" fill="#0c111d" stroke="#334155" strokeWidth="2" />
-        <rect x="1" y="1" width="128" height="143" rx="17" stroke="rgba(255, 255, 255, 0.12)" />
-        {/* Punch Hole */}
-        <circle cx="65" cy="11" r="3.5" fill="#000000" />
-        
-        {/* App UI Header (Identical Parity) */}
-        <g transform="translate(10, 24)">
-          <rect width="110" height="24" rx="6" fill="#1e293b" />
-          <circle cx="14" cy="12" r="6" fill="url(#cpGreen)" />
-          <text x="26" y="15" fill="#ffffff" fontSize="8" fontWeight="700">Bakiye: $18,450</text>
-          <text x="82" y="15" fill="#4ade80" fontSize="7" fontWeight="bold">+14.2%</text>
-        </g>
-        
-        {/* Sparkline Chart */}
-        <path d="M12 75 L30 65 L50 72 L70 56 L90 62 L118 48 L118 85 L12 85 Z" fill="url(#cpChartGrad)" />
-        <path d="M12 75 L30 65 L50 72 L70 56 L90 62 L118 48" stroke="#4ade80" strokeWidth="2" fill="none" />
-        
-        {/* Action Buttons */}
-        <rect x="12" y="94" width="48" height="16" rx="4" fill="rgba(34, 197, 94, 0.2)" />
-        <text x="20" y="105" fill="#86efac" fontSize="7.5" fontWeight="600">Gönder</text>
-        <rect x="70" y="94" width="48" height="16" rx="4" fill="rgba(255, 255, 255, 0.08)" />
-        <text x="82" y="105" fill="#ffffff" fontSize="7.5">Al</text>
-        
-        {/* Bottom OS Label */}
-        <rect x="10" y="118" width="110" height="18" rx="5" fill="#052e16" />
-        <text x="18" y="130" fill="#4ade80" fontSize="8" fontWeight="700" fontFamily="monospace">Android 15 · Kotlin Core</text>
-      </g>
-
-      {/* Center Floating Parity Badge */}
-      <g transform="translate(168, 135)">
-        <rect width="84" height="65" rx="10" fill="#111c33" stroke="rgba(255, 255, 255, 0.12)" />
-        <text x="18" y="24" fill="#fbbf24" fontSize="11" fontWeight="800">2x Hızlı</text>
-        <text x="12" y="38" fill="rgba(255, 255, 255, 0.75)" fontSize="8" fontWeight="600">Sıfır Kod Tekrarı</text>
-        <text x="10" y="52" fill="rgba(255, 255, 255, 0.55)" fontSize="7.5">%50 Maliyet Avantajı</text>
-      </g>
-    </svg>
+      {/* Bottom Efficiency Banner */}
+      <div className="text-center py-1.5 px-3 rounded-lg bg-white/5 border border-white/10 font-mono text-[9.5px] text-white/75">
+        Tek Mühendislik Mimarisi · %50 Maliyet Avantajı · Eş Zamanlı Yayında
+      </div>
+    </div>
   );
 }
 
 // 3. Şeffaf Fiyatlandırma & Sözleşmeli Güvence
-function SvgTransparentPricing() {
+function VisualTransparentPricing() {
   return (
-    <svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full max-h-[260px]" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="tpBg" x1="0" y1="0" x2="420" y2="280" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#090d16" />
-          <stop offset="1" stopColor="#05070d" />
-        </linearGradient>
-        <linearGradient id="tpGold" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fbbf24" />
-          <stop offset="1" stopColor="#d97706" />
-        </linearGradient>
-      </defs>
+    <div className="w-full max-w-[420px] rounded-2xl bg-[#111726] border border-white/10 p-4 shadow-2xl flex flex-col justify-between gap-3 text-white">
+      {/* Top Agreement Header */}
+      <div className="p-2.5 rounded-xl bg-[#0c1220] border border-emerald-500/30 flex items-center gap-2.5">
+        <div className="w-7 h-7 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center shrink-0">
+          <ShieldCheck size={16} className="text-emerald-400" />
+        </div>
+        <div>
+          <div className="text-xs font-bold text-white">Resmi Sabit Fiyat ve Kapsam Sözleşmesi</div>
+          <div className="text-[9.5px] text-white/60">Sürpriz Maliyet Yok · Kesin Teslim Takvimi Taahhüdü</div>
+        </div>
+      </div>
 
-      <rect width="420" height="280" rx="16" fill="url(#tpBg)" />
-      <rect x="0.5" y="0.5" width="419" height="279" rx="15.5" stroke="rgba(255, 255, 255, 0.08)" />
+      {/* 3 Pillar Guarantee Tiles */}
+      <div className="grid grid-cols-3 gap-2 my-1">
+        {/* Pillar 1 */}
+        <div className="p-2.5 rounded-xl bg-[#0c1220] border border-sky-500/30 flex flex-col justify-between">
+          <div className="w-6 h-6 rounded-md bg-sky-500/15 flex items-center justify-center mb-1.5">
+            <GitBranch size={13} className="text-sky-400" />
+          </div>
+          <div>
+            <div className="text-[10.5px] font-bold text-white">%100 Kod</div>
+            <div className="text-[8.5px] text-white/55 mt-0.5 leading-tight">Tüm kaynak kodlar müşteriye teslim</div>
+          </div>
+          <span className="mt-2 inline-block px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-300 text-[8px] font-mono font-semibold">
+            Tam Mülkiyet
+          </span>
+        </div>
 
-      {/* Official Security / Agreement Header */}
-      <g transform="translate(24, 18)">
-        <rect width="372" height="54" rx="12" fill="#0f172a" stroke="rgba(56, 189, 248, 0.35)" strokeWidth="1.2" />
-        <circle cx="28" cy="27" r="14" fill="rgba(34, 197, 94, 0.15)" stroke="#22c55e" strokeWidth="1.4" />
-        <path d="M23 27L27 31L34 23" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <text x="52" y="24" fill="#ffffff" fontSize="12" fontWeight="700">Resmi Sabit Fiyat ve Kapsam Sözleşmesi</text>
-        <text x="52" y="40" fill="rgba(255, 255, 255, 0.6)" fontSize="9">Proje başında netleşen şeffaf takvim ve bütçe · Sıfır sürpriz ek fatura</text>
-      </g>
+        {/* Pillar 2 */}
+        <div className="p-2.5 rounded-xl bg-[#0c1220] border border-emerald-500/30 flex flex-col justify-between">
+          <div className="w-6 h-6 rounded-md bg-emerald-500/15 flex items-center justify-center mb-1.5">
+            <Lock size={13} className="text-emerald-400" />
+          </div>
+          <div>
+            <div className="text-[10.5px] font-bold text-white">0₺ Gizli Gider</div>
+            <div className="text-[8.5px] text-white/55 mt-0.5 leading-tight">Sözleşmeye bağlı sabit bütçe</div>
+          </div>
+          <span className="mt-2 inline-block px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 text-[8px] font-mono font-semibold">
+            Sıfır Sürpriz
+          </span>
+        </div>
 
-      {/* 3 Pillar Guarantee Cards */}
-      <g transform="translate(24, 86)">
-        {/* Pillar 1: Kod Mülkiyeti */}
-        <g>
-          <rect width="116" height="96" rx="12" fill="#0c1322" stroke="rgba(56, 189, 248, 0.25)" strokeWidth="1.2" />
-          <rect x="12" y="12" width="30" height="26" rx="6" fill="rgba(56, 189, 248, 0.15)" />
-          <text x="18" y="29" fill="#38bdf8" fontSize="11" fontWeight="800" fontFamily="monospace">%100</text>
-          <text x="12" y="56" fill="#ffffff" fontSize="11" fontWeight="700">Kod Mülkiyeti</text>
-          <text x="12" y="70" fill="rgba(255, 255, 255, 0.6)" fontSize="8.5">Kaynak kodlar eksiksiz</text>
-          <text x="12" y="82" fill="rgba(255, 255, 255, 0.6)" fontSize="8.5">müşteriye teslim</text>
-        </g>
+        {/* Pillar 3 */}
+        <div className="p-2.5 rounded-xl bg-[#0c1220] border border-amber-500/30 flex flex-col justify-between">
+          <div className="w-6 h-6 rounded-md bg-amber-500/15 flex items-center justify-center mb-1.5">
+            <Zap size={13} className="text-amber-400" />
+          </div>
+          <div>
+            <div className="text-[10.5px] font-bold text-white">1 Yıl Garanti</div>
+            <div className="text-[8.5px] text-white/55 mt-0.5 leading-tight">Yayın sonrası ücretsiz bakım & SLA</div>
+          </div>
+          <span className="mt-2 inline-block px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-300 text-[8px] font-mono font-semibold">
+            Kesintisiz SLA
+          </span>
+        </div>
+      </div>
 
-        {/* Pillar 2: 0 TL Sürpriz */}
-        <g transform="translate(128, 0)">
-          <rect width="116" height="96" rx="12" fill="#0c1322" stroke="rgba(34, 197, 94, 0.25)" strokeWidth="1.2" />
-          <rect x="12" y="12" width="30" height="26" rx="6" fill="rgba(34, 197, 94, 0.15)" />
-          <text x="21" y="29" fill="#4ade80" fontSize="12" fontWeight="800" fontFamily="monospace">0₺</text>
-          <text x="12" y="56" fill="#ffffff" fontSize="11" fontWeight="700">Gizli Gider Yok</text>
-          <text x="12" y="70" fill="rgba(255, 255, 255, 0.6)" fontSize="8.5">Teklifte yazan net</text>
-          <text x="12" y="82" fill="rgba(255, 255, 255, 0.6)" fontSize="8.5">rakamla sabit taahhüt</text>
-        </g>
-
-        {/* Pillar 3: 1 Yıl Garanti */}
-        <g transform="translate(256, 0)">
-          <rect width="116" height="96" rx="12" fill="#0c1322" stroke="rgba(251, 191, 36, 0.25)" strokeWidth="1.2" />
-          <rect x="12" y="12" width="30" height="26" rx="6" fill="rgba(251, 191, 36, 0.15)" />
-          <text x="15" y="29" fill="#fbbf24" fontSize="10.5" fontWeight="800" fontFamily="monospace">1 YIL</text>
-          <text x="12" y="56" fill="#ffffff" fontSize="11" fontWeight="700">Teknik Destek</text>
-          <text x="12" y="70" fill="rgba(255, 255, 255, 0.6)" fontSize="8.5">Yayın sonrası ücretsiz</text>
-          <text x="12" y="82" fill="rgba(255, 255, 255, 0.6)" fontSize="8.5">hata &amp; bakım garantisi</text>
-        </g>
-      </g>
-
-      {/* Bottom Timeline Schedule Bar */}
-      <g transform="translate(24, 196)">
-        <rect width="372" height="66" rx="12" fill="#0f172a" stroke="rgba(255, 255, 255, 0.08)" />
-        <text x="16" y="24" fill="rgba(255, 255, 255, 0.85)" fontSize="10" fontWeight="600">Ortalama Teslimat Süreci: <tspan fill="#38bdf8" fontWeight="bold">2 ila 6 Hafta</tspan> (Kapsama Bağlı)</text>
-        
-        {/* Milestone Steps Bar */}
-        <g transform="translate(16, 34)">
-          <rect width="340" height="8" rx="4" fill="#1e293b" />
-          <rect width="255" height="8" rx="4" fill="url(#tpGold)" />
-          
-          <text x="0" y="22" fill="#94a3b8" fontSize="8" fontFamily="monospace">Aşama 1: Analiz</text>
-          <text x="95" y="22" fill="#94a3b8" fontSize="8" fontFamily="monospace">Aşama 2: UI/UX</text>
-          <text x="190" y="22" fill="#94a3b8" fontSize="8" fontFamily="monospace">Aşama 3: Kodlama</text>
-          <text x="290" y="22" fill="#4ade80" fontSize="8" fontWeight="bold" fontFamily="monospace">Canlıda 🚀</text>
-        </g>
-      </g>
-    </svg>
+      {/* Bottom Timeline Schedule */}
+      <div className="p-2.5 rounded-xl bg-[#0c1220] border border-white/10 space-y-1.5">
+        <div className="flex items-center justify-between text-[10px]">
+          <span className="text-white/70 font-medium">Ortalama Teslimat Süresi:</span>
+          <span className="font-mono font-bold text-sky-400">2 ila 6 Hafta</span>
+        </div>
+        <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+          <div className="h-full w-4/5 bg-gradient-to-r from-sky-400 via-purple-400 to-emerald-400 rounded-full" />
+        </div>
+        <div className="flex justify-between font-mono text-[7.5px] text-white/45 pt-0.5">
+          <span>Analiz</span>
+          <span>UI/UX</span>
+          <span>Kodlama</span>
+          <span className="text-emerald-400 font-bold">Canlıda</span>
+        </div>
+      </div>
+    </div>
   );
 }
 
 // 4. Web Sistemleri & Google SEO (100/100 Core Web Vitals)
-function SvgWebPerformance() {
+function VisualWebPerformance() {
   return (
-    <svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full max-h-[260px]" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="wpBg" x1="0" y1="0" x2="420" y2="280" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#090d16" />
-          <stop offset="1" stopColor="#05070d" />
-        </linearGradient>
-        <linearGradient id="wpEmerald" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#22c55e" />
-          <stop offset="1" stopColor="#16a34a" />
-        </linearGradient>
-        <filter id="wpGlow">
-          <feGaussianBlur stdDeviation="3.5" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-      </defs>
+    <div className="w-full max-w-[420px] rounded-2xl bg-[#111726] border border-white/10 p-4 shadow-2xl flex flex-col justify-between gap-3 text-white">
+      {/* Top Lighthouse & Core Web Vitals HUD */}
+      <div className="grid grid-cols-5 gap-2.5">
+        {/* Score 100 Gauge */}
+        <div className="col-span-2 p-2.5 rounded-xl bg-[#0c1220] border border-emerald-500/30 flex flex-col items-center justify-center text-center">
+          <div className="w-12 h-12 rounded-full border-2 border-emerald-400 flex items-center justify-center font-mono font-extrabold text-lg text-emerald-400 shadow-[0_0_12px_rgba(74,222,128,0.3)]">
+            100
+          </div>
+          <div className="text-[10px] font-bold text-white mt-1">Lighthouse Score</div>
+          <div className="text-[8px] text-white/50">Core Web Vitals</div>
+        </div>
 
-      <rect width="420" height="280" rx="16" fill="url(#wpBg)" />
-      <rect x="0.5" y="0.5" width="419" height="279" rx="15.5" stroke="rgba(255, 255, 255, 0.08)" />
+        {/* 3 Metrics */}
+        <div className="col-span-3 space-y-1.5 flex flex-col justify-center">
+          <div className="p-1.5 px-2.5 rounded-lg bg-[#0c1220] border border-emerald-500/25 flex items-center justify-between text-[9.5px]">
+            <span className="text-white/75">Sayfa Açılış (LCP):</span>
+            <span className="font-mono font-bold text-emerald-400">&lt; 0.4s</span>
+          </div>
+          <div className="p-1.5 px-2.5 rounded-lg bg-[#0c1220] border border-emerald-500/25 flex items-center justify-between text-[9.5px]">
+            <span className="text-white/75">Tıklama Tepki (INP):</span>
+            <span className="font-mono font-bold text-emerald-400">14ms</span>
+          </div>
+          <div className="p-1.5 px-2.5 rounded-lg bg-[#0c1220] border border-emerald-500/25 flex items-center justify-between text-[9.5px]">
+            <span className="text-white/75">Düzen Kayması (CLS):</span>
+            <span className="font-mono font-bold text-emerald-400">0.00</span>
+          </div>
+        </div>
+      </div>
 
-      {/* Left: Google Lighthouse 100/100 Gauge */}
-      <g transform="translate(24, 20)">
-        <rect width="130" height="135" rx="14" fill="#0d1424" stroke="rgba(34, 197, 94, 0.3)" strokeWidth="1.2" />
-        {/* Circular Gauge */}
-        <circle cx="65" cy="50" r="32" stroke="#1e293b" strokeWidth="5" />
-        <circle cx="65" cy="50" r="32" stroke="#22c55e" strokeWidth="5" strokeDasharray="201" strokeDashoffset="0" strokeLinecap="round" filter="url(#wpGlow)" />
-        <text x="50" y="56" fill="#22c55e" fontSize="20" fontWeight="900" fontFamily="monospace">100</text>
-        <text x="24" y="98" fill="#ffffff" fontSize="10.5" fontWeight="700">Lighthouse Score</text>
-        <text x="28" y="112" fill="rgba(255, 255, 255, 0.55)" fontSize="8.5">Core Web Vitals</text>
-        <circle cx="65" cy="122" r="3" fill="#22c55e" />
-      </g>
-
-      {/* Right: 3 Key Real-world Telemetry Pills */}
-      <g transform="translate(166, 20)">
-        {/* Metric 1: LCP */}
-        <g>
-          <rect width="230" height="38" rx="8" fill="#0d1424" stroke="rgba(34, 197, 94, 0.25)" />
-          <circle cx="16" cy="19" r="5" fill="#22c55e" />
-          <text x="28" y="17" fill="#ffffff" fontSize="9.5" fontWeight="700">Sayfa Açılış Hızı (LCP):</text>
-          <text x="28" y="30" fill="rgba(255, 255, 255, 0.5)" fontSize="8">Google hedefi &lt; 2.5s</text>
-          <text x="165" y="24" fill="#4ade80" fontSize="11" fontWeight="900" fontFamily="monospace">&lt; 0.4s</text>
-        </g>
-
-        {/* Metric 2: INP */}
-        <g transform="translate(0, 48)">
-          <rect width="230" height="38" rx="8" fill="#0d1424" stroke="rgba(34, 197, 94, 0.25)" />
-          <circle cx="16" cy="19" r="5" fill="#22c55e" />
-          <text x="28" y="17" fill="#ffffff" fontSize="9.5" fontWeight="700">Tıklama Tepki Süresi (INP):</text>
-          <text x="28" y="30" fill="rgba(255, 255, 255, 0.5)" fontSize="8">Anında etkileşim</text>
-          <text x="175" y="24" fill="#4ade80" fontSize="11" fontWeight="900" fontFamily="monospace">14ms</text>
-        </g>
-
-        {/* Metric 3: CLS */}
-        <g transform="translate(0, 96)">
-          <rect width="230" height="38" rx="8" fill="#0d1424" stroke="rgba(34, 197, 94, 0.25)" />
-          <circle cx="16" cy="19" r="5" fill="#22c55e" />
-          <text x="28" y="17" fill="#ffffff" fontSize="9.5" fontWeight="700">Düzen Kayması (CLS):</text>
-          <text x="28" y="30" fill="rgba(255, 255, 255, 0.5)" fontSize="8">Sıfır ekran atlaması</text>
-          <text x="178" y="24" fill="#4ade80" fontSize="11" fontWeight="900" fontFamily="monospace">0.00</text>
-        </g>
-      </g>
-
-      {/* Bottom: Google SERP Preview Card with Rich Sitelinks */}
-      <g transform="translate(24, 168)">
-        <rect width="372" height="96" rx="12" fill="#0c1322" stroke="rgba(255, 255, 255, 0.1)" />
-        {/* Favicon + URL */}
-        <circle cx="20" cy="20" r="7" fill="#2563eb" />
-        <text x="17" y="23" fill="#ffffff" fontSize="8" fontWeight="bold">M</text>
-        <text x="34" y="22" fill="#93c5fd" fontSize="9.5" fontFamily="monospace">muhammetatmaca.com.tr</text>
-        {/* Title */}
-        <text x="14" y="42" fill="#60a5fa" fontSize="12" fontWeight="700">Muhammet Atmaca — Mobil &amp; Web Sistemleri Mühendisi</text>
-        <text x="14" y="56" fill="rgba(255, 255, 255, 0.65)" fontSize="8.5">Google 1. sıra indeksleme mimarisi, zengin Schema.org sonuçları ve 60 FPS mobil altyapı.</text>
-        {/* 3 Sitelink Pills */}
-        <g transform="translate(14, 66)">
-          <rect width="92" height="18" rx="4" fill="#1e293b" />
-          <text x="8" y="78" fill="#93c5fd" fontSize="8">Mobil Uygulamalar</text>
-          <rect x="100" y="0" width="86" height="18" rx="4" fill="#1e293b" />
-          <text x="108" y="12" fill="#93c5fd" fontSize="8">Web Platformları</text>
-          <rect x="194" y="0" width="70" height="18" rx="4" fill="#1e293b" />
-          <text x="202" y="12" fill="#93c5fd" fontSize="8">Teklif İste</text>
-        </g>
-      </g>
-    </svg>
+      {/* Google SERP Preview Card */}
+      <div className="p-2.5 rounded-xl bg-[#0c1220] border border-white/10 space-y-1">
+        <div className="flex items-center gap-1.5">
+          <div className="w-3.5 h-3.5 rounded-full bg-blue-600 flex items-center justify-center text-[7px] font-bold">M</div>
+          <span className="font-mono text-[9px] text-sky-300">muhammetatmaca.com.tr</span>
+        </div>
+        <div className="text-[11px] font-bold text-sky-400 leading-snug">
+          Muhammet Atmaca — Kıdemli Mobil &amp; Web Mühendisi
+        </div>
+        <div className="flex items-center gap-1 text-[8.5px] text-amber-400 font-semibold">
+          <span>★★★★★</span>
+          <span className="text-white/60 font-mono">5.0 (50+ Üretim Projesi)</span>
+        </div>
+        <div className="text-[8.5px] text-white/60 leading-tight">
+          Google 1. sıra indeksleme mimarisi, zengin Schema.org yapısal verileri ve 60 FPS mobil altyapı.
+        </div>
+        <div className="flex gap-1.5 pt-1">
+          <span className="px-2 py-0.5 rounded bg-white/5 text-[8px] font-mono text-sky-300">Mobil Uygulamalar</span>
+          <span className="px-2 py-0.5 rounded bg-white/5 text-[8px] font-mono text-sky-300">Web Sistemleri</span>
+          <span className="px-2 py-0.5 rounded bg-white/5 text-[8px] font-mono text-sky-300">Teklif İste</span>
+        </div>
+      </div>
+    </div>
   );
 }
 
 // 5. %100 Mağaza Onayı (App Store & Google Play)
-function SvgStoreApproval() {
+function VisualStoreApproval() {
   return (
-    <svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full max-h-[260px]" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="saBg" x1="0" y1="0" x2="420" y2="280" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#090d16" />
-          <stop offset="1" stopColor="#05070d" />
-        </linearGradient>
-      </defs>
+    <div className="w-full max-w-[420px] rounded-2xl bg-[#111726] border border-white/10 p-4 shadow-2xl flex flex-col justify-between gap-3 text-white">
+      {/* Dual Store Cards */}
+      <div className="grid grid-cols-2 gap-2.5 my-1">
+        {/* Apple App Store */}
+        <div className="p-3 rounded-xl bg-[#0c1220] border border-sky-500/30 flex flex-col justify-between space-y-2">
+          <div className="flex items-center justify-between">
+            <span className="font-bold text-xs text-white">Apple App Store</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          </div>
+          <div className="py-1 px-2 rounded-md bg-emerald-500/15 border border-emerald-500/30 text-[9px] font-mono font-bold text-emerald-400">
+            Ready for Sale
+          </div>
+          <div className="space-y-1 text-[8px] text-white/65">
+            <div>✔ HIG Standartlarına %100 Uyum</div>
+            <div>✔ In-App Purchase &amp; IAP Onaylı</div>
+            <div>✔ TestFlight Beta Ağı Aktif</div>
+          </div>
+          <span className="text-[7.5px] font-mono text-sky-300">iOS &amp; iPadOS SDK 18</span>
+        </div>
 
-      <rect width="420" height="280" rx="16" fill="url(#saBg)" />
-      <rect x="0.5" y="0.5" width="419" height="279" rx="15.5" stroke="rgba(255, 255, 255, 0.08)" />
+        {/* Google Play Console */}
+        <div className="p-3 rounded-xl bg-[#0c1220] border border-emerald-500/30 flex flex-col justify-between space-y-2">
+          <div className="flex items-center justify-between">
+            <span className="font-bold text-xs text-white">Google Play Store</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          </div>
+          <div className="py-1 px-2 rounded-md bg-emerald-500/15 border border-emerald-500/30 text-[9px] font-mono font-bold text-emerald-400">
+            Production Live
+          </div>
+          <div className="space-y-1 text-[8px] text-white/65">
+            <div>✔ Target Android 15 (API 35)</div>
+            <div>✔ Developer Policy %100 Uyum</div>
+            <div>✔ Crash Rate: %0.00 Sıfır Hata</div>
+          </div>
+          <span className="text-[7.5px] font-mono text-emerald-300">Android Production</span>
+        </div>
+      </div>
 
-      {/* Left Card: Apple App Store Connect */}
-      <g transform="translate(24, 20)">
-        <rect width="180" height="142" rx="14" fill="#0d1424" stroke="rgba(56, 189, 248, 0.35)" strokeWidth="1.2" />
-        {/* Apple Logo Placeholder / Icon */}
-        <rect x="14" y="14" width="30" height="30" rx="8" fill="#1e293b" stroke="rgba(255, 255, 255, 0.1)" />
-        <path d="M29 20V36M22 28H36" stroke="#38bdf8" strokeWidth="2.2" strokeLinecap="round" />
-        <text x="52" y="26" fill="#ffffff" fontSize="11" fontWeight="700">App Store Connect</text>
-        <text x="52" y="38" fill="#60a5fa" fontSize="8.5" fontFamily="monospace">iOS &amp; iPadOS</text>
-
-        {/* Status Pill */}
-        <rect x="14" y="52" width="152" height="24" rx="6" fill="rgba(34, 197, 94, 0.15)" stroke="rgba(34, 197, 94, 0.35)" />
-        <circle cx="26" cy="64" r="3.5" fill="#22c55e" />
-        <text x="36" y="67" fill="#4ade80" fontSize="9" fontWeight="700">Status: Ready for Sale</text>
-
-        {/* Checklist items */}
-        <text x="14" y="94" fill="rgba(255, 255, 255, 0.65)" fontSize="8.5">✔ Human Interface Guidelines</text>
-        <text x="14" y="109" fill="rgba(255, 255, 255, 0.65)" fontSize="8.5">✔ In-App Purchase (IAP) Ready</text>
-        <text x="14" y="124" fill="rgba(255, 255, 255, 0.65)" fontSize="8.5">✔ Privacy Nutrition Label OK</text>
-      </g>
-
-      {/* Right Card: Google Play Console */}
-      <g transform="translate(216, 20)">
-        <rect width="180" height="142" rx="14" fill="#0d1424" stroke="rgba(34, 197, 94, 0.35)" strokeWidth="1.2" />
-        {/* Play Icon */}
-        <rect x="14" y="14" width="30" height="30" rx="8" fill="#1e293b" stroke="rgba(255, 255, 255, 0.1)" />
-        <path d="M24 21L36 29L24 37Z" fill="#4ade80" />
-        <text x="52" y="26" fill="#ffffff" fontSize="11" fontWeight="700">Google Play Store</text>
-        <text x="52" y="38" fill="#4ade80" fontSize="8.5" fontFamily="monospace">Android Production</text>
-
-        {/* Status Pill */}
-        <rect x="14" y="52" width="152" height="24" rx="6" fill="rgba(34, 197, 94, 0.15)" stroke="rgba(34, 197, 94, 0.35)" />
-        <circle cx="26" cy="64" r="3.5" fill="#22c55e" />
-        <text x="36" y="67" fill="#4ade80" fontSize="9" fontWeight="700">Status: Passed &amp; Live</text>
-
-        {/* Checklist items */}
-        <text x="14" y="94" fill="rgba(255, 255, 255, 0.65)" fontSize="8.5">✔ Target Android 15 (API 35)</text>
-        <text x="14" y="109" fill="rgba(255, 255, 255, 0.65)" fontSize="8.5">✔ Developer Policy %100 Uyum</text>
-        <text x="14" y="124" fill="rgba(255, 255, 255, 0.65)" fontSize="8.5">✔ Account Deletion Flow OK</text>
-      </g>
-
-      {/* Bottom Track Record Banner */}
-      <g transform="translate(24, 178)">
-        <rect width="372" height="84" rx="12" fill="#0f172a" stroke="rgba(25, 75, 223, 0.35)" />
-        <circle cx="38" cy="42" r="20" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" strokeWidth="1.2" />
-        <text x="26" y="47" fill="#38bdf8" fontSize="15" fontWeight="900" fontFamily="monospace">50+</text>
-        <text x="70" y="34" fill="#ffffff" fontSize="12.5" fontWeight="700">50'den Fazla Başarılı Mağaza Onayı</text>
-        <text x="70" y="49" fill="rgba(255, 255, 255, 0.6)" fontSize="9">Apple ve Google inceleme ekiplerinin katı kurallarına harfiyen uyum</text>
-        <rect x="70" y="58" width="124" height="18" rx="4" fill="rgba(34, 197, 94, 0.2)" />
-        <text x="78" y="70" fill="#4ade80" fontSize="8.5" fontWeight="700">✔ Sıfır Ret Garantisi</text>
-      </g>
-    </svg>
+      {/* Bottom Track Record Crest */}
+      <div className="p-2.5 rounded-xl bg-[#0c1220] border border-white/10 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg bg-sky-500/15 border border-sky-500/30 flex items-center justify-center font-mono font-extrabold text-sm text-sky-400">
+            50+
+          </div>
+          <div>
+            <div className="text-xs font-bold text-white">50'den Fazla Başarılı Mağaza Onayı</div>
+            <div className="text-[9px] text-white/55">Apple &amp; Google onay kurallarına harfiyen uyum</div>
+          </div>
+        </div>
+        <span className="px-2 py-1 rounded bg-emerald-500/15 border border-emerald-500/30 text-[9px] font-bold text-emerald-400 shrink-0">
+          Sıfır Ret Garantisi
+        </span>
+      </div>
+    </div>
   );
 }
 
 // 6. Türkiye Geneli 81 İl ve Uzaktan Çalışma Ağı
-function SvgNationwideRemote() {
+function VisualNationwideRemote() {
+  const channels = [
+    {
+      title: 'Haftalık TestFlight & APK',
+      desc: 'Doğrudan telefonunuza canlı test sürümü',
+      tag: 'Canlı Mobil Test',
+      icon: <Smartphone size={13} className="text-sky-400" />,
+      border: 'border-sky-500/30',
+      badge: 'bg-sky-500/10 text-sky-300',
+    },
+    {
+      title: 'Birebir Video Çağrı (Meet)',
+      desc: 'Doğrudan mühendisle ekran paylaşımı',
+      tag: 'Sıfır Aracı Ajans',
+      icon: <Video size={13} className="text-purple-400" />,
+      border: 'border-purple-500/30',
+      badge: 'bg-purple-500/10 text-purple-300',
+    },
+    {
+      title: 'Şeffaf GitHub CI/CD Akışı',
+      desc: 'Her commit ve geliştirmeyi anlık takip',
+      tag: 'Canlı Kod Takibi',
+      icon: <GitBranch size={13} className="text-emerald-400" />,
+      border: 'border-emerald-500/30',
+      badge: 'bg-emerald-500/10 text-emerald-300',
+    },
+  ];
+
   return (
-    <svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full max-h-[260px]" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="nrBg" x1="0" y1="0" x2="420" y2="280" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#090d16" />
-          <stop offset="1" stopColor="#05070d" />
-        </linearGradient>
-      </defs>
+    <div className="w-full max-w-[420px] rounded-2xl bg-[#111726] border border-white/10 p-4 shadow-2xl flex flex-col justify-between gap-3 text-white">
+      {/* Top Network Command Node */}
+      <div className="p-2.5 rounded-xl bg-[#0c1220] border border-white/10 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <div className="w-7 h-7 rounded-lg bg-sky-500/15 border border-sky-500/30 flex items-center justify-center">
+            <Globe size={15} className="text-sky-400" />
+          </div>
+          <div>
+            <div className="text-xs font-bold text-white">Samsun HQ ⟶ 81 İl ve Yurt Dışı</div>
+            <div className="text-[9px] text-white/55">İstanbul · Ankara · İzmir · Bursa · Antalya · Bayburt</div>
+          </div>
+        </div>
+        <span className="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[9px] font-mono font-bold">
+          %100 Remote
+        </span>
+      </div>
 
-      <rect width="420" height="280" rx="16" fill="url(#nrBg)" />
-      <rect x="0.5" y="0.5" width="419" height="279" rx="15.5" stroke="rgba(255, 255, 255, 0.08)" />
+      {/* 3 Remote Protocols */}
+      <div className="space-y-1.5 my-1">
+        {channels.map((ch, idx) => (
+          <div
+            key={idx}
+            className={`p-2 px-3 rounded-xl bg-[#0c1220] border ${ch.border} flex items-center justify-between gap-2`}
+          >
+            <div className="flex items-center gap-2.5">
+              <div className="p-1 rounded-md bg-white/5">{ch.icon}</div>
+              <div>
+                <div className="text-[10.5px] font-bold text-white leading-tight">{ch.title}</div>
+                <div className="text-[8.5px] text-white/55 leading-tight">{ch.desc}</div>
+              </div>
+            </div>
+            <span className={`px-1.5 py-0.5 rounded text-[8px] font-mono shrink-0 ${ch.badge}`}>
+              {ch.tag}
+            </span>
+          </div>
+        ))}
+      </div>
 
-      {/* Network Connecting Lines */}
-      <path d="M210 50 L80 90" stroke="rgba(56, 189, 248, 0.5)" strokeWidth="1.5" strokeDasharray="3 3" />
-      <path d="M210 50 L160 120" stroke="rgba(56, 189, 248, 0.5)" strokeWidth="1.5" strokeDasharray="3 3" />
-      <path d="M210 50 L340 90" stroke="rgba(74, 222, 128, 0.6)" strokeWidth="1.5" strokeDasharray="3 3" />
-      <path d="M80 90 L160 120" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="1" strokeDasharray="2 2" />
-      <path d="M160 120 L60 155" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="1" strokeDasharray="2 2" />
-      <path d="M210 50 L275 145" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="1" strokeDasharray="2 2" />
-
-      {/* Center Command HQ: SAMSUN */}
-      <g transform="translate(210, 50)">
-        <circle cx="0" cy="0" r="22" fill="rgba(56, 189, 248, 0.12)" stroke="#38bdf8" strokeWidth="1" />
-        <circle cx="0" cy="0" r="14" fill="rgba(56, 189, 248, 0.25)" stroke="#38bdf8" strokeWidth="2" />
-        <circle cx="0" cy="0" r="5" fill="#38bdf8" />
-        <rect x="-45" y="-34" width="90" height="18" rx="5" fill="#0f172a" stroke="#38bdf8" strokeWidth="1" />
-        <text x="-37" y="-22" fill="#38bdf8" fontSize="9" fontWeight="800" fontFamily="monospace">SAMSUN (HQ)</text>
-      </g>
-
-      {/* Node: İstanbul */}
-      <g transform="translate(80, 90)">
-        <circle cx="0" cy="0" r="12" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.3)" />
-        <circle cx="0" cy="0" r="4" fill="#ffffff" />
-        <text x="-18" y="-16" fill="#ffffff" fontSize="9" fontWeight="600">İstanbul</text>
-      </g>
-
-      {/* Node: Ankara */}
-      <g transform="translate(160, 120)">
-        <circle cx="0" cy="0" r="12" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.3)" />
-        <circle cx="0" cy="0" r="4" fill="#ffffff" />
-        <text x="-16" y="-16" fill="#ffffff" fontSize="9" fontWeight="600">Ankara</text>
-      </g>
-
-      {/* Node: İzmir */}
-      <g transform="translate(60, 155)">
-        <circle cx="0" cy="0" r="12" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.3)" />
-        <circle cx="0" cy="0" r="4" fill="#ffffff" />
-        <text x="-12" y="-16" fill="#ffffff" fontSize="9" fontWeight="600">İzmir</text>
-      </g>
-
-      {/* Node: Bayburt */}
-      <g transform="translate(340, 90)">
-        <circle cx="0" cy="0" r="16" fill="rgba(74, 222, 128, 0.15)" stroke="#4ade80" strokeWidth="1.8" />
-        <circle cx="0" cy="0" r="5" fill="#4ade80" />
-        <rect x="-35" y="-30" width="70" height="18" rx="5" fill="#0f172a" stroke="#4ade80" strokeWidth="1" />
-        <text x="-25" y="-18" fill="#4ade80" fontSize="9" fontWeight="800" fontFamily="monospace">Bayburt</text>
-      </g>
-
-      {/* Bottom Remote Protocol 3 Cards */}
-      <g transform="translate(24, 185)">
-        <rect width="372" height="75" rx="12" fill="#0f172a" stroke="rgba(255, 255, 255, 0.08)" />
-        
-        {/* Card 1 */}
-        <g transform="translate(12, 12)">
-          <rect width="108" height="50" rx="8" fill="#1e293b" />
-          <text x="10" y="22" fill="#38bdf8" fontSize="8.5" fontWeight="700">Haftalık TestFlight</text>
-          <text x="10" y="34" fill="rgba(255, 255, 255, 0.6)" fontSize="7.5">Canlı Test APK/IPA</text>
-          <text x="10" y="44" fill="#4ade80" fontSize="7" fontFamily="monospace">✔ Doğrudan Telefona</text>
-        </g>
-
-        {/* Card 2 */}
-        <g transform="translate(132, 12)">
-          <rect width="108" height="50" rx="8" fill="#1e293b" />
-          <text x="10" y="22" fill="#c084fc" fontSize="8.5" fontWeight="700">Birebir Video Çağrı</text>
-          <text x="10" y="34" fill="rgba(255, 255, 255, 0.6)" fontSize="7.5">Doğrudan Mühendis</text>
-          <text x="10" y="44" fill="#a78bfa" fontSize="7" fontFamily="monospace">✔ Sıfır Aracı Ajans</text>
-        </g>
-
-        {/* Card 3 */}
-        <g transform="translate(252, 12)">
-          <rect width="108" height="50" rx="8" fill="#1e293b" />
-          <text x="10" y="22" fill="#4ade80" fontSize="8.5" fontWeight="700">GitHub CI/CD Akışı</text>
-          <text x="10" y="34" fill="rgba(255, 255, 255, 0.6)" fontSize="7.5">Şeffaf Commitler</text>
-          <text x="10" y="44" fill="#86efac" fontSize="7" fontFamily="monospace">✔ Anlık Kod Takibi</text>
-        </g>
-      </g>
-    </svg>
+      {/* Bottom Ping Telemetry */}
+      <div className="p-2 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between text-[9px] font-mono text-white/70">
+        <span>Uzaktan Çalışma İletişimi: Gerçek Zamanlı</span>
+        <span className="text-emerald-400 font-bold">● Aktif Destek</span>
+      </div>
+    </div>
   );
 }
 
 // 7. Bayburt Yerel Kurumsal Çözümler & Altyapı
-function SvgLocalEngineering() {
+function VisualLocalEngineering() {
   return (
-    <svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full max-h-[260px]" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="leBg" x1="0" y1="0" x2="420" y2="280" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#090d16" />
-          <stop offset="1" stopColor="#05070d" />
-        </linearGradient>
-      </defs>
+    <div className="w-full max-w-[420px] rounded-2xl bg-[#111726] border border-white/10 p-4 shadow-2xl flex flex-col justify-between gap-3 text-white">
+      {/* Terminal Header */}
+      <div className="p-2.5 rounded-xl bg-[#0c1220] border border-emerald-500/30 space-y-1.5">
+        <div className="flex items-center justify-between border-b border-white/10 pb-1.5">
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#ff5f57]" />
+            <span className="w-2 h-2 rounded-full bg-[#febc2e]" />
+            <span className="w-2 h-2 rounded-full bg-[#28c840]" />
+            <span className="ml-2 font-mono text-[9px] text-white/50">bayburt-kurumsal-sistemler.sh</span>
+          </div>
+          <span className="text-[8px] font-mono text-emerald-400 font-bold">● Aktif Servis</span>
+        </div>
+        <div className="font-mono text-[9px] text-emerald-400">
+          $ muhammet --location=bayburt --service=all
+        </div>
+        <div className="font-mono text-[8.5px] text-white/80 space-y-0.5">
+          <div>✔ Kurumsal Web Sitesi &amp; E-Ticaret Sistemi (Aktif)</div>
+          <div>✔ Özel Barkod, Stok &amp; Muhasebe Entegrasyonu (Kuruldu)</div>
+          <div>✔ SQL Veritabanı &amp; Yerel Ağ Altyapı Desteği (Tamam)</div>
+        </div>
+        <div className="py-1 px-2 rounded bg-amber-500/15 border border-amber-500/30 font-mono text-[8px] text-amber-300 font-semibold">
+          Status: Yerinde Birebir Mühendislik &amp; Esnaf Desteği
+        </div>
+      </div>
 
-      <rect width="420" height="280" rx="16" fill="url(#leBg)" />
-      <rect x="0.5" y="0.5" width="419" height="279" rx="15.5" stroke="rgba(255, 255, 255, 0.08)" />
+      {/* 3 Regional Badges */}
+      <div className="grid grid-cols-3 gap-2 my-1">
+        <div className="p-2 rounded-xl bg-[#0c1220] border border-sky-500/30 flex flex-col justify-between">
+          <div className="text-[10px] font-bold text-sky-400">Bayburt Lisesi</div>
+          <div className="text-[8px] text-white/50 leading-tight mt-0.5">Fen Lisesi Mezunu</div>
+          <span className="mt-1 text-[7.5px] font-mono text-sky-300 font-bold">Yerel Güven</span>
+        </div>
 
-      {/* Terminal Screen Header */}
-      <g transform="translate(24, 18)">
-        <rect width="372" height="140" rx="12" fill="#0b1324" stroke="rgba(74, 222, 128, 0.35)" strokeWidth="1.2" />
-        <circle cx="16" cy="16" r="4" fill="#ff5f57" />
-        <circle cx="28" cy="16" r="4" fill="#febc2e" />
-        <circle cx="40" cy="16" r="4" fill="#28c840" />
-        <text x="56" y="20" fill="rgba(255, 255, 255, 0.45)" fontSize="9.5" fontFamily="monospace">bayburt-kurumsal-sistemler.sh</text>
+        <div className="p-2 rounded-xl bg-[#0c1220] border border-emerald-500/30 flex flex-col justify-between">
+          <div className="text-[10px] font-bold text-emerald-400">Birebir Destek</div>
+          <div className="text-[8px] text-white/50 leading-tight mt-0.5">Ofis veya Dükkanda</div>
+          <span className="mt-1 text-[7.5px] font-mono text-emerald-300 font-bold">Hızlı Müdahale</span>
+        </div>
 
-        {/* Terminal Commands */}
-        <text x="16" y="44" fill="#4ade80" fontSize="10.5" fontFamily="monospace">$ muhammet --location=bayburt --service=all</text>
-        <text x="16" y="64" fill="#ffffff" fontSize="10" fontFamily="monospace">✔ Kurumsal Web Sitesi &amp; E-Ticaret Sistemi (Aktif)</text>
-        <text x="16" y="82" fill="#ffffff" fontSize="10" fontFamily="monospace">✔ Özel Barkod, Stok &amp; Muhasebe Entegrasyonu (Kuruldu)</text>
-        <text x="16" y="100" fill="#ffffff" fontSize="10" fontFamily="monospace">✔ Veritabanı, Yerel Sunucu &amp; Ağ Altyapı Desteği (Tamam)</text>
-        <rect x="16" y="112" width="340" height="18" rx="4" fill="rgba(251, 191, 36, 0.15)" />
-        <text x="22" y="125" fill="#fbbf24" fontSize="9" fontWeight="bold" fontFamily="monospace">Status: İş Yerinde / Ofiste Birebir Mühendislik Desteği</text>
-      </g>
+        <div className="p-2 rounded-xl bg-[#0c1220] border border-amber-500/30 flex flex-col justify-between">
+          <div className="text-[10px] font-bold text-amber-400">Anahtar Teslim</div>
+          <div className="text-[8px] text-white/50 leading-tight mt-0.5">Yazılım &amp; Altyapı</div>
+          <span className="mt-1 text-[7.5px] font-mono text-amber-300 font-bold">Tam Entegrasyon</span>
+        </div>
+      </div>
 
-      {/* 3 Regional Trust Cards */}
-      <g transform="translate(24, 172)">
-        {/* Card 1 */}
-        <g>
-          <rect width="116" height="88" rx="10" fill="#0f172a" stroke="rgba(56, 189, 248, 0.25)" />
-          <text x="12" y="26" fill="#38bdf8" fontSize="11" fontWeight="700">Bayburt Lisesi</text>
-          <text x="12" y="40" fill="rgba(255, 255, 255, 0.6)" fontSize="8.5">Fen Lisesi Mezunu</text>
-          <text x="12" y="58" fill="#ffffff" fontSize="9.5" fontWeight="600">Yerel Güvenilirlik</text>
-          <text x="12" y="72" fill="rgba(255, 255, 255, 0.5)" fontSize="8">Doğrudan yerel bağ</text>
-        </g>
-
-        {/* Card 2 */}
-        <g transform="translate(128, 0)">
-          <rect width="116" height="88" rx="10" fill="#0f172a" stroke="rgba(74, 222, 128, 0.25)" />
-          <text x="12" y="26" fill="#4ade80" fontSize="11" fontWeight="700">Birebir Destek</text>
-          <text x="12" y="40" fill="rgba(255, 255, 255, 0.6)" fontSize="8.5">Ofis veya Dükkanda</text>
-          <text x="12" y="58" fill="#ffffff" fontSize="9.5" fontWeight="600">Hızlı Müdahale</text>
-          <text x="12" y="72" fill="rgba(255, 255, 255, 0.5)" fontSize="8">Esnaf ve KOBİ'ler</text>
-        </g>
-
-        {/* Card 3 */}
-        <g transform="translate(256, 0)">
-          <rect width="116" height="88" rx="10" fill="#0f172a" stroke="rgba(251, 191, 36, 0.25)" />
-          <text x="12" y="26" fill="#fbbf24" fontSize="11" fontWeight="700">Anahtar Teslim</text>
-          <text x="12" y="40" fill="rgba(255, 255, 255, 0.6)" fontSize="8.5">Yazılım &amp; Altyapı</text>
-          <text x="12" y="58" fill="#ffffff" fontSize="9.5" fontWeight="600">Tam Donanım</text>
-          <text x="12" y="72" fill="rgba(255, 255, 255, 0.5)" fontSize="8">Sıfırdan Canlıya</text>
-        </g>
-      </g>
-    </svg>
+      {/* Bottom Summary Pill */}
+      <div className="py-1.5 px-3 rounded-lg bg-white/5 border border-white/10 text-center font-mono text-[9px] text-white/75">
+        Bayburt &amp; Çevre İllere Yerinde ve Online Doğrudan Mühendis Desteği
+      </div>
+    </div>
   );
 }
 
@@ -645,7 +568,7 @@ export const FAQ_ACCORDION_ITEMS: FaqAccordionItem[] = [
       'Süreç 4 temel aşamadan oluşur: 1) İhtiyaç Analizi & Mimari Taslak: Fikrinizi dinler, gerekli ekranları ve fonksiyonları netleştiririz. 2) Prototip & Arayüz Geliştirme: Modern ve kullanıcı dostu arayüzleri hazırlarım. 3) Kodlama & Test: React Native veya Flutter ile çift platforma eş zamanlı temiz ve test edilebilir kod yazarız. 4) Canlıya Alma: Uygulamanızı Apple App Store ve Google Play Store hesaplarınıza yükler, onay sürecini baştan sona yönetirim.',
     actionText: 'Süreç Hakkında Bilgi Al',
     actionUrl: '#contact',
-    renderVisual: () => <SvgMobileProcess />,
+    renderVisual: () => <VisualMobileProcess />,
   },
   {
     id: '02',
@@ -656,7 +579,7 @@ export const FAQ_ACCORDION_ITEMS: FaqAccordionItem[] = [
       'Evet. Geliştirdiğim uygulamalarda React Native ve Flutter teknolojilerini kullanarak tek bir sağlam kod tabanından hem iOS (iPhone, iPad) hem de Android (Samsung, Xiaomi vb.) cihazlarda yerel (native) hızda çalışan ürünler teslim ediyorum. Bu sayede iki ayrı ekip maliyetinden tasarruf eder, güncellemeleri aynı gün her iki mağazaya birden gönderirsiniz.',
     actionText: '50+ Yayındaki Uygulamayı Gör',
     actionUrl: '/apps',
-    renderVisual: () => <SvgCrossPlatform />,
+    renderVisual: () => <VisualCrossPlatform />,
   },
   {
     id: '03',
@@ -667,7 +590,7 @@ export const FAQ_ACCORDION_ITEMS: FaqAccordionItem[] = [
       'Projenin kapsamı, ekran sayısı, entegrasyonlar (ödeme sistemleri, harita, yapay zeka API’leri, özel yönetim paneli) ve teslim süresi belirleyicidir. Net bir iş listesi çıkardıktan sonra sürpriz maliyetler içermeyen, şeffaf ve sabit bir teklif sunuyorum. İletişime geçerek projeniz için ücretsiz ön değerlendirme ve resmi fiyat teklifi alabilirsiniz.',
     actionText: 'Ücretsiz Teklif İste',
     actionUrl: '#contact',
-    renderVisual: () => <SvgTransparentPricing />,
+    renderVisual: () => <VisualTransparentPricing />,
   },
   {
     id: '04',
@@ -678,7 +601,7 @@ export const FAQ_ACCORDION_ITEMS: FaqAccordionItem[] = [
       'Kesinlikle. Geliştirdiğim web siteleri Next.js ve modern sunucu taraflı render (SSR/SSG) teknolojileriyle hazırlanır. Schema.org yapısal verileri, OpenGraph etiketleri, sitemap.xml, robots.txt ve 100/100 Google Core Web Vitals performans kriterlerine uygun kodlanır; böylece arama motorları sitenizi hızla dizine ekler ve organik aramalarda üst sıralara taşır.',
     actionText: 'Web Sistemlerini İncele',
     actionUrl: '/web',
-    renderVisual: () => <SvgWebPerformance />,
+    renderVisual: () => <VisualWebPerformance />,
   },
   {
     id: '05',
@@ -689,7 +612,7 @@ export const FAQ_ACCORDION_ITEMS: FaqAccordionItem[] = [
       'Evet. Bugüne kadar 50’den fazla mobil uygulamayı başarıyla mağazalara yüklemiş bir mühendis olarak, Apple Human Interface Guidelines ve Google Play Developer Policy kurallarına %100 uyumlu kod yazıyorum. Gizlilik politikası, izinler, hesap silme kuralları ve uygulama içi satın alma (IAP) gereksinimlerini eksiksiz uygulayarak ret riskini sıfıra indiriyorum.',
     actionText: "WhatsApp'tan Danış",
     actionUrl: 'https://wa.me/905445258979?text=Merhaba%2C%20mobil%20uygulama%20ma%C4%9Faza%20onay%20s%C3%BCreci%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum.',
-    renderVisual: () => <SvgStoreApproval />,
+    renderVisual: () => <VisualStoreApproval />,
   },
   {
     id: '06',
@@ -700,7 +623,7 @@ export const FAQ_ACCORDION_ITEMS: FaqAccordionItem[] = [
       'Evet. Samsun ve Bayburt merkezli olarak çalışıyorum; başta İstanbul, Ankara, İzmir, Bursa, Antalya olmak üzere Türkiye’nin 81 ilindeki ve yurt dışındaki müşterilerimle %100 uzaktan (remote) kusursuz iş birlikleri yürütüyorum. Düzenli video toplantılar, haftalık canlı test sürümleri (TestFlight / APK) ve şeffaf ilerleme raporları ile fiziksel mesafe fark etmeksizin projenin her anında doğrudan yanınızdayım.',
     actionText: 'Görüşme Planla',
     actionUrl: '#contact',
-    renderVisual: () => <SvgNationwideRemote />,
+    renderVisual: () => <VisualNationwideRemote />,
   },
   {
     id: '07',
@@ -711,7 +634,7 @@ export const FAQ_ACCORDION_ITEMS: FaqAccordionItem[] = [
       'Evet. Bayburt Fen Lisesi mezunu olarak memleketim Bayburt’taki yerel işletmeler, KOBİ\'ler, esnaflar ve kurumlar için özel bilgisayar yazılımları, kurumsal web sitesi tasarımı, e-ticaret sistemleri, teknik veritabanı çözümleri ve iOS & Android mobil uygulama geliştirme hizmetlerini doğrudan yerinde veya online olarak sunuyorum.',
     actionText: 'Ofis & İletişim Bilgileri',
     actionUrl: '#contact',
-    renderVisual: () => <SvgLocalEngineering />,
+    renderVisual: () => <VisualLocalEngineering />,
   },
 ];
 
@@ -752,7 +675,7 @@ export function FaqAccordion({
               </span>
             </AccordionTrigger>
             <AccordionContent className="relative p-0 text-muted-foreground w-full grid md:grid-cols-2 overflow-hidden bg-white/40">
-              <div className="p-6 md:p-8 space-y-6 flex flex-col justify-between min-h-[250px]">
+              <div className="p-6 md:p-8 space-y-6 flex flex-col justify-between min-h-[260px]">
                 <div className="space-y-3">
                   <span className="inline-block text-[11px] font-mono uppercase tracking-wider font-semibold text-[var(--cobalt)] bg-[rgba(25,75,223,0.08)] px-2.5 py-0.5 rounded-full">
                     {item.badge}
@@ -777,7 +700,7 @@ export function FaqAccordion({
                   </Button>
                 </div>
               </div>
-              <div className="h-64 md:h-full md:border-l border-t md:border-t-0 border-[var(--line)] md:absolute md:w-1/2 md:right-0 md:top-0 relative overflow-hidden bg-[#090d16] flex items-center justify-center p-3 md:p-5">
+              <div className="min-h-[260px] md:h-full md:border-l border-t md:border-t-0 border-[var(--line)] md:absolute md:w-1/2 md:right-0 md:top-0 relative overflow-hidden bg-[#182033] flex items-center justify-center p-3 md:p-5">
                 {item.renderVisual()}
               </div>
             </AccordionContent>
