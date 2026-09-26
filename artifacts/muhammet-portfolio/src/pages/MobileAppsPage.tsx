@@ -23,6 +23,7 @@ import {
 import FlowerType from '../components/originkit/ui/botanical-text-custom-style';
 import { SEO } from '../components/SEO';
 import { SitelinksDirectory } from '../components/SitelinksDirectory';
+import { GlassCodeBlock } from '../components/GlassCodeBlock';
 
 const APP_CATEGORY_LABELS: Record<string, string> = {
   All: 'Tümü',
@@ -530,6 +531,24 @@ export function MobileAppsPage() {
             })}
           </div>
         )}
+      </section>
+
+      {/* Interactive Code Architecture Showcase */}
+      <section style={{ padding: '70px 0 50px', borderTop: '1px solid var(--line)', background: '#f4f0e6' }} aria-label="Mobil Mühendislik ve Canlı Kod Standartları">
+        <div className="container-wide" style={{ marginBottom: '32px', textAlign: 'center' }}>
+          <div style={{ color: 'var(--cobalt)', font: '600 11px/1 var(--app-font-mono)', textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: '8px' }}>
+            60 FPS & Temiz Kod Mimarisi
+          </div>
+          <h2 style={{ margin: '0 0 12px', font: '700 clamp(24px, 4vw, 36px)/1.15 var(--font-display)', color: 'var(--ink)', letterSpacing: '-0.03em' }}>
+            50+ Mobil Uygulamanın Altyapısı
+          </h2>
+          <p style={{ maxWidth: '620px', margin: '0 auto', fontSize: '15px', lineHeight: 1.6, color: 'rgba(24, 32, 51, 0.75)' }}>
+            App Store ve Google Play'de onaylanan uygulamalarımızın arkasındaki sade, anlaşılır ve güvenilir mobil mimari.
+          </p>
+        </div>
+        <div className="container-wide" style={{ maxWidth: '920px' }}>
+          <GlassCodeBlock initialTabId="mobile" />
+        </div>
       </section>
 
       {/* Editorial Detail Modal matching site cards */}

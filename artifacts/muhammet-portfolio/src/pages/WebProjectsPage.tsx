@@ -5,6 +5,7 @@ import LiquidGlassCluster from '../components/originkit/ui/glass-icon-custom-sty
 import { SEO } from '../components/SEO';
 import { SitelinksDirectory } from '../components/SitelinksDirectory';
 import { LogoLoop, type LogoItem } from '../components/LogoLoop';
+import { GlassCodeBlock } from '../components/GlassCodeBlock';
 import {
   SiNextdotjs,
   SiReact,
@@ -1010,6 +1011,24 @@ export function WebProjectsPage() {
           </div>
         </div>
       )}
+
+      {/* Interactive Code Architecture Showcase */}
+      <section style={{ padding: '70px 0 50px', borderTop: '1px solid var(--line)', background: '#f4f0e6' }} aria-label="Mühendislik Standartları ve Kod Mimarisi">
+        <div className="container-wide" style={{ marginBottom: '32px', textAlign: 'center' }}>
+          <div style={{ color: 'var(--cobalt)', font: '600 11px/1 var(--app-font-mono)', textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: '8px' }}>
+            Temiz Kod & Kurumsal Standartlar
+          </div>
+          <h2 style={{ margin: '0 0 12px', font: '700 clamp(24px, 4vw, 36px)/1.15 var(--font-display)', color: 'var(--ink)', letterSpacing: '-0.03em' }}>
+            Mühendislik Nasıl İnşa Edilir?
+          </h2>
+          <p style={{ maxWidth: '620px', margin: '0 auto', fontSize: '15px', lineHeight: 1.6, color: 'rgba(24, 32, 51, 0.75)' }}>
+            Ölçeklenebilir B2B portalları ve mobil sistemlerin perde arkasındaki sade, anlaşılır ve güvenilir kod mimarisi.
+          </p>
+        </div>
+        <div className="container-wide" style={{ maxWidth: '920px' }}>
+          <GlassCodeBlock initialTabId="web" />
+        </div>
+      </section>
 
       {/* Web Technologies & Architecture Logo Loop */}
       <section style={{ padding: '60px 0 45px', borderTop: '1px solid var(--line)', background: 'rgba(250, 248, 242, 0.45)' }} aria-label="Kullanılan Teknolojiler">
