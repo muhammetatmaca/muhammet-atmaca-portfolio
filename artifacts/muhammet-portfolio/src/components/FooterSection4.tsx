@@ -103,7 +103,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
   ];
 
   return (
-    <footer className={`py-14 px-4 sm:px-6 lg:px-8 border-t-2 border-[var(--coral)] bg-[var(--paper)] ${className}`} id="footer-section">
+    <footer className={`pt-4 pb-12 px-4 sm:px-6 lg:px-8 bg-[var(--paper)] ${className}`} id="footer-section">
       <motion.div
         className="container-wide mx-auto max-w-7xl"
         initial="hidden"
@@ -117,23 +117,6 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
             className="relative w-full lg:w-1/3 min-h-[380px] lg:min-h-[560px] overflow-hidden rounded-2xl bg-[var(--coral)] text-white flex flex-col justify-between p-8 md:p-10 shadow-lg"
             variants={itemVariants}
           >
-            {/* SVG Noise / Grain Overlay */}
-            <svg
-              className="absolute inset-0 w-full h-full opacity-25 pointer-events-none mix-blend-overlay z-0"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <filter id="footerNoise">
-                <feTurbulence
-                  type="fractalNoise"
-                  baseFrequency="0.65"
-                  numOctaves="4"
-                  stitchTiles="stitch"
-                />
-              </filter>
-              <rect width="100%" height="100%" filter="url(#footerNoise)" />
-            </svg>
-
             {/* Top Logo & Header */}
             <div className="relative z-10">
               <div className="flex items-center gap-3">
