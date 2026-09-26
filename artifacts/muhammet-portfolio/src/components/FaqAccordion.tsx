@@ -52,11 +52,10 @@ const CircleNode = React.forwardRef<
     className?: string;
     children: React.ReactNode;
     label?: string;
-    sublabel?: string;
   }
->(({ className, children, label, sublabel }, ref) => {
+>(({ className, children, label }, ref) => {
   return (
-    <div className="flex flex-col items-center gap-1 z-10">
+    <div className="flex flex-col items-center gap-1.5 z-10">
       <div
         ref={ref}
         className={cn(
@@ -69,11 +68,6 @@ const CircleNode = React.forwardRef<
       {label && (
         <span className="font-mono text-[8.5px] md:text-[9px] text-white/85 font-medium whitespace-nowrap px-1.5 py-0.5 rounded bg-black/60 border border-white/10 shadow-sm">
           {label}
-        </span>
-      )}
-      {sublabel && (
-        <span className="font-mono text-[7px] text-white/45 -mt-0.5 whitespace-nowrap">
-          {sublabel}
         </span>
       )}
     </div>
@@ -93,32 +87,18 @@ function VisualMobileProcess() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[420px] h-[330px] rounded-2xl bg-[#0b101d] border border-white/10 p-3.5 shadow-2xl flex flex-col justify-between overflow-hidden text-white mx-auto"
+      className="relative w-full max-w-[420px] h-[280px] md:h-[300px] rounded-2xl bg-[#0b101d] border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden text-white mx-auto p-4"
     >
       <DotPattern className="opacity-25 [mask-image:radial-gradient(220px_circle_at_center,white,transparent)]" />
 
-      {/* Top Chrome Header */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-2 z-10">
-        <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-          <span className="ml-2 font-mono text-[9.5px] text-white/45">pipeline://mobile-workflow.v3</span>
-        </div>
-        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 font-mono text-[8.5px] text-emerald-400 font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span>Production Ready</span>
-        </div>
-      </div>
-
       {/* Center Stage: Animated Beam Flow */}
-      <div className="flex items-center justify-between w-full h-[190px] px-2 relative z-10">
+      <div className="flex items-center justify-between w-full h-full px-2 relative z-10">
         {/* Left Column: Analysis & UI */}
-        <div className="flex flex-col justify-around h-full py-1">
-          <CircleNode ref={prdRef} label="PRD Analiz" sublabel="Mimari Taslak">
+        <div className="flex flex-col justify-around h-full py-2">
+          <CircleNode ref={prdRef} label="PRD Analiz">
             <FileSearch size={16} className="text-[#38bdf8]" />
           </CircleNode>
-          <CircleNode ref={figmaRef} label="Figma UI/UX" sublabel="Prototip">
+          <CircleNode ref={figmaRef} label="Figma UI/UX">
             <Palette size={16} className="text-[#c084fc]" />
           </CircleNode>
         </div>
@@ -129,18 +109,17 @@ function VisualMobileProcess() {
             ref={rnRef}
             className="h-14 w-14 md:h-14 md:w-14 border-sky-400/50 bg-[#14233c] shadow-[0_0_25px_rgba(56,189,248,0.4)]"
             label="React Native"
-            sublabel="TurboEngine"
           >
             <Cpu size={24} className="text-sky-300 animate-pulse" />
           </CircleNode>
         </div>
 
         {/* Right Column: Stores */}
-        <div className="flex flex-col justify-around h-full py-1">
-          <CircleNode ref={iosRef} label="App Store" sublabel="iOS & TestFlight">
+        <div className="flex flex-col justify-around h-full py-2">
+          <CircleNode ref={iosRef} label="App Store">
             <Smartphone size={16} className="text-white" />
           </CircleNode>
-          <CircleNode ref={androidRef} label="Google Play" sublabel="Android APK">
+          <CircleNode ref={androidRef} label="Google Play">
             <CheckCircle2 size={16} className="text-emerald-400" />
           </CircleNode>
         </div>
@@ -151,7 +130,7 @@ function VisualMobileProcess() {
         containerRef={containerRef}
         fromRef={prdRef}
         toRef={rnRef}
-        curvature={22}
+        curvature={24}
         duration={3.5}
         gradientStartColor="#38bdf8"
         gradientStopColor="#194bdf"
@@ -160,7 +139,7 @@ function VisualMobileProcess() {
         containerRef={containerRef}
         fromRef={figmaRef}
         toRef={rnRef}
-        curvature={-22}
+        curvature={-24}
         duration={3.5}
         delay={0.6}
         gradientStartColor="#c084fc"
@@ -170,7 +149,7 @@ function VisualMobileProcess() {
         containerRef={containerRef}
         fromRef={rnRef}
         toRef={iosRef}
-        curvature={-22}
+        curvature={-24}
         duration={3.5}
         delay={1.2}
         gradientStartColor="#194bdf"
@@ -180,21 +159,12 @@ function VisualMobileProcess() {
         containerRef={containerRef}
         fromRef={rnRef}
         toRef={androidRef}
-        curvature={22}
+        curvature={24}
         duration={3.5}
         delay={1.8}
         gradientStartColor="#194bdf"
         gradientStopColor="#34d399"
       />
-
-      {/* Bottom Summary Bar */}
-      <div className="z-10 px-2.5 py-1.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-[9px] font-mono text-white/75">
-        <span>TestFlight &amp; Play Console Çift Dağıtım</span>
-        <span className="text-emerald-400 font-bold flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          60 FPS OK
-        </span>
-      </div>
     </div>
   );
 }
@@ -202,89 +172,64 @@ function VisualMobileProcess() {
 // 2. Çift Platform (Magic UI Orbiting Circles - iOS & Android Senkron Yerel UI)
 function VisualCrossPlatform() {
   return (
-    <div className="relative w-full max-w-[420px] h-[330px] rounded-2xl bg-[#0b101d] border border-white/10 p-3.5 shadow-2xl flex flex-col justify-between overflow-hidden text-white mx-auto">
+    <div className="relative w-full max-w-[420px] h-[280px] md:h-[300px] rounded-2xl bg-[#0b101d] border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden text-white mx-auto p-4">
       <DotPattern className="opacity-25 [mask-image:radial-gradient(220px_circle_at_center,white,transparent)]" />
 
-      {/* Top Chrome Header */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-2 z-10">
-        <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-          <span className="ml-2 font-mono text-[9.5px] text-white/45">runtime://dual-platform.sync</span>
-        </div>
-        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-sky-500/15 border border-sky-500/30 font-mono text-[8.5px] text-sky-300 font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
-          <span>Tek Kod Tabanı</span>
-        </div>
-      </div>
-
       {/* Center Stage: Orbiting Circles */}
-      <div className="relative flex items-center justify-center w-full h-[200px] overflow-hidden z-10">
+      <div className="relative flex items-center justify-center w-full h-full overflow-hidden z-10">
         {/* Core Center Engine */}
         <div className="z-10 flex flex-col items-center">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-700 to-sky-500 flex items-center justify-center text-white shadow-[0_0_30px_rgba(56,189,248,0.5)] border border-white/20">
+          <div className="w-13 h-13 rounded-2xl bg-gradient-to-br from-blue-700 to-sky-500 flex items-center justify-center text-white shadow-[0_0_30px_rgba(56,189,248,0.5)] border border-white/20">
             <Layers size={22} className="text-white" />
           </div>
-          <span className="font-mono text-[8.5px] text-white/90 font-bold mt-1.5 px-2 py-0.5 rounded bg-black/70 border border-white/15">
+          <span className="font-mono text-[9px] text-white/90 font-bold mt-1.5 px-2 py-0.5 rounded bg-black/70 border border-white/15">
             React Native
           </span>
         </div>
 
-        {/* Inner Orbit (radius 56) */}
-        <OrbitingCircles radius={56} duration={16} iconSize={32}>
-          {/* iOS */}
+        {/* Inner Orbit (radius 58) */}
+        <OrbitingCircles radius={58} duration={16} iconSize={32}>
           <div
             className="w-8 h-8 rounded-full bg-[#111726] border border-white/30 flex items-center justify-center shadow-lg text-white"
-            title="Apple iOS Native"
+            title="Apple iOS"
           >
             <Smartphone size={14} className="text-white" />
           </div>
-          {/* Android */}
           <div
             className="w-8 h-8 rounded-full bg-[#111726] border border-emerald-500/40 flex items-center justify-center shadow-lg text-emerald-400"
-            title="Google Android Kotlin"
+            title="Google Android"
           >
             <Smartphone size={14} className="text-emerald-400" />
           </div>
         </OrbitingCircles>
 
-        {/* Outer Orbit (radius 98, reverse) */}
-        <OrbitingCircles radius={98} duration={26} reverse iconSize={28}>
+        {/* Outer Orbit (radius 102, reverse) */}
+        <OrbitingCircles radius={102} duration={26} reverse iconSize={28}>
           <div
             className="w-7 h-7 rounded-full bg-[#111726] border border-amber-500/40 flex items-center justify-center shadow-lg text-amber-300"
-            title="60 FPS Akıcı"
+            title="60 FPS Native"
           >
             <Zap size={13} className="text-amber-300" />
           </div>
           <div
             className="w-7 h-7 rounded-full bg-[#111726] border border-sky-500/40 flex items-center justify-center shadow-lg text-sky-300"
-            title="TypeScript Mimari"
+            title="TypeScript"
           >
             <Code2 size={13} className="text-sky-300" />
           </div>
           <div
             className="w-7 h-7 rounded-full bg-[#111726] border border-purple-500/40 flex items-center justify-center shadow-lg text-purple-300"
-            title="Sıfır Sapma"
+            title="Tek Kod Tabanı"
           >
             <Layers size={13} className="text-purple-300" />
           </div>
           <div
             className="w-7 h-7 rounded-full bg-[#111726] border border-emerald-500/40 flex items-center justify-center shadow-lg text-emerald-300"
-            title="%50 Maliyet Tasarrufu"
+            title="%50 Tasarruf"
           >
             <ShieldCheck size={13} className="text-emerald-300" />
           </div>
         </OrbitingCircles>
-      </div>
-
-      {/* Bottom Summary Bar */}
-      <div className="z-10 px-2.5 py-1.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-[9px] font-mono text-white/75">
-        <span>Tek Mühendislik · %50 Maliyet Avantajı</span>
-        <span className="text-sky-400 font-bold flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
-          Eş Zamanlı Canlıda
-        </span>
       </div>
     </div>
   );
@@ -302,29 +247,15 @@ function VisualTransparentPricing() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[420px] h-[330px] rounded-2xl bg-[#0b101d] border border-white/10 p-3.5 shadow-2xl flex flex-col justify-between overflow-hidden text-white mx-auto"
+      className="relative w-full max-w-[420px] h-[280px] md:h-[300px] rounded-2xl bg-[#0b101d] border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden text-white mx-auto p-4"
     >
       <DotPattern className="opacity-25 [mask-image:radial-gradient(220px_circle_at_center,white,transparent)]" />
 
-      {/* Top Chrome Header */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-2 z-10">
-        <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-          <span className="ml-2 font-mono text-[9.5px] text-white/45">contract://fixed-budget.legal</span>
-        </div>
-        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 font-mono text-[8.5px] text-emerald-400 font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span>Resmi Güvence</span>
-        </div>
-      </div>
-
       {/* Center Stage: Animated Trust Beam */}
-      <div className="flex items-center justify-between w-full h-[190px] px-2 relative z-10">
+      <div className="flex items-center justify-between w-full h-full px-2 relative z-10">
         {/* Left: Client Requirements */}
         <div className="flex flex-col items-center justify-center">
-          <CircleNode ref={clientRef} label="Müşteri Talebi" sublabel="Net Kapsam">
+          <CircleNode ref={clientRef} label="Müşteri Talebi">
             <User size={16} className="text-sky-400" />
           </CircleNode>
         </div>
@@ -335,21 +266,20 @@ function VisualTransparentPricing() {
             ref={contractRef}
             className="h-14 w-14 md:h-14 md:w-14 border-emerald-400/50 bg-[#0e231d] shadow-[0_0_25px_rgba(52,211,153,0.4)]"
             label="Sabit Sözleşme"
-            sublabel="Resmi Taahhüt"
           >
             <ShieldCheck size={24} className="text-emerald-400" />
           </CircleNode>
         </div>
 
         {/* Right: 3 Guarantees */}
-        <div className="flex flex-col justify-around h-full py-0.5">
-          <CircleNode ref={codeRef} label="%100 Kod Mülkiyeti" sublabel="Tam Teslim">
+        <div className="flex flex-col justify-around h-full py-1">
+          <CircleNode ref={codeRef} label="%100 Kod">
             <GitBranch size={15} className="text-indigo-400" />
           </CircleNode>
-          <CircleNode ref={budgetRef} label="0₺ Gizli Gider" sublabel="Sabit Bütçe">
+          <CircleNode ref={budgetRef} label="0₺ Gizli Gider">
             <Lock size={15} className="text-emerald-400" />
           </CircleNode>
-          <CircleNode ref={slaRef} label="1 Yıl Garanti" sublabel="Ücretsiz SLA">
+          <CircleNode ref={slaRef} label="1 Yıl Garanti">
             <Zap size={15} className="text-amber-400" />
           </CircleNode>
         </div>
@@ -395,15 +325,6 @@ function VisualTransparentPricing() {
         gradientStartColor="#10b981"
         gradientStopColor="#fbbf24"
       />
-
-      {/* Bottom Summary Bar */}
-      <div className="z-10 px-2.5 py-1.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-[9px] font-mono text-white/75">
-        <span>Sürpriz Maliyet Yok · Kesin Teslim Takvimi</span>
-        <span className="text-emerald-400 font-bold flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          Sıfır Risk
-        </span>
-      </div>
     </div>
   );
 }
@@ -421,32 +342,18 @@ function VisualWebPerformance() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[420px] h-[330px] rounded-2xl bg-[#0b101d] border border-white/10 p-3.5 shadow-2xl flex flex-col justify-between overflow-hidden text-white mx-auto"
+      className="relative w-full max-w-[420px] h-[280px] md:h-[300px] rounded-2xl bg-[#0b101d] border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden text-white mx-auto p-4"
     >
       <DotPattern className="opacity-25 [mask-image:radial-gradient(220px_circle_at_center,white,transparent)]" />
 
-      {/* Top Chrome Header */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-2 z-10">
-        <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-          <span className="ml-2 font-mono text-[9.5px] text-white/45">lighthouse://core-web-vitals.100</span>
-        </div>
-        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 font-mono text-[8.5px] text-emerald-400 font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span>100/100 Puan</span>
-        </div>
-      </div>
-
       {/* Center Stage: Animated Web & SEO Engine */}
-      <div className="flex items-center justify-between w-full h-[190px] px-2 relative z-10">
+      <div className="flex items-center justify-between w-full h-full px-2 relative z-10">
         {/* Left: Search Crawler & Visitor */}
-        <div className="flex flex-col justify-around h-full py-1">
-          <CircleNode ref={botRef} label="Googlebot" sublabel="Indexleme">
+        <div className="flex flex-col justify-around h-full py-2">
+          <CircleNode ref={botRef} label="Googlebot">
             <Search size={16} className="text-amber-400" />
           </CircleNode>
-          <CircleNode ref={userWebRef} label="Ziyaretçi" sublabel="Web Tarayıcı">
+          <CircleNode ref={userWebRef} label="Ziyaretçi">
             <Globe size={16} className="text-sky-400" />
           </CircleNode>
         </div>
@@ -457,21 +364,20 @@ function VisualWebPerformance() {
             ref={nextCoreRef}
             className="h-14 w-14 md:h-14 md:w-14 border-emerald-400/50 bg-[#0f241a] shadow-[0_0_25px_rgba(74,222,128,0.4)]"
             label="Next.js 15"
-            sublabel="SSR &amp; Edge Cache"
           >
             <div className="font-mono font-extrabold text-lg text-emerald-400">100</div>
           </CircleNode>
         </div>
 
         {/* Right: Core Vitals & SERP */}
-        <div className="flex flex-col justify-around h-full py-0.5">
-          <CircleNode ref={lcpRef} label="LCP &lt; 0.4s" sublabel="Anında Açılış">
+        <div className="flex flex-col justify-around h-full py-1">
+          <CircleNode ref={lcpRef} label="LCP &lt; 0.4s">
             <Zap size={15} className="text-emerald-400" />
           </CircleNode>
-          <CircleNode ref={schemaRef} label="Schema.org" sublabel="Zengin Sonuçlar">
+          <CircleNode ref={schemaRef} label="Schema.org">
             <Star size={15} className="text-amber-400" />
           </CircleNode>
-          <CircleNode ref={serpRef} label="Google 1. Sıra" sublabel="Organik İndeks">
+          <CircleNode ref={serpRef} label="Google 1. Sıra">
             <ArrowUpRight size={15} className="text-sky-400" />
           </CircleNode>
         </div>
@@ -482,7 +388,7 @@ function VisualWebPerformance() {
         containerRef={containerRef}
         fromRef={botRef}
         toRef={nextCoreRef}
-        curvature={-22}
+        curvature={-24}
         duration={3.5}
         gradientStartColor="#fbbf24"
         gradientStopColor="#10b981"
@@ -491,7 +397,7 @@ function VisualWebPerformance() {
         containerRef={containerRef}
         fromRef={userWebRef}
         toRef={nextCoreRef}
-        curvature={22}
+        curvature={24}
         duration={3.5}
         delay={0.5}
         gradientStartColor="#38bdf8"
@@ -527,15 +433,6 @@ function VisualWebPerformance() {
         gradientStartColor="#10b981"
         gradientStopColor="#38bdf8"
       />
-
-      {/* Bottom Summary Bar */}
-      <div className="z-10 px-2.5 py-1.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-[9px] font-mono text-white/75">
-        <span>0.4s LCP · 14ms Tepki · 0.00 CLS</span>
-        <span className="text-emerald-400 font-bold flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          Arama Motoru Uyumlu
-        </span>
-      </div>
     </div>
   );
 }
@@ -553,32 +450,18 @@ function VisualStoreApproval() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[420px] h-[330px] rounded-2xl bg-[#0b101d] border border-white/10 p-3.5 shadow-2xl flex flex-col justify-between overflow-hidden text-white mx-auto"
+      className="relative w-full max-w-[420px] h-[280px] md:h-[300px] rounded-2xl bg-[#0b101d] border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden text-white mx-auto p-4"
     >
       <DotPattern className="opacity-25 [mask-image:radial-gradient(220px_circle_at_center,white,transparent)]" />
 
-      {/* Top Chrome Header */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-2 z-10">
-        <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-          <span className="ml-2 font-mono text-[9.5px] text-white/45">store://app-store-google-play.audit</span>
-        </div>
-        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 font-mono text-[8.5px] text-emerald-400 font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span>%100 Onaylı</span>
-        </div>
-      </div>
-
-      {/* Center Stage: Store Approval Pipeline */}
-      <div className="flex items-center justify-between w-full h-[190px] px-2 relative z-10">
+      {/* Store Approval Pipeline */}
+      <div className="flex items-center justify-between w-full h-full px-2 relative z-10">
         {/* Left: Requirements */}
-        <div className="flex flex-col justify-around h-full py-1">
-          <CircleNode ref={appleHigRef} label="Apple HIG" sublabel="iOS 18 Uyum">
+        <div className="flex flex-col justify-around h-full py-2">
+          <CircleNode ref={appleHigRef} label="Apple HIG">
             <Smartphone size={16} className="text-white" />
           </CircleNode>
-          <CircleNode ref={googlePolicyRef} label="Google Policy" sublabel="API 35 Uyum">
+          <CircleNode ref={googlePolicyRef} label="Google Policy">
             <Smartphone size={16} className="text-emerald-400" />
           </CircleNode>
         </div>
@@ -589,21 +472,20 @@ function VisualStoreApproval() {
             ref={verifiedCoreRef}
             className="h-14 w-14 md:h-14 md:w-14 border-emerald-400/50 bg-[#122820] shadow-[0_0_25px_rgba(52,211,153,0.4)]"
             label="50+ Onay"
-            sublabel="Sıfır Ret Güvencesi"
           >
             <CheckCircle2 size={24} className="text-emerald-400" />
           </CircleNode>
         </div>
 
         {/* Right: Live Releases */}
-        <div className="flex flex-col justify-around h-full py-0.5">
-          <CircleNode ref={appStoreLiveRef} label="App Store" sublabel="Ready for Sale">
+        <div className="flex flex-col justify-around h-full py-1">
+          <CircleNode ref={appStoreLiveRef} label="App Store">
             <Check size={15} className="text-emerald-400" />
           </CircleNode>
-          <CircleNode ref={playStoreLiveRef} label="Play Console" sublabel="Production Live">
+          <CircleNode ref={playStoreLiveRef} label="Play Console">
             <Check size={15} className="text-emerald-400" />
           </CircleNode>
-          <CircleNode ref={privacyRef} label="IAP &amp; Gizlilik" sublabel="KVKK / GDPR OK">
+          <CircleNode ref={privacyRef} label="IAP &amp; Gizlilik">
             <Lock size={15} className="text-sky-400" />
           </CircleNode>
         </div>
@@ -614,7 +496,7 @@ function VisualStoreApproval() {
         containerRef={containerRef}
         fromRef={appleHigRef}
         toRef={verifiedCoreRef}
-        curvature={-22}
+        curvature={-24}
         duration={3.5}
         gradientStartColor="#38bdf8"
         gradientStopColor="#10b981"
@@ -623,7 +505,7 @@ function VisualStoreApproval() {
         containerRef={containerRef}
         fromRef={googlePolicyRef}
         toRef={verifiedCoreRef}
-        curvature={22}
+        curvature={24}
         duration={3.5}
         delay={0.5}
         gradientStartColor="#10b981"
@@ -659,15 +541,6 @@ function VisualStoreApproval() {
         gradientStartColor="#10b981"
         gradientStopColor="#818cf8"
       />
-
-      {/* Bottom Summary Bar */}
-      <div className="z-10 px-2.5 py-1.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-[9px] font-mono text-white/75">
-        <span>50'den Fazla Başarılı Mağaza Onayı</span>
-        <span className="text-emerald-400 font-bold flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          Sıfır Ret Garantisi
-        </span>
-      </div>
     </div>
   );
 }
@@ -675,37 +548,23 @@ function VisualStoreApproval() {
 // 6. Türkiye Geneli 81 İl ve Uzaktan Çalışma Ağı (Magic UI Orbiting Circles)
 function VisualNationwideRemote() {
   return (
-    <div className="relative w-full max-w-[420px] h-[330px] rounded-2xl bg-[#0b101d] border border-white/10 p-3.5 shadow-2xl flex flex-col justify-between overflow-hidden text-white mx-auto">
+    <div className="relative w-full max-w-[420px] h-[280px] md:h-[300px] rounded-2xl bg-[#0b101d] border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden text-white mx-auto p-4">
       <DotPattern className="opacity-25 [mask-image:radial-gradient(220px_circle_at_center,white,transparent)]" />
 
-      {/* Top Chrome Header */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-2 z-10">
-        <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-          <span className="ml-2 font-mono text-[9.5px] text-white/45">network://nationwide-remote.81</span>
-        </div>
-        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-sky-500/15 border border-sky-500/30 font-mono text-[8.5px] text-sky-300 font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
-          <span>%100 Uzaktan &amp; Canlı</span>
-        </div>
-      </div>
-
       {/* Center Stage: Remote Orbit Network */}
-      <div className="relative flex items-center justify-center w-full h-[200px] overflow-hidden z-10">
+      <div className="relative flex items-center justify-center w-full h-full overflow-hidden z-10">
         {/* Core Center HQ */}
         <div className="z-10 flex flex-col items-center">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-700 to-sky-600 flex items-center justify-center text-white shadow-[0_0_30px_rgba(99,102,241,0.5)] border border-white/20">
+          <div className="w-13 h-13 rounded-2xl bg-gradient-to-br from-indigo-700 to-sky-600 flex items-center justify-center text-white shadow-[0_0_30px_rgba(99,102,241,0.5)] border border-white/20">
             <Globe size={22} className="text-white" />
           </div>
-          <span className="font-mono text-[8.5px] text-white/90 font-bold mt-1.5 px-2 py-0.5 rounded bg-black/70 border border-white/15">
-            HQ Samsun &amp; Bayburt
+          <span className="font-mono text-[9px] text-white/90 font-bold mt-1.5 px-2 py-0.5 rounded bg-black/70 border border-white/15">
+            Samsun HQ
           </span>
         </div>
 
-        {/* Inner Orbit (radius 56) */}
-        <OrbitingCircles radius={56} duration={18} iconSize={32}>
+        {/* Inner Orbit (radius 58) */}
+        <OrbitingCircles radius={58} duration={18} iconSize={32}>
           <div
             className="w-8 h-8 rounded-full bg-[#111726] border border-sky-400/40 flex items-center justify-center shadow-lg text-sky-300 font-mono text-[8px] font-bold"
             title="İstanbul"
@@ -726,42 +585,33 @@ function VisualNationwideRemote() {
           </div>
         </OrbitingCircles>
 
-        {/* Outer Orbit (radius 98, reverse) */}
-        <OrbitingCircles radius={98} duration={26} reverse iconSize={28}>
+        {/* Outer Orbit (radius 102, reverse) */}
+        <OrbitingCircles radius={102} duration={26} reverse iconSize={28}>
           <div
             className="w-7 h-7 rounded-full bg-[#111726] border border-purple-400/40 flex items-center justify-center shadow-lg text-purple-300"
-            title="Google Meet Birebir"
+            title="Google Meet"
           >
             <Video size={13} className="text-purple-300" />
           </div>
           <div
             className="w-7 h-7 rounded-full bg-[#111726] border border-sky-400/40 flex items-center justify-center shadow-lg text-sky-300"
-            title="TestFlight Canlı Test"
+            title="TestFlight Canlı"
           >
             <Smartphone size={13} className="text-sky-300" />
           </div>
           <div
             className="w-7 h-7 rounded-full bg-[#111726] border border-emerald-400/40 flex items-center justify-center shadow-lg text-emerald-300"
-            title="GitHub CI/CD Şeffaf Takip"
+            title="GitHub CI/CD"
           >
             <GitBranch size={13} className="text-emerald-300" />
           </div>
           <div
             className="w-7 h-7 rounded-full bg-[#111726] border border-amber-400/40 flex items-center justify-center shadow-lg text-amber-300"
-            title="Doğrudan Mühendisle İletişim"
+            title="Doğrudan Destek"
           >
             <Zap size={13} className="text-amber-300" />
           </div>
         </OrbitingCircles>
-      </div>
-
-      {/* Bottom Summary Bar */}
-      <div className="z-10 px-2.5 py-1.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-[9px] font-mono text-white/75">
-        <span>81 İl &amp; Global · Sıfır Aracı Ajans</span>
-        <span className="text-emerald-400 font-bold flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          Doğrudan Mühendis
-        </span>
       </div>
     </div>
   );
@@ -780,32 +630,18 @@ function VisualLocalEngineering() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[420px] h-[330px] rounded-2xl bg-[#0b101d] border border-white/10 p-3.5 shadow-2xl flex flex-col justify-between overflow-hidden text-white mx-auto"
+      className="relative w-full max-w-[420px] h-[280px] md:h-[300px] rounded-2xl bg-[#0b101d] border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden text-white mx-auto p-4"
     >
       <DotPattern className="opacity-25 [mask-image:radial-gradient(220px_circle_at_center,white,transparent)]" />
 
-      {/* Top Chrome Header */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-2 z-10">
-        <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-          <span className="ml-2 font-mono text-[9.5px] text-white/45">terminal://bayburt-local.sh</span>
-        </div>
-        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 font-mono text-[8.5px] text-emerald-400 font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span>Yerinde Servis</span>
-        </div>
-      </div>
-
       {/* Center Stage: Bayburt Tech Hub */}
-      <div className="flex items-center justify-between w-full h-[190px] px-2 relative z-10">
+      <div className="flex items-center justify-between w-full h-full px-2 relative z-10">
         {/* Left: Local Clients */}
-        <div className="flex flex-col justify-around h-full py-1">
-          <CircleNode ref={esnafRef} label="Yerel Esnaf" sublabel="KOBİ &amp; Mağaza">
+        <div className="flex flex-col justify-around h-full py-2">
+          <CircleNode ref={esnafRef} label="Yerel Esnaf">
             <Store size={16} className="text-amber-400" />
           </CircleNode>
-          <CircleNode ref={kurumsalRef} label="Kurumsal" sublabel="Sanayi &amp; Tesis">
+          <CircleNode ref={kurumsalRef} label="Kurumsal">
             <Server size={16} className="text-sky-400" />
           </CircleNode>
         </div>
@@ -816,21 +652,20 @@ function VisualLocalEngineering() {
             ref={bayburtHubRef}
             className="h-14 w-14 md:h-14 md:w-14 border-sky-400/50 bg-[#14233c] shadow-[0_0_25px_rgba(56,189,248,0.4)]"
             label="Muhammet Atmaca"
-            sublabel="Fen Lisesi Güvencesi"
           >
             <Terminal size={22} className="text-sky-300" />
           </CircleNode>
         </div>
 
         {/* Right: Deployed Local Solutions */}
-        <div className="flex flex-col justify-around h-full py-0.5">
-          <CircleNode ref={webSysRef} label="Web &amp; E-Ticaret" sublabel="Google Uyumlu">
+        <div className="flex flex-col justify-around h-full py-1">
+          <CircleNode ref={webSysRef} label="Web &amp; E-Ticaret">
             <Globe size={15} className="text-sky-400" />
           </CircleNode>
-          <CircleNode ref={barcodeRef} label="Barkod &amp; Stok" sublabel="Özel Muhasebe">
+          <CircleNode ref={barcodeRef} label="Barkod &amp; Stok">
             <Terminal size={15} className="text-emerald-400" />
           </CircleNode>
-          <CircleNode ref={customDevRef} label="Mobil &amp; Ağ" sublabel="Yerel Altyapı">
+          <CircleNode ref={customDevRef} label="Mobil &amp; Ağ">
             <Smartphone size={15} className="text-purple-400" />
           </CircleNode>
         </div>
@@ -841,7 +676,7 @@ function VisualLocalEngineering() {
         containerRef={containerRef}
         fromRef={esnafRef}
         toRef={bayburtHubRef}
-        curvature={-22}
+        curvature={-24}
         duration={3.5}
         gradientStartColor="#fbbf24"
         gradientStopColor="#194bdf"
@@ -850,7 +685,7 @@ function VisualLocalEngineering() {
         containerRef={containerRef}
         fromRef={kurumsalRef}
         toRef={bayburtHubRef}
-        curvature={22}
+        curvature={24}
         duration={3.5}
         delay={0.5}
         gradientStartColor="#38bdf8"
@@ -886,15 +721,6 @@ function VisualLocalEngineering() {
         gradientStartColor="#194bdf"
         gradientStopColor="#c084fc"
       />
-
-      {/* Bottom Summary Bar */}
-      <div className="z-10 px-2.5 py-1.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-[9px] font-mono text-white/75">
-        <span>Bayburt &amp; Çevre İllere Doğrudan Mühendis Desteği</span>
-        <span className="text-sky-400 font-bold flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
-          Yerel Güven
-        </span>
-      </div>
     </div>
   );
 }
@@ -1052,7 +878,7 @@ export function FaqAccordion({
                   </Button>
                 </div>
               </div>
-              <div className="min-h-[350px] w-full border-t md:border-t-0 md:border-l border-[var(--line)] relative overflow-hidden bg-[#0c1220] flex items-center justify-center p-3 md:p-6">
+              <div className="min-h-[300px] md:min-h-[340px] w-full border-t md:border-t-0 md:border-l border-[var(--line)] relative overflow-hidden bg-[#0c1220] flex items-center justify-center p-3 md:p-6">
                 {item.renderVisual()}
               </div>
             </AccordionContent>
