@@ -262,9 +262,11 @@
   margin: 36px 0 32px 4px;
   color: #000000;
   text-shadow: none;
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: 16.5px;
   line-height: 1.62;
+  letter-spacing: -0.02em;
 }
 .web-hero-lede {
   color: rgba(24,32,51,.7);
