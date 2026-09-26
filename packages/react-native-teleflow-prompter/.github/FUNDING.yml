@@ -1,0 +1,5 @@
+# Official GitHub Funding Configuration for react-native-teleflow-prompter
+# Specification: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+
+github: [muhammetatmaca]
+custom: ['https://muhammetatmaca.com.tr', 'https://muhammetatmaca.com.tr/apps/teleflow-prompter']
