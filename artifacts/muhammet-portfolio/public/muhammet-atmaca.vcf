@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:4.0
+PRODID:-//Muhammet Atmaca//Portfolio vCard 4.0//TR
+N:Atmaca;Muhammet;;;
+FN:Muhammet Atmaca
+ORG:VirelonSoft
+TITLE:Mobil & Web Yazılım Mühendisi
+ROLE:Software Engineer
+EMAIL;TYPE=work:muhammetatmaca79@gmail.com
+TEL;TYPE=cell,voice;VALUE=uri:tel:+905448375685
+URL;TYPE=work:https://muhammetatmaca.com.tr
+URL;TYPE=apps:https://muhammetatmaca.com.tr/apps
+URL;TYPE=github:https://github.com/muhammetatmaca
+URL;TYPE=linkedin:https://www.linkedin.com/in/muhammet-atmaca-857481252/
+ADR;TYPE=work:;;Merkez;Bayburt;;69000;Türkiye
+NOTE:Apple App Store ve Google Play Store üzerinde 50'den fazla canlı mobil uygulaması bulunan mobil ve web yazılım mühendisi. VirelonSoft kurucusu.
+REV:20260926T003700Z
+END:VCARD
