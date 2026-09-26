@@ -26,6 +26,21 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+User-agent: DeepSeekBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
 # Sitemaps & Feeds
 Sitemap: https://muhammetatmaca.com.tr/sitemap.xml
 Sitemap: https://muhammetatmaca.com.tr/geositemap.xml
@@ -34,6 +49,7 @@ Sitemap: https://muhammetatmaca.com.tr/sitemap.txt
 # Plaintext Sitemap: https://muhammetatmaca.com.tr/urllist.txt
 # RSS Feed: https://muhammetatmaca.com.tr/feed.xml
 # Security: https://muhammetatmaca.com.tr/.well-known/security.txt
+# Security (Legacy Mirror): https://muhammetatmaca.com.tr/security.txt
 # App-Ads.txt: https://muhammetatmaca.com.tr/app-ads.txt
 
 # LLM Direct Knowledge Context
