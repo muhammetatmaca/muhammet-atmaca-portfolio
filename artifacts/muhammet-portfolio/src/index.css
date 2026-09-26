@@ -1047,8 +1047,7 @@
   .wordmark-role { display: none; }
   .mobile-menu-button { display: inline-flex; padding: 7px; }
   .hero-landing-wrap {
-    min-height: 100vh;
-    min-height: 100svh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1056,12 +1055,12 @@
     background: var(--paper);
   }
   .hero {
-    flex: 1 1 0%;
-    min-height: 0;
-    padding: 76px 0 16px;
+    flex: none;
+    min-height: auto;
+    padding: 70px 0 16px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;

@@ -103,7 +103,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
   ];
 
   return (
-    <footer className={`pt-4 pb-12 px-4 sm:px-6 lg:px-8 bg-[var(--paper)] ${className}`} id="footer-section">
+    <footer className={`pt-4 pb-12 px-3 sm:px-6 lg:px-8 bg-[var(--paper)] ${className}`} id="footer-section">
       <motion.div
         className="container-wide mx-auto max-w-7xl"
         initial="hidden"
@@ -114,20 +114,20 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
         <div className="flex flex-col lg:flex-row gap-5 items-stretch">
           {/* Coral Orange Identity Card (Left Card) */}
           <motion.div
-            className="relative w-full lg:w-1/3 min-h-[380px] lg:min-h-[560px] overflow-hidden rounded-2xl bg-[var(--coral)] text-white flex flex-col justify-between p-8 md:p-10 shadow-lg"
+            className="relative w-full lg:w-1/3 min-h-[360px] lg:min-h-[560px] overflow-hidden rounded-2xl bg-[var(--coral)] text-white flex flex-col justify-between p-6 sm:p-8 md:p-10 shadow-lg"
             variants={itemVariants}
           >
             {/* Top Logo & Header */}
             <div className="relative z-10">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center font-mono font-bold text-xl text-white shadow-sm backdrop-blur-md">
+                <div className="w-11 h-11 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center font-mono font-bold text-xl text-white shadow-sm backdrop-blur-md shrink-0">
                   M
                 </div>
-                <div>
-                  <span className="text-xl font-bold tracking-tight block leading-tight font-display text-white">
+                <div className="min-w-0">
+                  <span className="text-xl font-bold tracking-tight block leading-tight font-display text-white truncate">
                     Muhammet Atmaca
                   </span>
-                  <span className="text-xs text-white/75 font-mono tracking-wide">
+                  <span className="text-xs text-white/75 font-mono tracking-wide block truncate">
                     Senior Software Engineer
                   </span>
                 </div>
@@ -135,18 +135,18 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
             </div>
 
             {/* Center Editorial Statement */}
-            <div className="relative z-10 py-6 space-y-3">
-              <h3 className="text-2xl md:text-3xl font-display font-bold text-white tracking-tight leading-snug">
+            <div className="relative z-10 py-5 sm:py-6 space-y-3">
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-white tracking-tight leading-snug break-words">
                 Modern Mobil Uygulama & Web Sistemleri
               </h3>
-              <p className="text-sm text-white/85 font-normal leading-relaxed">
+              <p className="text-sm text-white/85 font-normal leading-relaxed break-words">
                 Samsun ve Bayburt merkezli, Türkiye geneli (81 İl) ve yurt dışına %100 uzaktan anahtar teslim yazılım geliştirme.
               </p>
             </div>
 
             {/* Bottom Socials & Copyright */}
-            <div className="relative z-10 space-y-5 pt-4 border-t border-white/15">
-              <div className="flex items-center flex-wrap gap-2.5">
+            <div className="relative z-10 space-y-4 pt-4 border-t border-white/15">
+              <div className="flex items-center flex-wrap gap-2 sm:gap-2.5">
                 <a
                   href="https://github.com/muhammetatmaca"
                   target="_blank"
@@ -207,7 +207,7 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
                   </button>
                 )}
               </div>
-              <p className="text-xs text-white/65 font-mono">
+              <p className="text-xs text-white/65 font-mono break-words">
                 &copy; {new Date().getFullYear()} Muhammet Atmaca. Tüm hakları saklıdır.
               </p>
             </div>
@@ -215,44 +215,45 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
 
           {/* Paper Content Card (Right Card) */}
           <motion.div
-            className="w-full lg:w-2/3 rounded-2xl bg-white border border-[var(--line)] p-8 md:p-12 flex flex-col justify-between min-h-[500px] lg:min-h-[560px] shadow-sm"
+            className="w-full lg:w-2/3 rounded-2xl bg-white border border-[var(--line)] p-5 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-between min-h-[480px] lg:min-h-[560px] shadow-sm overflow-hidden"
             variants={itemVariants}
           >
             {/* Top Categories Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-7 sm:gap-6 md:gap-8">
               {navColumns.map((col, idx) => (
-                <div key={idx} className="flex flex-col space-y-4">
-                  <h4 className="text-sm font-bold text-[var(--ink)] font-display uppercase tracking-wider text-xs font-mono text-[var(--coral)]">
+                <div key={idx} className="flex flex-col space-y-3 min-w-0">
+                  <h4 className="font-mono font-bold text-xs text-[var(--coral)] uppercase tracking-wider">
                     {col.title}
                   </h4>
-                  <ul className="flex flex-col space-y-2.5 text-xs md:text-[13px] text-[#182033]/75 font-normal">
+                  <ul className="flex flex-col space-y-2 text-xs sm:text-[13px] text-[#182033]/80 font-normal min-w-0">
                     {col.links.map((link, linkIdx) => (
-                      <li key={linkIdx}>
+                      <li key={linkIdx} className="min-w-0 w-full">
                         {link.isRoute ? (
                           <Link
                             href={link.href}
-                            className="hover:text-[var(--coral)] transition-colors inline-flex items-center gap-1"
+                            className="hover:text-[var(--coral)] transition-colors flex items-start gap-1 min-w-0 w-full group"
                           >
-                            <span>{link.label}</span>
+                            <span className="break-words min-w-0 leading-snug">{link.label}</span>
                           </Link>
                         ) : link.isDownload ? (
                           <a
                             href={link.href}
                             download="Muhammet_Atmaca_CV.pdf"
-                            className="hover:text-[var(--coral)] transition-colors inline-flex items-center gap-1"
+                            className="hover:text-[var(--coral)] transition-colors flex items-start gap-1 min-w-0 w-full group"
                           >
-                            <span>{link.label}</span>
-                            <Download size={11} className="opacity-70" />
+                            <span className="break-words min-w-0 leading-snug">{link.label}</span>
+                            <Download size={11} className="opacity-70 shrink-0 mt-0.5" />
                           </a>
                         ) : (
                           <a
                             href={link.href}
                             target={link.href.startsWith('http') ? '_blank' : undefined}
                             rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-                            className="hover:text-[var(--coral)] transition-colors inline-flex items-center gap-1"
+                            className="hover:text-[var(--coral)] transition-colors flex items-start gap-1 min-w-0 w-full group"
+                            title={link.label}
                           >
-                            <span className="truncate max-w-[170px]">{link.label}</span>
-                            {link.href.startsWith('http') && <ArrowUpRight size={11} className="opacity-60 shrink-0" />}
+                            <span className="break-all sm:break-words min-w-0 leading-snug">{link.label}</span>
+                            {link.href.startsWith('http') && <ArrowUpRight size={11} className="opacity-60 shrink-0 mt-0.5" />}
                           </a>
                         )}
                       </li>
@@ -263,32 +264,32 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
             </div>
 
             {/* Bottom Quick Contact & Newsletter */}
-            <div className="pt-10 mt-10 border-t border-[var(--line)] flex flex-col md:flex-row md:items-end justify-between gap-6">
-              <div className="space-y-2 max-w-md">
+            <div className="pt-8 sm:pt-10 mt-8 sm:mt-10 border-t border-[var(--line)] flex flex-col md:flex-row md:items-end justify-between gap-6 min-w-0">
+              <div className="space-y-2 max-w-md w-full min-w-0">
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--coral)] font-semibold">
                     Hızlı Değerlendirme & Bütçe
                   </span>
                 </div>
-                <h4 className="text-base md:text-lg font-bold text-[var(--ink)] font-display tracking-tight">
+                <h4 className="text-base md:text-lg font-bold text-[var(--ink)] font-display tracking-tight break-words">
                   Aklınızdaki projeyi hemen başlatalım
                 </h4>
-                <p className="text-xs text-[#182033]/70 leading-relaxed">
+                <p className="text-xs text-[#182033]/70 leading-relaxed break-words">
                   E-posta adresinizi veya proje özetinizi bırakın, teknik analiz ve bütçe planlaması için aynı gün doğrudan iletişime geçeyim.
                 </p>
 
-                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2.5 pt-2">
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2.5 pt-2 w-full min-w-0">
                   <input
                     type="text"
                     required
                     value={emailInput}
                     onChange={(e) => setEmailInput(e.target.value)}
                     placeholder="E-posta veya telefon numaranız..."
-                    className="flex-1 rounded-lg px-3.5 py-2.5 text-xs md:text-sm bg-[#faf8f2] text-[var(--ink)] border border-[var(--line)] focus:outline-none focus:border-[var(--coral)] transition-colors"
+                    className="w-full sm:flex-1 min-w-0 rounded-lg px-3.5 py-2.5 text-xs md:text-sm bg-[#faf8f2] text-[var(--ink)] border border-[var(--line)] focus:outline-none focus:border-[var(--coral)] transition-colors"
                   />
                   <button
                     type="submit"
-                    className="rounded-lg bg-[var(--coral)] text-white px-5 py-2.5 text-xs md:text-sm font-medium hover:bg-[#ff6444] transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer shrink-0"
+                    className="w-full sm:w-auto rounded-lg bg-[var(--coral)] text-white px-5 py-2.5 text-xs md:text-sm font-medium hover:bg-[#ff6444] transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer shrink-0"
                   >
                     <span>{submitted ? 'Açılıyor...' : 'Teklif Al'}</span>
                     <Send size={13} />
