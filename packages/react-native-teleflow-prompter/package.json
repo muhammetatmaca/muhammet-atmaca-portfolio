@@ -35,7 +35,7 @@
   "homepage": "https://muhammetatmaca.com.tr/apps/teleflow-prompter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/muhammetatmaca/muhammet-atmaca-portfolio.git",
+    "url": "git+https://github.com/muhammetatmaca/muhammet-atmaca-portfolio.git",
     "directory": "packages/react-native-teleflow-prompter"
   },
   "bugs": {
