@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Muhammet Atmaca</ShortName>
+  <Description>Muhammet Atmaca — 50+ Mobil Uygulama ve Yazılım Portfolyosunda Ara</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <Tags>yazılım mobil-uygulama react-native flutter mühendislik bayburt samsun virelonsoft</Tags>
+  <Contact>muhammetatmaca79@gmail.com</Contact>
+  <Url type="text/html" template="https://muhammetatmaca.com.tr/apps?q={searchTerms}"/>
+  <Image width="64" height="64" type="image/svg+xml">https://muhammetatmaca.com.tr/favicon.svg</Image>
+  <Developer>Muhammet Atmaca (VirelonSoft)</Developer>
+  <Attribution>© 2026 Muhammet Atmaca. Tüm Hakları Saklıdır.</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  <Language>tr</Language>
+</OpenSearchDescription>
