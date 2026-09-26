@@ -152,15 +152,11 @@ export function FooterSection4({ onOpenCv, className = '' }: FooterSection4Props
             </div>
 
             {/* Center Editorial Statement */}
-            <div className="relative z-10 py-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/12 border border-white/20 text-[11px] font-mono text-white/95 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-[#86efac] animate-pulse" />
-                <span>Yeni projelere & iş birliklerine açık</span>
-              </div>
+            <div className="relative z-10 py-6 space-y-3">
               <h3 className="text-2xl md:text-3xl font-display font-bold text-white tracking-tight leading-snug">
-                Fikirlerinizi 60 FPS canlıya, arama motorlarında zirveye taşıyalım.
+                Modern Mobil Uygulama & Web Sistemleri
               </h3>
-              <p className="text-sm text-white/80 font-normal leading-relaxed">
+              <p className="text-sm text-white/85 font-normal leading-relaxed">
                 Samsun ve Bayburt merkezli, Türkiye geneli (81 İl) ve yurt dışına %100 uzaktan anahtar teslim yazılım geliştirme.
               </p>
             </div>
