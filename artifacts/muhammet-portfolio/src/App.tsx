@@ -23,6 +23,7 @@ import { MOBILE_APPS } from './data/mobileApps';
 import { SERVICES_LIST, FAQ_LIST } from './data/servicesFaq';
 import { SEO } from './components/SEO';
 import { SitelinksDirectory } from './components/SitelinksDirectory';
+import { GlassCodeBlock } from './components/GlassCodeBlock';
 import { SEO_LANDING_PAGES } from './data/seoLandingPages';
 
 const MobileAppsPage = lazy(() => import('./pages/MobileAppsPage').then((m) => ({ default: m.MobileAppsPage })));
@@ -535,6 +536,25 @@ function Home() {
             ))}
           </div>
         )}
+      </section>
+
+      {/* Interactive Architecture & Code Quality Terminal */}
+      <section className="section container-wide" style={{ paddingTop: '20px', paddingBottom: '70px' }} aria-label="Mühendislik Standartları ve Canlı Mimari">
+        <Reveal className="section-heading" style={{ textAlign: 'center', margin: '0 auto 36px', maxWidth: '720px' }}>
+          <div>
+            <div className="eyebrow" style={{ justifyContent: 'center' }}>Temiz Kod ve Açık Mimari</div>
+            <h2 style={{ fontSize: 'clamp(26px, 4.5vw, 40px)', margin: '0 0 14px' }}>
+              Mühendislik Standartları.<br />
+              <em>Şeffaf ve Anlaşılır.</em>
+            </h2>
+            <p style={{ margin: '0 auto', fontSize: '15px', color: 'rgba(24, 32, 51, 0.76)', lineHeight: 1.6 }}>
+              Karmaşık teknolojileri sade, test edilebilir ve güven veren yapılara dönüştürüyorum. İşte her projemde taviz vermediğim üretim standartları.
+            </p>
+          </div>
+        </Reveal>
+        <Reveal delay={1} style={{ maxWidth: '940px', margin: '0 auto' }}>
+          <GlassCodeBlock initialTabId="mobile" />
+        </Reveal>
       </section>
 
       {/* Services & Search Intent FAQ Section */}
