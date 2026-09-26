@@ -4,6 +4,27 @@ import RidgeParallax from '../components/originkit/ui/ridge-parallax-base';
 import LiquidGlassCluster from '../components/originkit/ui/glass-icon-custom-style';
 import { SEO } from '../components/SEO';
 import { SitelinksDirectory } from '../components/SitelinksDirectory';
+import { LogoLoop, type LogoItem } from '../components/LogoLoop';
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiNodedotjs,
+  SiDotnet,
+  SiDocker,
+  SiKubernetes,
+  SiPostgresql,
+  SiRedis,
+  SiRabbitmq,
+  SiTailwindcss,
+  SiGraphql,
+  SiPython,
+  SiLinux,
+  SiNginx,
+  SiGit,
+  SiVite,
+  SiMongodb,
+} from 'react-icons/si';
 import {
   ArrowDown,
   ArrowLeft,
@@ -21,6 +42,171 @@ import {
   Zap,
 } from 'lucide-react';
 import { WEB_PROJECTS, type WebProject } from '../data/careerAndWeb';
+
+const WEB_TECH_LOGOS: LogoItem[] = [
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiNextdotjs style={{ width: '18px', height: '18px', color: '#000000' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Next.js</span>
+      </div>
+    ),
+    title: 'Next.js',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiReact style={{ width: '18px', height: '18px', color: '#61DAFB' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>React 19</span>
+      </div>
+    ),
+    title: 'React',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiTypescript style={{ width: '18px', height: '18px', color: '#3178C6' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>TypeScript</span>
+      </div>
+    ),
+    title: 'TypeScript',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiNodedotjs style={{ width: '18px', height: '18px', color: '#5FA04E' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Node.js</span>
+      </div>
+    ),
+    title: 'Node.js',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiDotnet style={{ width: '18px', height: '18px', color: '#512BD4' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>ASP.NET Core</span>
+      </div>
+    ),
+    title: 'ASP.NET Core',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiDocker style={{ width: '18px', height: '18px', color: '#2496ED' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Docker</span>
+      </div>
+    ),
+    title: 'Docker',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiKubernetes style={{ width: '18px', height: '18px', color: '#326CE5' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Kubernetes</span>
+      </div>
+    ),
+    title: 'Kubernetes',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiPostgresql style={{ width: '18px', height: '18px', color: '#4169E1' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>PostgreSQL</span>
+      </div>
+    ),
+    title: 'PostgreSQL',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiRedis style={{ width: '18px', height: '18px', color: '#FF4438' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Redis</span>
+      </div>
+    ),
+    title: 'Redis',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiRabbitmq style={{ width: '18px', height: '18px', color: '#FF6600' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>RabbitMQ</span>
+      </div>
+    ),
+    title: 'RabbitMQ',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiTailwindcss style={{ width: '18px', height: '18px', color: '#06B6D4' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Tailwind CSS</span>
+      </div>
+    ),
+    title: 'Tailwind CSS',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiGraphql style={{ width: '18px', height: '18px', color: '#E10098' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>GraphQL</span>
+      </div>
+    ),
+    title: 'GraphQL',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiPython style={{ width: '18px', height: '18px', color: '#3776AB' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Python</span>
+      </div>
+    ),
+    title: 'Python',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiLinux style={{ width: '18px', height: '18px', color: '#FCC624' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Linux</span>
+      </div>
+    ),
+    title: 'Linux',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiNginx style={{ width: '18px', height: '18px', color: '#009639' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Nginx</span>
+      </div>
+    ),
+    title: 'Nginx',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiMongodb style={{ width: '18px', height: '18px', color: '#47A248' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>MongoDB</span>
+      </div>
+    ),
+    title: 'MongoDB',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiVite style={{ width: '18px', height: '18px', color: '#646CFF' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Vite</span>
+      </div>
+    ),
+    title: 'Vite',
+  },
+  {
+    node: (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', border: '1px solid rgba(24, 32, 51, 0.12)', background: 'rgba(250, 248, 242, 0.9)', boxShadow: '0 2px 6px rgba(24, 32, 51, 0.04)', whiteSpace: 'nowrap' }}>
+        <SiGit style={{ width: '18px', height: '18px', color: '#F05032' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink)' }}>Git</span>
+      </div>
+    ),
+    title: 'Git',
+  },
+];
 
 const WEB_CATEGORIES = [
   'All',
@@ -217,7 +403,7 @@ export function WebProjectsPage() {
               backdropFilter: 'blur(10px)',
             }}
           >
-            netlik ve ölçek için tasarlandı
+            Yüksek Performans & Güçlü Mimari
           </span>
         </div>
       </div>
@@ -236,9 +422,9 @@ export function WebProjectsPage() {
           <div style={{ maxWidth: '620px' }}>
             <div className="eyebrow">Web mühendisliği ve full-stack sistemler</div>
             <h1 style={{ maxWidth: '840px' }}>
-              Web sistemleri,<br />
-              <em>netlik</em><br />
-              ve ölçek için.
+              Hız, güvenilirlik ve<br />
+              <em>yüksek ölçek için</em><br />
+              geliştirilen web sistemleri.
             </h1>
             <p className="hero-lede web-hero-lede" style={{ maxWidth: '620px' }}>
               Next.js, React, Node.js ve ASP.NET Core ile geliştirilen üretim web platformları, kurumsal B2B portalları, otomasyon sistemleri ve dağıtık mikroservis altyapıları.
@@ -824,6 +1010,29 @@ export function WebProjectsPage() {
           </div>
         </div>
       )}
+
+      {/* Web Technologies & Architecture Logo Loop */}
+      <section style={{ padding: '60px 0 45px', borderTop: '1px solid var(--line)', background: 'rgba(250, 248, 242, 0.45)' }} aria-label="Kullanılan Teknolojiler">
+        <div className="container-wide" style={{ marginBottom: '28px', textAlign: 'center' }}>
+          <div style={{ color: 'var(--cobalt)', font: '600 11px/1 var(--app-font-mono)', textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: '8px' }}>
+            Mühendislik Altyapısı & Ekosistem
+          </div>
+          <h3 style={{ margin: 0, font: '600 clamp(20px, 3.5vw, 28px)/1.15 var(--font-display)', color: 'var(--ink)' }}>
+            Web Platformlarında Kullanılan Güçlü Teknolojiler
+          </h3>
+        </div>
+        <LogoLoop
+          logos={WEB_TECH_LOGOS}
+          speed={65}
+          logoHeight={36}
+          gap={32}
+          pauseOnHover={true}
+          scaleOnHover={true}
+          fadeOut={true}
+          fadeOutColor="#f4f0e6"
+          ariaLabel="Web teknolojileri ve kurumsal altyapı logoları"
+        />
+      </section>
 
       {/* Sitelinks Navigation Directory */}
       <SitelinksDirectory />
