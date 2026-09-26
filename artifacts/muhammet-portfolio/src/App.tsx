@@ -219,7 +219,7 @@ function Home() {
             style={{ background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer', padding: '13px 2px', borderBottom: '1px solid var(--line)' }}
             data-testid="link-mobile-cv"
           >
-            Download CV (PDF) <FileText size={13} style={{ display: 'inline', marginLeft: '4px' }} />
+            Özgeçmişi İndir (PDF) <FileText size={13} style={{ display: 'inline', marginLeft: '4px' }} />
           </button>
           <a href="#contact" className="nav-link" onClick={closeMenu} data-testid="link-mobile-contact">İletişim <ArrowUpRight size={13} /></a>
         </div>
@@ -282,7 +282,7 @@ function Home() {
               <div className="hero-caption">GitHub, LinkedIn, Medium ve e-posta<br />için tuşlara tıkla.</div>
             </Reveal>
           </div>
-          <div className="container-wide scroll-cue">Scroll to explore</div>
+          <div className="container-wide scroll-cue">Keşfetmek için kaydırın</div>
         </section>
 
         {/* Marquee band */}
@@ -528,7 +528,7 @@ function Home() {
                     className="project-link"
                     data-testid={`link-project-${project.id}`}
                   >
-                    View project <ArrowUpRight size={14} />
+                    Projeyi İncele <ArrowUpRight size={14} />
                   </a>
                 </article>
               </Reveal>
