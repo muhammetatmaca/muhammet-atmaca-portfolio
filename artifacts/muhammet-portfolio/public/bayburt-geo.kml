@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <name>Muhammet Atmaca — VirelonSoft Yazılım &amp; Bilgisayar Mühendisliği (Bayburt)</name>
+    <description><![CDATA[
+      <h2>Muhammet Atmaca — VirelonSoft</h2>
+      <p><strong>Faaliyet:</strong> Mobil Uygulama Geliştirme (iOS & Android), Kurumsal Web Platformları, Bilgisayar Sistemleri & Danışmanlık.</p>
+      <p><strong>Adres:</strong> Gençosman Mah. Merkez, Bayburt, Türkiye (69000)</p>
+      <p><strong>Telefon:</strong> <a href="tel:+905448375685">+90 544 837 56 85</a></p>
+      <p><strong>Resmi Web Sitesi:</strong> <a href="https://muhammetatmaca.com.tr/">https://muhammetatmaca.com.tr/</a></p>
+      <p><strong>50+ Canlı Uygulama Kataloğu:</strong> <a href="https://muhammetatmaca.com.tr/apps">Mobil Uygulamalar</a></p>
+      <p><strong>Hizmet Alanı:</strong> Bayburt (Merkez, Aydıntepe, Demirözü), Samsun ve Tüm Türkiye.</p>
+    ]]></description>
+
+    <Style id="hqIcon">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon>
+          <href>https://muhammetatmaca.com.tr/favicon.svg</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+
+    <Placemark>
+      <name>VirelonSoft Genel Merkez &amp; Yazılım Ofisi</name>
+      <description><![CDATA[
+        <strong>Muhammet Atmaca — VirelonSoft</strong><br/>
+        Bayburt merkezli bilgisayar mühendisliği, mobil uygulama geliştirme (React Native & Flutter) ve kurumsal yazılım AR-GE merkezi.<br/>
+        Web: <a href="https://muhammetatmaca.com.tr/bayburt-yazilim">Bayburt Yazılım Çözümleri</a>
+      ]]></description>
+      <styleUrl>#hqIcon</styleUrl>
+      <address>Gençosman Mah. Merkez, Bayburt, TR</address>
+      <Point>
+        <extrude>1</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>40.2249,40.2552,1550</coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Bayburt Bilişim &amp; Mühendislik AR-GE Noktası</name>
+      <description>Bayburt Fen Lisesi kökenli yazılım mühendisliği ve teknoloji üretim noktası.</description>
+      <Point>
+        <coordinates>40.2260,40.2565,1555</coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>VirelonSoft Samsun AR-GE &amp; Uydu İstasyonu</name>
+      <description>Samsun Üniversitesi bağlantılı uydu yörünge kestirimi ve büyük veri sistemleri AR-GE üssü.</description>
+      <Point>
+        <coordinates>36.3361,41.2797,25</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- Bayburt Primary Coverage Polygon -->
+    <Placemark>
+      <name>Bayburt Hizmet ve Etki Alanı Poligonu</name>
+      <description>Muhammet Atmaca / VirelonSoft birincil yerinde servis ve mühendislik kapsama alanı.</description>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              40.1000,40.1500,0
+              40.3500,40.1500,0
+              40.4000,40.3800,0
+              40.1200,40.4200,0
+              39.9800,40.2800,0
+              40.1000,40.1500,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>
