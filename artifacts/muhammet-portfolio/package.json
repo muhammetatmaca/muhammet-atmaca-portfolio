@@ -80,7 +80,7 @@
   },
   "dependencies": {
     "@splinetool/react-spline": "^4.1.0",
-    "@splinetool/runtime": "^2.0.40",
+    "@splinetool/runtime": "^2.0.55",
     "@types/three": "^0.185.4",
     "three": "^0.186.0"
   }
