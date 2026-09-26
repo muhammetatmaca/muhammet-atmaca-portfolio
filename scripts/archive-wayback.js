@@ -5,6 +5,21 @@ const URLS = [
   'https://muhammetatmaca.com.tr/apps',
   'https://muhammetatmaca.com.tr/academic',
   'https://muhammetatmaca.com.tr/web',
+  'https://muhammetatmaca.com.tr/services',
+  'https://muhammetatmaca.com.tr/career',
+  'https://muhammetatmaca.com.tr/contact',
+  'https://muhammetatmaca.com.tr/bayburt-yazilim',
+  'https://muhammetatmaca.com.tr/samsun-yazilim',
+  'https://muhammetatmaca.com.tr/robots.txt',
+  'https://muhammetatmaca.com.tr/sitemap.xml',
+  'https://muhammetatmaca.com.tr/geositemap.xml',
+  'https://muhammetatmaca.com.tr/.well-known/webfinger',
+  'https://muhammetatmaca.com.tr/.well-known/host-meta',
+  'https://muhammetatmaca.com.tr/.well-known/gpc.json',
+  'https://muhammetatmaca.com.tr/.well-known/security.txt',
+  'https://muhammetatmaca.com.tr/security.txt',
+  'https://muhammetatmaca.com.tr/crossdomain.xml',
+  'https://muhammetatmaca.com.tr/bayburt-geo.kml',
   'https://muhammetatmaca.com.tr/feed.xml'
 ];
 
