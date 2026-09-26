@@ -67,6 +67,13 @@
     <link rel="author" href="/humans.txt" />
     <link rel="alternate" type="text/vcard" href="/muhammet-atmaca.vcf" title="Muhammet Atmaca Dijital Kartvizit (vCard 4.0)" />
 
+    <!-- IndieWeb rel="me" Federated Identity & Webmention Protocols -->
+    <link rel="me" href="https://github.com/muhammetatmaca" />
+    <link rel="me" href="https://www.linkedin.com/in/muhammet-atmaca-857481252/" />
+    <link rel="me" href="https://www.wikidata.org/wiki/Q141561691" />
+    <link rel="me" href="https://www.npmjs.com/~muhammetatmaca" />
+    <link rel="webmention" href="https://webmention.io/muhammetatmaca.com.tr/webmention" />
+
     <!-- AI Engine & LLM Directives (GEO - Generative Engine Optimization) -->
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Knowledge File (llms.txt)" />
     <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full LLM Knowledge File (llms-full.txt)" />
@@ -620,6 +627,44 @@
           },
           "image": "https://muhammetatmaca.com.tr/apps/toplualarm/icon.webp",
           "url": "https://muhammetatmaca.com.tr/apps"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://muhammetatmaca.com.tr/#teleflow-prompter-source",
+          "name": "react-native-teleflow-prompter",
+          "alternateName": "TeleFlow Prompter Engine",
+          "description": "60 FPS smooth auto-scroll teleprompter engine for React Native with words-per-minute (WPM) speed calculation and horizontal/vertical optical mirror transform.",
+          "programmingLanguage": {
+            "@type": "ComputerLanguage",
+            "name": "TypeScript"
+          },
+          "runtimePlatform": "React Native, Expo, iOS, Android",
+          "version": "1.0.0",
+          "codeRepository": "https://github.com/muhammetatmaca/muhammet-atmaca-portfolio",
+          "installUrl": "https://www.npmjs.com/package/react-native-teleflow-prompter",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://muhammetatmaca.com.tr/#person"
+          },
+          "publisher": {
+            "@id": "https://muhammetatmaca.com.tr/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://muhammetatmaca.com.tr/#portfolio-source",
+          "name": "Muhammet Atmaca Portfolio Architecture",
+          "description": "Modern React 19, Three.js 3D mechanical keyboard, Vite and TypeScript software engineering portfolio.",
+          "programmingLanguage": {
+            "@type": "ComputerLanguage",
+            "name": "TypeScript"
+          },
+          "runtimePlatform": "Node.js, React 19, Three.js",
+          "codeRepository": "https://github.com/muhammetatmaca/muhammet-atmaca-portfolio",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://muhammetatmaca.com.tr/#person"
+          }
         }
       ]
     }
@@ -628,9 +673,9 @@
   <body>
     <div id="root">
       <!-- Pre-rendered Semantic HTML for Googlebot / SEO Crawlers (Hydrated by React on client execution) -->
-      <header style="padding: 2.5rem 1.5rem 1rem; max-width: 1200px; margin: 0 auto; text-align: center; font-family: system-ui, -apple-system, sans-serif;">
+      <header class="h-card" style="padding: 2.5rem 1.5rem 1rem; max-width: 1200px; margin: 0 auto; text-align: center; font-family: system-ui, -apple-system, sans-serif;">
         <nav aria-label="Ana Menü" style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem;">
-          <a href="/" style="font-weight: 700; color: #0f172a; text-decoration: none;">Ana Sayfa</a>
+          <a href="/" class="u-url" style="font-weight: 700; color: #0f172a; text-decoration: none;">Ana Sayfa</a>
           <a href="/apps" style="color: #475569; text-decoration: none;">50+ Mobil Uygulama</a>
           <a href="/academic" style="color: #475569; text-decoration: none;">Akademik &amp; Savunma Sanayii AR-GE</a>
           <a href="/web" style="color: #475569; text-decoration: none;">Web Sistemleri</a>
@@ -638,12 +683,20 @@
           <a href="/career" style="color: #475569; text-decoration: none;">Kariyer &amp; CV</a>
           <a href="/contact" style="color: #0284c7; text-decoration: none; font-weight: 600;">İletişim &amp; Teklif Al</a>
         </nav>
-        <h1 style="font-size: 2.25rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem; line-height: 1.25;">
-          Muhammet Atmaca — Mobil &amp; Web Yazılım Mühendisi
+        <img class="u-photo" src="https://muhammetatmaca.com.tr/og-image.png" alt="Muhammet Atmaca" style="display: none;" />
+        <h1 class="p-name" style="font-size: 2.25rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem; line-height: 1.25;">
+          Muhammet Atmaca — <span class="p-job-title">Mobil &amp; Web Yazılım Mühendisi</span>
         </h1>
-        <p style="font-size: 1.2rem; color: #334155; max-width: 850px; margin: 0 auto 2rem; line-height: 1.6;">
+        <p class="p-note" style="font-size: 1.2rem; color: #334155; max-width: 850px; margin: 0 auto 2rem; line-height: 1.6;">
           7 yılı aşkın profesyonel yazılım mühendisliği tecrübesi, Apple App Store &amp; Google Play Store'da yayınlanmış <strong>50'den fazla canlı mobil uygulama</strong>, kurumsal web platformları ve havacılık/savunma sanayii odaklı derin öğrenme AR-GE projeleri. Samsun merkezli, Türkiye geneli (81 il) ve global anahtar teslim yazılım geliştirme.
         </p>
+        <div style="display: none;">
+          <span class="p-org">VirelonSoft</span>
+          <span class="p-locality">Bayburt</span>
+          <span class="p-region">Samsun</span>
+          <span class="p-country-name">Türkiye</span>
+          <a class="u-email" href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a>
+        </div>
       </header>
 
       <main style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 3rem; font-family: system-ui, -apple-system, sans-serif;">
