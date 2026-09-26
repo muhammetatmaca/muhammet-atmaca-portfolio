@@ -1,0 +1,542 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.teleprompter",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelonsoft.geodecutter3d",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.wifi",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.weather",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.twoscreenonepage",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.toplualarm",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.tick",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.tempoeat",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dopaminds.app",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ghostread.app",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.muhammet.synccv",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.nova.authenticator",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.acupointar",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.ascii",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.blockscroll",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.calmtouch",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.coffie",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.consensus",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.dice3d",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.dklik",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.DocuQuery",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.ecza",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.eink",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.suterazisi",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.sonorbird",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.sketchdr",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.ringekko",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.quran",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.qrbase",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.privaradar",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.petpin",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.petgame",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.pdfscanner",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.offlinemap",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.nutricompass",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.namazhutbe",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "virelon.luminagrade",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.kiraai",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.ruler",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.imposterkim",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.icd",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.gurultumetre",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.game",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.fairytales",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.virelon.enginechef",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0E:52:D7:19:85:49:A6:49:18:40:91:3C:76:5E:44:83:B1:5E:9B:45:9F:8B:78:2F:32:89:4E:9F"
+      ]
+    }
+  }
+]
