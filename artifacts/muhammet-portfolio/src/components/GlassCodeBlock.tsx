@@ -125,26 +125,29 @@ const tokenizeLine = (line: string): Token[] => {
   return tokens;
 };
 
-/* --- PORTFOLIO EDITORIAL THEME PALETTE ---
- * Cobalt Blue: var(--cobalt, #194bdf)
- * Coral Orange: var(--coral, #ff765e)
- * Ink Dark: var(--ink, #182033)
- * Paper: var(--paper, #f4f0e6)
- * Line: var(--line, rgba(24, 32, 51, 0.16))
+/* --- PORTFOLIO EDITORIAL THEME PALETTE ON DERİN MÜREKKEP ---
+ * Background: Derin Mürekkep (var(--ink, #182033))
+ * Text / Identifiers: Bizim Beyaz (#ffffff)
+ * Keywords: Luminous Cobalt Sky Blue (#60a5fa)
+ * Strings & Numbers: Bizim Turuncu (var(--coral, #ff765e))
+ * Functions & Hooks: Bizim Lime (var(--lime, #d4e86e))
+ * Types: Sky Cyan (#38bdf8)
+ * Properties: Soft Gold (#fde047)
+ * Comments: Readable Slate (rgba(255, 255, 255, 0.5))
  */
 const TOKEN_STYLES: Record<TokenKind, React.CSSProperties> = {
-  comment: { color: 'rgba(24, 32, 51, 0.5)', fontStyle: 'italic' },
-  keyword: { color: 'var(--cobalt)', fontWeight: 600 },
-  boolean: { color: 'var(--coral)', fontWeight: 600 },
-  type: { color: '#0284c7', fontWeight: 600 },
-  function: { color: '#4f46e5', fontWeight: 500 },
-  property: { color: '#b45309' },
-  string: { color: '#d94d34' }, // Rich readable coral-orange on light background
-  number: { color: '#ea580c', fontWeight: 600 },
-  jsxTag: { color: 'var(--cobalt)', fontWeight: 600 },
-  operator: { color: 'rgba(24, 32, 51, 0.65)' },
-  punctuation: { color: 'rgba(24, 32, 51, 0.55)' },
-  code: { color: 'var(--ink)' },
+  comment: { color: 'rgba(255, 255, 255, 0.5)', fontStyle: 'italic' },
+  keyword: { color: '#60a5fa', fontWeight: 600 },
+  boolean: { color: 'var(--coral, #ff765e)', fontWeight: 600 },
+  type: { color: '#38bdf8', fontWeight: 600 },
+  function: { color: 'var(--lime, #d4e86e)', fontWeight: 500 },
+  property: { color: '#fde047' },
+  string: { color: 'var(--coral, #ff765e)' },
+  number: { color: '#fb923c', fontWeight: 600 },
+  jsxTag: { color: 'var(--coral, #ff765e)', fontWeight: 600 },
+  operator: { color: '#94a3b8' },
+  punctuation: { color: '#cbd5e1' },
+  code: { color: '#ffffff' },
 };
 
 export interface CodeTab {
@@ -260,7 +263,7 @@ export const GlassCodeBlock = ({
   width = '100%',
   maxHeight,
   fontSize = 13.5,
-  glassColor = '#ffffff',
+  glassColor = '#182033',
   showTrafficLights = true,
   className = '',
   style,
@@ -302,9 +305,9 @@ export const GlassCodeBlock = ({
         .glass-code-aura {
           position: absolute;
           inset: -12px;
-          background: radial-gradient(ellipse at 25% 20%, rgba(25, 75, 223, 0.09), transparent 60%),
-                      radial-gradient(ellipse at 80% 80%, rgba(255, 118, 94, 0.08), transparent 60%);
-          filter: blur(24px);
+          background: radial-gradient(ellipse at 25% 20%, rgba(25, 75, 223, 0.2), transparent 60%),
+                      radial-gradient(ellipse at 80% 80%, rgba(255, 118, 94, 0.16), transparent 60%);
+          filter: blur(26px);
           border-radius: 24px;
           pointer-events: none;
           z-index: 0;
@@ -313,17 +316,17 @@ export const GlassCodeBlock = ({
         @media (max-width: 640px) {
           .glass-code-aura {
             inset: 0;
-            filter: blur(12px);
+            filter: blur(14px);
           }
         }
 
         .glass-code-frame {
           position: relative;
           z-index: 1;
-          background: #ffffff;
-          border: 1px solid var(--line);
+          background: linear-gradient(180deg, #1e283f 0%, #151c2e 100%);
+          border: 1px solid rgba(255, 255, 255, 0.14);
           border-radius: 16px;
-          box-shadow: 0 16px 44px -12px rgba(24, 32, 51, 0.09), 0 2px 8px -2px rgba(24, 32, 51, 0.04);
+          box-shadow: 0 20px 50px -10px rgba(10, 16, 30, 0.5), 0 2px 8px -2px rgba(24, 32, 51, 0.3);
           box-sizing: border-box;
           overflow: hidden;
         }
@@ -333,6 +336,7 @@ export const GlassCodeBlock = ({
           overflow: hidden;
           display: flex;
           flex-direction: column;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
         }
 
         .glass-code-header {
@@ -341,8 +345,8 @@ export const GlassCodeBlock = ({
           justifyContent: space-between;
           gap: 10px;
           padding: 10px 16px;
-          border-bottom: 1px solid var(--line);
-          background: var(--paper);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+          background: #111726;
           min-height: 46px;
           box-sizing: border-box;
         }
@@ -392,7 +396,7 @@ export const GlassCodeBlock = ({
           border: 1px solid transparent;
           border-radius: 7px;
           padding: 5px 11px;
-          color: rgba(24, 32, 51, 0.65);
+          color: rgba(255, 255, 255, 0.65);
           font-size: 12px;
           font-family: ${FONT_MONO};
           font-weight: 500;
@@ -407,32 +411,32 @@ export const GlassCodeBlock = ({
         }
 
         .glass-tab-btn:hover {
-          color: var(--ink);
-          background: rgba(24, 32, 51, 0.05);
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.07);
         }
 
         .glass-tab-btn.active {
-          background: #ffffff;
-          border-color: var(--line);
-          color: var(--cobalt);
+          background: rgba(255, 255, 255, 0.12);
+          border-color: rgba(255, 255, 255, 0.2);
+          color: #ffffff;
           font-weight: 600;
-          box-shadow: 0 2px 6px rgba(24, 32, 51, 0.06);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
         }
 
         .glass-tab-badge {
           font-size: 10px;
           padding: 1.5px 6px;
           border-radius: 4px;
-          background: rgba(24, 32, 51, 0.06);
-          color: rgba(24, 32, 51, 0.6);
+          background: rgba(255, 255, 255, 0.07);
+          color: rgba(255, 255, 255, 0.55);
           font-weight: 500;
           transition: all 0.18s ease;
         }
 
         .glass-tab-btn.active .glass-tab-badge {
-          background: rgba(25, 75, 223, 0.08);
-          color: var(--cobalt);
-          border: 1px solid rgba(25, 75, 223, 0.2);
+          background: rgba(255, 118, 94, 0.2);
+          color: var(--coral, #ff765e);
+          border: 1px solid rgba(255, 118, 94, 0.35);
         }
 
         @media (max-width: 640px) {
@@ -449,12 +453,12 @@ export const GlassCodeBlock = ({
           display: inline-flex;
           align-items: center;
           gap: 5px;
-          background: #ffffff;
-          border: 1px solid var(--line);
+          background: rgba(255, 255, 255, 0.06);
+          border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 6px;
           padding: 5px 10px;
           font-size: 11px;
-          color: rgba(24, 32, 51, 0.75);
+          color: rgba(255, 255, 255, 0.8);
           cursor: pointer;
           font-family: ${FONT_MONO};
           flex-shrink: 0;
@@ -463,15 +467,15 @@ export const GlassCodeBlock = ({
         }
 
         .glass-copy-btn:hover {
-          background: rgba(25, 75, 223, 0.05);
-          color: var(--cobalt);
-          border-color: var(--cobalt);
+          background: rgba(25, 75, 223, 0.25);
+          color: #ffffff;
+          border-color: #60a5fa;
         }
 
         .glass-copy-btn.copied {
-          background: rgba(255, 118, 94, 0.1);
-          border-color: var(--coral);
-          color: var(--coral);
+          background: rgba(255, 118, 94, 0.2);
+          border-color: var(--coral, #ff765e);
+          color: var(--coral, #ff765e);
         }
 
         @media (max-width: 440px) {
@@ -495,7 +499,7 @@ export const GlassCodeBlock = ({
           font-family: ${FONT_MONO};
           line-height: 1.62;
           box-sizing: border-box;
-          background: #ffffff;
+          background: #182033;
         }
 
         .glass-code-body::-webkit-scrollbar {
@@ -527,7 +531,7 @@ export const GlassCodeBlock = ({
         }
 
         .glass-line-number {
-          color: rgba(24, 32, 51, 0.32);
+          color: rgba(255, 255, 255, 0.32);
           user-select: none;
           font-size: 11px;
           width: 24px;
@@ -539,7 +543,7 @@ export const GlassCodeBlock = ({
           .glass-line-number {
             width: 18px;
             font-size: 10px;
-            color: rgba(24, 32, 51, 0.28);
+            color: rgba(255, 255, 255, 0.28);
           }
         }
 
@@ -559,10 +563,10 @@ export const GlassCodeBlock = ({
             gap: 5px;
             padding: 5px 14px 8px;
             font-size: 10px;
-            color: rgba(24, 32, 51, 0.5);
+            color: rgba(255, 255, 255, 0.45);
             font-family: ${FONT_MONO};
-            border-top: 1px solid var(--line);
-            background: var(--paper);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: #111726;
             user-select: none;
           }
         }
@@ -590,7 +594,7 @@ export const GlassCodeBlock = ({
                       height: 11,
                       borderRadius: '50%',
                       background: '#ff5f57',
-                      boxShadow: '0 0 4px rgba(255, 95, 87, 0.35)',
+                      boxShadow: '0 0 4px rgba(255, 95, 87, 0.4)',
                     }}
                   />
                   <div
@@ -599,7 +603,7 @@ export const GlassCodeBlock = ({
                       height: 11,
                       borderRadius: '50%',
                       background: '#febc2e',
-                      boxShadow: '0 0 4px rgba(254, 188, 46, 0.35)',
+                      boxShadow: '0 0 4px rgba(254, 188, 46, 0.4)',
                     }}
                   />
                   <div
@@ -608,7 +612,7 @@ export const GlassCodeBlock = ({
                       height: 11,
                       borderRadius: '50%',
                       background: '#28c840',
-                      boxShadow: '0 0 4px rgba(40, 200, 64, 0.35)',
+                      boxShadow: '0 0 4px rgba(40, 200, 64, 0.4)',
                     }}
                   />
                 </div>
@@ -646,7 +650,7 @@ export const GlassCodeBlock = ({
             >
               {copied ? (
                 <>
-                  <Check size={12} color="var(--coral)" />
+                  <Check size={12} color="var(--coral, #ff765e)" />
                   <span className="glass-copy-label">Kopyalandı</span>
                 </>
               ) : (
