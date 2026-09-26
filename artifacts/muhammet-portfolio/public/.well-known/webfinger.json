@@ -1,0 +1,40 @@
+{
+  "subject": "acct:muhammetatmaca79@gmail.com",
+  "aliases": [
+    "https://muhammetatmaca.com.tr/",
+    "https://github.com/muhammetatmaca",
+    "https://www.wikidata.org/wiki/Q141561691"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://muhammetatmaca.com.tr/"
+    },
+    {
+      "rel": "http://microformats.org/profile/hcard",
+      "type": "text/html",
+      "href": "https://muhammetatmaca.com.tr/"
+    },
+    {
+      "rel": "vcard",
+      "type": "text/vcard",
+      "href": "https://muhammetatmaca.com.tr/muhammet-atmaca.vcf"
+    },
+    {
+      "rel": "https://schema.org/Person",
+      "type": "application/ld+json",
+      "href": "https://muhammetatmaca.com.tr/#person"
+    },
+    {
+      "rel": "https://schema.org/Organization",
+      "type": "application/ld+json",
+      "href": "https://muhammetatmaca.com.tr/#organization"
+    },
+    {
+      "rel": "http://webfinger.net/rel/avatar",
+      "type": "image/png",
+      "href": "https://muhammetatmaca.com.tr/og-image.png"
+    }
+  ]
+}
