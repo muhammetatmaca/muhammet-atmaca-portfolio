@@ -180,7 +180,7 @@ export const GlassCodeBlock = ({
   tabs = DEFAULT_CODE_TABS,
   initialTabId,
   width = '100%',
-  maxHeight = 480,
+  maxHeight,
   fontSize = 13.5,
   glassColor = 'rgba(13, 17, 26, 0.82)',
   showTrafficLights = true,
@@ -212,6 +212,19 @@ export const GlassCodeBlock = ({
         ...style,
       }}
     >
+      {/* Eliminated scrollbar styles */}
+      <style>{`
+        .glass-code-scroll::-webkit-scrollbar {
+          display: none !important;
+          width: 0 !important;
+          height: 0 !important;
+        }
+        .glass-code-scroll {
+          -ms-overflow-style: none !important;
+          scrollbar-width: none !important;
+        }
+      `}</style>
+
       {/* Background ambient glowing aura */}
       <div
         aria-hidden="true"
@@ -355,15 +368,18 @@ export const GlassCodeBlock = ({
 
           {/* Code body */}
           <div
+            className="glass-code-scroll"
             style={{
               padding: '18px 22px',
               fontFamily: FONT_MONO,
               fontSize,
               lineHeight: 1.62,
               overflowX: 'auto',
-              maxHeight,
-              scrollbarWidth: 'thin',
-            }}
+              overflowY: 'hidden',
+              maxHeight: maxHeight || undefined,
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+            } as React.CSSProperties}
           >
             {lines.map((line, i) => {
               const tokens = tokenizeLine(line);

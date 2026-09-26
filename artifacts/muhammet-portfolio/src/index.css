@@ -1746,5 +1746,15 @@ spline-viewer::part(watermark),
   pointer-events: none !important;
 }
 
-
-
+/* Clean scrollbar suppression for GlassCodeBlock & interactive components */
+.glass-code-scroll,
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+.glass-code-scroll::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
