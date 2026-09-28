@@ -25,11 +25,14 @@ import { SitelinksDirectory } from './components/SitelinksDirectory';
 import { GlassCodeBlock } from './components/GlassCodeBlock';
 import { FaqAccordion } from './components/FaqAccordion';
 import { SEO_LANDING_PAGES } from './data/seoLandingPages';
+import { LogoCloud } from './components/LogoCloud';
+import { ExperienceEducation } from './components/ExperienceEducation';
 
 const MobileAppsPage = lazy(() => import('./pages/MobileAppsPage').then((m) => ({ default: m.MobileAppsPage })));
 const WebProjectsPage = lazy(() => import('./pages/WebProjectsPage').then((m) => ({ default: m.WebProjectsPage })));
 const AcademicProjectsPage = lazy(() => import('./pages/AcademicProjectsPage').then((m) => ({ default: m.AcademicProjectsPage })));
 const SeoLandingPage = lazy(() => import('./pages/SeoLandingPage').then((m) => ({ default: m.SeoLandingPage })));
+const InteractiveLandingPage = lazy(() => import('./pages/InteractiveLandingPage').then((m) => ({ default: m.InteractiveLandingPage })));
 
 type RevealProps = {
   children: React.ReactNode;
@@ -172,6 +175,7 @@ function Home() {
           <Link href="/web" className="nav-link" data-testid="link-nav-web">Web Sistemleri</Link>
           <Link href="/apps" className="nav-link" data-testid="link-nav-apps">Mobil Uygulamalar</Link>
           <Link href="/academic" className="nav-link" data-testid="link-nav-academic">Akademik & AR-GE</Link>
+          <Link href="/landing" className="nav-link" data-testid="link-nav-landing">İş Ortakları & Deneyim</Link>
           <a href="#career" className="nav-link" data-testid="link-career">Deneyim</a>
           <a href="#approach" className="nav-link" data-testid="link-approach">Yaklaşım</a>
           <a href="#about" className="nav-link" data-testid="link-about">Hakkımda</a>
@@ -206,6 +210,7 @@ function Home() {
           <Link href="/web" className="nav-link" onClick={closeMenu} data-testid="link-mobile-web">Web Sistemleri</Link>
           <Link href="/apps" className="nav-link" onClick={closeMenu} data-testid="link-mobile-apps">Mobil Uygulamalar</Link>
           <Link href="/academic" className="nav-link" onClick={closeMenu} data-testid="link-mobile-academic">Akademik & AR-GE</Link>
+          <Link href="/landing" className="nav-link" onClick={closeMenu} data-testid="link-mobile-landing">İş Ortakları & Deneyim</Link>
           <a href="#career" className="nav-link" onClick={closeMenu} data-testid="link-mobile-career">Deneyim</a>
           <a href="#approach" className="nav-link" onClick={closeMenu} data-testid="link-mobile-approach">Yaklaşım</a>
           <a href="#about" className="nav-link" onClick={closeMenu} data-testid="link-mobile-about">Hakkımda</a>
@@ -266,6 +271,9 @@ function Home() {
                     Çalışmalarımı Gör <ArrowDown size={15} />
                   </a>
                   <div className="hero-actions-secondary">
+                    <Link href="/landing" className="button-secondary hero-directory-button" data-testid="button-see-landing">
+                      İnteraktif Vitrin (3D) <ArrowUpRight size={14} />
+                    </Link>
                     <Link href="/apps" className="button-secondary hero-directory-button" data-testid="button-see-apps">
                       Mobil Uygulamalar (50+) <ArrowUpRight size={14} />
                     </Link>
@@ -809,6 +817,16 @@ function Home() {
         </div>
       </section>
 
+      {/* Modern Dark Tech Logo Grid Section (İş Ortaklarımız) */}
+      <section id="is-ortaklari" className="w-full bg-[#08080a] relative z-10 overflow-hidden border-t border-[#27272a] my-10">
+        <LogoCloud />
+      </section>
+
+      {/* Deneyim & Eğitim Kurumsal Grid Section */}
+      <section id="deneyim-ve-egitim" className="w-full bg-[#08080a] relative z-10 overflow-hidden mb-10">
+        <ExperienceEducation />
+      </section>
+
       {/* About section */}
       <section id="about" className="section about-section container-wide">
         <Reveal className="about-grid">
@@ -1078,6 +1096,11 @@ function App() {
           <Route path="/akademik" component={AcademicProjectsPage} />
           <Route path="/web" component={WebProjectsPage} />
           <Route path="/apps" component={MobileAppsPage} />
+          <Route path="/landing" component={InteractiveLandingPage} />
+          <Route path="/vitrin" component={InteractiveLandingPage} />
+          <Route path="/interactive" component={InteractiveLandingPage} />
+          <Route path="/waving" component={InteractiveLandingPage} />
+          <Route path="/is-ortaklari" component={InteractiveLandingPage} />
           <Route path="/services" component={Home} />
           <Route path="/hizmetler" component={Home} />
           <Route path="/career" component={Home} />
