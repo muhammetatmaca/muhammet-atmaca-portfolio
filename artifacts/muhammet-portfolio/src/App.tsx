@@ -815,12 +815,12 @@ function Home() {
       </section>
 
       {/* Modern Dark Tech Logo Grid Section (İş Ortaklarımız) */}
-      <section id="is-ortaklari" className="w-full bg-[#08080a] relative z-10 overflow-hidden border-t border-[#27272a] my-10">
+      <section id="is-ortaklari" className="w-full bg-[#08080a] relative z-10 overflow-hidden border-t border-[#27272a] my-6 md:my-10">
         <LogoCloud />
       </section>
 
       {/* Deneyim & Eğitim Kurumsal Grid Section */}
-      <section id="deneyim-ve-egitim" className="w-full bg-[#08080a] relative z-10 overflow-hidden mb-10">
+      <section id="deneyim-ve-egitim" className="w-full bg-[#08080a] relative z-10 overflow-hidden mb-6 md:mb-10">
         <ExperienceEducation />
       </section>
 
