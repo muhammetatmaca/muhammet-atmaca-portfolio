@@ -271,9 +271,6 @@ function Home() {
                     Çalışmalarımı Gör <ArrowDown size={15} />
                   </a>
                   <div className="hero-actions-secondary">
-                    <Link href="/landing" className="button-secondary hero-directory-button" data-testid="button-see-landing">
-                      İnteraktif Vitrin (3D) <ArrowUpRight size={14} />
-                    </Link>
                     <Link href="/apps" className="button-secondary hero-directory-button" data-testid="button-see-apps">
                       Mobil Uygulamalar (50+) <ArrowUpRight size={14} />
                     </Link>
