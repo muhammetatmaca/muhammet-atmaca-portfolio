@@ -19,8 +19,8 @@ catalogs:
       specifier: ^4.1.14
       version: 4.3.3
     '@tanstack/react-query':
-      specifier: ^5.90.21
-      version: 5.101.4
+      specifier: ^5.104.0
+      version: 5.104.0
     '@types/node':
       specifier: ^25.3.3
       version: 25.9.5
@@ -528,7 +528,7 @@ importers:
         version: 4.3.3(vite@7.3.6(@types/node@25.9.5)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.4)(yaml@2.9.0))
       '@tanstack/react-query':
         specifier: 'catalog:'
-        version: 5.101.4(react@19.1.0)
+        version: 5.104.0(react@19.1.0)
       '@types/node':
         specifier: 'catalog:'
         version: 25.9.5
@@ -624,7 +624,7 @@ importers:
     dependencies:
       '@tanstack/react-query':
         specifier: 'catalog:'
-        version: 5.101.4(react@19.1.0)
+        version: 5.104.0(react@19.1.0)
 
   lib/api-spec:
     devDependencies:
@@ -662,6 +662,15 @@ importers:
       drizzle-kit:
         specifier: ^0.31.10
         version: 0.31.10
+
+  packages/react-native-teleflow-prompter:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.0 || ^19.0.0
+        version: 19.2.18
+      typescript:
+        specifier: ~5.9.3
+        version: 5.9.3
 
   scripts:
     devDependencies:
@@ -1642,11 +1651,11 @@ packages:
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
 
-  '@tanstack/query-core@5.101.4':
-    resolution: {integrity: sha512-gNwcvOJcRbLWPOLG/2OBm+zM+Yv+MKsXKEOWC57USuZDEsI71hEErQsiEGx5wX9rzWWkfwM0fVSPoiIFSsxfiw==}
+  '@tanstack/query-core@5.104.0':
+    resolution: {integrity: sha512-JrC2r/JQlXt7khBSdUpsgxNvybzOg+aITa+ARRMlP2AFo93Y8vIqz077rp+e61mJetSZ0T6AJbwW1JHer1vrPQ==}
 
-  '@tanstack/react-query@5.101.4':
-    resolution: {integrity: sha512-yRg2pfOCxIs4ZJW3XYYHU/WgtD04FHSnfHlpRT7h7pR77hwkdRG4wxbKe4aq6P0RvXUTBSQpQeadS1SUYUe+KA==}
+  '@tanstack/react-query@5.104.0':
+    resolution: {integrity: sha512-e1TZmDCQnWIfiDVryIHeA6Idj+Lfx1hORLOhXS/l5wcgvtVD4yYqbTDl378sGQKIi2cSgb0TEMC9cKK8GGoJEw==}
     peerDependencies:
       react: ^18 || ^19
 
@@ -4316,11 +4325,11 @@ snapshots:
       tailwindcss: 4.3.3
       vite: 7.3.6(@types/node@25.9.5)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.4)(yaml@2.9.0)
 
-  '@tanstack/query-core@5.101.4': {}
+  '@tanstack/query-core@5.104.0': {}
 
-  '@tanstack/react-query@5.101.4(react@19.1.0)':
+  '@tanstack/react-query@5.104.0(react@19.1.0)':
     dependencies:
-      '@tanstack/query-core': 5.101.4
+      '@tanstack/query-core': 5.104.0
       react: 19.1.0
 
   '@tweenjs/tween.js@23.1.3': {}
