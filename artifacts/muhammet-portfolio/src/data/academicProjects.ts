@@ -19,8 +19,38 @@ export interface AcademicProject {
 
 export const ACADEMIC_PROJECTS: AcademicProject[] = [
   {
-    id: 'astro-bi-lstm-collision-avoidance',
+    id: 'ada-spark-compression-academic',
     no: '01',
+    title: 'Ada SPARK Aviyonik Veri Sıkıştırma Süiti',
+    institution: 'Biçimsel Yöntemler (Formal Methods) & Savunma Sanayii Mimarisi',
+    highlightBadge: 'DO-178C Level-A & STANAG-4586 Uyumlu',
+    tagline: 'İHA görev bilgisayarları ve yer istasyonları için matematiksel olarak kanıtlanmış (AoRTE), sıfır dinamik bellekli (Zero-Heap) telemetri sıkıştırma motoru',
+    category: 'Aviyonik / Güvenlik-Kritik Gömülü Sistemler',
+    technologies: [
+      'Ada 2012 / SPARK',
+      'GNATprove',
+      'Formal Verification',
+      'STANAG-4586',
+      'DO-178C Level-A',
+      'C / Embedded FFI',
+      'Deterministik Sıkıştırma',
+    ],
+    description:
+      'İnsansız hava araçları (İHA) ve aviyonik uçuş kontrol bilgisayarları için biçimsel yöntemlerle (Formal Methods) matematiksel olarak kanıtlanmış, sıfır dinamik bellek tahsisli (Zero-Heap) ve deterministik kayıpsız telemetri sıkıştırma motoru. SPARK prover kullanılarak çalışma zamanında sıfır istisna (No Runtime Errors - AoRTE), arabellek taşması ve bellek sızıntısı olamayacağı matematiksel olarak ispatlanmıştır.',
+    methodology:
+      'SPARK 2012 sözleşme tabanlı tasarım (Contracts, Pre/Post Conditions); GNATprove statik analiz aracıyla tüm çalışma zamanı istisnalarının formal ispatı; C/C++ gömülü sistemlerle FFI uyumluluğu; STANAG-4586 standartlarında telemetri paketleme.',
+    results: [
+      'DO-178C Level-A güvenlik-kritik havacılık standardına tam uyumluluk',
+      'Çalışma zamanında sıfır istisna garantisi ve statik bellek tahsisiyle %100 determinizm',
+      'Dar bantlı taktik veri hatlarında (STANAG-4586) telemetri aktarım verimliliğinde belirgin kazanç',
+    ],
+    githubUrl: 'https://github.com/muhammetatmaca/ada-spark-compression',
+    year: '2026',
+    cardBg: '#e2e8f0',
+  },
+  {
+    id: 'astro-bi-lstm-collision-avoidance',
+    no: '02',
     title: 'AI Destekli Otonom Yörünge Yönetimi ve Pasif Kaçınma Sistemi',
     institution: 'Samsun Üniversitesi • İMECE Uydusu Referanslı',
     highlightBadge: 'Ulusal Havacılık Kongresi Bildirisi',
