@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /*?*
 
 # AI Crawlers & Large Language Models (GEO / LLMO)
 User-agent: GPTBot
