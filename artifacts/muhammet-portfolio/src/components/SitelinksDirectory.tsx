@@ -44,6 +44,14 @@ const SITELINKS: SitelinkItem[] = [
     isInternalRoute: false,
   },
   {
+    id: 'sitelink-regions',
+    badge: '81 İl Dizin',
+    title: 'Hizmet Bölgeleri (81 İl)',
+    description: 'Türkiye genelinde 81 il için kurumsal yazılım, iOS & Android mobil uygulama ve e-ticaret hizmet ağı.',
+    href: '/hizmet-bolgeleri',
+    isInternalRoute: true,
+  },
+  {
     id: 'sitelink-contact',
     badge: 'İletişim',
     title: 'İletişim & Proje Teklifi',

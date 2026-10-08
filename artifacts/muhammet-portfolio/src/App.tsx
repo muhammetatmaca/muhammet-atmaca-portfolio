@@ -33,6 +33,7 @@ const WebProjectsPage = lazy(() => import('./pages/WebProjectsPage').then((m) =>
 const AcademicProjectsPage = lazy(() => import('./pages/AcademicProjectsPage').then((m) => ({ default: m.AcademicProjectsPage })));
 const SeoLandingPage = lazy(() => import('./pages/SeoLandingPage').then((m) => ({ default: m.SeoLandingPage })));
 const InteractiveLandingPage = lazy(() => import('./pages/InteractiveLandingPage').then((m) => ({ default: m.InteractiveLandingPage })));
+const RegionalDirectoryPage = lazy(() => import('./pages/RegionalDirectoryPage').then((m) => ({ default: m.RegionalDirectoryPage })));
 
 type RevealProps = {
   children: React.ReactNode;
@@ -859,6 +860,7 @@ function Home() {
           <div className="footer-links">
             <Link href="/apps" className="footer-link">Mobil Uygulamalar (50+)</Link>
             <Link href="/web" className="footer-link">Web Sistemleri</Link>
+            <Link href="/hizmet-bolgeleri" className="footer-link">Hizmet Bölgeleri (81 İl)</Link>
             <a
               href="https://share.google/LeVvOPDHGCxM1biap"
               target="_blank"
@@ -1104,6 +1106,8 @@ function App() {
           <Route path="/kariyer" component={Home} />
           <Route path="/contact" component={Home} />
           <Route path="/iletisim" component={Home} />
+          <Route path="/hizmet-bolgeleri" component={RegionalDirectoryPage} />
+          <Route path="/sehirler" component={RegionalDirectoryPage} />
           <Route path="/:slug" component={SeoPageWrapper} />
           <Route path="/" component={Home} />
           <Route component={Home} />

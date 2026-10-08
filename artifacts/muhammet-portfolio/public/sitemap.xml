@@ -49,6 +49,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/hizmet-bolgeleri</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
 
   <!-- ========================================== -->
   <!-- BAYBURT ÖNCELİKLİ HEDEF SAYFALARI (TR-69) -->

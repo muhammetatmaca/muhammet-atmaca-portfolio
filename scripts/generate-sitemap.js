@@ -132,6 +132,12 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+  <url>
+    <loc>https://muhammetatmaca.com.tr/hizmet-bolgeleri</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
 
   <!-- ========================================== -->
   <!-- BAYBURT ÖNCELİKLİ HEDEF SAYFALARI (TR-69) -->
