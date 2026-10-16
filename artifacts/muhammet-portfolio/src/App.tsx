@@ -523,7 +523,7 @@ function Home() {
         {(workFilter === 'all' || workFilter === 'web') && (
           <div className="project-stack">
             {displayedProjects.map((project, idx) => (
-              <Reveal key={project.id} delay={idx}>
+              <Reveal key={project.id} delay={idx} style={{ height: '100%' }}>
                 <article className="project-card" style={{ background: project.cardBg || '#e7e5dd' }}>
                   <div className="project-topline">
                     <span className="project-tag">{project.no} — {project.category}</span>
@@ -532,15 +532,28 @@ function Home() {
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                   <div className="project-graphic"><span /></div>
-                  <a
-                    href={project.githubUrl || 'https://github.com/muhammetatmaca'}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="project-link"
-                    data-testid={`link-project-${project.id}`}
-                  >
-                    Projeyi İncele <ArrowUpRight size={14} />
-                  </a>
+                  <div className="project-card-footer">
+                    <a
+                      href={project.liveUrl || project.githubUrl || 'https://github.com/muhammetatmaca'}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      data-testid={`link-project-${project.id}`}
+                    >
+                      {project.liveUrl ? 'Projeyi İncele' : 'GitHub Kodları'} <ArrowUpRight size={13} />
+                    </a>
+                    {project.liveUrl && project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="project-link"
+                        style={{ background: 'transparent', border: 'none', color: 'rgba(24, 32, 51, 0.65)' }}
+                      >
+                        GitHub <Github size={13} />
+                      </a>
+                    )}
+                  </div>
                 </article>
               </Reveal>
             ))}

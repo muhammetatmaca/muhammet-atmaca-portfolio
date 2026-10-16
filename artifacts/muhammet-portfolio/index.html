@@ -680,7 +680,13 @@
   </head>
   <body>
     <div id="root">
-      <!-- Pre-rendered Semantic HTML for Googlebot / SEO Crawlers (Hydrated by React on client execution) -->
+      <div style="min-height: 100vh; min-height: 100dvh; background: #f4f0e6; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; font-family: 'DM Mono', monospace, sans-serif; color: #182033;">
+        <div style="width: 32px; height: 32px; border-radius: 8px; background: #194bdf; color: #f4f0e6; display: grid; place-items: center; font-size: 15px; font-weight: 700; box-shadow: 2px 2px 0 #182033; letter-spacing: -0.02em;">M</div>
+        <div style="width: 22px; height: 22px; border: 2.5px solid rgba(24,32,51,0.18); border-top-color: #194bdf; border-radius: 50%; animation: initial-spin 0.75s linear infinite;"></div>
+      </div>
+      <style>@keyframes initial-spin { to { transform: rotate(360deg); } }</style>
+    </div>
+    <noscript>
       <header class="h-card" style="padding: 2.5rem 1.5rem 1rem; max-width: 1200px; margin: 0 auto; text-align: center; font-family: system-ui, -apple-system, sans-serif;">
         <nav aria-label="Ana Menü" itemscope itemtype="https://schema.org/SiteNavigationElement" style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem;">
           <a itemprop="url" href="/" class="u-url" style="font-weight: 700; color: #0f172a; text-decoration: none;"><span itemprop="name">Ana Sayfa</span></a>
@@ -998,11 +1004,6 @@
         </div>
         <p style="margin: 0;">&copy; 2026 Muhammet Atmaca. Tüm hakları saklıdır. Mobil Uygulama &amp; Web Yazılım Mühendisliği.</p>
       </footer>
-    </div>
-    <noscript>
-      <div style="max-width: 800px; margin: 2rem auto; padding: 2rem; background: #fff3cd; border: 1px solid #ffeeba; border-radius: 8px; color: #856404; text-align: center; font-family: system-ui, sans-serif;">
-        <p><strong>Not:</strong> Bu portfolyo zengin interaktif özellikler için JavaScript gerektirir. Ancak yukarıdaki tüm proje detayları, akademik çalışmalar ve iletişim bilgileri eksiksiz olarak görüntülenebilir.</p>
-      </div>
     </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
