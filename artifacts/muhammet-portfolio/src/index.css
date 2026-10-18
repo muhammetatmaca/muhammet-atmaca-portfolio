@@ -2006,3 +2006,25 @@ spline-viewer::part(watermark),
   }
 }
 
+/* Infinite Mobile Apps Marquee Animation */
+@keyframes marquee-phones {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-phones {
+  display: flex;
+  width: max-content;
+  animation: marquee-phones 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-phones:hover {
+  animation-play-state: paused;
+}
+
+
