@@ -264,6 +264,28 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
           {/* Action CTAs */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '45px' }}>
             <a
+              href="https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20hizmetiniz%20hakk%C4%B1nda%20bilgi%20ve%20teklif%20almak%20istiyorum."
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '13px 22px',
+                borderRadius: '12px',
+                background: '#166534',
+                color: '#ffffff',
+                font: '600 13.5px/1 var(--app-font-mono)',
+                textDecoration: 'none',
+                boxShadow: '0 4px 14px rgba(22, 101, 52, 0.25)',
+                transition: 'all 0.2s ease',
+              }}
+            >
+              <MessageSquare size={15} />
+              WhatsApp'tan Ulaş (+90 507 008 4069)
+            </a>
+
+            <a
               href="#contact"
               className="button-primary"
               style={{
@@ -1144,6 +1166,28 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              <a
+                href="https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20hizmetiniz%20hakk%C4%B1nda%20bilgi%20ve%20teklif%20almak%20istiyorum."
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  padding: '16px 20px',
+                  borderRadius: '12px',
+                  background: '#166534',
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                  fontSize: '14px',
+                  fontWeight: 700,
+                  boxShadow: '0 4px 14px rgba(22, 101, 52, 0.35)',
+                }}
+              >
+                <MessageSquare size={18} />
+                <span>WhatsApp'tan Ulaş (+90 507 008 4069)</span>
+              </a>
+
               <a
                 href="mailto:muhammetatmaca79@gmail.com?subject=Proje Teklifi - Muhammet Atmaca"
                 style={{

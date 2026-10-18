@@ -788,8 +788,8 @@ export const FAQ_ACCORDION_ITEMS: FaqAccordionItem[] = [
     title: 'Uygulama App Store ve Google Play Store onayından geçer mi?',
     content:
       'Evet. Bugüne kadar 50’den fazla mobil uygulamayı başarıyla mağazalara yüklemiş bir mühendis olarak, Apple Human Interface Guidelines ve Google Play Developer Policy kurallarına %100 uyumlu kod yazıyorum. Gizlilik politikası, izinler, hesap silme kuralları ve uygulama içi satın alma (IAP) gereksinimlerini eksiksiz uygulayarak ret riskini sıfıra indiriyorum.',
-    actionText: 'Danışmanlık Al & İletişim',
-    actionUrl: '#contact',
+    actionText: "WhatsApp'tan Danış (+90 507 008 4069)",
+    actionUrl: 'https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20mobil%20uygulama%20ma%C4%9Faza%20onay%20s%C3%BCreci%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum.',
     renderVisual: () => <VisualStoreApproval />,
   },
   {

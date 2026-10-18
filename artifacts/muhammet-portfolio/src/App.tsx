@@ -11,6 +11,7 @@ import {
   Linkedin,
   Mail,
   Menu,
+  MessageSquare,
   MoveUpRight,
   Smartphone,
   X,
@@ -192,6 +193,17 @@ function Home() {
           <a href="#contact" className="nav-cta" data-testid="link-contact-nav">
             İletişime geç <ArrowUpRight size={14} strokeWidth={1.8} />
           </a>
+          <a
+            href="https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20projem%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
+            target="_blank"
+            rel="noreferrer"
+            className="nav-whatsapp"
+            data-testid="link-whatsapp-nav"
+            title="WhatsApp ile İletişime Geç"
+          >
+            <MessageSquare size={13} strokeWidth={2} />
+            <span>WhatsApp</span>
+          </a>
         </div>
         <button
           type="button"
@@ -224,6 +236,18 @@ function Home() {
           >
             Özgeçmişi İndir (PDF) <FileText size={13} style={{ display: 'inline', marginLeft: '4px' }} />
           </button>
+          <a
+            href="https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20projem%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link"
+            style={{ color: '#166534', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+            onClick={closeMenu}
+            data-testid="link-mobile-whatsapp"
+          >
+            <span>WhatsApp'tan Ulaş (+90 507 008 4069)</span>
+            <MessageSquare size={14} />
+          </a>
           <a href="#contact" className="nav-link" onClick={closeMenu} data-testid="link-mobile-contact">İletişim <ArrowUpRight size={13} /></a>
         </div>
       )}
@@ -857,7 +881,21 @@ function Home() {
             <div><div className="eyebrow">Çözülecek bir problem mi var?</div><h2 className="contact-title">Birlikte hayata<br />geçirelim.</h2></div>
             <div className="contact-side">
               <p>Geliştirmek istediğiniz fikri, karşılaştığınız teknik engelleri veya merak ettiklerinizi paylaşın. En kısa sürede doğrudan yanıtlayacağım.</p>
-              <a href="mailto:muhammetatmaca79@gmail.com" className="contact-mail" data-testid="link-email-contact">İletişime geç <Mail size={14} /></a>
+              <div className="contact-actions">
+                <a
+                  href="https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20projem%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-whatsapp-btn"
+                  data-testid="link-whatsapp-contact"
+                >
+                  <MessageSquare size={16} />
+                  <span>WhatsApp'tan Ulaş (+90 507 008 4069)</span>
+                </a>
+                <a href="mailto:muhammetatmaca79@gmail.com" className="contact-mail" data-testid="link-email-contact">
+                  E-posta: muhammetatmaca79@gmail.com <Mail size={14} />
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>
