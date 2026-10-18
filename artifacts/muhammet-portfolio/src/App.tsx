@@ -886,14 +886,19 @@ function Home() {
                   href="https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20projem%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
                   target="_blank"
                   rel="noreferrer"
-                  className="contact-whatsapp-btn"
+                  className="contact-btn contact-btn-whatsapp"
                   data-testid="link-whatsapp-contact"
                 >
                   <MessageSquare size={16} />
-                  <span>WhatsApp'tan Ulaş (+90 507 008 4069)</span>
+                  <span>WhatsApp ile Mesaj Gönder</span>
                 </a>
-                <a href="mailto:muhammetatmaca79@gmail.com" className="contact-mail" data-testid="link-email-contact">
-                  E-posta: muhammetatmaca79@gmail.com <Mail size={14} />
+                <a
+                  href="mailto:muhammetatmaca79@gmail.com"
+                  className="contact-btn contact-btn-mail"
+                  data-testid="link-email-contact"
+                >
+                  <Mail size={15} />
+                  <span>E-posta Gönder (Teklif Al)</span>
                 </a>
               </div>
             </div>
@@ -1164,6 +1169,21 @@ function App() {
           <Route component={Home} />
         </Switch>
       </Suspense>
+
+      {/* Floating Mobile WhatsApp Quick Contact Button */}
+      <a
+        href="https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20hizmetiniz%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
+        target="_blank"
+        rel="noreferrer"
+        className="floating-whatsapp-btn"
+        aria-label="WhatsApp ile İletişime Geçin"
+        data-testid="button-floating-whatsapp"
+      >
+        <span className="floating-whatsapp-pulse">
+          <MessageSquare size={16} strokeWidth={2.4} />
+        </span>
+        <span>WhatsApp'tan Ulaş</span>
+      </a>
     </>
   );
 }
