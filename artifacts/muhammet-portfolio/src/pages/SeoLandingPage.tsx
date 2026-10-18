@@ -38,6 +38,7 @@ import { MOBILE_APPS, MobileApp } from '@/data/mobileApps';
 import { WEB_PROJECTS, WebProject } from '@/data/careerAndWeb';
 import { TURKISH_CITIES, TurkishCity } from '@/data/turkishCities';
 import { SitelinksDirectory } from '@/components/SitelinksDirectory';
+import TopoWave from '@/components/TopoWave';
 
 interface SeoLandingPageProps {
   pageData: SeoLandingPageData;
@@ -198,8 +199,14 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
       </nav>
 
       {/* Hero Section */}
-      <section style={{ padding: '125px 0 55px', borderBottom: '1px solid var(--line)' }}>
-        <div className="container-wide">
+      <section style={{ padding: '125px 0 55px', borderBottom: '1px solid var(--line)', position: 'relative', overflow: 'hidden' }}>
+        <TopoWave
+          mode="light"
+          speed={0.65}
+          density={1.15}
+          style={{ opacity: 0.28, zIndex: 0 }}
+        />
+        <div className="container-wide" style={{ position: 'relative', zIndex: 1 }}>
           {/* Breadcrumb Bar */}
           <nav
             style={{
@@ -1132,9 +1139,17 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
               gap: '32px',
               alignItems: 'center',
               boxShadow: '0 16px 40px rgba(24, 32, 51, 0.25)',
+              position: 'relative',
+              overflow: 'hidden',
             }}
           >
-            <div>
+            <TopoWave
+              mode="dark"
+              speed={0.5}
+              density={1.0}
+              style={{ opacity: 0.18, zIndex: 0 }}
+            />
+            <div style={{ position: 'relative', zIndex: 1 }}>
               <div
                 style={{
                   color: 'var(--coral)',
@@ -1165,7 +1180,7 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
               </p>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', position: 'relative', zIndex: 1 }}>
               <a
                 href="https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20hizmetiniz%20hakk%C4%B1nda%20bilgi%20ve%20teklif%20almak%20istiyorum."
                 target="_blank"

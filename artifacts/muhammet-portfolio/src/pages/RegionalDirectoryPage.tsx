@@ -15,11 +15,13 @@ import {
   ArrowDown,
   Github,
   Linkedin,
+  MessageSquare,
 } from 'lucide-react';
 import { TURKISH_CITIES, TurkishCity } from '../data/turkishCities';
 import { BAYBURT_SPECIALIZED_PAGES, TECH_SPECIALIZED_PAGES } from '../data/seoLandingPages';
 import { SEO } from '../components/SEO';
 import { SitelinksDirectory } from '../components/SitelinksDirectory';
+import TopoWave from '../components/TopoWave';
 
 const REGIONS: Array<TurkishCity['region']> = [
   'Marmara',
@@ -106,12 +108,28 @@ export function RegionalDirectoryPage() {
           <a href="mailto:muhammetatmaca79@gmail.com" className="nav-cta">
             İletişime geç <ArrowUpRight size={14} strokeWidth={1.8} />
           </a>
+          <a
+            href="https://wa.me/905070084069?text=Merhaba%20Muhammet%20Bey%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20hizmetiniz%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
+            target="_blank"
+            rel="noreferrer"
+            className="nav-whatsapp"
+            style={{ textDecoration: 'none' }}
+          >
+            <MessageSquare size={13} strokeWidth={2} />
+            <span>WhatsApp</span>
+          </a>
         </div>
       </nav>
 
       {/* Header section */}
-      <section style={{ padding: '130px 0 50px', borderBottom: '1px solid var(--line)' }}>
-        <div className="container-wide">
+      <section style={{ padding: '130px 0 50px', borderBottom: '1px solid var(--line)', position: 'relative', overflow: 'hidden' }}>
+        <TopoWave
+          mode="light"
+          speed={0.65}
+          density={1.15}
+          style={{ opacity: 0.28, zIndex: 0 }}
+        />
+        <div className="container-wide" style={{ position: 'relative', zIndex: 1 }}>
           <div className="eyebrow" style={{ marginBottom: '14px' }}>
             Türkiye Geneli Mühendislik & Yazılım Dizini
           </div>
