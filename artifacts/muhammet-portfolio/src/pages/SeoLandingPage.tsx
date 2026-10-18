@@ -1166,9 +1166,7 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
               </a>
 
               <a
-                href="https://wa.me/905432420822?text=Merhaba%2C%20yaz%C4%B1l%C4%B1m%20ve%20mobil%20uygulama%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
-                target="_blank"
-                rel="noreferrer"
+                href="/#contact"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -1183,8 +1181,8 @@ export function SeoLandingPage({ pageData }: SeoLandingPageProps) {
                   boxShadow: '0 4px 12px rgba(25, 75, 223, 0.3)',
                 }}
               >
-                <MessageSquare size={18} />
-                <span>WhatsApp ile Hızlı Mesaj Gönder</span>
+                <ArrowRight size={18} />
+                <span>Teklif Al & İletişim Formuna Git</span>
               </a>
             </div>
           </div>
