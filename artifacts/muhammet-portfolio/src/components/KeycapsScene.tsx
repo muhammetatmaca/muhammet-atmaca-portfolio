@@ -25,6 +25,7 @@ export function KeycapsScene({
   const [isDesktop, setIsDesktop] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
+  const splineAppRef = useRef<any>(null);
 
   useEffect(() => {
     const checkIsDesktop = () => {
@@ -47,6 +48,41 @@ export function KeycapsScene({
     observer.observe(el);
     return () => observer.disconnect();
   }, [isDesktop]);
+
+  // Offscreen & tab visibility sleep: freeze Spline render loop when offscreen
+  useEffect(() => {
+    const app = splineAppRef.current;
+    if (!app) return;
+    if (isVisible && !document.hidden) {
+      if (app.isStopped) app.play?.();
+    } else {
+      if (!app.isStopped) app.stop?.();
+    }
+  }, [isVisible]);
+
+  useEffect(() => {
+    const handleVisibility = () => {
+      const app = splineAppRef.current;
+      if (!app) return;
+      if (document.hidden) {
+        if (!app.isStopped) app.stop?.();
+      } else if (isVisible) {
+        if (app.isStopped) app.play?.();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
+    return () => document.removeEventListener('visibilitychange', handleVisibility);
+  }, [isVisible]);
+
+  useEffect(() => {
+    return () => {
+      if (splineAppRef.current) {
+        try {
+          splineAppRef.current.dispose?.();
+        } catch {}
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (!isDesktop) return;
@@ -109,9 +145,14 @@ export function KeycapsScene({
           <Spline
             scene={sceneUrl}
             onLoad={(app) => {
+              splineAppRef.current = app;
               setIsLoaded(true);
               try {
                 const renderer = (app as any)?._renderer;
+                // DPR Sınırlandırması (1.25 Cap) - Yüksek DPI ekranlarda GPU fragment yükünü %60 azaltır
+                if (renderer?.setPixelRatio) {
+                  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.25));
+                }
                 if (renderer?.pipeline?.setWatermark) renderer.pipeline.setWatermark(null);
                 if (renderer?.pipeline?.logoOverlayPass) renderer.pipeline.logoOverlayPass.enabled = false;
                 if (renderer?.pipeline) {

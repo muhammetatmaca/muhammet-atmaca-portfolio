@@ -151,7 +151,7 @@ export default function TopoWave({
     const startTime = performance.now();
 
     const render = (time: number) => {
-      if (!isVisible) {
+      if (!isVisible || (typeof document !== 'undefined' && document.hidden)) {
         rafId = 0;
         return;
       }
